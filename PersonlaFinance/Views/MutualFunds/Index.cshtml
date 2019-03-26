@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Mutual Funds";
+    Layout = "~/Views/Shared/_CommonLayout.cshtml";
+}
+
+<div>
+    @Html.Partial("/Views/MutualFunds/_Filter.cshtml")
+</div>
+
+<div>
+    @Html.Partial("~/Views/MutualFunds/_Controls.cshtml")
+</div>
+<div>
+    @Html.Partial("~/Views/MutualFunds/_ConsolidateMF.cshtml")
+</div>
+<div>
+    @Html.Partial("~/Views/MutualFunds/_MFTable.cshtml")
+</div>
+
+<div>
+    @Html.Partial("~/Views/MutualFunds/_Popups.cshtml")
+</div>

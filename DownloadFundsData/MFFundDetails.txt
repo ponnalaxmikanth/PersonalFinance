@@ -1,0 +1,1737 @@
+ADITYABIRLA,Aditya Birla Sun Life Cash Plus Dividend Reinvestment Direct Plan,119571,0.09,,1000,Liquid,,Open,0,511
+ADITYABIRLA,Aditya Birla Sun Life Floating Rate Fund Long Term Weekly Dividend Reinvestment Direct Plan,122648,0.14,,1000,Ultrashort Bond,,Open,0,579
+ADITYABIRLA,Aditya Birla Sun Life Savings Fund Weekly Dividend Reinvestment Direct Plan,119499,0.25,,1000,Ultrashort Bond,,Open,0,318
+ADITYABIRLA,Aditya Birla Sun Life Short Term Fund Dividend Reinvestment Direct Plan,124832,0.22,,1000,Short-Term Bond,,Open,0,343
+ADITYABIRLA,Aditya Birla Sun Life Treasury Optimizer Plan Monthly Dividend Reinvestment Direct Plan,119552,0.30,,1000,Intermediate Bond,,Open,0,608
+ADITYABIRLA,Aditya Birla Sun Life Treasury Optimizer Plan Quarterly Dividend Reinvestment Direct Plan,119553,0.30,,1000,Intermediate Bond,,Open,0,608
+ADITYABIRLA,Aditya Birla Sun Life Tax Relief 96 Fund (ELSS U/S 80C of IT ACT) Growth (LSP),107745,0,,500,ELSS (Tax Savings),,Open,0,0
+ADITYABIRLA,Aditya Birla Sun Life Gilt Plus PF Growth Instant Gain Direct Plan,119605,0,,1000,Intermediate Government Bond,,Open,0,2133
+ADITYABIRLA,Aditya Birla Sun Life Gilt Plus PF Growth Instant Gain Regular Plan,100058,0,,1000,Intermediate Government Bond,,Open,0,2133
+ADITYABIRLA,Aditya Birla Sun Life Frontline Equity Fund (Trigger Facility) - Growth,103174,0,,1000,Large-Cap,,Open,0,366
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Regular Growth,141720,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Regular Dividend,141721,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Direct Growth,141724,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Direct Dividend,141722,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Direct Quarterly Dividend,141725,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Fixed Term Plan Series OT Regular Quarterly Dividend,141723,0,,1000,Fixed Maturity Short-Term Bond,,Limited,0,0
+ADITYABIRLA,Aditya Birla Sun Life Resurgent India Fund Series 1 Regular Plan Dividend Sweep,139785,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,13
+ADITYABIRLA,Aditya Birla Sun Life Resurgent India Fund Series 1 Direct Plan Dividend Sweep,139786,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,13
+ADITYABIRLA,Aditya Birla Sun Life Cash Plus Weekly Dividend Reinvestment Direct Plan,119570,0.20,,1000,Liquid,,Open,0,511
+ADITYABIRLA,Aditya Birla Sun Life Enhanced Arbitrage Fund Dividend Reinvestment Direct Plan,119525,0.30,,1000,Arbitrage Fund,,Open,0,1219
+ADITYABIRLA,Aditya Birla Sun Life India Opportunities Fund Dividend Reinvestment Direct Plan,119617,2.31,,1000,Flexicap,,Open,0,66
+ADITYABIRLA,Aditya Birla Sun Life Index Fund Dividend Reinvestment Direct Plan,119649,0.50,,1000,Large-Cap,,Open,0,311
+ADITYABIRLA,Aditya Birla Sun Life Mid Cap Fund Dividend Reinvestment Direct Plan,119619,1.57,,1000,Small/Mid-Cap,,Open,0,61
+ADITYABIRLA,Aditya Birla Sun Life India Gennext Fund Dividend Reinvestment Direct Plan,119590,1.67,,1000,Flexicap,,Open,0,33
+ADITYABIRLA,Aditya Birla Sun Life Infrastructure Fund Dividend Reinvestment Direct Plan,119515,2.14,,1000,Sector - Infrastructure,,Open,0,79
+ADITYABIRLA,Aditya Birla Sun Life International Equity Fund Plan A Dividend Reinvestment Direct Plan,119516,2.46,,1000,Global - Other,,Open,0,25
+ADITYABIRLA,Aditya Birla Sun Life International Equity Fund Plan B Dividend Reinvestment Direct Plan,119519,2.41,,1000,Equity - Other,,Open,0,42
+ADITYABIRLA,Aditya Birla Sun Life Medium Term Plan Direct Dividend Reinvestment,119538,0.93,,1000,Corporate Credit,,Open,0,862
+ADITYABIRLA,Aditya Birla Sun Life Medium Term Plan Regular Plan Quarterly Dividend Reinvestment,111809,1.70,,1000,Corporate Credit,,Open,0,862
+ADITYABIRLA,Aditya Birla Sun Life MIP Fund Direct Plan Monthly Dividend Reinvestment,119640,2.11,,1000,Conservative Allocation,,Open,0,145
+ADITYABIRLA,Aditya Birla Sun Life Dynamic Bond Fund Retail Quarterly Dividend Reinvestment Direct Plan,119502,0.95,,1000,Dynamic Bond,,Open,0,802
+ADITYABIRLA,Aditya Birla Sun Life Dynamic Bond Fund Retail Monthly Dividend Reinvestment Direct Plan,119503,0.95,,1000,Dynamic Bond,,Open,0,802
+ADITYABIRLA,Aditya Birla Sun Life Short Term Opportunities Fund Regular Plan Quarterly Dividend Reinvestment,112356,1.40,,1000,Short-Term Bond,,Open,0,489
+ADITYABIRLA,Aditya Birla Sun Life Government Securities Fund Long Term Half Yearly Dividend Reinvestmt Dir Plan,120532,0.84,,1000,Intermediate Government Bond,,Open,0,535
+ADITYABIRLA,Aditya Birla Sun Life Gold Fund Dividend Reinvestment Direct Plan,120545,0,,1000,Sector - Precious Metals,,Open,0,13
+ADITYABIRLA,Aditya Birla Sun Life India Reforms Fund Dividend Reinvestment Direct Plan,119537,1.94,,1000,Flexicap,,Open,0,30
+ADITYABIRLA,Aditya Birla Sun Life Dynamic Bond Fund Dividend Reinvestment Direct Plan,132918,0.95,,1000,Dynamic Bond,,Open,0,802
+ADITYABIRLA,Aditya Birla Sun Life Balanced Advantage Fund Dividend Payout,131665,2.97,,1000,Moderate Allocation,,Open,0,592
+ADITYABIRLA,Aditya Birla Sun Life Balanced Advantage Fund Growth,131666,2.97,,1000,Moderate Allocation,,Open,0,592
+ADITYABIRLA,Aditya Birla Sun Life Tax Saving Fund Bonus,131738,3.01,,0,ELSS (Tax Savings),,Limited,0,9
+ADITYABIRLA,Aditya Birla Sun Life Tax Saving Fund Dividend Payout,131737,3.01,,0,ELSS (Tax Savings),,Limited,0,9
+ADITYABIRLA,Aditya Birla Sun Life Tax Saving Fund Growth,131736,3.01,,0,ELSS (Tax Savings),,Limited,0,9
+ADITYABIRLA,Aditya Birla Sun Life Advantage Fund Dividend Payout,100034,2.46,,1000,Flexicap,,Open,0,69
+ADITYABIRLA,Aditya Birla Sun Life Advantage Fund Growth,100033,2.46,,1000,Flexicap,,Open,0,69
+AXIS,Axis Hybrid Fund Series 35 1359 Days Regular Growth,140114,2.75,,5000,Conservative Allocation,,Limited,0,137
+AXIS,Axis Hybrid Fund Series 35 1359 Days Regular Dividend,140115,2.75,,5000,Conservative Allocation,,Limited,0,137
+AXIS,Axis Hybrid Fund Series 35 1359 Days Direct Growth,140112,0.95,,5000,Conservative Allocation,,Limited,0,137
+AXIS,Axis Emerging Opportunities Series 1 1400 Days Regular Growth,140400,2.88,,5000,Small/Mid-Cap,,Limited,0,9
+AXIS,Axis Emerging Opportunities Series 1 1400 Days Regular Dividend,140399,2.88,,5000,Small/Mid-Cap,,Limited,0,9
+AXIS,Axis Emerging Opportunities Series 1 1400 Days Direct Growth,140398,1.08,,5000,Small/Mid-Cap,,Limited,0,9
+AXIS,Axis Emerging Opportunities Series 1 1400 Days Direct Dividend,140397,1.08,,5000,Small/Mid-Cap,,Limited,0,9
+AXIS,Axis Emerging Opportunities Series 2 1400 Days Regular Growth,140592,2.62,,5000,Small/Mid-Cap,,Limited,0,68
+AXIS,Axis Emerging Opportunities Series 2 1400 Days Regular Dividend,140593,2.62,,5000,Small/Mid-Cap,,Limited,0,68
+AXIS,Axis Emerging Opportunities Series 2 1400 Days Direct Growth,140594,0.82,,5000,Small/Mid-Cap,,Limited,0,68
+AXIS,Axis Emerging Opportunities Series 2 1400 Days Direct Dividend,140591,0.82,,5000,Small/Mid-Cap,,Limited,0,68
+AXIS,Axis Equity Saver Fund Direct Plan Regular Dividend Payout,139520,1.67,,5000,Hybrid Allocation,,Open,0,565
+AXIS,Axis Hybrid Fund Series 33 1358 Days Regular Growth,139777,2.68,,5000,Conservative Allocation,,Open,0,223
+AXIS,Axis Hybrid Fund Series 33 1358 Days Regular Dividend,139776,2.68,,5000,Conservative Allocation,,Open,0,223
+AXIS,Axis Hybrid Fund Series 33 1358 Days Direct Growth,139775,0.88,,5000,Conservative Allocation,,Open,0,223
+AXIS,Axis Hybrid Fund Series 33 1358 Days Direct Dividend,139778,0.88,,5000,Conservative Allocation,,Open,0,223
+AXIS,Axis Hybrid Fund Series 32 1367 Days Regular Growth,139615,2.67,,5000,Conservative Allocation,,Open,0,133
+AXIS,Axis Hybrid Fund Series 32 1367 Days Regular Dividend,139614,2.67,,5000,Conservative Allocation,,Open,0,133
+AXIS,Axis Hybrid Fund Series 32 1367 Days Direct Growth,139613,1.22,,5000,Conservative Allocation,,Open,0,133
+AXIS,Axis Hybrid Fund Series 32 1367 Days Direct Dividend,139612,1.22,,5000,Conservative Allocation,,Open,0,133
+AXIS,Axis Equity Saver Fund Regular Plan Dividend Payout,139521,2.85,,5000,Hybrid Allocation,,Open,0,565
+AXIS,Axis Hybrid Fund Series 31 1381 Days Regular Growth,139525,2.71,,5000,Conservative Allocation,,Open,0,84
+AXIS,Axis Hybrid Fund Series 31 1381 Days Regular Dividend,139523,2.71,,5000,Conservative Allocation,,Open,0,84
+AXIS,Axis Hybrid Fund Series 31 1381 Days Direct Growth,139524,0.96,,5000,Conservative Allocation,,Open,0,84
+AXIS,Axis Hybrid Fund Series 31 1381 Days Direct Dividend,139522,0.96,,5000,Conservative Allocation,,Open,0,84
+AXIS,Axis Hybrid Fund Series 30 1297 Days Regular Growth,136130,2.53,,5000,Conservative Allocation,,Open,0,38
+AXIS,Axis Hybrid Fund Series 30 1297 Days Regular Dividend,136132,2.53,,5000,Conservative Allocation,,Open,0,38
+AXIS,Axis Hybrid Fund Series 30 1297 Days Direct Growth,136131,1.26,,5000,Conservative Allocation,,Open,0,38
+AXIS,Axis Hybrid Fund Series 29 1275 Days Direct Growth,136033,1.30,,5000,Conservative Allocation,,Open,0,17
+AXIS,Axis Hybrid Fund Series 29 1275 Days Regular Dividend,136035,2.57,,5000,Conservative Allocation,,Open,0,17
+AXIS,Axis Hybrid Fund Series 29 1275 Days Regular Growth,136032,2.57,,5000,Conservative Allocation,,Open,0,17
+AXIS,Axis Children's Gift Regular Lock in Growth,135759,3.10,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Regular Lock in Dividend Payout,135760,3.10,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Regular No Lock in Growth,135766,3.10,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Regular No Lock in Dividend Payout,135761,3.10,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Direct Lock in Growth,135762,1.26,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Direct Lock in Dividend Payout,135765,1.26,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Direct No Lock in Growth,135764,1.26,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Children's Gift Direct No Lockin Dividend Payout,135763,1.26,,5000,Moderate Allocation,,Open,0,329
+AXIS,Axis Hybrid Fund Series 27 1351 Days Regular Growth,135527,2.39,,5000,Conservative Allocation,,Open,0,24
+AXIS,Axis Hybrid Fund Series 27 1351 Days Regular Dividend,135526,2.39,,5000,Conservative Allocation,,Open,0,24
+AXIS,Axis Hybrid Fund Series 27 1351 Days Direct Growth,135528,1.12,,5000,Conservative Allocation,,Open,0,24
+AXIS,Axis Hybrid Fund Series 27 1351 Days Direct Dividend,135529,1.12,,5000,Conservative Allocation,,Open,0,24
+AXIS,Axis Hybrid Fund Series 28 1331 Days Regular Growth,135620,2.41,,5000,Conservative Allocation,,Open,0,51
+AXIS,Axis Hybrid Fund Series 28 1331 Days Regular Dividend,135621,2.41,,5000,Conservative Allocation,,Open,0,51
+AXIS,Axis Hybrid Fund Series 28 1331 Days Direct Growth,135618,1.14,,5000,Conservative Allocation,,Open,0,51
+AXIS,Axis Hybrid Fund Series 28 1331 Days Direct Dividend,135619,1.14,,5000,Conservative Allocation,,Open,0,51
+AXIS,Axis Hybrid Fund Series 26 1276 Days Regular Growth,135285,2.43,,5000,Conservative Allocation,,Open,0,2
+AXIS,Axis Hybrid Fund Series 26 1276 Days Regular Dividend,135283,2.43,,5000,Conservative Allocation,,Open,0,2
+AXIS,Axis Hybrid Fund Series 26 1276 Days Direct Growth,135282,1.16,,5000,Conservative Allocation,,Open,0,2
+BARODA,Baroda Pioneer Balance Fund Plan A Dividend Payout,101913,2.90,,5000,Moderate Allocation,,Open,0,296
+BARODA,Baroda Pioneer Balance Fund - Plan A - Growth,101912,2.90,,5000,Moderate Allocation,,Open,0,296
+BARODA,Baroda Pioneer ELSS 96 Plan A- Dividend Payout Option,100068,3.06,,500,ELSS (Tax Savings),,Open,0,220
+BARODA,Baroda Pioneer Gilt Fund Plan A Dividend Payout,101188,1.92,,5000,Intermediate Government Bond,,Open,0,146
+BARODA,Baroda Pioneer Gilt Fund - Plan A - Growth,101187,1.92,,5000,Intermediate Government Bond,,Open,0,146
+BARODA,Baroda Pioneer Growth Fund - Plan A - Dividend Payout,102021,2.97,,5000,Large-Cap,,Open,0,183
+BARODA,Baroda Pioneer Growth Fund - Plan A - Growth,102020,2.97,,5000,Large-Cap,,Open,0,183
+BARODA,Baroda Pioneer Liquid Fund Regular Daily Dividend Payout,101409,0.34,,5000,Liquid,,Limited,0,891
+BARODA,Baroda Pioneer Income Fund - Plan A - Growth,101154,2.61,,5000,Intermediate Bond,,Open,0,107
+BARODA,Baroda Pioneer Liquid Fund Regular Dividend Payout,101407,0.34,,5000,Liquid,,Limited,0,891
+BARODA,Baroda Pioneer Liquid Fund Regular Growth,101408,0.34,,5000,Liquid,,Limited,0,891
+BARODA,Baroda Pioneer Income Fund Plan A Dividend Payout,101155,2.61,,5000,Intermediate Bond,,Open,0,107
+BARODA,Baroda Pioneer Mip Fund Plan A Monthly Dividend Payout,102662,2.15,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Mip Fund - Plan A - Growth,102661,2.15,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Mip Fund Plan A Quarterly Dividend Payout,102663,2.15,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Balance Fund Plan A Dividend Reinvestment,101913,2.90,,5000,Moderate Allocation,,Open,0,296
+BARODA,Baroda Pioneer Balance Fund Plan B (Direct) Dividend Reinvestment Option,119325,1.56,,5000,Moderate Allocation,,Open,0,296
+BARODA,Baroda Pioneer Banking and Financial Services Fund Plan A Dividend Reinvestment,117548,3.03,,5000,Sector - Financial Services,,Open,0,183
+BARODA,Baroda Pioneer Banking and Financial Services Fund Plan B (Direct) Dividend Reinvestment Payout,119335,2.33,,5000,Sector - Financial Services,,Open,0,183
+BARODA,Baroda Pioneer Credit Opportunities Fund Plan A Regular Monthly Dividend Reinvestment,133522,1.91,,5000,Corporate Credit,,Open,0,287
+BARODA,Baroda Pioneer Credit Opportunities Fund Plan A Regular Quarterly Dividend Reinvestment,133519,1.91,,5000,Corporate Credit,,Open,0,287
+BARODA,Baroda Pioneer Credit Opportunities Fund Plan B Direct Monthly Dividend Reinvestment,133523,0.55,,5000,Corporate Credit,,Open,0,287
+BARODA,Baroda Pioneer Credit Opportunities Fund Plan B Direct Quarterly Dividend Reinvestment,133521,0.55,,5000,Corporate Credit,,Open,0,287
+BARODA,Baroda Pioneer Dynamic Bond Fund Plan A Dividend Reinvestment,117630,1.48,,5000,Dynamic Bond,,Open,0,167
+BARODA,Baroda Pioneer Dynamic Bond Fund Plan B (Direct) Dividend Reinvestment Payout Option,119338,0.64,,5000,Dynamic Bond,,Open,0,167
+BARODA,Baroda Pioneer Gilt Fund Plan A Dividend Reinvestment,101188,1.92,,5000,Intermediate Government Bond,,Open,0,146
+BARODA,Baroda Pioneer Gilt Fund Plan B (Direct) Dividend Reinvestment Option,119340,1.25,,5000,Intermediate Government Bond,,Open,0,146
+BARODA,Baroda Pioneer Income Fund Plan A Dividend Reinvestment,101155,2.61,,5000,Intermediate Bond,,Open,0,107
+BARODA,Baroda Pioneer Income Fund Plan B (Direct) Dividend Reinvestment Option,119361,1.83,,5000,Intermediate Bond,,Open,0,107
+BARODA,Baroda Pioneer Large Cap Fund Plan A Dividend Reinvestment,112944,3.08,,5000,Large-Cap,,Open,0,274
+BARODA,Baroda Pioneer Large Cap Fund Plan B (Direct) Dividend Reinvestment Option,119366,2.41,,5000,Large-Cap,,Open,0,274
+BARODA,Baroda Pioneer Liquid Plan A Daily Dividend Reinvestment,111707,0.38,,5000,Liquid,,Open,0,891
+BARODA,Baroda Pioneer Liquid Plan A Weekly Dividend Reinvestment,111705,0.38,,5000,Liquid,,Open,0,891
+BARODA,Baroda Pioneer Liquid Fund Plan B (Direct) Weekly Dividend Reinvestment Option,119416,0.23,,5000,Liquid,,Open,0,891
+BARODA,Baroda Pioneer Liquid Fund Regular Daily Dividend Reinvestment,101409,0.34,,5000,Liquid,,Limited,0,891
+BARODA,Baroda Pioneer Liquid Fund Regular Dividend Reinvestment,101407,0.34,,5000,Liquid,,Limited,0,891
+BARODA,Baroda Pioneer Mid-cap Fund Plan A Dividend Reinvestment,113328,3.03,,5000,Small/Mid-Cap,,Open,0,258
+BARODA,Baroda Pioneer Mid-cap Fund-Plan B (Direct)-Dividend Reinvestment Option,119313,2.34,,5000,Small/Mid-Cap,,Open,0,258
+BARODA,Baroda Pioneer Mip Fund Plan A Monthly Dividend Reinvestment,102662,2.15,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Mip Fund Plan A Quarterly Dividend Reinvestment,102663,2.15,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Mip Fund Plan B (Direct) Monthly Dividend Reinvestment Option,119390,1.43,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Mip Fund Plan B (Direct) Quarterly Dividend Reinvestment Option,119391,1.43,,5000,Conservative Allocation,,Open,0,74
+BARODA,Baroda Pioneer Short Term Bond Plan A Monthly Dividend Reinvestment,113037,1.23,,5000,Short-Term Bond,,Open,0,301
+BARODA,Baroda Pioneer Short Term Bond Fund Plan A Quarterly Dividend Reinvestment Payout,140462,0,,5000,Short-Term Bond,,Open,0,301
+BARODA,Baroda Pioneer Short Term Bond Fund Plan B (Direct) Monthly Dividend Reinvestment Option,119399,0.47,,5000,Short-Term Bond,,Open,0,301
+BARODA,Baroda Pioneer Short Term Bond Fund Plan B (Direct) Quarterly Dividend Reinvestment Payout,140464,0,,5000,Short-Term Bond,,Open,0,301
+BARODA,Baroda Pioneer Treasury Advantage Fund Plan A Daily Dividend Reinvestment,112032,0.75,,5000,Ultrashort Bond,,Open,0,822
+BARODA,Baroda Pioneer Treasury Advantage Fund Plan A Monthly Dividend Reinvestment,112035,0.75,,5000,Ultrashort Bond,,Open,0,822
+BARODA,Baroda Pioneer Treasury Advantage Fund Plan A Quarterly Dividend Reinvestment,112034,0.75,,5000,Ultrashort Bond,,Open,0,822
+BARODA,Baroda Pioneer Treasury Advantage Fund Plan A Weekly Dividend Reinvestment,112033,0.75,,5000,Ultrashort Bond,,Open,0,822
+BNP,BNP Paribas Enhanced Arbitrage Regular Growth,140385,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Regular Dividend Payout,140388,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Direct Dividend Payout,140387,0.58,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Direct Growth,140386,0.58,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Government Securities Fund Half yearly Dividend Payout option,122293,0.45,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Balanced Direct Dividend Reinvestment,141005,0,,5000,Moderate Allocation,,Open,0,0
+BNP,BNP Paribas Balanced Regular Dividend Reinvestment,141007,0,,5000,Moderate Allocation,,Open,0,0
+BNP,BNP Paribas Corporate Bond Fund Annual Dividend Reinvestment,117949,1.41,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas Corporate Bond Fund Direct Plan Annual Dividend Reinvestment Option,119983,0.37,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas CorporateBond Fund Direct Plan Monthly Dividend Reinvestment Option,119985,0.37,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas Corporate Bond Fund Direct Plan Quarterly Dividend Reinvestment Option,119986,0.37,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas Corporate Bond Fund Monthly Dividend Reinvestment,117950,1.41,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas Corporate Bond Fund Quarterly Dividend Reinvestment,117948,1.41,,5000,Intermediate Bond,,Open,0,996
+BNP,BNP Paribas Corporate Bond Regular Annual Dividend Reinvestment,114100,0.93,,5000,Intermediate Bond,,Limited,0,996
+BNP,BNP Paribas Corporate Bond Regular Monthly Dividend Reinvestment,114105,0.93,,5000,Intermediate Bond,,Limited,0,996
+BNP,BNP Paribas Corporate Bond Regular Quarterly Dividend Reinvestment,114097,0.93,,5000,Intermediate Bond,,Limited,0,996
+BNP,BNP Paribas Dividend Yield Fund Direct Plan Dividend Reinvestment Option,119987,1.17,,5000,Flexicap,,Open,0,49
+BNP,BNP Paribas Dividend Yield Fund Dividend Reinvestment,113461,2.53,,5000,Flexicap,,Open,0,49
+BNP,BNP Paribas Enhanced Arbitrage Direct Dividend Reinvestment,140387,0.58,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Fund Direct Plan Monthly Dividend Reinvestment,141208,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Fund Direct Plan Quarterly Dividend Reinvestment,141209,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Regular Dividend Reinvestment,140388,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Fund Regular Plan Monthly Dividend Reinvestment,141207,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Enhanced Arbitrage Fund Regular Plan Quarterly Dividend Reinvestment,141210,0,,5000,Equity - Other,,Open,0,93
+BNP,BNP Paribas Equity Fund Direct Plan Dividend Reinvestment Option,119894,1.09,,5000,Large-Cap,,Open,0,74
+BNP,BNP Paribas Equity Fund Dividend Reinvestment,113545,2.25,,5000,Large-Cap,,Open,0,74
+BNP,BNP Paribas Flexi Debt Fund Direct Plan Half Yearly Dividend Reinvestment Option,119993,1.10,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Flexi Debt Fund Direct Plan Monthly Dividend Reinvestment Option,119994,1.10,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Flexi Debt Fund Direct Plan Quarterly Dividend Reinvestment Option,119995,1.10,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Flexi Debt Fund Half Yearly Dividend Reinvestment,117962,1.85,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Flexi Debt Fund Monthly Dividend Reinvestment,117960,1.85,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Flexi Debt Fund Quarterly Dividend Reinvestment,117961,1.85,,5000,Dynamic Bond,,Open,0,1899
+BNP,BNP Paribas Government Securities Fund Regular Annual Dividend Reinvestment,122393,0.45,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Government Securities Fund Regular Calendar Quarterly Dividend Reinvestment,122291,0.45,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Government Securities Fund Direct Annual Dividend Reinvestment,122376,0.35,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Government Securities Fund Direct Monthly Dividend Reinvestment,122400,0.35,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Government Securities Fund Half yearly Dividend Reinvestment option,122293,0.45,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Government Securities Fund Regular Monthly Dividend Reinvestment,122290,0.45,,5000,Long-Term Government Bond,,Open,0,1297
+BNP,BNP Paribas Long Term Equity Fund Direct Plan Dividend Reinvestment Option,120146,1.96,,5000,ELSS (Tax Savings),,Open,0,87
+BNP,BNP Paribas Long Term Equity Fund Dividend Reinvestment,113464,2.73,,5000,ELSS (Tax Savings),,Open,0,87
+BNP,BNP Paribas Medium Term Income Fund Direct Annual Dividend Reinvestment,127315,0.70,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Direct Calendar Quarterly Dividend Reinvestment,127311,0.70,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Direct Half Yearly Dividend Reinvestment,127313,0.70,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Direct Monthly Dividend Reinvestment,127310,0.70,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Regular Annual Dividend Reinvestment,127320,1.13,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Regular Calendar Quarterly Dividend Reinvestment,127307,1.13,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Regular Half Yearly Dividend Reinvestment,127319,1.13,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Medium Term Income Fund Regular Monthly Dividend Reinvestment,127308,1.13,,5000,Short-Term Bond,,Open,0,70
+BNP,BNP Paribas Mid Cap Fund Direct Plan Dividend Reinvestment Option,120001,1.32,,5000,Small/Mid-Cap,,Open,0,56
+BNP,BNP Paribas Mid Cap Dividend Reinvestment,113567,2.38,,5000,Small/Mid-Cap,,Open,0,56
+BOIAXA,BOI AXA S/T Income Regular Growth,111585,1.42,,5000,Short-Term Bond,,Open,0,800
+BOIAXA,BOI AXA S/T Income Regular Monthly Dividend Payout,111589,1.42,,5000,Short-Term Bond,,Open,0,800
+BOIAXA,BOI AXA Regular Return Regular Quarterly Dividend Payout,111713,2.26,,10000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Regular Return Regular Annual Dividend Payout,111714,2.26,,10000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Regular Return Eco Growth,111715,2.26,,10000,Conservative Allocation,,Limited,0,795
+BOIAXA,BOI AXA Tax Advantage Eco Growth,111709,2.56,,500,ELSS (Tax Savings),,Limited,0,102
+BOIAXA,BOI AXA S/T Income Regular Quarterly Dividend Payout,111590,1.42,,5000,Short-Term Bond,,Open,0,800
+BOIAXA,BOI AXA Regular Return Eco Quarterly Dividend Payout,111718,2.26,,10000,Conservative Allocation,,Limited,0,795
+BOIAXA,BOI AXA Tax Advantage Regular Dividend Payout,111708,3.26,,500,ELSS (Tax Savings),,Open,0,102
+BOIAXA,BOI AXA Tax Advantage Regular Growth,111710,3.26,,500,ELSS (Tax Savings),,Open,0,102
+BOIAXA,BOI AXA Regular Return Regular Monthly Dividend Payout,111716,2.26,,10000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Regular Return Eco Monthly Dividend Payout,111717,2.26,,10000,Conservative Allocation,,Limited,0,795
+BOIAXA,BOI AXA Regular Return Regular Growth,111712,2.26,,10000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Manufacturing & Infra Growth,112359,3.11,,5000,Sector - Infrastructure,,Open,0,139
+BOIAXA,BOI AXA Manufacturing & Infra Dividend Payout,112361,3.11,,5000,Sector - Infrastructure,,Open,0,139
+BOIAXA,BOI AXA Manufacturing & Infra Quarterly Dividend Payout,112360,3.11,,5000,Sector - Infrastructure,,Open,0,139
+BOIAXA,BOI AXA Liquid Fund Regular Daily Dividend Reinvestment,111971,0.20,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Treasury Advantage Retail Daily Dividend Reinvestment,111970,0.64,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Tax Advantage Eco Dividend Payout,111711,2.56,,500,ELSS (Tax Savings),,Limited,0,102
+BOIAXA,BOI AXA Liquid Fund Regular Weekly Dividend Reinvestment,109255,0.20,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Treasury Advantage Retail Weekly Dividend Reinvestment,109264,0.64,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Treasury Advantage Retail Growth,109269,0.64,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Liquid Fund Regular Growth,109254,0.20,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Equity Fund Eco Bonus,110601,2.56,,5000,Large-Cap,,Limited,0,174
+BOIAXA,BOI AXA Equity Fund Eco Dividend Payout,110608,2.56,,5000,Large-Cap,,Limited,0,174
+BOIAXA,BOI AXA Equity Fund Eco Growth,110599,2.56,,5000,Large-Cap,,Limited,0,174
+BOIAXA,BOI AXA Equity Fund Eco Quarterly Dividend Payout,110604,2.56,,5000,Large-Cap,,Limited,0,174
+BOIAXA,BOI AXA Equity Fund Regular Bonus,110606,3.29,,5000,Large-Cap,,Limited,0,174
+BOIAXA,BOI AXA Equity Fund Regular Dividend Payout,110607,3.29,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Equity Fund Regular Growth,110603,3.29,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Equity Fund Regular Quarterly Dividend Payout,110598,3.29,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Equity Fund Direct Plan-Regular Dividend Payout,119346,1.97,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Equity Fund Direct Plan-Growth,119350,1.97,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Equity Fund Direct Plan- Quarterly Dividend Payout,119349,1.97,,5000,Large-Cap,,Open,0,174
+BOIAXA,BOI AXA Manufacturing & Infra-Direct Plan-Growth,119364,1.65,,5000,Sector - Infrastructure,,Open,0,139
+BOIAXA,BOI AXA Liquid Fund- Direct Plan- Daily Dividend Reinvestment,119368,0.09,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Liquid Fund- Direct Plan- Growth,119369,0.09,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Short Term Income Fund-Direct Plan- Growth,119382,0.45,,5000,Short-Term Bond,,Open,0,800
+BOIAXA,BOI AXA Tax Advantage Fund-Direct Plan-Dividend Payout,119352,1.82,,500,ELSS (Tax Savings),,Open,0,102
+BOIAXA,BOI AXA Tax Advantage Fund-Direct Plan- Growth,119351,1.82,,500,ELSS (Tax Savings),,Open,0,102
+BOIAXA,BOI AXA Treasury Advnatage Fund- Direct Plan- Daily Dividend Reinvestment,119380,0.37,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Treasury Advantage Fund- Direct Plan- Growth,119379,0.37,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Regular Return Direct Monthly Dividend Payout,119394,1.87,,5000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Short Term Income Fund-Direct Plan- Monthly Dividend Payout,119383,0.45,,5000,Short-Term Bond,,Open,0,800
+BOIAXA,BOI AXA Manufacturing & Infra-Direct Plan-Regular Dividend Payout,119363,1.65,,5000,Sector - Infrastructure,,Open,0,139
+BOIAXA,BOI AXA Liquid Direct Weekly Dividend Reinvestment,119370,0.09,,5000,Liquid,,Open,0,1411
+BOIAXA,BOI AXA Regular Return Direct Growth,119393,1.87,,5000,Conservative Allocation,,Open,0,795
+BOIAXA,BOI AXA Treasury Advantage Fund- Direct Plan- Weekly Dividend Reinvestment,119381,0.37,,5000,Ultrashort Bond,,Open,0,554
+BOIAXA,BOI AXA Equity Debt Rebalancer Direct Dividend Payout,127852,2.14,,5000,Hybrid Allocation,,Open,0,539
+BOIAXA,BOI AXA Equity Debt Rebalancer Direct Growth,127850,2.14,,5000,Hybrid Allocation,,Open,0,539
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 7 Regular Growth,139716,2.08,,5000,Conservative Allocation,,Open,0,3
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 7 Regular Dividend,139713,2.08,,5000,Conservative Allocation,,Open,0,3
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 7 Direct Growth,139714,1.03,,5000,Conservative Allocation,,Open,0,3
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 7 Direct Dividend,139715,1.03,,5000,Conservative Allocation,,Open,0,3
+CANARA,Canara Robeco Treasury Advantage Fund- Regular Plan Dividend Payout option,140530,0.97,,500,Ultrashort Bond,,Open,0,314
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 4 Regular Growth,133880,2.14,,5000,Conservative Allocation,,Open,0,7
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 4 Regular Dividend,133881,2.14,,5000,Conservative Allocation,,Open,0,7
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 4 Direct Growth,133879,1.72,,5000,Conservative Allocation,,Open,0,7
+CANARA,Canara Robeco India Opportunities Fund Series 2 Regular Growth,134041,2.82,,5000,Small/Mid-Cap,,Open,0,42
+CANARA,Canara Robeco India Opportunities Fund Series 2 Regular Dividend,134040,2.82,,5000,Small/Mid-Cap,,Open,0,42
+CANARA,Canara Robeco India Opportunities Fund Series 2 Direct Growth,134039,2.57,,5000,Small/Mid-Cap,,Open,0,42
+CANARA,Canara Robeco India Opportunities Fund Series 2 Direct Dividend,134038,2.57,,5000,Small/Mid-Cap,,Open,0,42
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 5 Regular Growth,134159,2.25,,5000,Conservative Allocation,,Open,0,18
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 5 Regular Dividend,134158,2.25,,5000,Conservative Allocation,,Open,0,18
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 5 Direct Growth,134156,2.13,,5000,Conservative Allocation,,Open,0,18
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 5 Direct Dividend,134157,2.13,,5000,Conservative Allocation,,Open,0,18
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 6 Regular Growth,135675,2.08,,5000,Conservative Allocation,,Open,0,6
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 6 Regular Dividend,135676,2.08,,5000,Conservative Allocation,,Open,0,6
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 6 Direct Growth,135673,1.45,,5000,Conservative Allocation,,Open,0,6
+CANARA,Canara Robeco Capital Protection Oriented Fund Series 6 Direct Dividend,135674,1.45,,5000,Conservative Allocation,,Open,0,6
+CANARA,Canara Robeco Balance Direct Plan Monthly Dividend Reinvestment,118271,1.62,,5000,Moderate Allocation,,Open,0,361
+CANARA,Canara Robeco Balanced Dividend Reinvestment Regular Monthly Dividend Reinvestment,106167,2.76,,5000,Moderate Allocation,,Open,0,361
+CANARA,Canara Robeco Dynamic Bond Fund Direct Plan Dividend Reinvestment Option,118283,1.12,,5000,Dynamic Bond,,Open,0,3098
+CANARA,Canara Robeco Dynamic Bond Fund Regular Plan Dividend Reinvestment,111963,1.75,,5000,Dynamic Bond,,Open,0,3098
+CANARA,Canara Robeco Emerging Equities-Direct Plan-Dividend Reinvestment Option,118277,1.32,,5000,Small/Mid-Cap,,Open,0,83
+CANARA,Canara Robeco Emerging Equities Dividend Reinvestment,102921,2.53,,5000,Small/Mid-Cap,,Open,0,83
+CANARA,Canara Robeco Equity Diversified-Direct Plan-Dividend Reinvestment Option,118276,2.01,,5000,Flexicap,,Open,0,88
+CANARA,Canara Robeco Equity Diversified Dividend Reinvestment,101923,2.67,,5000,Flexicap,,Open,0,88
+CANARA,Canara Robeco Equity Taxsaver Direct Plan Dividend Reinvestment Option,118286,1.97,,500,ELSS (Tax Savings),,Open,0,59
+CANARA,Canara Robeco Equity Taxsaver Regular Dividend Reinvestment,100593,2.64,,500,ELSS (Tax Savings),,Open,0,59
+CANARA,Canara Robeco F.O.R.C.E Fund Direct Plan Dividend Reinvestment,118274,2.09,,5000,Equity - Other,,Open,0,62
+CANARA,Canara Robeco F.O.R.C.E Fund Regular Plan Dividend Reinvestment,112153,3.00,,5000,Equity - Other,,Open,0,62
+CANARA,Canara Robeco Gilt PGS Direct Plan Dividend Reinvestment Option,118298,0.66,,5000,Intermediate Government Bond,,Open,0,3047
+CANARA,Canara Robeco Gilt PGS Dividend Reinvestment,100596,1.24,,5000,Intermediate Government Bond,,Open,0,3047
+CANARA,Canara Robeco Gold Savings Fund Direct Plan Dividend Reinvestment Option,118300,0,,5000,Sector - Precious Metals,,Open,0,0
+CANARA,Canara Robeco Gold Savings Fund Dividend Reinvestment,117540,0,,5000,Sector - Precious Metals,,Open,0,0
+CANARA,Canara Robeco Income- Direct Plan Quarterly Dividend Reinvestment Option,118281,1.17,,5000,Dynamic Bond,,Open,0,1736
+CANARA,Canara Robeco Income Quarterly Dividend Reinvestment,101587,1.90,,5000,Dynamic Bond,,Open,0,1736
+CANARA,Canara Robeco Indigo Fund Direct Plan Quarterly Dividend Reinvestment,118303,1.97,,5000,Hybrid Allocation,,Open,0,80
+CANARA,Canara Robeco Indigo Quarterly Dividend Reinvestment,113100,2.64,,5000,Hybrid Allocation,,Open,0,80
+CANARA,Canara Robeco Infrastructure-Direct Plan Dividend Reinvestment,118268,2.15,,5000,Sector - Infrastructure,,Open,0,32
+CANARA,Canara Robeco Infrastructure Dividend Reinvestment,103389,2.97,,5000,Sector - Infrastructure,,Open,0,32
+CANARA,Canara Robeco Large Cap Plus Fund Direct Plan Dividend Reinvestment,118270,1.93,,5000,Large-Cap,,Open,0,90
+CANARA,Canara Robeco Large Cap+ Dividend Reinvestment,113222,2.99,,5000,Large-Cap,,Open,0,90
+CANARA,Canara Robeco Liquid Direct Plan Monthly Dividend Reinvestment,118306,0.09,,5000,Liquid,,Open,0,1312
+CANARA,Canara Robeco Liquid- Direct Plan-Weekly Dividend Reinvestment,118308,0.09,,5000,Liquid,,Open,0,1312
+CANARA,Canara Robeco Liquid Regular Monthly Dividend Reinvestment,109351,0.12,,5000,Liquid,,Open,0,1312
+CANARA,Canara Robeco Liquid Regular Plan Weekly Dividend Reinvestment,109350,0.12,,5000,Liquid,,Open,0,1312
+CANARA,Canara Robeco Medium Term Opportunities Fund Direct Dividend Reinvestment,126686,0.59,,5000,Short-Term Bond,,Open,0,392
+CANARA,Canara Robeco Medium Term Opportunities Fund Regular Dividend Reinvestment,126688,1.25,,5000,Short-Term Bond,,Open,0,392
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AG Direct Growth,140994,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AG Regular Growth,140992,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AE Regular Growth,140951,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AE Regular Dividend,140952,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AE Regular Annual Dividend,140947,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AE Direct Growth,140950,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AE Direct Annual Dividend,140949,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AF Regular Growth,140941,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AF Regular Quarterly Dividend,140939,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AF Regular Annual Dividend,140940,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AF Direct Growth,140936,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AF Direct Annual Dividend,140938,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Regular Growth,140821,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Regular Dividend,140822,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Regular Quarterly Dividend,140823,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Regular Annual Dividend,140828,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Direct Growth,140824,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Direct Dividend,140825,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Dual Advantage Fund Series 1 Direct Quarterly Dividend,140826,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Regular Growth,140671,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Regular Dividend,140678,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Regular Quarterly Dividend,140673,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Regular Annual Dividend,140674,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Direct Growth,140672,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Direct Dividend,140676,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Fixed Duration Fund Series AC Direct Annual Dividend,140675,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+DHFLPRAMERICA,DHFL Pramerica Medium Term Income Fund Direct Plan Annual Dividend Payout,138696,0.33,,5000,Intermediate Bond,,Open,0,1957
+DHFLPRAMERICA,DHFL Pramerica Medium Term Income Fund Regular Plan Quarterly Dividend Payout,138695,1.06,,5000,Intermediate Bond,,Open,0,1957
+DHFLPRAMERICA,DHFL Pramerica Large Cap Fund Dividend Payout,138307,3.09,,5000,Large-Cap,,Open,0,144
+DHFLPRAMERICA,DHFL Pramerica Large Cap Fund Growth,138308,3.09,,5000,Large-Cap,,Open,0,144
+DHFLPRAMERICA,DHFL Pramerica Ultra Short Term Fund Regular Plan Growth,138337,0.55,,5000,Ultrashort Bond,,Limited,0,1758
+DHFLPRAMERICA,DHFL Pramerica Ultra Short Term Fund Regular Plan Monthly Dividend Payout,138340,0.55,,5000,Ultrashort Bond,,Limited,0,1758
+DHFLPRAMERICA,DHFL Pramerica Ultra Short Term Fund Regular Plan Weekly Dividend Payout,138339,0.55,,5000,Ultrashort Bond,,Limited,0,1758
+DHFLPRAMERICA,DHFL Pramerica Insta Cash Plus Fund Dividend Reinvestment Daily Dividend Reinvestment,138280,2.44,,5000,Liquid,,Limited,0,865
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 45 38 Month Regular Dividend,139328,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 45 38 Month Regular Growth,139327,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 45 38 Month Direct Dividend,139330,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 45 38 Month Direct Growth,139329,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund - Regular Plan - Growth,136563,1.89,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Regular Plan Dividend Payout,136564,1.89,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Regular Plan Monthly Dividend Payout,136565,1.89,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Regular Plan Quarterly Dividend Payout,136566,1.89,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund - Direct Plan - Growth,136567,1.40,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Direct Plan Dividend Payout,136568,1.40,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Direct Plan Monthly Dividend Payout,136569,1.40,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP BlackRock Equity Savings Fund Direct Plan Quarterly Dividend Payout,136570,1.40,,1000,Equity - Other,,Open,0,43
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 44 39 Month Regular Dividend,139230,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 44 39 Month Regular Growth,139229,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 44 39 Month Direct Dividend,139232,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 44 39 Month Direct Growth,139231,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Direct Dividend,136265,0.57,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Direct Growth,136264,0.57,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Regular Dividend,136267,0.92,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Regular Growth,136262,0.92,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Direct Qtrly Div,136266,0.57,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 195 36 Month Regular Qtrly Div,136263,0.92,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Regular Growth,135970,1.00,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Regular Dividend,135966,1.00,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Regular Qtrly Div,135971,1.00,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Direct Growth,135967,0.65,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Direct Dividend,135968,0.65,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 192 36 Month Direct Qtrly Div,135969,0.65,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 46 36 Month Regular Dividend,139466,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 46 36 Month Regular Growth,139467,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 46 36 Month Direct Growth,139468,0,,5000,Conservative Allocation,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 196 37 Month Regular Growth,139512,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 196 37 Month Regular Dividend,139507,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 196 37 Month Regular Qtrly Div,139510,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP BlackRock Fixed Maturity Plan Series 196 37 Month Direct Growth,139511,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 49 42 Month Regular Dividend,140061,0,,5000,Conservative Allocation,,Limited,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 49 42 Month Regular Growth,140062,0,,5000,Conservative Allocation,,Limited,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 49 42 Month Direct Growth,140063,0,,5000,Conservative Allocation,,Limited,0,0
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 36 36 Month Regular Dividend,133918,2.00,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 36 36 Month Regular Growth,133917,2.00,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 36 36 Month Direct Dividend,133915,1.50,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 36 36 Month Direct Growth,133916,1.50,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 39 36 Month Regular Dividend,135338,2.25,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 39 36 Month Regular Growth,135337,2.25,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 39 36 Month Direct Dividend,135339,1.75,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP Blackrock Dual Advantage Fund Series 39 36 Month Direct Growth,135340,1.75,,5000,Conservative Allocation,,Open,0,4
+DSPBLACKROCK,DSP BlackRock Balanced Fund Direct Plan Dividend Reinvestment,119020,1.36,,1000,Moderate Allocation,,Open,0,111
+DSPBLACKROCK,DSP BlackRock Balanced Fund Direct Plan Quarterly Dividend Reinvestment,131086,1.36,,1000,Moderate Allocation,,Limited,0,111
+DSPBLACKROCK,DSP BlackRock Balanced Fund Dividend Reinvestment,100082,2.51,,1000,Moderate Allocation,,Open,0,111
+DSPBLACKROCK,DSP BlackRock Balanced Fund Regular Plan Quarterly Dividend Reinvestment,131087,2.51,,1000,Moderate Allocation,,Limited,0,111
+EDELWEISS,Edelweiss Fixed Maturity Plan Series 41 Direct Dividend,141057,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+EDELWEISS,Edelweiss Fixed Maturity Plan Series 41 Direct Growth,141056,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+EDELWEISS,Edelweiss Fixed Maturity Plan Series 41 Regular Dividend,141058,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+EDELWEISS,Edelweiss Fixed Maturity Plan Series 41 Regular Growth,141059,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+EDELWEISS,Edelweiss Arbitrage Fund - Regular Plan - Monthly Dividend Payout Option,141605,0,,5000,Arbitrage Fund,,Open,0,240
+EDELWEISS,Edelweiss Arbitrage Fund - Direct Plan - Monthly Dividend Reinvestment Option,141606,0,,5000,Arbitrage Fund,,Open,0,240
+EDELWEISS,Edelweiss Arbitrage Fund - Regular Plan - Monthly Dividend Reinvestment Option,141605,0,,5000,Arbitrage Fund,,Open,0,240
+EDELWEISS,Edelweiss Arbitrage Fund - Direct Plan - Monthly Dividend Payout Option,141606,0,,5000,Arbitrage Fund,,Open,0,240
+EDELWEISS,Edelweiss Liquid Fund - Regular Plan - Fortnightly Dividend Reinvestment Option,140184,0,,5000,Liquid,,Open,0,1105
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Regular Plan - Monthly Dividend Sweep Option,141766,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Direct Plan - Monthly Dividend Payout Option,141767,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Direct Plan - Monthly Dividend Payout Option,141767,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Direct Plan - Monthly Dividend Sweep Option,141767,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Regular Plan - Monthly Dividend Payout Option,141766,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund - Regular Plan - Monthly Dividend Reinvestment Option,141766,0,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Prudent Advantage A Growth,112108,2.79,,5000,Flexicap,,Open,0,161
+EDELWEISS,Edelweiss Prudent Advantage B Dividend Payout,112013,2.28,,100000,Flexicap,,Limited,0,161
+EDELWEISS,Edelweiss ELSS Growth,111638,2.92,,500,ELSS (Tax Savings),,Open,0,258
+EDELWEISS,Edelweiss Prudent Advantage B Growth,112012,2.28,,5000,Flexicap,,Limited,0,161
+EDELWEISS,Edelweiss Large Cap Advntg A Growth,111940,2.91,,5000,Flexicap,,Open,0,205
+EDELWEISS,Edelweiss Large Cap Advantage Fund A Dividend Payout,111936,2.91,,5000,Flexicap,,Open,0,205
+EDELWEISS,Edelweiss Large Cap Advantage Fund B Dividend Payout,111938,2.91,,100000,Flexicap,,Limited,0,205
+EDELWEISS,Edelweiss Large Cap Advntg B Growth,111935,2.91,,100000,Flexicap,,Limited,0,205
+EDELWEISS,Edelweiss Large Cap Advantage Fund C Dividend Payout,111939,2.91,,0,Flexicap,,Limited,0,205
+EDELWEISS,Edelweiss Large Cap Advntg C Growth,111937,2.91,,0,Flexicap,,Limited,0,205
+EDELWEISS,Edelweiss Ultra Short Term Fund Retail Growth,140201,0.29,,5000,Ultrashort Bond,,Limited,0,589
+EDELWEISS,Edelweiss Ultra Short Term Fund Retail Monthly Dividend Payout,140204,0.29,,5000,Ultrashort Bond,,Limited,0,589
+EDELWEISS,Edelweiss Ultra Short Term Fund Retail Daily Dividend Reinvestment,140200,0.29,,5000,Ultrashort Bond,,Limited,0,589
+EDELWEISS,Edelweiss Liquid Retail Weekly Dividend Payout,140178,0.06,,5000,Liquid,,Limited,0,1105
+EDELWEISS,Edelweiss Ultra Short Term Fund Retail Weekly Dividend Payout,140202,0.29,,5000,Ultrashort Bond,,Limited,0,589
+EDELWEISS,Edelweiss Liquid Retail Daily Dividend Reinvestment,140177,0.06,,5000,Liquid,,Limited,0,1105
+EDELWEISS,Edelweiss Liquid Retail Growth,140176,0.06,,5000,Liquid,,Limited,0,1105
+EDELWEISS,Edelweiss ELSS Dividend Payout,111639,2.92,,500,ELSS (Tax Savings),,Open,0,258
+EDELWEISS,Edelweiss Tax Advantage Growth,140238,2.70,,500,ELSS (Tax Savings),,Limited,0,65
+EDELWEISS,Edelweiss Tax Advantage Dividend Payout,140239,2.70,,500,ELSS (Tax Savings),,Limited,0,65
+EDELWEISS,Edelweiss Ultra Short Term FundSuper Inst Monthly Dividend Payout,140206,0.29,,10000,Ultrashort Bond,,Open,0,589
+EDELWEISS,Edelweiss Short Term Fund Growth,140244,0.71,,5000,Short-Term Bond,,Open,0,330
+EDELWEISS,Edelweiss Short Term Fund Weekly Dividend Payout,140245,0.71,,5000,Short-Term Bond,,Open,0,330
+EDELWEISS,Edelweiss Short Term Fund Fortnightly Dividend Payout,140246,0.71,,5000,Short-Term Bond,,Open,0,330
+EDELWEISS,Edelweiss Short Term Fund Monthly Dividend Payout,140247,0.71,,5000,Short-Term Bond,,Open,0,330
+EDELWEISS,Edelweiss Dynmc Equity Advntg Growth,112117,2.67,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss JF Greater China Equity Growth,140242,0.75,,10000,Global - Other,,Open,0,0
+EDELWEISS,Edelweiss Dynamic Equity Advantage Fund Dividend Payout,112118,2.67,,5000,Moderate Allocation,,Open,0,245
+EDELWEISS,Edelweiss Prudent Advantage A Dividend Payout,112109,2.79,,5000,Flexicap,,Open,0,161
+EDELWEISS,Edelweiss ASEAN Equity Off Shore Fund - Regular Plan - Growth,140255,1.55,,5000,Global - Other,,Open,0,0
+EDELWEISS,Edelweiss Short Term Fund Dividend Payout,140248,0.71,,5000,Short-Term Bond,,Open,0,330
+ESCORTS,Escorts Balanced Fund Dividend Reinvestment Option Direct Plan,120818,0,,1000,Hybrid Allocation,,Open,0,165
+ESCORTS,Escorts Balanced Fund Dividend Reinvestment,101069,2.25,,1000,Hybrid Allocation,,Open,0,165
+ESCORTS,Escorts Gilt Plan Dividend Reinvestment Option Direct Plan,120820,0,,1000,Short-Term Government Bond,,Open,0,40
+ESCORTS,Escorts Gilt Plan Dividend Reinvestment,101071,1.50,,1000,Short-Term Government Bond,,Open,0,40
+ESCORTS,Escorts Growth Plan Dividend Reinvestment Option Direct Plan,120822,0,,1000,Flexicap,,Open,0,380
+ESCORTS,Escorts Growth Plan Dividend Reinvestment,100630,2.50,,1000,Flexicap,,Open,0,380
+ESCORTS,Escorts High Yield Equity Plan Dividend Reinvestment Option Direct Plan,120825,1.90,,1000,Flexicap,,Open,0,107
+ESCORTS,Escorts High Yield Equity Plan Dividend Reinvestment,104514,2.50,,1000,Flexicap,,Open,0,107
+ESCORTS,Escorts Income Bond Dividend Reinvestment,100176,2.25,,1000,Conservative Allocation,,Open,0,86
+ESCORTS,Escorts Income Plan Dividend Reinvestment Option Direct Plan,120829,1.75,,1000,Corporate Credit,,Open,0,69
+ESCORTS,Escorts Income Plan Dividend Reinvestment,100171,2.25,,1000,Corporate Credit,,Open,0,69
+ESCORTS,Escorts Infrastructure Fund Dividend Reinvestment Option Direct Plan,120832,0,,5000,Sector - Infrastructure,,Open,0,182
+ESCORTS,Escorts Infrastructure Fund Dividend Reinvestment,106169,2.50,,5000,Sector - Infrastructure,,Open,0,182
+ESCORTS,Escorts Leading Sectors Fund Dividend Reinvestment Option Direct Plan,120835,1.90,,1000,Flexicap,,Open,0,237
+ESCORTS,Escorts Leading Sectors Fund Dividend Reinvestment,109274,2.50,,1000,Flexicap,,Open,0,237
+ESCORTS,Escorts Liquid Plan Monthly Dividend Reinvestment Option Direct Plan,120838,0,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Liquid Plan Weekly Dividend Reinvestment Option Direct Plan,120839,0,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Liquid Plan Monthly Dividend Reinvestment,103228,0.69,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Opportunities Fund Dividend Reinvestment Option Direct Plan,120840,0,,1000,Conservative Allocation,,Open,0,166
+ESCORTS,Escorts Opportunities Fund Dividend Reinvestment,101066,2.50,,1000,Conservative Allocation,,Open,0,166
+ESCORTS,Escorts Power and Energy Fund Dividend Reinvestment Option Direct Plan,120842,1.90,,1000,Sector - Energy,,Open,0,56
+ESCORTS,Escorts Power and Energy Fund Dividend Reinvestment,109831,2.50,,1000,Sector - Energy,,Open,0,56
+ESCORTS,Escorts Short Term Debt Fund Dividend Reinvestment Option Direct Plan,120844,0.50,,1000,Ultrashort Bond,,Open,0,0
+ESCORTS,Escorts Short Term Debt Dividend Reinvestment,103465,0.75,,1000,Ultrashort Bond,,Open,0,0
+ESCORTS,Escorts Tax Plan Dividend Reinvestment,100174,2.50,,500,ELSS (Tax Savings),,Open,0,99
+ESCORTS,Escorts Leading Sectors Fund Growth Option Direct Plan,120834,1.90,,1000,Flexicap,,Open,0,237
+ESCORTS,Escorts Balanced Fund Dividend Payout Option Direct Plan,120818,0,,1000,Hybrid Allocation,,Open,0,165
+ESCORTS,Escorts Balanced Fund Growth Option Direct Plan,120819,0,,1000,Hybrid Allocation,,Open,0,165
+ESCORTS,Escorts Gilt Plan Dividend Payout Option Direct Plan,120820,0,,1000,Short-Term Government Bond,,Open,0,40
+ESCORTS,Escorts Gilt Plan Growth Option Direct Plan,120821,0,,1000,Short-Term Government Bond,,Open,0,40
+ESCORTS,Escorts Growth Plan Dividend Payout Option Direct Plan,120822,0,,1000,Flexicap,,Open,0,380
+ESCORTS,Escorts Growth Plan Growth Option Direct Plan,120823,2.00,,1000,Flexicap,,Open,0,380
+ESCORTS,Escorts High Yield Equity Plan Bonus Option Direct Plan,120824,0,,1000,Flexicap,,Limited,0,107
+ESCORTS,Escorts High Yield Equity Plan Dividend Payout Option Direct Plan,120825,1.90,,1000,Flexicap,,Open,0,107
+ESCORTS,Escorts High Yield Equity Plan Growth Option Direct Plan,120826,1.90,,1000,Flexicap,,Open,0,107
+ESCORTS,Escorts Income Bond Dividend Reinvestment Option Direct Plan,120827,1.75,,1000,Conservative Allocation,,Open,0,86
+ESCORTS,Escorts Income Bond Growth Option Direct Plan,120828,1.75,,1000,Conservative Allocation,,Open,0,86
+ESCORTS,Escorts Income Plan Bonus Option Direct Plan,120831,0,,1000,Corporate Credit,,Limited,0,69
+ESCORTS,Escorts Income Plan Dividend Payout Option Direct Plan,120829,1.75,,1000,Corporate Credit,,Open,0,69
+ESCORTS,Escorts Income Plan Growth Option Direct Plan,120830,1.75,,1000,Corporate Credit,,Open,0,69
+ESCORTS,Escorts Infrastructure Fund Dividend Payout Option Direct Plan,120832,0,,5000,Sector - Infrastructure,,Open,0,182
+ESCORTS,Escorts Infrastructure Fund Growth Option Direct Plan,120833,1.90,,5000,Sector - Infrastructure,,Open,0,182
+ESCORTS,Escorts Leading Sectors Fund Dividend Payout Option Direct Plan,120835,1.90,,1000,Flexicap,,Open,0,237
+ESCORTS,Escorts Liquid Plan Daily Dividend Reinvestment Option Direct Plan,120836,0.50,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Liquid Plan Growth Option Direct Plan,120837,0.50,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Liquid Plan Monthly Dividend Payout Option Direct Plan,120838,0,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Liquid Plan Weekly Dividend Payout Option Direct Plan,120839,0,,1000,Liquid,,Open,0,4
+ESCORTS,Escorts Opportunities Fund Dividend Payout Option Direct Plan,120840,0,,1000,Conservative Allocation,,Open,0,166
+ESCORTS,Escorts Opportunities Fund Growth Option Direct Plan,120841,2.00,,1000,Conservative Allocation,,Open,0,166
+ESCORTS,Escorts Power and Energy Fund Dividend Payout Option Direct Plan,120842,1.90,,1000,Sector - Energy,,Open,0,56
+FRANKLINTEMPLETON,Franklin India Bluechip Fund Dividend Payout,100470,2.22,,5000,Large-Cap,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Bluechip Fund Growth,100471,2.22,,5000,Large-Cap,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Flexi Cap Fund Growth,102883,2.30,,5000,Flexicap,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Flexi Cap Fund Dividend Payout,102884,2.30,,5000,Flexicap,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Index Fund NSE Nifty Plan Dividend Payout,100484,1.05,,5000,Large-Cap,,Open,0,19
+FRANKLINTEMPLETON,Franklin India Index Fund NSE Nifty Plan Growth,105067,1.05,,5000,Large-Cap,,Open,0,19
+FRANKLINTEMPLETON,Franklin India Opportunities Fund Dividend Payout,100524,2.82,,5000,Flexicap,,Open,0,20
+FRANKLINTEMPLETON,Franklin India Opportunities Fund Growth,103151,2.82,,5000,Flexicap,,Open,0,20
+FRANKLINTEMPLETON,Franklin India Prima Fund Dividend Payout,100472,2.30,,5000,Small/Mid-Cap,,Open,0,24
+FRANKLINTEMPLETON,Franklin India Prima Fund Growth,100473,2.30,,5000,Small/Mid-Cap,,Open,0,24
+FRANKLINTEMPLETON,Franklin India Prima Plus Fund Dividend Payout,100519,2.29,,5000,Flexicap,,Open,0,12
+FRANKLINTEMPLETON,Franklin India Prima Plus Fund Growth,100520,2.29,,5000,Flexicap,,Open,0,12
+FRANKLINTEMPLETON,Franklin India Smaller Companies Fund Dividend Payout,103361,2.40,,5000,Small/Mid-Cap,,Open,0,14
+FRANKLINTEMPLETON,Franklin India Smaller Companies Fund Growth,103360,2.40,,5000,Small/Mid-Cap,,Open,0,14
+FRANKLINTEMPLETON,Franklin India Taxshield Fund Dividend Payout,100525,2.45,,500,ELSS (Tax Savings),,Open,0,19
+FRANKLINTEMPLETON,Franklin India Taxshield Fund Growth,100526,2.45,,500,ELSS (Tax Savings),,Open,0,19
+FRANKLINTEMPLETON,Franklin India Technology Fund Dividend Payout,100521,2.79,,5000,Sector - Technology,,Open,0,7
+FRANKLINTEMPLETON,Franklin India Technology Fund Growth,100522,2.79,,5000,Sector - Technology,,Open,0,7
+FRANKLINTEMPLETON,Franklin India Balanced Fund Dividend Payout,100549,2.72,,5000,Moderate Allocation,,Open,0,276
+FRANKLINTEMPLETON,Franklin India Balanced Fund Growth,100550,2.72,,5000,Moderate Allocation,,Open,0,276
+FRANKLINTEMPLETON,Franklin India Dynamic PE Ratio Fund Of Funds Dividend Payout,101657,0,,5000,Hybrid Allocation,,Open,0,57
+FRANKLINTEMPLETON,Franklin India Dynamic PE Ratio Fund Of Funds Growth,101656,0,,5000,Hybrid Allocation,,Open,0,57
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds The 20s Plan Dividend Payout,102108,0.75,,5000,Moderate Allocation,,Open,0,11
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds The 30s Plan Dividend Payout,102110,0.75,,5000,Hybrid Allocation,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds - The 20s Plan - Growth,102107,0.75,,5000,Moderate Allocation,,Open,0,11
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds The 40s Plan Dividend Payout,102111,0.50,,5000,Conservative Allocation,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds - The 30s Plan Growth,102109,0.75,,5000,Hybrid Allocation,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds The 50s Plus Floating Rate Plan Dividend Payout,102546,0.25,,5000,Conservative Allocation,,Open,0,10
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds - The 40s Plan Growth,102112,0.50,,5000,Conservative Allocation,,Open,0,13
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds - The 50s Plus Floating Rate Plan Growth,102547,0.25,,5000,Conservative Allocation,,Open,0,10
+FRANKLINTEMPLETON,Franklin India Life Stage Fund Of Funds The 50s Plus Plan Dividend Payout,102113,0.25,,5000,Conservative Allocation,,Open,0,15
+FRANKLINTEMPLETON,Franklin India Life Stage Fund of Funds - The 50s Plus Plan Growth,102114,0.25,,5000,Conservative Allocation,,Open,0,15
+FRANKLINTEMPLETON,Franklin India Monthly Income Plan Growth,100948,2.27,,10000,Conservative Allocation,,Open,0,606
+FRANKLINTEMPLETON,Franklin India Monthly Income Plan Monthly Dividend Payout,100949,2.27,,25000,Conservative Allocation,,Open,0,606
+FRANKLINTEMPLETON,Franklin India Monthly Income Plan Quarterly Dividend Payout,100950,2.27,,25000,Conservative Allocation,,Open,0,606
+FRANKLINTEMPLETON,Franklin India Short Term Income Plan Direct Plan Weekly Dividend Payout,118568,0.66,,5000,Corporate Credit,,Open,0,97
+FRANKLINTEMPLETON,Franklin India Ultra Short Bond Fund Direct Weekly Dividend Payout,118562,0.22,,10000,Ultrashort Bond,,Open,0,259
+FRANKLINTEMPLETON,Franklin India Savings Plus Fund Dividend Payout,101356,0.85,,5000,Ultrashort Bond,,Open,0,431
+FRANKLINTEMPLETON,Franklin India Savings Plus Fund - Growth,101357,0.85,,5000,Ultrashort Bond,,Open,0,431
+FRANKLINTEMPLETON,Franklin India Savings Plus Fund Institutional Weekly Dividend Payout,101359,0.83,,0,Ultrashort Bond,,Limited,0,431
+FRANKLINTEMPLETON,Franklin India Government Securities Fund Composite Plan Dividend Payout,100486,1.77,,10000,Intermediate Government Bond,,Open,0,785
+FRANKLINTEMPLETON,Franklin India Government Securities Fund - Composite Plan Growth,100485,1.77,,10000,Intermediate Government Bond,,Open,0,785
+FRANKLINTEMPLETON,Franklin India Government Securities Fund Provident Fund Plan Growth,100490,1.77,,25000,Intermediate Government Bond,,Open,0,785
+FRANKLINTEMPLETON,Franklin India Government Securities Fund Provident Fund Plan Dividend Payout,100491,1.77,,25000,Intermediate Government Bond,,Open,0,785
+FRANKLINTEMPLETON,Templeton India Equity Income Fund Dividend Payout,103679,2.56,,5000,Flexicap,,Open,0,28
+FRANKLINTEMPLETON,Templeton India Equity Income Fund Growth,103678,2.56,,5000,Flexicap,,Open,0,28
+FRANKLINTEMPLETON,Templeton India Growth Fund Dividend Payout,100497,2.72,,5000,Flexicap,,Open,0,22
+FRANKLINTEMPLETON,Templeton India Growth Fund Growth,100496,2.72,,5000,Flexicap,,Open,0,22
+FRANKLINTEMPLETON,Franklin India Government Securities Fund Long Term Plan Quarterly Dividend Payout,100494,1.73,,25000,Intermediate Government Bond,,Open,0,800
+FRANKLINTEMPLETON,Franklin India Government Securities Fund Long Term Plan Growth,100493,1.73,,10000,Intermediate Government Bond,,Open,0,800
+HDFC,HDFC Arbitrage Fund-Direct Plan Dividend Reinvestment Quarterly Option,118930,0.26,,100000,Arbitrage Fund,,Limited,0,1657
+HDFC,HDFC Arbitrage Fund Retail Quarterly Dividend Reinvestment,106797,0.93,,5000,Arbitrage Fund,,Limited,0,1657
+HDFC,HDFC Arbitrage Fund Wholesale Plan Dividend Reinvestment Option Direct Plan,129053,0.26,,100000,Arbitrage Fund,,Open,0,1657
+HDFC,HDFC Arbitrage Fund Wholesale Plan Monthly Dividend Reinvestment Option Direct Plan,129054,0.26,,100000,Arbitrage Fund,,Open,0,1657
+HDFC,HDFC Arbitrage Fund Institutional Normal Dividend Reinvestment,106795,0.78,,100000,Arbitrage Fund,,Open,0,1657
+HDFC,HDFC Arbitrage Fund Wholesale Plan Monthly Dividend Reinvestment Option,129051,0.78,,100000,Arbitrage Fund,,Open,0,1657
+HDFC,HDFC Balanced Fund -Direct Plan Dividend Reinvestment Option,118932,1.06,,5000,Moderate Allocation,,Open,0,32
+HDFC,HDFC Balanced Fund Dividend Reinvestment,100121,2.10,,5000,Moderate Allocation,,Open,0,32
+HDFC,HDFC Banking & PSU Debt Fund Direct Plan Dividend Reinvestment Option,128626,0.23,,5000,Short-Term Bond,,Open,0,559
+HDFC,HDFC Banking & PSU Debt Fund Regular Plan Dividend Reinvestment Option,128627,0.32,,5000,Short-Term Bond,,Open,0,559
+HDFC,HDFC Capital Builder Fund -Direct Plan Dividend Reinvestment Option,118934,1.73,,5000,Flexicap,,Open,0,31
+HDFC,HDFC Capital Builder Fund Dividend Reinvestment,101765,2.63,,5000,Flexicap,,Open,0,31
+HDFC,HDFC Cash Management Fund Savings Direct Plan Weekly Dividend Reinvestment Option,119094,0.13,,5000,Liquid,,Open,0,644
+HDFC,HDFC Cash Management Fund Savings Weekly Dividend Reinvestment,101995,0.30,,5000,Liquid,,Open,0,644
+HDFC,HDFC Cash Management Fund Treasury Advantage Plan Direct Plan Monthly Dividend Reinvestment Option,118943,0.55,,5000,Ultrashort Bond,,Open,0,277
+HDFC,HDFC Cash Management Fund Treasury Advantage Plan Retail Plan Monthly Dividend Reinvestment,105543,1.31,,5000,Ultrashort Bond,,Open,0,277
+HDFC,HDFC Cash Management Fund Treasury Advantage Plan Retail Plan Weekly Dividend Reinvestment,102453,1.31,,5000,Ultrashort Bond,,Open,0,277
+HDFC,HDFC Cash Management Fund Treasury Advantage Plan Wholesale Plan Monthly Dividend Reinvestment,105546,0.62,,0,Ultrashort Bond,,Limited,0,277
+HDFC,HDFC Core & Satellite Fund -Direct Plan Dividend Reinvestment Option,118949,1.98,,5000,Flexicap,,Open,0,59
+HDFC,HDFC Core & Satellite Fund Dividend Reinvestment,102761,2.84,,5000,Flexicap,,Open,0,59
+HDFC,HDFC Corporate Debt Opportunities Fund Direct Option Normal Dividend Reinvestment Option,133147,0.75,,5000,Corporate Credit,,Open,0,84
+HDFC,HDFC Corporate Debt Opportunities Fund Direct Plan Half Yearly Dividend Reinvestment Option,128050,0.75,,5000,Corporate Credit,,Open,0,84
+HDFC,HDFC Corporate Debt Opportunities Fund Half Yearly Dividend Reinvestment Option,128052,1.80,,5000,Corporate Credit,,Open,0,84
+HDFC,HDFC Corporate Debt Opportunities Fund Regular Option Normal Dividend Reinvestment Option,133148,1.80,,5000,Corporate Credit,,Open,0,84
+HDFC,HDFC Dynamic PE Ratio Fund of Funds- Plan A Direct Quarterly Dividend Reinvestment- Payout,130547,0.05,,5000,Hybrid Allocation,,Open,0,9
+HDFC,HDFC Dynamic PE Ratio Fund of Funds- Plan A Quarterly Dividend Reinvestment,130540,1.00,,5000,Hybrid Allocation,,Open,0,9
+HDFC,HDFC Equity Fund -Direct Plan Dividend Reinvestment Option,118954,1.38,,5000,Large-Cap,,Open,0,37
+HDFC,HDFC Equity Fund Dividend Reinvestment,101763,2.20,,5000,Large-Cap,,Open,0,37
+HDFC,HDFC Equity Savings Fund -Direct Plan Dividend Reinvestment Option,119129,1.74,,5000,Conservative Allocation,,Open,0,93
+HDFC,HDFC Equity Savings Fund Dividend Reinvestment,101586,2.41,,5000,Conservative Allocation,,Open,0,93
+HDFC,HDFC Floating Rate Income Fund Short Retail Plan Monthly Dividend Reinvestment,101484,0.56,,0,Ultrashort Bond,,Limited,0,610
+HDFC,HDFC Floating Rate Income Fund Short Retail Plan Weekly Dividend Reinvestment,101482,0.56,,0,Ultrashort Bond,,Limited,0,610
+HDFC,HDFC Floating Rate Income Fund Short Direct Plan Wholesale Monthly Dividend Reinvestment Option,118960,0.27,,0,Ultrashort Bond,,Open,0,610
+HDFC,HDFC Floating Rate Income Fund Short Wholesale Plan Monthly Dividend Reinvestment,106839,0.37,,0,Ultrashort Bond,,Open,0,610
+HDFC,HDFC Floating Rate Income Fund Short Wholesale Plan Weekly Dividend Reinvestment,106840,0.37,,0,Ultrashort Bond,,Open,0,610
+HDFC,HDFC Gilt Fund Long Term Plan -Direct Plan Dividend Reinvestment Option,119115,0.37,,5000,Long-Term Government Bond,,Open,0,152
+HDFC,HDFC Gilt Fund Long Term Plan Dividend Reinvestment,101084,0.82,,5000,Long-Term Government Bond,,Open,0,152
+HDFC,HDFC Gilt Fund Short Term Plan -Direct Plan Dividend Reinvestment Option,119113,0.11,,5000,Intermediate Government Bond,,Open,0,96
+HDFC,HDFC Gilt Fund Short Term Plan Dividend Reinvestment,101081,0.38,,5000,Intermediate Government Bond,,Open,0,96
+HDFC,HDFC Growth Fund -Direct Plan Dividend Reinvestment Option,118969,1.88,,5000,Large-Cap,,Open,0,29
+HDFC,HDFC Growth Fund Dividend Reinvestment,100120,2.53,,5000,Large-Cap,,Open,0,29
+HDFC,HDFC High Interest Fund Dynamic Plan Direct Plan Half Yearly Dividend Reinvestment Option,119072,1.08,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Direct Plan Normal Dividend Reinvestment Option,133369,1.08,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Direct Plan Quarterly Dividend Reinvestment Option,119073,1.08,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Direct Plan Yearly Dividend Reinvestment Option,119074,1.08,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Half Yearly Dividend Reinvestment,101874,1.75,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Quaterly Dividend Reinvestment,101873,1.75,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Regular Plan Normal Dividend Reinvestment Option,133370,1.75,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Dynamic Plan Annual Dividend Reinvestment,101875,1.75,,5000,Intermediate Bond,,Open,0,224
+HDFC,HDFC High Interest Fund Short Term -Direct Plan Dividend Reinvestment Option,119080,0.76,,5000,Short-Term Bond,,Open,0,479
+HSBC,HSBC Infrastructure Equity Fund Growth,103407,2.93,,10000,Sector - Infrastructure,,Open,0,22
+HSBC,HSBC Infrastructure Equity Fund Dividend Payout,103406,2.93,,10000,Sector - Infrastructure,,Open,0,22
+HSBC,HSBC Cash Fund Institutional Daily Dividend Reinvestment,118909,0.35,,10000,Liquid,,Limited,0,709
+HSBC,HSBC Cash Fund Institutional Growth,118910,0.35,,10000,Liquid,,Limited,0,709
+HSBC,HSBC Cash Fund Daily Dividend Reinvestment,118901,0.09,,10000,Liquid,,Open,0,709
+HSBC,HSBC Cash Fund Growth,118902,0.09,,10000,Liquid,,Open,0,709
+HSBC,HSBC Cash Fund Monthly Dividend Payout,118903,0.09,,10000,Liquid,,Open,0,709
+HSBC,HSBC Cash Fund Weekly Dividend Payout,118904,0.09,,10000,Liquid,,Open,0,709
+HSBC,HSBC Cash Fund Regular Dividend Payout,118906,1.00,,10000,Liquid,,Limited,0,709
+HSBC,HSBC Cash Fund Regular Growth,118907,1.00,,10000,Liquid,,Limited,0,709
+HSBC,HSBC Cash Fund Regular Weekly Dividend Reinvestment,118908,1.00,,10000,Liquid,,Limited,0,709
+HSBC,HSBC Equity Fund Dividend Payout,101593,2.66,,10000,Large-Cap,,Open,0,82
+HSBC,HSBC Equity Fund Growth,101594,2.66,,10000,Large-Cap,,Open,0,82
+HSBC,HSBC Income Fund Investment Plan Dividend Payout,101686,1.99,,10000,Intermediate Bond,,Open,0,296
+HSBC,HSBC Income Fund Investment Plan Growth,101685,1.99,,10000,Intermediate Bond,,Open,0,296
+HSBC,HSBC Income Fund Short Term Plan Growth,101599,1.29,,10000,Short-Term Bond,,Open,0,183
+HSBC,HSBC Income Fund Short Term Plan Dividend Payout,101600,1.29,,10000,Short-Term Bond,,Open,0,183
+HSBC,HSBC India Opportunities Fund Dividend Payout,102251,2.69,,10000,Flexicap,,Open,0,36
+HSBC,HSBC India Opportunities Fund Growth,102252,2.69,,10000,Flexicap,,Open,0,36
+HSBC,HSBC Midcap Equity Fund Dividend Payout,103007,2.75,,10000,Small/Mid-Cap,,Open,0,30
+HSBC,HSBC Midcap Equity Fund Growth,103006,2.75,,10000,Small/Mid-Cap,,Open,0,30
+HSBC,HSBC Monthly Income Plan - Regular - Monthly Dividend,102257,2.49,,25000,Conservative Allocation,,Open,0,192
+HSBC,HSBC Monthly Income Plan Monthly Dividend Payout,102260,2.52,,10000,Conservative Allocation,,Open,0,190
+HSBC,HSBC Monthly Income Plan Growth,102262,2.52,,10000,Conservative Allocation,,Open,0,190
+HSBC,HSBC Monthly Income Plan Quarterly Dividend Payout,102261,2.52,,10000,Conservative Allocation,,Open,0,190
+HSBC,HSBC Income Fund Short Term Plan Quarterly Dividend Reinvestment Direct,139767,0,,10000,Short-Term Bond,,Open,0,183
+HSBC,HSBC Fixed Term Series 129 Regular Growth,141467,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Fixed Term Series 129 Regular Dividend,141468,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Fixed Term Series 129 Direct Growth,141469,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Income Fund Short Term Plan Quarterly Dividend Payout Direct,139767,0,,10000,Short-Term Bond,,Open,0,183
+HSBC,HSBC Fixed Term Series 128 Regular Growth,141206,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Fixed Term Series 128 Regular Dividend,141205,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Fixed Term Series 128 Direct Growth,141204,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,0
+HSBC,HSBC Dynamic Fund Growth,106670,2.94,,10000,Large-Cap,,Open,0,66
+HSBC,HSBC Dynamic Fund Dividend Payout,106671,2.94,,10000,Large-Cap,,Open,0,66
+HSBC,HSBC Income Fund Short Term Plan Weekly Dividend Reinvestment,104429,1.29,,10000,Short-Term Bond,,Open,0,183
+HSBC,HSBC Income Fund Short Term Plan Institutional Weekly Dividend Reinvestment,104430,0.74,,10000,Short-Term Bond,,Limited,0,183
+HSBC,HSBC Ultra Short Term Bond Fund Daily Dividend Reinvestment,104351,1.03,,10000,Ultrashort Bond,,Open,0,227
+HSBC,HSBC Ultra Short Term Bond Fund Institutional Plus Daily Dividend Reinvestment,104349,0.30,,10000,Ultrashort Bond,,Limited,0,227
+HSBC,HSBC Ultra Short Term Bond Fund Weekly Dividend Reinvestment,104352,1.03,,10000,Ultrashort Bond,,Open,0,227
+HSBC,HSBC Ultra Short Term Bond Fund Monthly Dividend Payout,104348,1.03,,10000,Ultrashort Bond,,Open,0,227
+HSBC,HSBC Ultra ST Bond Fund Growth,104344,1.03,,10000,Ultrashort Bond,,Open,0,227
+HSBC,HSBC Ultra Short Term Bond Fund Regular Weekly Dividend Reinvestment,104343,1.35,,10000,Ultrashort Bond,,Limited,0,227
+HSBC,HSBC Ultra ST Bond Fund Regular Growth,104350,1.35,,10000,Ultrashort Bond,,Limited,0,227
+HSBC,HSBC Ultra Short Term Bond Fund Regular Daily Dividend Reinvestment,104342,1.35,,10000,Ultrashort Bond,,Limited,0,227
+HSBC,HSBC Tax Saver Equity Fund Growth,104707,2.85,,500,ELSS (Tax Savings),,Open,0,63
+HSBC,HSBC Tax Saver Equity Fund Dividend Payout,104706,2.85,,500,ELSS (Tax Savings),,Open,0,63
+HSBC,HSBC Emerging Markets Fund Growth,107988,1.87,,10000,Global - Other,,Open,0,2
+HSBC,HSBC Emerging Markets Fund Dividend Payout,107989,1.87,,10000,Global - Other,,Open,0,2
+HSBC,HSBC Flexi Debt Fund Regular Plan Monthly Dividend Payout,106741,1.97,,10000,Dynamic Bond,,Limited,0,316
+ICICI,ICICI Prudential Advisor Cautious Plan Direct Plan Dividend Reinvestment,120314,0,,5000,Hybrid Allocation,,Open,0,376
+ICICI,ICICI Prudential Advisor Cautious Plan Dividend Reinvestment,102140,0,,5000,Hybrid Allocation,,Open,0,376
+ICICI,ICICI Prudential Advisor Dynamic Accrual Plan Direct Plan Dividend Reinvestment,120703,0,,5000,Dynamic Bond,,Open,0,413
+ICICI,ICICI Prudential Advisor Dynamic Accrual Plan Dividend Reinvestment,102143,0,,5000,Dynamic Bond,,Open,0,413
+ICICI,ICICI Prudential Advisor Series Long Term Savings Plan Direct Plan Dividend Reinvestment,120243,0,,5000,Hybrid Allocation,,Open,0,199
+ICICI,ICICI Prudential Advisor Series Long Term Savings Plan Dividend Reinvestment,102134,0,,5000,Hybrid Allocation,,Open,0,199
+ICICI,ICICI Prudential Advisor Moderate Direct Plan Dividend Reinvestment,120680,0,,5000,Hybrid Allocation,,Open,0,240
+ICICI,ICICI Prudential Advisor Moderate Dividend Reinvestment,102138,0,,5000,Hybrid Allocation,,Open,0,240
+ICICI,ICICI Prudential Advisor Very Aggressive Plan Dividend Reinvestment,102136,0,,5000,Hybrid Allocation,,Limited,0,232
+ICICI,ICICI Prudential Balanced Advantage Fund Direct Plan Dividend Reinvestment,120376,0.96,,5000,Moderate Allocation,,Open,0,1503
+ICICI,ICICI Prudential Balanced Advantage Fund Direct Plan Monthly Dividend Reinvestment,122236,0.96,,5000,Moderate Allocation,,Open,0,1503
+ICICI,ICICI Prudential Balanced Advantage Fund Direct Plan Quarterly Dividend Reinvestment,131451,0.96,,5000,Moderate Allocation,,Limited,0,1503
+ICICI,ICICI Prudential Balanced Advantage Fund Dividend Reinvestment,104686,2.32,,5000,Moderate Allocation,,Open,0,1503
+ICICI,ICICI Prudential Balanced Advantage Fund Monthly Dividend Reinvestment,122168,2.32,,5000,Moderate Allocation,,Open,0,1503
+ICICI,ICICI Prudential Balanced Advantage Fund Quarterly Dividend Reinvestment,131450,2.32,,5000,Moderate Allocation,,Limited,0,1503
+ICICI,ICICI Prudential Balanced Fund Annual Dividend Reinvestment,136113,2.41,,5000,Moderate Allocation,,Open,0,1672
+ICICI,ICICI Prudential Balanced Fund Direct Plan Annual Dividend Reinvestment,136114,1.06,,5000,Moderate Allocation,,Open,0,1672
+ICICI,ICICI Prudential Balanced Fund Direct Plan Half Yearly Dividend Reinvestment,131453,1.06,,5000,Moderate Allocation,,Limited,0,1672
+ICICI,ICICI Prudential Balanced Fund Direct Plan Monthly Dividend Reinvestment,120252,1.06,,5000,Moderate Allocation,,Open,0,1672
+ICICI,ICICI Prudential Balanced Fund Half Yearly Dividend Reinvestment,131452,2.41,,5000,Moderate Allocation,,Limited,0,1672
+ICICI,ICICI Prudential Balanced Fund Monthly Dividend Reinvestment,100355,2.41,,5000,Moderate Allocation,,Open,0,1672
+ICICI,ICICI Prudential Banking and Financial Services Fund Direct Plan Dividend Reinvestment,120245,1.38,,5000,Sector - Financial Services,,Open,0,2201
+ICICI,ICICI Prudential Banking and Financial Services Fund Retail Dividend Reinvestment,109446,2.62,,5000,Sector - Financial Services,,Open,0,2201
+ICICI,ICICI Prudential Banking and PSU Debt Fund Direct Plan Daily Dividend Reinvestment,120257,0.54,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Direct Plan Half Yearly Dividend Reinvestment Option,131148,0.54,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Direct Plan Quarterly Dividend Reinvestment,120258,0.54,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Direct Plan Weekly Dividend Reinvestment,120255,0.54,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Daily Dividend Reinvestment,112343,0.78,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Half Yearly Dividend Reinvestment Option,131147,0.78,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Retail Plan Daily Dividend Reinvestment,113247,0.76,,5000,Short-Term Bond,,Limited,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Retail Plan Quarterly Dividend Reinvestment,116174,0.76,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Banking and PSU Debt Fund Weekly Dividend Reinvestment,112344,0.78,,5000,Short-Term Bond,,Open,0,869
+ICICI,ICICI Prudential Constant Maturity Gilt Direct Dividend Reinvestment,131056,0.32,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Direct Half Yearly Dividend Reinvestment,131055,0.32,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Direct Monthly Dividend Reinvestment,131053,0.32,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Direct Plan Quarterly Dividend Reinvestment,131054,0.32,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Dividend Reinvestment,131059,0.53,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Half Yearly Dividend Reinvestment,131058,0.53,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Monthly Dividend Reinvestment,131062,0.53,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Constant Maturity Gilt Quarterly Dividend Reinvestment,131057,0.53,,5000,Long-Term Government Bond,,Open,0,487
+ICICI,ICICI Prudential Corporate Bond Fund Annual Dividend Reinvestment,132981,1.68,,5000,Corporate Credit,,Open,0,646
+ICICI,ICICI Prudential Corporate Bond Fund B Half Yearly Dividend Reinvestment,117706,1.72,,5000,Corporate Credit,,Limited,0,646
+ICICI,ICICI Prudential Corporate Bond Fund B Quarterly Dividend Reinvestment,113138,1.72,,5000,Corporate Credit,,Limited,0,646
+ICICI,ICICI Prudential Corporate Bond Fund C Quarterly Dividend Reinvestment,113136,1.68,,5000,Corporate Credit,,Limited,0,646
+ICICI,ICICI Prudential Corporate Bond Fund Direct Plan Annual Dividend Reinvestment,132982,0.68,,5000,Corporate Credit,,Open,0,646
+ICICI,ICICI Prudential Corporate Bond Fund Direct Plan Half Yearly Dividend Reinvestment,120672,0.68,,5000,Corporate Credit,,Open,0,646
+ICICI,ICICI Prudential Corporate Bond Fund Direct Plan Quarterly Dividend Reinvestment,120671,0.68,,5000,Corporate Credit,,Open,0,646
+ICICI,ICICI Prudential Corporate Bond Fund Half Yearly Dividend Reinvestment,117330,1.68,,5000,Corporate Credit,,Limited,0,646
+ICICI,ICICI Prudential Corporate Bond Fund Quarterly Dividend Reinvestment,113137,1.68,,5000,Corporate Credit,,Open,0,646
+ICICI,ICICI Prudential Dividend Yield Equity Fund Direct Dividend Reinvestment,129309,2.28,,5000,Flexicap,,Open,0,1709
+IDBI,IDBI Small Cap Fund Direct Dividend Sweep,141476,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Regular Dividend Sweep,141477,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Regular Growth,141462,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Regular Dividend Payout,141477,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Direct Growth,141475,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Direct Dividend Payout,141476,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Direct Dividend Reinvestment,141476,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI Small Cap Fund Regular Dividend Reinvestment,141477,0,,5000,Small/Mid-Cap,,Open,0,0
+IDBI,IDBI India Top 100 Equity Fund Growth,117311,3.08,,5000,Large-Cap,,Open,0,101
+IDBI,IDBI India Top 100 Equity Fund Dividend Payout,117310,3.08,,5000,Large-Cap,,Open,0,101
+IDBI,IDBI Gold Fund Growth,117714,0.95,,5000,Sector - Precious Metals,,Open,0,0
+IDBI,IDBI Liquid Monthly Dividend Payout,113104,0.21,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Liquid Weekly Dividend Payout,113103,0.21,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Dynamic Bond Fund Growth,116583,1.98,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Dynamic Bond Fund Annual Dividend Payout,116582,1.98,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Nifty Index Dividend Payout,113062,1.66,,5000,Large-Cap,,Open,0,61
+IDBI,IDBI Dynamic Bond Fund Quarterly Dividend Payout,116810,1.98,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Gold ETF,115939,0.91,,0,Sector - Precious Metals,,Open,0,0
+IDBI,IDBI Ultra Short Term Growth,113251,1.15,,5000,Ultrashort Bond,,Open,0,1334
+IDBI,IDBI Ultra Short Term Daily Dividend Reinvestment,113252,1.15,,5000,Ultrashort Bond,,Open,0,1334
+IDBI,IDBI Ultra Short Term Weekly Dividend Payout,113253,1.15,,5000,Ultrashort Bond,,Open,0,1334
+IDBI,IDBI Ultra Short Term Monthly Dividend Payout,113254,1.15,,5000,Ultrashort Bond,,Open,0,1334
+IDBI,IDBI Nifty Junior Index Growth,113249,1.64,,5000,Large-Cap,,Open,0,69
+IDBI,IDBI Nifty Junior Index Dividend Payout,113250,1.64,,5000,Large-Cap,,Open,0,69
+IDBI,IDBI Monthly Income Plan Growth,114982,2.79,,5000,Conservative Allocation,,Open,0,251
+IDBI,IDBI Monthly Income Plan Monthly Dividend Payout,114630,2.79,,5000,Conservative Allocation,,Open,0,251
+IDBI,IDBI Monthly Income Plan Quarterly Dividend Payout,114983,2.79,,5000,Conservative Allocation,,Open,0,251
+IDBI,IDBI Short Term Bond Growth,115005,1.64,,5000,Short-Term Bond,,Open,0,151
+IDBI,IDBI Short Term Bond Weekly Dividend Payout,115000,1.64,,5000,Short-Term Bond,,Open,0,151
+IDBI,IDBI Short Term Bond Monthly Dividend Payout,114999,1.64,,5000,Short-Term Bond,,Open,0,151
+IDBI,IDBI Liquid Growth,113096,0.21,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Liquid Daily Dividend Reinvestment,113102,0.21,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Nifty Index Growth,113063,1.66,,5000,Large-Cap,,Open,0,61
+IDBI,IDBI Dynamic Bond Fund Direct Growth,116811,1.05,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Dynamic Bond Fund Direct Annual Dividend Payout,118428,1.05,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Dynamic Bond Fund Direct Quarterly Dividend Payout,118429,1.05,,5000,Dynamic Bond,,Open,0,604
+IDBI,IDBI Gilt Fund Direct Annual Dividend Payout,118447,1.13,,5000,Long-Term Government Bond,,Open,0,1169
+IDBI,IDBI Gilt Fund Direct Growth,118341,1.13,,5000,Long-Term Government Bond,,Open,0,1169
+IDBI,IDBI Gilt Fund Direct Quarterly Dividend Payout,118446,1.13,,5000,Long-Term Government Bond,,Open,0,1169
+IDBI,IDBI Gold Fund Direct Growth,118343,0.33,,5000,Sector - Precious Metals,,Open,0,0
+IDBI,IDBI India Top 100 Equity Fund Direct Dividend Payout,118448,1.93,,5000,Large-Cap,,Open,0,101
+IDBI,IDBI India Top 100 Equity Fund Direct Growth,118344,1.93,,5000,Large-Cap,,Open,0,101
+IDBI,IDBI Liquid Fund Direct Daily Dividend Reinvestment,118450,0.11,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Liquid Fund Direct Growth,118345,0.11,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Liquid Fund Direct Monthly Dividend Payout,118449,0.11,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Liquid Fund Direct Weekly Dividend Payout,118451,0.11,,5000,Liquid,,Open,0,1010
+IDBI,IDBI Monthly Income Plan Growth Option Direct,118452,1.95,,5000,Conservative Allocation,,Open,0,251
+IDBI,IDBI Monthly Income Plan Direct Monthly Dividend Payout,118453,1.95,,5000,Conservative Allocation,,Open,0,251
+IDBI,IDBI Nifty Index Fund Direct Dividend Payout,118455,0.44,,5000,Large-Cap,,Open,0,61
+IDBI,IDBI Monthly Income Plan Direct Quarterly Dividend Payout,118454,1.95,,5000,Conservative Allocation,,Open,0,251
+IDFC,IDFC All Seasons Bond Fund-Direct Plan-Fortnightly Dividend Reinvestment,118414,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund Direct Plan Periodic Dividend Reinvestment,131398,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund-Direct Plan-Quarterly Dividend Reinvestment,118413,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund Regular Plan Annual Dividend Reinvestment,108547,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund Regular Plan Fortnightly Dividend Reinvestment,115874,0,,5000,Short-Term Bond,,Limited,0,566
+IDFC,IDFC All Seasons Bond Fund Regular Plan Half Yearly Dividend Reinvestment,108546,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund Regular Plan Periodic Dividend Reinvestment,131399,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC All Seasons Bond Fund Regular Plan Quarterly Dividend Reinvestment,108544,0,,5000,Short-Term Bond,,Open,0,566
+IDFC,IDFC Arbitrage Fund-Direct Plan- Annual Dividend Reinvestment,133679,0.45,,100,Arbitrage Fund,,Open,0,2786
+IDFC,IDFC Arbitrage Fund Direct Plan Dividend Reinvestment,118475,0.45,,100,Arbitrage Fund,,Open,0,2786
+IDFC,IDFC Arbitrage Plus Fund-Direct Plan- Annual Dividend Reinvestment,133681,0.59,,5000,Arbitrage Fund,,Limited,0,2752
+IDFC,IDFC Arbitrage Plus Fund Direct Plan Dividend Reinvestment,118476,0.59,,5000,Arbitrage Fund,,Limited,0,2752
+IDFC,IDFC Arbitrage Plus Fund- Regular Plan- Annual Dividend Reinvestment,133682,1.16,,5000,Arbitrage Fund,,Limited,0,2752
+IDFC,IDFC Arbitrage Plus Fund Regular Plan Dividend Reinvestment,108992,1.16,,5000,Arbitrage Fund,,Limited,0,2752
+IDFC,IDFC Arbitrage Fund-Regular Plan- Annual Dividend Reinvestment,133680,1.00,,100,Arbitrage Fund,,Open,0,2786
+IDFC,IDFC Arbitrage Fund Regular Plan Dividend Reinvestment,108847,1.00,,100,Arbitrage Fund,,Open,0,2786
+IDFC,IDFC Asset Allocation Fund Of Fund Aggressive Plan Direct Plan Dividend Reinvestment,118484,0,,5000,Hybrid Allocation,,Open,0,28
+IDFC,IDFC Asset Allocation Fund Of Fund Aggressive Plan Regular Plan Dividend Reinvestment,112331,0,,5000,Hybrid Allocation,,Open,0,28
+IDFC,IDFC Asset Allocation Fund Of Fund Conservative Plan Direct Plan Dividend Reinvestment,118487,0,,5000,Conservative Allocation,,Open,0,1
+IDFC,IDFC Asset Allocation Fund Of Fund Conservative Plan Regular Plan Dividend Reinvestment,112328,0,,5000,Conservative Allocation,,Open,0,1
+IDFC,IDFC Asset Allocation Fund Of Fund Moderate Plan Regular Plan Dividend Reinvestment,112330,0,,5000,Hybrid Allocation,,Open,0,6
+IDFC,IDFC Balanced Fund Direct Plan Dividend Reinvestment,140383,1.07,,5000,Moderate Allocation,,Open,0,0
+IDFC,IDFC Balanced Fund Regular Plan Dividend Reinvestment,140384,2.85,,5000,Moderate Allocation,,Open,0,0
+IDFC,IDFC Banking & PSU Debt Fund Direct Dividend Reinvestment,121281,0.22,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Banking & PSU Debt Fund-Direct Plan- Fortnightly Dividend Reinvestment,121934,0.22,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Banking & PSU Debt Fund-Direct Plan- Monthly Dividend Reinvestment,121935,0.22,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Banking & PSU Debt Fund Regular Dividend Reinvestment,121282,0.32,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Banking & PSU Debt Fund-Regular Plan- Fortnightly Dividend Reinvestment,121931,0.32,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Banking & PSU Debt Fund-Regular Plan- Monthly Dividend Reinvestment,121932,0.32,,5000,Ultrashort Bond,,Open,0,209
+IDFC,IDFC Cash Fund Direct Plan Monthly Dividend Reinvestment,118365,0.36,,100,Liquid,,Open,0,378
+IDFC,IDFC Cash Fund Direct Plan Periodic Dividend Reinvestment,118363,0.36,,100,Liquid,,Open,0,378
+IDFC,IDFC Cash Fund Regular Plan Daily Dividend Reinvestment,108692,0.44,,100,Liquid,,Open,0,378
+IDFC,IDFC Cash Fund Regular Plan Monthly Dividend Reinvestment,108693,0.44,,100,Liquid,,Open,0,378
+IDFC,IDFC Cash Fund Regular Plan Periodic Dividend Reinvestment,115489,0.44,,100,Liquid,,Open,0,378
+IDFC,IDFC Cash Fund Regular Plan Weekly Dividend Reinvestment,108691,0.44,,100,Liquid,,Open,0,378
+IDFC,IDFC Classic Equity Fund Plan A Dividend Reinvestment,108597,2.54,,5000,Flexicap,,Open,0,49
+IDFC,IDFC Classic Equity Fund Direct Plan Dividend Reinvestment,118420,0.72,,5000,Flexicap,,Open,0,49
+IDFC,IDFC CBF_Direct Plan_Annual Dividend Reinvestment,139201,0.23,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC Corporate Bond Fund Direct Plan Dividend Reinvestment,135917,0.23,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF_Direct Plan_Monthly Dividend Reinvestment,139198,0.23,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF_Direct Plan_Quarterly Dividend Reinvestment,139199,0.23,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF_Regular Plan_Annual Dividend Reinvestment,139204,0,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC Corporate Bond Fund Regular Plan Dividend Reinvestment,135915,0.56,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF_Regular Plan_Half Yearly Dividend Reinvestment,139203,0.56,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF-Regular Plan_Monthly Dividend Reinvestment,139202,0.56,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC CBF_Regular Plan_Quarterly Dividend Reinvestment,139205,0.56,,5000,Short-Term Bond,,Open,0,125
+IDFC,IDFC Credit Opportunities Fund Direct Annaul Dividend Reinvestment,140610,0.40,,5000,Corporate Credit,,Open,0,6
+IDFC,IDFC Credit Opportunities Fund Direct Half Yearly Dividend Reinvestment,140605,0.40,,5000,Corporate Credit,,Open,0,6
+IDFC,IDFC Credit Opportunities Fund Direct Periodic Dividend Reinvestment,140606,0.40,,5000,Corporate Credit,,Open,0,6
+IDFC,IDFC Credit Opportunities Fund Direct Quarterly Dividend Reinvestment,140604,0.40,,5000,Corporate Credit,,Open,0,6
+IIFL,IIFL Liquid Fund Direct Plan Weekly Dividend Payout,125343,0.20,,5000,Liquid,,Open,0,766
+IIFL,IIFL Dynamic Bond Fund Regular Growth,122612,0.94,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Bonus,122711,0.94,,10000,Dynamic Bond,,Limited,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Monthly Dividend Payout,122719,0.94,,10000,Dynamic Bond,,Limited,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Quarterly Dividend Payout,122712,0.94,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Half Yearly Dividend Payout,122720,0.94,,10000,Dynamic Bond,,Limited,0,574
+IIFL,IIFL Dynamic Bond Fund Direct Growth,122715,0.44,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Direct Monthly Dividend Payout,122721,0.44,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Liquid Fund Regular Daily Dividend Reinvestment,125342,0.25,,5000,Liquid,,Open,0,766
+IIFL,IIFL Liquid Fund Regular Weekly Dividend Payout,125337,0.25,,5000,Liquid,,Open,0,766
+IIFL,IIFL Liquid Fund Direct Growth,125345,0.20,,5000,Liquid,,Open,0,766
+IIFL,IIFL Liquid Fund Direct Daily Dividend Reinvestment,125349,0.20,,5000,Liquid,,Open,0,766
+IIFL,IIFL Liquid Fund Regular Growth,125259,0.25,,5000,Liquid,,Open,0,766
+IIFL,IIFL India Growth Fund Regular Growth,131578,1.69,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL India Growth Fund Regular Dividend Payout,131579,1.69,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL India Growth Fund Direct Growth,131580,1.00,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL India Growth Fund Direct Dividend Payout,131581,1.00,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL Dynamic Bond Fund Direct Plan Quarterly Dividend Payout,122717,0.44,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Direct Monthly Dividend Reinvestment,122721,0.44,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Direct Plan Quarterly Dividend Reinvestment,122717,0.44,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Half Yearly Dividend Reinvestment,122720,0.94,,10000,Dynamic Bond,,Limited,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Monthly Dividend Reinvestment,122719,0.94,,10000,Dynamic Bond,,Limited,0,574
+IIFL,IIFL Dynamic Bond Fund Regular Quarterly Dividend Reinvestment,122712,0.94,,10000,Dynamic Bond,,Open,0,574
+IIFL,IIFL India Growth Fund Direct Dividend Reinvestment,131581,1.00,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL India Growth Fund Regular Dividend Reinvestment,131579,1.69,,5000,Large-Cap,,Open,0,82
+IIFL,IIFL Liquid Fund Direct Plan Weekly Dividend Reinvestment,125343,0.20,,5000,Liquid,,Open,0,766
+IIFL,IIFL Liquid Fund Regular Weekly Dividend Reinvestment,125337,0.25,,5000,Liquid,,Open,0,766
+INDIABULLS,Indiabulls Arbitrage Fund Direct Plan Half Yearly Dividend Reinvestment Option,140805,0.50,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Arbitrage Fund Direct Monthly Dividend Reinvestment,140801,0.50,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Arbitrage Fund Regular Plan Half Yearly Dividend Reinvestment Option,140806,1.26,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Arbitrage Fund Regular Monthly Dividend Reinvestment,140802,1.26,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Arbitrage Fund Regular Plan Quarterly Dividend Reinvestment Option,140804,1.26,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Arbitrage Fund Regular Plan Yearly Dividend Reinvestment Option,140808,1.26,,500,Arbitrage Fund,,Open,0,1145
+INDIABULLS,Indiabulls Blue Chip Fund Direct Plan Dividend Reinvestment Option,119134,0.58,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Direct Plan Half Yearly Dividend Reinvestment Option,140814,0.58,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Direct Plan Monthly Dividend Reinvestment Option,140809,0.58,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Direct Plan Quarterly Dividend Reinvestment Option,140811,0.58,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Dividend Reinvestment,116548,2.54,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Regular Plan Half Yearly Dividend Reinvestment Option,140813,2.54,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Regular Plan Monthly Dividend Reinvestment option,140810,2.54,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Blue Chip Fund Regular Plan Quarterly Dividend Reinvestment Option,140812,2.54,,500,Large-Cap,,Open,0,157
+INDIABULLS,Indiabulls Gilt Fund Direct Plan Fortnightly Dividend Reinvestment Option,118817,0.37,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Gilt Fund Direct Plan Monthly Dividend Reinvestment Option,118818,0.37,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Gilt Fund Direct Plan Weekly Dividend Reinvestment Option,118816,0.37,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Gilt Fund Indirect Plan Fortnightly Dividend Reinvestment Option,118822,1.16,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Gilt Fund Indirect Plan Monthly Dividend Reinvestment Option,118823,1.16,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Gilt Fund Indirect Plan Weekly Dividend Reinvestment Option,118821,1.16,,500,Intermediate Government Bond,,Open,0,2834
+INDIABULLS,Indiabulls Income Fund Direct Half Yearly Dividend Reinvestment,121156,0.50,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Income Fund Direct Monthly Dividend Reinvestment,121154,0.50,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Income Fund Direct Quarterly Dividend Reinvestment,121155,0.50,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Income Fund Regular Half YearlyDividend Reinvestment,121157,1.86,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Income Fund Regular Monthly Dividend Reinvestment,121159,1.86,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Income Fund Regular Quarterly Dividend Reinvestment,121160,1.86,,500,Intermediate Bond,,Open,0,1996
+INDIABULLS,Indiabulls Liquid Fund Direct Plan Fortnightly Dividend Reinvestment Option,119138,0.12,,500,Liquid,,Open,0,655
+INDIABULLS,Indiabulls Liquid Fund Direct Plan Monthly Dividend Reinvestment Option,119139,0.12,,500,Liquid,,Open,0,655
+INDIABULLS,Indiabulls Liquid Fund Direct Plan Weekly Dividend Reinvestment Option,119137,0.12,,500,Liquid,,Open,0,655
+INDIABULLS,Indiabulls Liquid Fund Fortnightly Dividend Reinvestment,115994,0.23,,500,Liquid,,Limited,0,655
+INDIABULLS,Indiabulls Liquid Fund Monthly Dividend Reinvestment,115995,0.23,,500,Liquid,,Open,0,655
+INDIABULLS,Indiabulls Liquid Fund Weekly Dividend Reinvestment,115993,0.23,,500,Liquid,,Open,0,655
+INDIABULLS,INDIABULLS Monthly Income Plan Direct Dividend Reinvestment,135690,0.81,,500,Conservative Allocation,,Open,0,404
+INDIABULLS,INDIABULLS Monthly Income Plan Regular Dividend Reinvestment,135691,2.26,,500,Conservative Allocation,,Open,0,404
+INDIABULLS,Indiabulls Short Term Fund Direct Plan Fortnightly Dividend Reinvestment Option,123706,0.43,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Short Term Fund Direct Monthly Dividend Reinvestment,123707,0.43,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Short Term Fund Direct Weekly Dividend Reinvestment,123705,0.43,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Short Term Fund Regular Plan Fortnightly Dividend Reinvestment Option,123710,1.70,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Short Term Fund Regular Monthly Dividend Reinvestment,123711,1.70,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Short Term Fund Regular Weekly Dividend Reinvestment,123709,1.70,,5000,Ultrashort Bond,,Open,0,997
+INDIABULLS,Indiabulls Ultra Short Term Fund Direct Plan Fortnightly Dividend Reinvestment Option,119146,0.33,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Ultra Short Term Fund Direct Plan Monthly Dividend Reinvestment Option,119147,0.33,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Ultra Short Term Fund Direct Plan Weekly Dividend Reinvestment Option,119145,0.33,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Ultra Short Term Fund Fortnightly Dividend Reinvestment,116426,1.17,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Ultra Short Term Fund Monthly Dividend Reinvestment,116427,1.17,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Ultra Short Term Fund Weekly Dividend Reinvestment,116425,1.17,,5000,Ultrashort Bond,,Open,0,1452
+INDIABULLS,Indiabulls Value Discovery Fund Direct Dividend Reinvestment,135342,0.21,,500,Small/Mid-Cap,,Open,0,88
+INDIABULLS,Indiabulls Value Discovery Fund Direct Plan Monthly Dividend Reinvestment Option,140815,0.21,,500,Small/Mid-Cap,,Open,0,88
+INDIABULLS,Indiabulls Value Discovery Fund Direct Plan Quarterly Dividend Reinvestment Option,140817,0.21,,500,Small/Mid-Cap,,Open,0,88
+INDIABULLS,Indiabulls Value Discovery Fund Regular Dividend Reinvestment,135344,2.56,,500,Small/Mid-Cap,,Open,0,88
+INVESCO,Invesco India Fixed Maturity Plan series 29 Plan B Regular Growth,140883,0.02,,5000,Fixed Maturity Short-Term Bond,,Limited,0,88
+INVESCO,Invesco India Fixed Maturity Plan series 29 Plan B Regular Dividend,140881,0.02,,5000,Fixed Maturity Short-Term Bond,,Limited,0,88
+INVESCO,Invesco India Fixed Maturity Plan series 29 Plan B Direct Growth,140884,0,,5000,Fixed Maturity Short-Term Bond,,Limited,0,88
+INVESCO,Invesco India AGILE Tax Fund Dividend Reinvestment,107714,2.87,,500,ELSS (Tax Savings),,Open,0,307
+INVESCO,Invesco India Bank Debt Fund Monthly Dividend Payout,118233,0.41,,5000,Short-Term Bond,,Open,0,347
+INVESCO,Invesco India Bank Debt Fund Daily Dividend Reinvestment,118234,0.41,,5000,Short-Term Bond,,Open,0,347
+INVESCO,Invesco India Bank Debt Fund - Growth,118232,0.41,,5000,Short-Term Bond,,Open,0,347
+INVESCO,Invesco India Active Income Fund Direct Plan MonthlyDividend Payout,120496,1.26,,5000,Dynamic Bond,,Open,0,1228
+INVESCO,Invesco India Active Income Fund Direct Plan AnnualDividend Payout,120500,1.26,,5000,Dynamic Bond,,Open,0,1228
+INVESCO,Invesco India Active Income Fund - Direct Plan - Growth,120497,1.26,,5000,Dynamic Bond,,Open,0,1228
+INVESCO,Invesco India Active Income Fund Direct Plan Quarterly Dividend Payout,120501,1.26,,5000,Dynamic Bond,,Open,0,1228
+INVESCO,Invesco India Arbitrage Fund - Direct Plan - Growth Option,120401,0.84,,5000,Arbitrage Fund,,Open,0,1035
+INVESCO,Invesco India Arbitrage Fund Direct Plan Dividend Payout Option,120400,0.84,,5000,Arbitrage Fund,,Open,0,1035
+INVESCO,Invesco India Banking Fund Direct Plan Dividend Payout,120384,2.98,,5000,Sector - Financial Services,,Open,0,89
+INVESCO,Invesco India Bank Debt Fund Direct Plan Daily Dividend Reinvestment,120443,1.60,,5000,Short-Term Bond,,Open,0,347
+INVESCO,Invesco India Business Leaders Fund Direct Plan Dividend Payout,120393,2.97,,5000,Large-Cap,,Open,0,29
+INVESCO,Invesco India Bank Debt Fund Direct Plan Monthly Dividend Payout,120445,1.60,,5000,Short-Term Bond,,Open,0,347
+INVESCO,Invesco India Contra Fund Direct Plan Dividend Payout,120349,2.96,,5000,Flexicap,,Open,0,42
+INVESCO,Invesco India Banking Fund - Direct Plan - Growth,120385,2.98,,5000,Sector - Financial Services,,Open,0,89
+INVESCO,Invesco India Credit Opportunities Fund Direct Plan Discretionary Dividend Payout,120508,0.51,,5000,Ultrashort Bond,,Open,0,940
+INVESCO,Invesco India Business Leaders Fund - Direct Plan - Growth,120392,2.97,,5000,Large-Cap,,Open,0,29
+INVESCO,Invesco India Credit Opportunities Fund Direct Plan Daily Dividend Reinvestment,120506,0.51,,5000,Ultrashort Bond,,Open,0,940
+INVESCO,Invesco India Contra Fund - Direct Plan - Growth,120348,2.96,,5000,Flexicap,,Open,0,42
+INVESCO,Invesco India Growth Fund - Direct Plan - Growth,120357,2.82,,5000,Large-Cap,,Open,0,55
+INVESCO,Invesco India Credit Opportunities Fund Direct Plan Monthly Dividend Payout,120509,0.51,,5000,Ultrashort Bond,,Open,0,940
+INVESCO,Invesco India Dynamic Equity Fund Direct Plan Dividend Payout,120332,2.91,,5000,Flexicap,,Open,0,60
+INVESCO,Invesco India Credit Opportunities Fund Direct Plan Growth,120507,0.51,,5000,Ultrashort Bond,,Open,0,940
+INVESCO,Invesco India Gilt Fund - Direct Plan - Growth,120520,1.71,,5000,Long-Term Government Bond,,Open,0,1198
+INVESCO,Invesco India Growth Fund Direct Plan Dividend Payout,120356,2.82,,5000,Large-Cap,,Open,0,55
+INVESCO,Invesco India Gilt Fund Direct Plan Quarterly Dividend Payout,120522,1.71,,5000,Long-Term Government Bond,,Open,0,1198
+INVESCO,Invesco India Dynamic Equity Fund - Direct Plan - Growth,120333,2.91,,5000,Flexicap,,Open,0,60
+INVESCO,Invesco India Gilt Fund Direct Plan Monthly Dividend Reinvestment,120521,1.71,,5000,Long-Term Government Bond,,Open,0,1198
+INVESCO,Invesco India Gilt Fund Direct Plan Annual Dividend Payout,120519,1.71,,5000,Long-Term Government Bond,,Open,0,1198
+INVESCO,Invesco India Gold Fund - Direct Plan - Growth,120531,0,,5000,Sector - Precious Metals,,Open,0,19
+INVESCO,Invesco India Infrastructure Fund - Direct Pan - Growth Option,120405,3.06,,5000,Sector - Infrastructure,,Open,0,51
+INVESCO,Invesco India Gold Fund Direct Plan Dividend Payout,120530,0,,5000,Sector - Precious Metals,,Open,0,19
+INVESCO,Invesco India Liquid Fund Direct Plan Weekly Dividend Reinvestment,120535,0.14,,5000,Liquid,,Open,0,775
+INVESCO,Invesco India Infrastructure Fund Direct Pan Dividend Payout Option,120404,3.06,,5000,Sector - Infrastructure,,Open,0,51
+INVESCO,Invesco India Liquid Fund - Direct Plan - Growth,120537,0.14,,5000,Liquid,,Open,0,775
+INVESCO,Invesco India Liquid Fund Direct Plan Monthly Dividend Payout,120536,0.14,,5000,Liquid,,Open,0,775
+INVESCO,Invesco India Mid N Small Cap Fund - Direct Plan - Growth Option,120413,2.79,,5000,Small/Mid-Cap,,Open,0,47
+INVESCO,Invesco India Liquid Fund Direct Plan Daily Dividend Reinvestment,120534,0.14,,5000,Liquid,,Open,0,775
+INVESCO,Invesco India Mid Cap Fund - Direct Plan - Growth Option,120403,3.08,,5000,Small/Mid-Cap,,Open,0,53
+INVESCO,Invesco India Mid N Small Cap Fund Direct Plan Dividend Payout Option,120412,2.79,,5000,Small/Mid-Cap,,Open,0,47
+INVESCO,Invesco India Mid Cap Fund Direct Plan Dividend Payout Option,120402,3.08,,5000,Small/Mid-Cap,,Open,0,53
+INVESCO,Invesco India Monthly Income Plan (MIP) Plus - Direct Plan - Growth,120554,2.45,,5000,Hybrid Allocation,,Open,0,107
+JM,JM Arbitrage Advantage Fund Annual Dividend Reinvestment Option,135167,1.10,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund (Direct) Annual Dividend Reinvestment Option,135173,0.74,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund (Direct) Dividend Reinvestment Option,120481,0.74,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund (Direct) Half Yearly Dividend Reinvestment Option,135171,0.74,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund (Direct) Monthly Dividend Reinvestment Option,135172,0.74,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund (Direct) Quarterly Dividend Reinvestment Option,135174,0.74,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund Dividend Reinvestment,103781,1.10,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund Half Yearly Dividend Reinvestment Option,135170,1.10,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund Monthly Dividend Reinvestment Option,135168,1.10,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Arbitrage Advantage Fund Quarterly Dividend Reinvestment Option,135169,1.10,,5000,Arbitrage Fund,,Open,0,899
+JM,JM Balanced Fund Annual Dividend Reinvestment Option,131476,2.34,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund (Direct) Annual Dividend Reinvestment Option,131477,1.67,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund (Direct) Dividend Reinvestment Option,120483,1.67,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund (Direct) Half Yearly Dividend Reinvestment Option,133402,1.67,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund (Direct) Monthly Dividend Reinvestment Option,133412,1.67,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund (Direct) Quarterly Dividend Reinvestment Option,133406,1.67,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund Dividend Reinvestment,100220,2.34,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund Half Yearly Dividend Reinvestment Option,133408,2.34,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund Monthly Dividend Reinvestment Option,133404,2.34,,5000,Moderate Allocation,,Open,0,358
+JM,JM Balanced Fund Quarterly Dividend Reinvestment Option,133405,2.34,,5000,Moderate Allocation,,Open,0,358
+JM,JM Basic Fund (Direct) Dividend Reinvestment Option,120485,2.25,,5000,Flexicap,,Open,0,36
+JM,JM Basic Fund Dividend Reinvestment,106168,2.88,,5000,Flexicap,,Open,0,36
+JM,JM Core 11 Fund (Direct) Dividend Reinvestment Option,120487,2.20,,5000,Large-Cap,,Open,0,46
+JM,JM Core 11 Fund Dividend Reinvestment,107409,2.94,,5000,Large-Cap,,Open,0,46
+JM,JM Equity Fund Annual Dividend Reinvestment Option,134961,2.49,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund (Direct) Annual Dividend Reinvestment Option,134958,1.61,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund (Direct) Dividend Reinvestment Option,120489,1.61,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund (Direct) Half Yearly Dividend Reinvestment Option,134957,1.61,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund (Direct) Monthly Dividend Reinvestment Option,134956,1.61,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund (Direct) Quarterly Dividend Reinvestment Option,134960,1.61,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund Dividend Reinvestment,100218,2.49,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund Half Yearly Dividend Reinvestment Option,134955,2.49,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund Monthly Dividend Reinvestment Option,134959,2.49,,5000,Large-Cap,,Open,0,565
+JM,JM Equity Fund Quarterly Dividend Reinvestment Option,134954,2.49,,5000,Large-Cap,,Open,0,565
+JM,JM Floater Long Term Fund (Direct) Dividend Reinvestment Option,120434,0.50,,5000,Ultrashort Bond,,Open,0,929
+JM,JM Floater Long Term Fund (Direct) Monthly Dividend Reinvestment Option,133414,0.50,,5000,Ultrashort Bond,,Open,0,929
+JM,JM Floater Long Term Fund Regular Dividend Reinvestment,101805,1.01,,5000,Ultrashort Bond,,Open,0,929
+JM,JM Floater Long Term Fund Monthly Dividend Reinvestment Option,133390,1.01,,5000,Ultrashort Bond,,Open,0,929
+JM,JM Floater Long Term Fund Premium Dividend Reinvestment,101807,1.01,,5000,Ultrashort Bond,,Limited,0,929
+JM,JM G-Sec Fund Annual Dividend Reinvestment Option,134659,1.75,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Direct Annual Dividend Reinvestment Option,134662,1.00,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund (Direct) Dividend Reinvestment Option,120420,1.00,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Direct Half Yearly Dividend Reinvestment Option,134661,1.00,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Direct Monthly Dividend Reinvestment Option,134664,1.00,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Regular Dividend Reinvestment,100249,1.75,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Half Yearly Dividend Reinvestment Option,134663,1.75,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM G-Sec Fund Monthly Dividend Reinvestment Option,134660,1.75,,5000,Intermediate Government Bond,,Open,0,851
+JM,JM High Liquidity Fund (Direct) Quarterly Dividend Reinvestment Option,120408,0.21,,5000,Liquid,,Open,0,2172
+JM,JM High Liquidity Fund (Direct) Weekly Dividend Reinvestment Option,120407,0.21,,5000,Liquid,,Open,0,2172
+JM,JM High Liquidity Fund Quarterly Dividend Reinvestment,100244,0.28,,5000,Liquid,,Open,0,2172
+KOTAK,Kotak 50 Dividend Payout,114457,2.22,,5000,Large-Cap,,Open,0,66
+KOTAK,Kotak 50 Growth,114458,2.22,,5000,Large-Cap,,Open,0,66
+KOTAK,Kotak Balance Fund Dividend Payout,100286,2.67,,5000,Moderate Allocation,,Open,0,406
+KOTAK,Kotak Bond - Plan A - Growth,100299,1.68,,5000,Intermediate Bond,,Open,0,1149
+KOTAK,Kotak Bond Plan A Annual Dividend Payout,100300,1.68,,5000,Intermediate Bond,,Open,0,1149
+KOTAK,Kotak Bond Plan A Qtrly Dividend Payout,100298,1.68,,5000,Intermediate Bond,,Open,0,1149
+KOTAK,Kotak Bond Fund Short Term Growth,101373,0.50,,5000,Short-Term Bond,,Open,0,935
+KOTAK,Kotak Bond Fund Short Term Monthly Dividend Payout,101372,0.50,,50000,Short-Term Bond,,Open,0,935
+KOTAK,Kotak Equity Arbitrage Fund Dividend Payout,105967,0.94,,5000,Arbitrage Fund,,Open,0,983
+KOTAK,Kotak Equity Arbitrage Fund Growth,105968,0.94,,5000,Arbitrage Fund,,Open,0,983
+KOTAK,Kotak Classic Equity Scheme Dividend Payout,103039,2.80,,5000,Large-Cap,,Open,0,196
+KOTAK,Kotak Classic Equity Scheme Growth,103040,2.80,,5000,Large-Cap,,Open,0,196
+KOTAK,Kotak Asset Allocator Fund Dividend Payout,102573,0.75,,5000,Hybrid Allocation,,Open,0,94
+KOTAK,Kotak Asset Allocator Fund Growth,102574,0.75,,5000,Hybrid Allocation,,Open,0,94
+KOTAK,Kotak Treasury Advantage Fund-Growth,102591,0.52,,5000,Ultrashort Bond,,Open,0,647
+KOTAK,Kotak Treasury Advantage Fund-Monthly Dividend Payout,102592,0.52,,5000,Ultrashort Bond,,Open,0,647
+KOTAK,Kotak Treasury Advantage Fund-Weekly Dividend Payout,102590,0.52,,0,Ultrashort Bond,,Open,0,647
+KOTAK,Kotak Floater Fund Short Term Monthly Dividend Payout,101892,0.35,,5000,Liquid,,Open,0,664
+KOTAK,Kotak Floater Fund Short Term Growth,101893,0.35,,5000,Liquid,,Open,0,664
+KOTAK,Kotak Floater Fund Short Term Weekly Dividend Payout,101894,0.35,,5000,Liquid,,Open,0,664
+KOTAK,Kotak Gilt Investment Fund Growth,100265,1.40,,5000,Long-Term Government Bond,,Open,0,2298
+KOTAK,Kotak Gilt Investment Fund Quarterly Dividend Payout,100264,1.40,,5000,Long-Term Government Bond,,Open,0,2298
+KOTAK,Kotak Banking and PSU Debt Growth,123690,0.29,,5000,Short-Term Bond,,Open,0,592
+KOTAK,Kotak Banking and PSU Debt Monthly Dividend Payout,123691,0.29,,50000,Short-Term Bond,,Open,0,592
+KOTAK,Kotak Gilt Investment Fund PF Plan Dividend Payout,100280,1.40,,5000,Long-Term Government Bond,,Open,0,2298
+KOTAK,Kotak Gilt Investment Fund PF Plan & Trust Growth,100281,1.40,,5000,Long-Term Government Bond,,Open,0,2298
+KOTAK,Kotak Monthly Income Plan Growth,114859,2.66,,5000,Conservative Allocation,,Open,0,835
+KOTAK,Kotak Monthly Income Plan Monthly Dividend Payout,114858,2.66,,50000,Conservative Allocation,,Open,0,835
+KOTAK,Kotak Monthly Income Plan Quarterly Dividend Payout,114860,2.66,,5000,Conservative Allocation,,Open,0,835
+KOTAK,Kotak Liquid Plan A-Daily Dividend Reinvestment,100833,0.34,,5000,Liquid,,Open,0,740
+KOTAK,Kotak Liquid - Plan A - Growth,100835,0.34,,5000,Liquid,,Open,0,740
+KOTAK,Kotak Liquid Plan A Weekly Dividend Payout,100834,0.34,,5000,Liquid,,Open,0,740
+KOTAK,Kotak Midcap Dividend Payout,102874,2.84,,5000,Small/Mid-Cap,,Open,0,36
+KOTAK,Kotak Midcap Growth,102875,2.84,,5000,Small/Mid-Cap,,Open,0,36
+KOTAK,Kotak Opportunities Fund Dividend Payout,103233,2.47,,5000,Large-Cap,,Open,0,44
+KOTAK,Kotak Opportunities Fund Growth,103234,2.47,,5000,Large-Cap,,Open,0,44
+KOTAK,Kotak Taxsaver Fund Growth,103339,2.82,,500,ELSS (Tax Savings),,Open,0,45
+KOTAK,Kotak Taxsaver Fund Dividend Payout,103338,2.82,,500,ELSS (Tax Savings),,Open,0,45
+KOTAK,Kotak Fixed Maturity Plan Series 210 Regular Growth,141838,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+KOTAK,Kotak Fixed Maturity Plan Series 210 Regular Dividend,141835,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+KOTAK,Kotak Fixed Maturity Plan Series 210 Direct Growth,141837,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+KOTAK,Kotak Fixed Maturity Plan Series 210 Direct Dividend,141836,0,,5000,Fixed Maturity Intermediate-Term Bond,,Limited,0,0
+KOTAK,Kotak Bond-Plan A-Annual Dividend Reinvestment Direct,119734,1.95,,5000,Intermediate Bond,,Open,0,1149
+KOTAK,Kotak Bond-Plan A-Quaterly Dividend Reinvestment Direct,119736,1.95,,5000,Intermediate Bond,,Open,0,1149
+KOTAK,Kotak Bond Short Term Plan-(Half Yearly Dividend Reinvestment) Direct,125254,0.83,,5000,Short-Term Bond,,Open,0,935
+KOTAK,Kotak Bond Short Term Plan Dividend Reinvestment Direct,119738,0.83,,50000,Short-Term Bond,,Open,0,935
+LIC,LIC MF Balanced Fund Dividend Payout,100321,3.09,,5000,Moderate Allocation,,Open,0,63
+LIC,LIC MF Balanced Fund - Growth,100323,3.09,,5000,Moderate Allocation,,Open,0,63
+LIC,LIC MF Bond Fund Dividend Payout,100314,1.02,,5000,Dynamic Bond,,Open,0,373
+LIC,LIC MF Bond Fund Growth,100315,1.02,,5000,Dynamic Bond,,Open,0,373
+LIC,LIC MF Childrens Fund,101271,2.07,,5000,Hybrid Allocation,,Open,0,20
+LIC,LIC MF Equity Fund Dividend Payout,100312,2.65,,5000,Large-Cap,,Open,0,113
+LIC,LIC MF Government Securities Fund PF Plan Dividend Payout,100318,1.81,,10000,Intermediate Government Bond,,Open,0,1226
+LIC,LIC MF Equity Fund Growth,100313,2.65,,5000,Large-Cap,,Open,0,113
+LIC,LIC MF Government Securities Fund Dividend Payout,100316,1.81,,10000,Intermediate Government Bond,,Open,0,1226
+LIC,LIC MF Government Securities Fund Growth,100317,1.81,,10000,Intermediate Government Bond,,Open,0,1226
+LIC,LIC MF Government Securities Fund PF Plan Growth,100319,1.81,,10000,Intermediate Government Bond,,Open,0,1226
+LIC,LIC MF Growth Fund Growth,106871,2.65,,5000,Large-Cap,,Open,0,38
+LIC,LIC MF Index Nifty Growth,101201,1.13,,5000,Large-Cap,,Open,0,42
+LIC,LIC MF Index Nifty Dividend Payout,101200,1.13,,5000,Large-Cap,,Open,0,42
+LIC,LIC MF Index Sensex Dividend Payout,101198,1.76,,5000,Large-Cap,,Open,0,10
+LIC,LIC MF Index Sensex Growth,101199,1.76,,5000,Large-Cap,,Open,0,10
+LIC,LIC MF Liquid Dividend Payout,101184,0.12,,5000,Liquid,,Open,0,1182
+LIC,LIC MF Liquid Growth,101185,0.12,,5000,Liquid,,Open,0,1182
+LIC,LIC MF Unit Linked Insurance Scheme,100325,2.70,,10000,Moderate Allocation,,Open,0,35
+LIC,LIC MF Monthly Income Plan Growth,101869,1.83,,5000,Conservative Allocation,,Open,0,344
+LIC,LIC MF Monthly Income Plan Monthly Dividend Payout,101866,1.83,,5000,Conservative Allocation,,Open,0,344
+LIC,LIC MF Monthly Income Plan Quarterly Dividend Payout,101867,1.83,,5000,Conservative Allocation,,Open,0,344
+LIC,LIC MF Monthly Income Plan Yearly Dividend Payout,101868,1.83,,5000,Conservative Allocation,,Open,0,344
+LIC,LIC MF Saving Plan Daily Dividend Payout,111676,0.60,,5000,Ultrashort Bond,,Open,0,1600
+LIC,LIC MF Saving Plan Growth,101830,0.60,,5000,Ultrashort Bond,,Open,0,1600
+LIC,LIC MF Tax Plan Dividend Payout,100864,2.91,,500,ELSS (Tax Savings),,Open,0,30
+LIC,LIC MF Tax Plan Growth,100865,2.91,,500,ELSS (Tax Savings),,Open,0,30
+LIC,LIC MF Interval Fund Annual Plan - Series 1 Direct Plan Dividend Reinvestment Option,120367,0.28,,10000,Fixed Maturity Short-Term Bond,,Open,0,45
+LIC,LIC MF Interval Annual Series 1 Dividend Reinvestment,108438,0.29,,10000,Fixed Maturity Short-Term Bond,,Open,0,45
+LIC,LIC MF Interval Fund Monthly Plan Series 1 Direct Plan Dividend Reinvestment Option,120358,0.32,,10000,Fixed Maturity Ultrashort Bond,,Open,0,708
+LIC,LIC MF Interval Months Series 1 Dividend Reinvestment,108416,0.38,,10000,Fixed Maturity Ultrashort Bond,,Open,0,708
+LIC,LIC MF Interval Fund Quarterly Plan Series 2 Direct Plan Dividend Reinvestment Option,120375,0.36,,10000,Fixed Maturity Ultrashort Bond,,Open,0,264
+LIC,LIC MF Interval Fund Quarterly Plan Series 2 Dividend Reinvestment,109917,0.40,,10000,Fixed Maturity Ultrashort Bond,,Open,0,264
+LIC,LIC MF Interval Fund Quarterly Plan Series 1 Direct Plan Dividend Reinvestment Option,120362,0.38,,10000,Fixed Maturity Ultrashort Bond,,Open,0,250
+LIC,LIC MF Interval Quarterly Series I Dividend Reinvestment,108408,0.46,,10000,Fixed Maturity Ultrashort Bond,,Open,0,250
+LIC,LIC MF Balanced Fund-Direct Plan Growth Option,120261,0,,5000,Moderate Allocation,,Open,0,63
+LIC,LIC MF Balanced Fund-Direct Plan Dividend Payout Option,120260,0,,5000,Moderate Allocation,,Open,0,63
+LIC,LIC MF Bond Fund-Direct Plan Growth Option,120279,0,,5000,Dynamic Bond,,Open,0,373
+LIC,LIC MF Bond Fund-Direct Plan Dividend Payout Option,120278,0,,5000,Dynamic Bond,,Open,0,373
+LIC,LIC MF Equity Fund-Direct Plan Growth Option,120264,0,,5000,Large-Cap,,Open,0,113
+LIC,LIC MF Equity Fund-Direct Plan Dividend Payout Option,120263,0,,5000,Large-Cap,,Open,0,113
+LIC,LIC MF Govt Securities Fund-Direct Plan Growth Option,120282,0,,10000,Intermediate Government Bond,,Open,0,1226
+LIC,LIC MF Growth Fund - Direct Plan Growth Option,120267,0,,5000,Large-Cap,,Open,0,38
+LIC,LIC MF Growth Fund Direct Plan Dividend Payout Option,120268,0,,5000,Large-Cap,,Open,0,38
+LIC,LIC MF Index Fund-Nifty-Direct Plan Dividend Payout Option,120309,0,,5000,Large-Cap,,Open,0,42
+LIC,LIC MF Income Plus Fund - Direct Plan Growth Option,120338,0,,5000,Short-Term Bond,,Open,0,936
+LIC,LIC MF Index Fund-Nifty-Direct Plan Growth Option,120307,0,,5000,Large-Cap,,Open,0,42
+LIC,LIC MF Index Fund-Sensex-Direct Plan Dividend Payout Option,120312,0,,5000,Large-Cap,,Open,0,10
+LIC,LIC MF Index Fund-Sensex-Direct Plan Growthoption,120308,0,,5000,Large-Cap,,Open,0,10
+LIC,LIC MF Infrastructure Fund Direct Plan Dividend Payout Option,120350,0,,5000,Sector - Infrastructure,,Open,0,17
+LNT,L&T Arbitrage Opportunities Fund Direct Monthly Dividend Reinvestment,130447,0.37,,5000,Arbitrage Fund,,Open,0,243
+LNT,L&T Arbitrage Opportunities Fund Direct Quarterly Dividend Reinvestment,130448,0.37,,5000,Arbitrage Fund,,Open,0,243
+LNT,L&T Arbitrage Opportunities Fund Regular Monthly Dividend Reinvestment,130452,0.98,,5000,Arbitrage Fund,,Open,0,243
+LNT,L&T Arbitrage Opportunities Fund Regular Quarterly Dividend Reinvestment,130449,0.98,,5000,Arbitrage Fund,,Open,0,243
+LNT,L&T Banking & PSU Debt fund Direct Plan Monthly Dividend Reinvestment Option,119794,0.22,,10000,Short-Term Bond,,Open,0,592
+LNT,L&T Banking & PSU Debt fund Monthly Dividend Reinvestment Option,118080,0.69,,10000,Short-Term Bond,,Open,0,592
+LNT,L&T Business Cycles Direct Dividend Reinvestment,130828,1.95,,5000,Flexicap,,Open,0,44
+LNT,L&T Business Cycles Regular Dividend Reinvestment,130826,2.57,,5000,Flexicap,,Open,0,44
+LNT,L&T Cash Fund Monthly Dividend Reinvestment,118066,0.90,,10000,Liquid,,Open,0,598
+LNT,L&T Dynamic Equity Fund Direct Plan Dividend Reinvestment Option,119297,1.98,,5000,Moderate Allocation,,Open,0,173
+LNT,L&T Dynamic Equity Fund Dividend Reinvestment,118193,3.10,,5000,Moderate Allocation,,Open,0,173
+LNT,L&T Emerging Business Fund Direct Dividend Reinvestment,129222,2.25,,5000,Small/Mid-Cap,,Open,0,91
+LNT,L&T Emerging Business Fund Regular Dividend Reinvestment,129221,3.01,,5000,Small/Mid-Cap,,Open,0,91
+LNT,L&T Equity Fund Direct Plan Dividend Reinvestment Option,119290,1.64,,5000,Large-Cap,,Open,0,46
+LNT,L&T Equity Fund Dividend Reinvestment,118044,2.36,,5000,Large-Cap,,Open,0,46
+LNT,L&T Equity Savings Direct Plan Quarterly Dividend Reinvestment,119801,2.34,,5000,Conservative Allocation,,Open,0,68
+LNT,L&T Equity Savings Monthly Dividend Reinvestment,115883,3.06,,5000,Conservative Allocation,,Open,0,68
+LNT,L&T Equity Savings Quarterly Dividend Reinvestment,115886,3.06,,5000,Conservative Allocation,,Open,0,68
+LNT,L&T Flexi Bond Fund Annual Dividend Reinvestment Option,134418,1.70,,10000,Dynamic Bond,,Open,0,1340
+LNT,L&T Flexi Bond Fund Direct Plan Annual Dividend Reinvestment Option,134417,0,,10000,Dynamic Bond,,Open,0,1340
+LNT,L&T Flexi Bond Fund Dividend Reinvestment,118054,1.70,,10000,Dynamic Bond,,Open,0,1340
+LNT,L&T Floating Rate Fund Monthly Dividend Reinvestment,114219,0.80,,10000,Ultrashort Bond,,Open,0,262
+LNT,L&T Gilt Fund Direct Plan Quarterly Dividend Reinvestment,119426,0.49,,10000,Intermediate Government Bond,,Open,0,1663
+LNT,L&T Gilt Fund Quarterly Dividend Reinvestment,112428,1.93,,10000,Intermediate Government Bond,,Open,0,1663
+LNT,L&T Income Opportunities Annual Dividend Reinvestment Option,134331,1.89,,10000,Corporate Credit,,Open,0,368
+LNT,L&T Income Opportunities Direct Plan Annual Dividend Reinvestment Option,134332,1.30,,10000,Corporate Credit,,Open,0,368
+LNT,L&T Income Opportunities Direct Plan Dividend Reinvestment,119785,1.30,,10000,Corporate Credit,,Open,0,368
+LNT,L&T Income Opportunities Dividend Reinvestment,112631,1.89,,10000,Corporate Credit,,Open,0,368
+LNT,L&T India Large Cap Fund Direct Plan Dividend Reinvestment Option,119314,2.16,,5000,Large-Cap,,Open,0,65
+LNT,L&T India Large Cap Fund Dividend Reinvestment,118070,2.89,,5000,Large-Cap,,Open,0,65
+LNT,L&T India Prudence Fund Annual Dividend Reinvestment Option,133870,2.52,,5000,Moderate Allocation,,Open,0,122
+LNT,L&T India Prudence Fund Direct Plan Annual Dividend Reinvestment Option,133871,1.42,,5000,Moderate Allocation,,Open,0,122
+LNT,L&T India Prudence Fund Monthly Dividend Reinvestment,118192,2.52,,5000,Moderate Allocation,,Open,0,122
+LNT,L&T India Special Situations Fund Direct Plan Dividend Reinvestment Option,119398,1.89,,5000,Flexicap,,Open,0,58
+LNT,L&T India Special Situations Fund Dividend Reinvestment,118050,2.62,,5000,Flexicap,,Open,0,58
+LNT,L&T India Value Fund Direct Plan Dividend Reinvestment Option,119403,1.70,,5000,Flexicap,,Open,0,71
+LNT,L&T India Value Dividend Reinvestment,118103,2.52,,5000,Flexicap,,Open,0,71
+LNT,L&T Infrastructure Fund Dividend Reinvestment,112601,3.10,,5000,Sector - Infrastructure,,Open,0,81
+LNT,L&T Liquid Fund Direct Plan Weekly Dividend Reinvestment,122235,0.10,,10000,Liquid,,Open,0,781
+LNT,L&T Liquid Fund Weekly Dividend Reinvestment Option,112458,0.16,,10000,Liquid,,Open,0,781
+LNT,L&T Midcap Fund Dividend Reinvestment,112495,2.91,,5000,Small/Mid-Cap,,Open,0,78
+LNT,L&T Monthly Income Plan Direct Plan Monthly Dividend Reinvestment,119853,2.07,,10000,Conservative Allocation,,Open,0,431
+LNT,L&T Monthly Income Plan Direct Plan Quarterly Dividend Reinvestment,119854,2.07,,10000,Conservative Allocation,,Open,0,431
+LNT,L&T Monthly Income Plan Monthly Dividend Reinvestment,112488,2.77,,10000,Conservative Allocation,,Open,0,431
+LNT,L&T Monthly Income Plan Quarterly Dividend Reinvestment,112489,2.77,,10000,Conservative Allocation,,Open,0,431
+LNT,L&T Resurgent India Corporate Bond Fund Annual Dividend Reinvestment Option,134426,1.83,,5000,Corporate Credit,,Open,0,209
+LNT,L&T Resurgent India Corporate Bond Fund Direct Plan Annual Dividend Reinvestment Option,134425,0.96,,5000,Corporate Credit,,Open,0,209
+LNT,L&T Resurgent India Corporate Bond Fund Direct Dividend Reinvestment,133606,0.96,,5000,Corporate Credit,,Open,0,209
+LNT,L&T Resurgent India Corporate Bond Fund Regular Dividend Reinvestment,133605,1.83,,5000,Corporate Credit,,Open,0,209
+LNT,L&T Short Term Income Fund Annual Dividend Reinvestment Option,134422,1.49,,10000,Corporate Credit,,Open,0,185
+MIRAE,Mirae Asset Dynamic Bond Regular Growth,140771,2.04,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Dynamic Bond Regular Dividend Payout,140772,2.04,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Dynamic Bond Direct Growth,140769,0,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Dynamic Bond Direct Dividend Payout,140770,0,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Tax Saver Fund -Regular Plan-Growth,135784,2.61,,500,ELSS (Tax Savings),,Open,0,114
+MIRAE,Mirae Asset Tax Saver Fund -Regular Plan-Dividend Payout,135783,2.61,,500,ELSS (Tax Savings),,Open,0,114
+MIRAE,Mirae Asset Tax Saver Fund -Direct Plan-Growth,135781,0,,500,ELSS (Tax Savings),,Open,0,114
+MIRAE,Mirae Asset Tax Saver Fund -Direct Plan-Dividend Payout,135782,0,,500,ELSS (Tax Savings),,Open,0,114
+MIRAE,Mirae Asset Prudence Fund -Regular Plan-Growth,134815,2.65,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Prudence Fund -Regular Plan-Dividend Payout,134816,2.65,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Prudence Fund -Direct Plan-Growth,134813,0,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Prudence Fund -Direct Plan-Dividend Payout,134814,0,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Cash Management Fund Direct Plan Monthly Dividend Reinvestment,118860,0,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Cash Management Monthly Dividend Reinvestment,111645,0.09,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Dynamic Bond Direct Dividend Reinvestment,140770,0,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Dynamic Bond Regular Dividend Reinvestment,140772,2.04,,5000,Intermediate Bond,,Open,0,76
+MIRAE,Mirae Asset Emerging Bluechip Fund Direct Plan Dividend Reinvestment,118835,0,,5000,Small/Mid-Cap,,Open,0,101
+MIRAE,Mirae Asset Emerging Bluechip Dividend Reinvestment,112931,2.28,,5000,Small/Mid-Cap,,Open,0,101
+MIRAE,Mirae Asset Great Consumer Direct Plan Dividend Reinvestment,118838,0,,5000,Equity - Other,,Open,0,70
+MIRAE,Mirae Asset Great Consumer Regular Dividend Reinvestment,114930,2.87,,5000,Equity - Other,,Open,0,70
+MIRAE,Mirae Asset India Opportunities Fund Direct Plan Dividend Reinvestment,118826,0,,5000,Large-Cap,,Open,0,86
+MIRAE,Mirae Asset India Opportunities Fund Regular Dividend Reinvestment,107579,2.23,,5000,Large-Cap,,Open,0,86
+MIRAE,Mirae Asset Prudence Fund -Direct Plan-Dividend Reinvestment,134814,0,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Prudence Fund -Regular Plan-Dividend Reinvestment,134816,2.65,,5000,Moderate Allocation,,Open,0,349
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Monthly Dividend Reinvestment,107704,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Quarterly Dividend Reinvestment,107702,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Direct Plan Monthly Dividend Reinvestment,118841,0,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Direct Plan Quarterly Dividend Reinvestment,118842,0,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Regular Plan Monthly Dividend Reinvestment,107697,0.64,,5000,Ultrashort Bond,,Limited,0,949
+MIRAE,Mirae Asset Saving Fund Direct Plan Daily Dividend Reinvestment,118843,0,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset India Opportunities Fund Regular Growth,107578,2.23,,5000,Large-Cap,,Open,0,86
+MIRAE,Mirae Asset India Opportunities Fund Regular Dividend Payout,107579,2.23,,5000,Large-Cap,,Open,0,86
+MIRAE,Mirae Asset Cash Management Weekly Dividend Reinvestment,111644,0.09,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Cash Management Monthly Dividend Payout,111645,0.09,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Cash Management Growth,111646,0.09,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Cash Management Daily Dividend Reinvestment,111647,0.09,,5000,Liquid,,Open,0,990
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Weekly Dividend Reinvestment,107701,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Daily Dividend Reinvestment,107700,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Regular Plan Growth,107695,0.64,,5000,Ultrashort Bond,,Limited,0,949
+MIRAE,Mirae Asset Saving Fund - Reg Saving Plan Growth,107705,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Monthly Dividend Payout,107704,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Saving Fund Regular Plan Weekly Dividend Reinvestment,107696,0.64,,5000,Ultrashort Bond,,Limited,0,949
+MIRAE,Mirae Asset Saving Fund Regular Plan Monthly Dividend Payout,107697,0.64,,5000,Ultrashort Bond,,Limited,0,949
+MIRAE,Mirae Asset Saving Fund Fund Regular Plan Daily Dividend Reinvestment,107698,0.64,,5000,Ultrashort Bond,,Limited,0,949
+MIRAE,Mirae Asset Emerging Bluechip Growth,112932,2.28,,5000,Small/Mid-Cap,,Open,0,101
+MIRAE,Mirae Asset Emerging Bluechip Dividend Payout,112931,2.28,,5000,Small/Mid-Cap,,Open,0,101
+MIRAE,Mirae Asset Great Consumer - Regular Growth,114931,2.87,,5000,Equity - Other,,Open,0,70
+MIRAE,Mirae Asset Great Consumer Regular Dividend Payout,114930,2.87,,5000,Equity - Other,,Open,0,70
+MIRAE,Mirae Asset Saving Fund Reg Saving Plan Quarterly Dividend Payout,107702,0.64,,5000,Ultrashort Bond,,Open,0,949
+MIRAE,Mirae Asset Cash Management Fund - Direct Plan - Growth,118859,0,,5000,Liquid,,Open,0,990
+MOTILAL,Motilal Oswal MOSt Shares M50 ETF,113069,1.31,,0,Large-Cap,,Open,0,3
+MOTILAL,Motilal Oswal MOSt Shares Midcap 100 ETF,114456,1.27,,0,Small/Mid-Cap,,Open,0,20
+MOTILAL,Motilal Oswal MOSt Shares NASDAQ 100 ETF,114984,1.35,,0,Equity - Other,,Open,0,11
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Regular Plan-Fortnightly Dividend Reinvestment Option,124313,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Fortnightly Dividend Reinvestment Option,124311,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Monthly Dividend Payout Option,124308,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Regular Plan-Quarterly Dividend Payout,124305,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Direct Dividend Payout,127044,2.31,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Direct Growth,127042,2.31,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Regular Dividend Payout,127040,2.28,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Regular Growth,127039,2.28,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused 25 Regular Growth,122387,2.76,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Focused 25 Regular Dividend Payout,122388,2.76,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Focused 25 Direct Growth,122389,2.43,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Focused 25 Direct Dividend Payout,122390,2.43,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Regular Growth,124233,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Regular Daily Dividend Reinvestment,124303,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Regular Weekly Dividend Reinvestment,124310,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Regular Monthly Dividend Payout,124315,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Direct Growth,124234,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Direct Daily Dividend Reinvestment,124316,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Quarterly Dividend Payout Option,124312,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 Direct Plan Dividend Payout,129047,2.06,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 - Direct Plan - Growth,129046,2.06,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 Regular Plan Dividend Payout,129049,2.11,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 - Regular Plan - Growth,129048,2.11,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Weekly Dividend Reinvestment Option,124306,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Focused Long Term Fund Direct Plan Dividend Payout,133384,3.17,,500,ELSS (Tax Savings),,Open,0,91
+MOTILAL,Motilal Oswal MOSt Focused Long Term Fund - Direct Plan - Growth,133386,3.17,,500,ELSS (Tax Savings),,Open,0,91
+MOTILAL,Motilal Oswal MOSt Focused Long Term Fund Regular Plan Dividend Payout,133383,3.07,,500,ELSS (Tax Savings),,Open,0,91
+MOTILAL,Motilal Oswal MOSt Focused Long Term Fund - Regular Plan - Growth,133385,3.07,,500,ELSS (Tax Savings),,Open,0,91
+MOTILAL,MOSt Focused Dynamic Equity Fund Direct Plan Annual Dividend Reinvestment Payout Option,139868,0,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Direct Plan Quarterly Dividend Reinvestment Payout Option,139867,0,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Regular Plan Annual Dividend Reinvestment Payout Option,139864,2.79,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Regular Plan Quarterly Dividend Reinvestment Payout Option,139869,2.79,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Direct Dividend Reinvestment,127044,2.31,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused Midcap 30 Regular Dividend Reinvestment,127040,2.28,,5000,Small/Mid-Cap,,Open,0,62
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 Direct Plan Dividend Reinvestment,129047,2.06,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Focused Multicap 35 Regular Plan Dividend Reinvestment,129049,2.11,,5000,Flexicap,,Open,0,54
+MOTILAL,Motilal Oswal MOSt Focused 25 Direct Dividend Reinvestment,122390,2.43,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Focused 25 Regular Dividend Reinvestment,122388,2.76,,5000,Large-Cap,,Open,0,104
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Monthly Dividend Reinvestment Option,124308,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Direct Plan-Quarterly Dividend Reinvestment Option,124312,0.95,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund Regular Monthly Dividend Reinvestment,124315,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,Motilal Oswal MOSt Ultra Short Term Bond Fund-Regular Plan-Quarterly Dividend Reinvestment Payout,124305,0.94,,5000,Ultrashort Bond,,Open,0,259
+MOTILAL,MOSt Focused Dynamic Equity Fund Regular Plan Quarterly Dividend Payout Option,139871,2.79,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Regular Plan Annual Dividend Payout Option,139863,2.79,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund - Direct Plan - Growth Option,139872,0,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Direct Plan Quarterly Dividend Payout Option,139865,0,,5000,Moderate Allocation,,Open,0,154
+MOTILAL,MOSt Focused Dynamic Equity Fund Direct Plan Annual Dividend Payout Option,139866,0,,5000,Moderate Allocation,,Open,0,154
+PEERLESS,Peerless Equity Fund Direct Plan Yearly Dividend Payout Option,135659,0,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Direct Plan Half Yearly Dividend Payout Option,135658,0,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Long Term Advantage Fund Regular Growth,135655,0.71,,500,ELSS (Tax Savings),,Open,0,13
+PEERLESS,Peerless Long Term Advantage Fund Regular Dividend Payout,135652,0.71,,500,ELSS (Tax Savings),,Open,0,13
+PEERLESS,Peerless Long Term Advantage Fund Direct Growth,135654,0.71,,500,ELSS (Tax Savings),,Open,0,13
+PEERLESS,Peerless Long Term Advantage Fund Direct Dividend Payout,135653,0.71,,500,ELSS (Tax Savings),,Open,0,13
+PEERLESS,Peerless Mid Cap Fund Regular Growth,135678,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Mid Cap Fund Regular Dividend Payout,135680,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Mid Cap Fund Direct Growth,135677,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Mid Cap Fund Direct Dividend Payout,135679,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Equity Fund Direct Plan Quarterly Dividend Payout Option,135656,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Regular Plan Half Yearly Dividend Payout Option,135657,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Regular Plan Yearly Dividend Payout Option,135660,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Regular Plan Quarterly Dividend Payout Option,135661,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless 3 in 1 Fund Direct Plan Dividend Reinvestment Option Monthly Dividend Reinvestment,119174,1.82,,1000,Hybrid Allocation,,Open,0,176
+PEERLESS,Peerless 3 in 1 Fund Direct Plan Dividend Reinvestment Option Quarterly Dividend Reinvestment,119175,1.82,,1000,Hybrid Allocation,,Open,0,176
+PEERLESS,Peerless 3 in 1 Fund Monthly Dividend Reinvestment,114854,1.82,,1000,Hybrid Allocation,,Open,0,176
+PEERLESS,Peerless 3 in 1 Fund Quarterly Dividend Reinvestment,115101,1.82,,1000,Hybrid Allocation,,Open,0,176
+PEERLESS,Peerless Equity Fund Regular Plan Yearly Dividend Reinvestment Option,135660,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Direct Plan Yearly Dividend Reinvestment Option,135659,0,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Normal Direct Plan Dividend Reinvestment Option,119149,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Direct Plan Half Yearly Dividend Reinvestment Option,135658,0,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Direct Plan Quarterly Dividend Reinvestment Option,135656,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Normal Dividend Reinvestment,115788,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Regular Plan Half Yearly Dividend Reinvestment Option,135657,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Equity Fund Regular Plan Quarterly Dividend Reinvestment Option,135661,2.78,,1000,Large-Cap,,Open,0,151
+PEERLESS,Peerless Flexible Income Fund Direct Plan Monthly Dividend Reinvestment Option,119152,0.55,,1000,Intermediate Bond,,Open,0,660
+PEERLESS,Peerless Flexible Income Fund Direct Quarterly Dividend Reinvestment,119153,0.55,,1000,Intermediate Bond,,Open,0,660
+PEERLESS,Peerless Flexible Income Fund Monthly Dividend Reinvestment,117839,0.55,,1000,Intermediate Bond,,Open,0,660
+PEERLESS,Peerless Flexible Income Fund Quarterly Dividend Reinvestment,117836,0.55,,1000,Intermediate Bond,,Open,0,660
+PEERLESS,Peerless Income Plus Fund Direct Plan Monthly Dividend Reinvestment Option,119157,2.71,,1000,Conservative Allocation,,Open,0,124
+PEERLESS,Peerless Income Plus Fund Direct Plan Quarterly Dividend Reinvestment Option,119158,2.71,,1000,Conservative Allocation,,Open,0,124
+PEERLESS,Peerless Income Plus Monthly Dividend Reinvestment,113141,2.71,,1000,Conservative Allocation,,Open,0,124
+PEERLESS,Peerless Income Plus Quarterly Dividend Reinvestment,113143,2.71,,1000,Conservative Allocation,,Open,0,124
+PEERLESS,Peerless Liquid Fund Direct Plan Dividend Reinvestment OptionMonthly,119161,0.12,,1000,Liquid,,Open,0,1840
+PEERLESS,Peerless Liquid Fund Direct Plan Dividend Reinvestment OptionWeekly,119162,0.12,,1000,Liquid,,Open,0,1840
+PEERLESS,Peerless Liquid Fund Regular Monthly Dividend Reinvestment,112647,0.12,,1000,Liquid,,Open,0,1840
+PEERLESS,Peerless Liquid Fund Regular Weekly Dividend Reinvestment,112646,0.12,,1000,Liquid,,Open,0,1840
+PEERLESS,Peerless Mid Cap Fund Direct Dividend Reinvestment,135679,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Mid Cap Fund Regular Dividend Reinvestment,135680,0.65,,1000,Small/Mid-Cap,,Open,0,63
+PEERLESS,Peerless Short Term Fund Direct Plan Dividend Reinvestment OptionQuarterly Dividend Reinvestment,119170,0.74,,1000,Short-Term Bond,,Open,0,366
+PEERLESS,Peerless Short Term Fund Direct Plan Dividend Reinvestment Option Monthly Dividend Reinvestment,119169,0.74,,1000,Short-Term Bond,,Open,0,366
+PEERLESS,Peerless Short Term Monthly Dividend Reinvestment,113173,0.74,,1000,Short-Term Bond,,Open,0,366
+PEERLESS,Peerless Short Term Quarterly Dividend Reinvestment,113211,0.74,,1000,Short-Term Bond,,Open,0,366
+PEERLESS,Peerless Ultra Short Term Fund Direct Plan Dividend Reinvestment OptionMonthly,119187,0.59,,1000,Ultrashort Bond,,Open,0,923
+PEERLESS,Peerless Ultra Short term Direct Weekly Dividend Reinvestment,119188,0.59,,1000,Ultrashort Bond,,Open,0,923
+PEERLESS,Peerless Ultra Short Term Regular Monthly Dividend Reinvestment,112649,0.59,,1000,Ultrashort Bond,,Open,0,923
+PEERLESS,Peerless Ultra Short Term Regular Weekly Dividend Reinvestment,112658,0.59,,1000,Ultrashort Bond,,Open,0,923
+PEERLESS,Peerless 3 in 1 Fund Direct Plan Dividend Payout Option Monthly Dividend Payout,119174,1.82,,1000,Hybrid Allocation,,Open,0,176
+PEERLESS,Peerless Ultra Short term Direct Weekly Dividend Payout,119188,0.59,,1000,Ultrashort Bond,,Open,0,923
+PPFAS,Parag Parikh Long Term Value Regular Growth,122640,2.72,,5000,Flexicap,,Open,0,17
+PPFAS,Parag Parikh Long Term Value Direct Growth,122639,2.17,,1000,Flexicap,,Open,0,17
+PRINCIPALPNB,Principal Equity Savings Direct Plan Dividend Payout Option Monthly,119470,1.50,,5000,Conservative Allocation,,Open,0,1320
+PRINCIPALPNB,Principal Debt Savings Fund - Retail Plan - Direct Plan -Growth Option,119479,0.50,,5000,Short-Term Bond,,Open,0,533
+PRINCIPALPNB,Principal Debt Savings Fund Retail Plan Direct Plan Dividend Payout Option Quarterly,119478,0.50,,5000,Short-Term Bond,,Open,0,533
+PRINCIPALPNB,Principal Smart Equity Fund - Direct Plan - Growth Option,119482,2.07,,5000,Hybrid Allocation,,Open,0,798
+PRINCIPALPNB,Principal Balanced Fund-Direct Plan Half Yearly Dividend Payout Option,119485,2.19,,5000,Moderate Allocation,,Open,0,198
+PRINCIPALPNB,Principal Cash Management Fund - Direct Plan - Growth Option,119468,0.08,,5000,Liquid,,Open,0,960
+PRINCIPALPNB,Principal Cash Management Fund Direct Plan Dividend Reinvestment Option Weekly,119469,0.08,,5000,Liquid,,Open,0,960
+PRINCIPALPNB,Principal Balanced Fund- Direct Plan - Growth Option,119484,2.19,,5000,Moderate Allocation,,Open,0,198
+PRINCIPALPNB,Principal Low Duration Fund Direct Plan Growth Option,119448,0.34,,5000,Ultrashort Bond,,Open,0,1105
+PRINCIPALPNB,Principal Low Duration Fund Direct Plan Weekly Dividend Reinvestment Option,119446,0.34,,5000,Ultrashort Bond,,Open,0,1105
+PRINCIPALPNB,Principal Credit Opportunities Fund Direct Plan Monthly Dividend Payout Option,119449,0.29,,5000,Ultrashort Bond,,Open,0,843
+PRINCIPALPNB,Principal Cash Management Fund Direct Plan Dividend Reinvestment Option Daily,119467,0.08,,5000,Liquid,,Open,0,960
+PRINCIPALPNB,Principal Cash Management Fund -Direct Plan Dividend Payout Option Monthly,119466,0.08,,5000,Liquid,,Open,0,960
+PRINCIPALPNB,Principal Equity Savings - Direct Plan - Growth Option,119472,1.50,,5000,Conservative Allocation,,Open,0,1320
+PRINCIPALPNB,Principal Low Duration Fund Direct Plan Daily Dividend Reinvestment Option,119445,0.34,,5000,Ultrashort Bond,,Open,0,1105
+PRINCIPALPNB,Principal Equity Savings Direct Plan Dividend Payout Option Quaterly,119471,1.50,,5000,Conservative Allocation,,Open,0,1320
+PRINCIPALPNB,Principal Low Duration Fund Direct Plan Monthly Dividend Payout Option,119447,0.34,,5000,Ultrashort Bond,,Open,0,1105
+PRINCIPALPNB,Principal Credit Opportunities Fund Direct Plan Growth Option,119450,0.29,,5000,Ultrashort Bond,,Open,0,843
+PRINCIPALPNB,Principal Dividend Yield Fund - Direct Plan - Growth Option,119438,2.39,,5000,Flexicap,,Open,0,73
+PRINCIPALPNB,Principal Emerging Bluechip Fund - Direct Plan - Growth Option,119441,1.77,,5000,Flexicap,,Open,0,133
+PRINCIPALPNB,Principal Global Opportunities Fund-Direct Plan - Growth Option,119457,0,,10000,Global - Other,,Open,0,11
+PRINCIPALPNB,Principal Dividend Yield Fund- Direct Plan Half Yearly Dividend Payout Option,119437,2.39,,5000,Flexicap,,Open,0,73
+PRINCIPALPNB,Principal Emerging Bluechip Fund Direct Plan Half Yearly Dividend Payout Option,119440,1.77,,5000,Flexicap,,Open,0,133
+PRINCIPALPNB,Principal Growth Fund Direct Plan -Half Yearly Dividend Payout Option,119451,2.07,,5000,Flexicap,,Open,0,162
+PRINCIPALPNB,Principal Global Opportunities Fund- Direct Plan Dividend Payout Option,119458,0,,10000,Global - Other,,Open,0,11
+PRINCIPALPNB,Principal Dynamic Bond Fund - Direct Plan - Growth Option,119461,0.92,,5000,Dynamic Bond,,Open,0,1946
+PRINCIPALPNB,Principal Dynamic Bond Fund Direct Plan Dividend Payout Option -Annually,119460,0.92,,5000,Dynamic Bond,,Open,0,1946
+PRINCIPALPNB,Principal Short Term Income Fund Direct Plan Dividend Payout Plan Monthly,119463,0.48,,5000,Short-Term Bond,,Open,0,912
+PRINCIPALPNB,Principal Growth Fund-Direct Plan - Growth Option,119452,2.07,,5000,Flexicap,,Open,0,162
+PRINCIPALPNB,Principal Index Fund-Nifty-Direct Plan - Growth Option,119488,0.50,,5000,Large-Cap,,Open,0,34
+PRINCIPALPNB,Principal Dynamic Bond Fund- Direct Plan Dividend Payout Option Quarterly,119459,0.92,,5000,Dynamic Bond,,Open,0,1946
+PRINCIPALPNB,Principal Large Cap Fund- Direct Plan - Growth Option,119464,2.10,,5000,Large-Cap,,Open,0,310
+PRINCIPALPNB,Principal Short Term Income Fund Direct Plan Growth Option,119462,0.48,,5000,Short-Term Bond,,Open,0,912
+PRINCIPALPNB,Principal Retail Money Manager Fund- Direct Plan Monthly Dividend Payout,119475,0.12,,0,Liquid,,Open,0,888
+PRINCIPALPNB,Principal Index Fund-Nifty-Direct Plan Dividend Payout Option,119487,0.50,,5000,Large-Cap,,Open,0,34
+PRINCIPALPNB,Principal Large Cap Fund- Direct Plan Half Yearly Dividend Payout Option,119465,2.10,,5000,Large-Cap,,Open,0,310
+PRINCIPALPNB,Principal Smart Equity Fund Monthly Dividend Payout,119483,2.07,,5000,Hybrid Allocation,,Open,0,798
+PRINCIPALPNB,Principal Money Manager Fund- Direct Plan - Growth Option,119474,0.12,,0,Liquid,,Open,0,888
+PRINCIPALPNB,Principal Tax Savings Fund - Direct Plan - Growth,119489,2.25,,500,ELSS (Tax Savings),,Open,0,145
+PRINCIPALPNB,Principal Personal Tax Saver Fund - Direct Plan,119486,2.07,,500,ELSS (Tax Savings),,Open,0,261
+PRINCIPALPNB,Principal Smart Equity Growth,114301,3.11,,5000,Hybrid Allocation,,Open,0,798
+PRINCIPALPNB,Principal Smart Equity Half Yearly Dividend Payout,114302,3.11,,5000,Hybrid Allocation,,Open,0,798
+PRINCIPALPNB,Principal Emerging Bluechip Fund Growth,111381,2.75,,5000,Flexicap,,Open,0,133
+PRINCIPALPNB,Principal Emerging Bluechip Fund Half Yearly Dividend Payout,111382,2.75,,5000,Flexicap,,Open,0,133
+PRINCIPALPNB,Principal Retail Money Manager Fund Monthly Dividend Payout,107330,0.19,,0,Liquid,,Open,0,888
+PRINCIPALPNB,Principal Retail Money Manager Fund Weekly Dividend Payout,107332,0.19,,0,Liquid,,Limited,0,888
+PRINCIPALPNB,Principal Retail Money Manager Fund Daily Dividend Reinvestment,107329,0.19,,0,Liquid,,Limited,0,888
+PRINCIPALPNB,Principal Money Manager Fund Growth,107328,0.19,,0,Liquid,,Open,0,888
+PRINCIPALPNB,Principal Low Duration Fund Daily Dividend Reinvestment,105461,1.29,,5000,Ultrashort Bond,,Open,0,1105
+PRINCIPALPNB,Principal Arbitrage Fund Direct Plan- Monthly Dividend Reinvestment,139219,0,,5000,Arbitrage Fund,,Open,0,0
+QUANTUM,Quantum Liquid Fund Direct Growth,103734,0.54,,5000,Liquid,,Open,0,618
+QUANTUM,Quantum Liquid Fund Direct Daily Dividend Reinvestment,103736,0.54,,100000,Liquid,,Open,0,618
+QUANTUM,Quantum Liquid Fund Direct Monthly Dividend Payout,103735,0.54,,10000,Liquid,,Open,0,618
+QUANTUM,Quantum Long-Term Equity Fund Direct Dividend Payout,103491,0.63,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Long-Term Equity Fund Direct Growth,103490,0.63,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Dynamic Bond Fund - Regular Plan Growth Option,141061,0,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Dynamic Bond Fund Regular Plan Monthly Dividend Payout Option,141060,0,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Equity Fund of Funds Regular Plan Dividend Payout Option,141062,0,,500,Flexicap,,Open,0,13
+QUANTUM,Quantum Equity Fund of Funds - Regular Plan Growth Option,141063,0,,500,Flexicap,,Open,0,13
+QUANTUM,Quantum Gold Savings Fund - Regular Plan Growth Option,141064,0,,500,Sector - Precious Metals,,Open,0,7
+QUANTUM,Quantum Liquid Fund Regular Plan Daily Dividend Reinvestment Option,141065,0,,500,Liquid,,Open,0,618
+QUANTUM,Quantum Liquid Fund - Regular Plan Growth Option,141066,0,,500,Liquid,,Open,0,618
+QUANTUM,Quantum Liquid Fund Regular Plan Monthly Dividend Payout Option,141067,0,,500,Liquid,,Open,0,618
+QUANTUM,Quantum Long Term Equity Fund Regular Plan Dividend Payout Option,141069,0,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Long Term Equity Fund - Regular Plan Growth Option,141068,0,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Multi Asset Fund - Regular Plan Growth Option,141072,0,,500,Hybrid Allocation,,Open,0,31
+QUANTUM,Quantum Tax Saving Fund Regular Plan Dividend Payout Option,141071,0,,500,ELSS (Tax Savings),,Open,0,15
+QUANTUM,Quantum Tax Saving Fund - Regular Plan Growth Option,141070,0,,500,ELSS (Tax Savings),,Open,0,15
+QUANTUM,Quantum Gold Exchange Traded Scheme,107693,0.56,,0,Sector - Precious Metals,,Open,0,1
+QUANTUM,Quantum Dynamic Bond Fund Direct Monthly Dividend Payout Option,134493,0.74,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Dynamic Bond Fund Direct Growth Option,134494,0.74,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Dynamic Bond Fund Direct Monthly Dividend Reinvestment Option,134493,0.74,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Dynamic Bond Fund Regular Plan Monthly Dividend Reinvestment Option,141060,0,,500,Dynamic Bond,,Open,0,1362
+QUANTUM,Quantum Equity FoF Direct Dividend Reinvestment,112038,0,,500,Flexicap,,Open,0,13
+QUANTUM,Quantum Equity Fund of Funds Regular Plan Dividend Reinvestment Option,141062,0,,500,Flexicap,,Open,0,13
+QUANTUM,Quantum Long-Term Equity Fund Direct Dividend Reinvestment,103491,0.63,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Long Term Equity Fund Regular Plan Dividend Reinvestment Option,141069,0,,500,Flexicap,,Open,0,15
+QUANTUM,Quantum Liquid Fund Direct Monthly Dividend Reinvestment,103735,0.54,,10000,Liquid,,Open,0,618
+QUANTUM,Quantum Liquid Fund Regular Plan Monthly Dividend Reinvestment Option,141067,0,,500,Liquid,,Open,0,618
+QUANTUM,Quantum Tax Saving Direct Dividend Reinvestment,111550,0.65,,500,ELSS (Tax Savings),,Open,0,15
+QUANTUM,Quantum Nifty Exchange Traded Scheme,108479,1.12,,0,Large-Cap,,Open,0,29
+QUANTUM,Quantum Gold Savings Direct Growth,115132,0.50,,500,Sector - Precious Metals,,Open,0,7
+QUANTUM,Quantum Multi Asset Fund Direct Growth,117608,0,,500,Hybrid Allocation,,Open,0,31
+QUANTUM,Quantum Tax Saving Direct Dividend Payout,111550,0.65,,500,ELSS (Tax Savings),,Open,0,15
+QUANTUM,Quantum Tax Saving Direct Growth,111549,0.65,,500,ELSS (Tax Savings),,Open,0,15
+QUANTUM,Quantum Equity FoF Direct Dividend Payout,112038,0,,500,Flexicap,,Open,0,13
+QUANTUM,Quantum Equity FoF Direct Growth,112039,0,,500,Flexicap,,Open,0,13
+RELIANCENIPPON,Reliance ETF Hang Seng BeES,140095,1.00,,0,Global - Other,,Open,0,8
+RELIANCENIPPON,Reliance Dynamic Bond Fund Quarterly Dividend Payout,117974,1.82,,5000,Dynamic Bond,,Open,0,894
+RELIANCENIPPON,Reliance Liquid Fund Treasury Plan Quarterly Dividend Payout,112340,0.19,,100,Liquid,,Open,0,625
+RELIANCENIPPON,Reliance Floating Rate Fund Short Term Plan Quarterly Dividend Payout,112942,0.61,,5000,Short-Term Bond,,Open,0,137
+RELIANCENIPPON,Reliance Liquid Fund Cash Plan Monthly Dividend Payout,114251,1.05,,100,Liquid,,Open,0,774
+RELIANCENIPPON,Reliance Liquid Fund Cash Plan Quarterly Dividend Payout,114252,1.05,,100,Liquid,,Open,0,774
+RELIANCENIPPON,Reliance Small Cap Fund - Bonus,113178,2.54,,5000,Small/Mid-Cap,,Limited,0,69
+RELIANCENIPPON,Reliance Regular Savings Fund Balanced Option Dividend Payout,112937,2.45,,500,Moderate Allocation,,Open,0,229
+RELIANCENIPPON,Reliance Regular Savings Fund Debt Option Quarterly Dividend Payout,112941,1.99,,500,Corporate Credit,,Open,0,173
+RELIANCENIPPON,Reliance Regular Savings Fund Equity Option Dividend Payout,103086,2.34,,500,Flexicap,,Open,0,39
+RELIANCENIPPON,Reliance Regular Savings Fund - Debt Option - Institutional - Growth,112939,1.76,,500,Corporate Credit,,Limited,0,173
+RELIANCENIPPON,Reliance ETF Infra BeES,140102,1.06,,0,Large-Cap,,Open,0,121
+RELIANCENIPPON,Reliance Index Fund - Nifty Plan - Growth,113296,0.95,,5000,Large-Cap,,Open,0,74
+RELIANCENIPPON,Reliance Index Fund - Nifty Plan - Bonus Option,113297,0.95,,5000,Large-Cap,,Limited,0,74
+RELIANCENIPPON,Reliance Index Fund - Sensex Plan - Growth,113269,0.90,,5000,Large-Cap,,Open,0,50
+RELIANCENIPPON,Reliance Index Fund - Sensex Plan - Bonus Option,113270,0.90,,5000,Large-Cap,,Limited,0,50
+RELIANCENIPPON,Reliance Arbitrage Advantage Fund - Growth,113345,1.05,,5000,Arbitrage Fund,,Open,0,1469
+RELIANCENIPPON,Reliance Arbitrage Advantage Fund Dividend Payout,113346,1.05,,5000,Arbitrage Fund,,Open,0,1469
+RELIANCENIPPON,Reliance Small Cap Fund - Growth,113177,2.54,,5000,Small/Mid-Cap,,Open,0,69
+RELIANCENIPPON,Reliance Small Cap Fund Dividend Payout,113179,2.54,,5000,Small/Mid-Cap,,Open,0,69
+RELIANCENIPPON,Reliance Index Fund Nifty Plan Quarterly Dividend Payout,113298,0.95,,5000,Large-Cap,,Open,0,74
+RELIANCENIPPON,Reliance Index Fund Nifty Plan Half Yearly Dividend Payout,113299,0.95,,5000,Large-Cap,,Open,0,74
+RELIANCENIPPON,Reliance Index Fund Nifty Plan Annual Dividend Payout,113300,0.95,,5000,Large-Cap,,Open,0,74
+RELIANCENIPPON,Reliance Index Fund Sensex Plan Quarterly Dividend Payout,113271,0.90,,5000,Large-Cap,,Open,0,50
+RELIANCENIPPON,Reliance Index Fund Sensex Plan Half Yearly Dividend Payout,113294,0.90,,5000,Large-Cap,,Open,0,50
+RELIANCENIPPON,Reliance Index Fund Sensex Plan Annual Dividend Payout,113295,0.90,,5000,Large-Cap,,Open,0,50
+RELIANCENIPPON,Reliance Gold Savings Fund - Growth,114616,0.70,,5000,Sector - Precious Metals,,Open,0,18
+RELIANCENIPPON,Reliance Gold Savings Fund Dividend Payout,114617,0.70,,5000,Sector - Precious Metals,,Open,0,18
+RELIANCENIPPON,Reliance Gilt Securities Fund Institutional Plan Growth,109717,1.69,,5000,Long-Term Government Bond,,Limited,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund Monthly Dividend Payout Plan,109723,1.79,,5000,Long-Term Government Bond,,Open,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund -Growth,109720,1.79,,5000,Long-Term Government Bond,,Open,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund -P F Option -Automatic Annual Dividend Payout,109716,1.79,,5000,Long-Term Government Bond,,Open,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund-Institutional Plan-PF-Automatic Capital Appreciation Payout,109718,1.69,,5000,Long-Term Government Bond,,Limited,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund-P F Option -Automatic Capital Appreciation Payout,109724,1.79,,5000,Long-Term Government Bond,,Open,0,1169
+RELIANCENIPPON,Reliance Gilt Securities Fund -P F Option -Defined Maturity Date,109721,1.79,,5000,Long-Term Government Bond,,Open,0,1169
+RELIANCENIPPON,Reliance ETF Shariah BeES,140094,1.00,,0,Large-Cap,,Open,0,40
+RELIANCENIPPON,Reliance Medium Term Fund Weekly Dividend Payout,109473,0.83,,5000,Ultrashort Bond,,Open,0,229
+RELIANCENIPPON,Reliance Medium Term Fund Daily Dividend Reinvestment,109472,0.83,,5000,Ultrashort Bond,,Open,0,229
+RELIANCENIPPON,Reliance Interval Fund-Monthly Interval Fund-Series-I- Dividend Payout,105230,0.16,,5000,Fixed Maturity Ultrashort Bond,,Open,0,419
+RELIANCENIPPON,Reliance Interval Fund-Monthly Interval Fund-Series-II- Dividend Payout,105401,0.43,,5000,Fixed Maturity Ultrashort Bond,,Open,0,501
+RELIANCENIPPON,Reliance Interval Fund Annual Interval Fund Series-I- Retail - Dividend Payout,105662,0.20,,5000,Fixed Maturity Short-Term Bond,,Open,0,78
+RELIANCENIPPON,Reliance Interval Fund Annual Interval Fund Series-I- Retail - Growth,105661,0.20,,5000,Fixed Maturity Short-Term Bond,,Open,0,78
+RELIANCENIPPON,Reliance Interval Fund Annual Interval Fund Series-I- Dividend Payout,105660,0.25,,5000,Fixed Maturity Short-Term Bond,,Open,0,78
+RELIANCENIPPON,Reliance Interval Fund Annual Interval Fund Series-I- Growth,105663,0.25,,5000,Fixed Maturity Short-Term Bond,,Open,0,78
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-III- Dividend Payout,105885,0.24,,5000,Fixed Maturity Ultrashort Bond,,Open,0,100
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-I- Growth,105433,0.10,,5000,Fixed Maturity Ultrashort Bond,,Open,0,315
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-II- Dividend Payout,105692,0.36,,5000,Fixed Maturity Ultrashort Bond,,Open,0,237
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-I- Dividend Payout,105434,0.10,,5000,Fixed Maturity Ultrashort Bond,,Open,0,315
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-III- Growth,105884,0.24,,5000,Fixed Maturity Ultrashort Bond,,Open,0,100
+RELIANCENIPPON,Reliance Interval Fund-Quarterly Interval Fund-Series-III- Institutional Growth,105882,0.21,,0,Fixed Maturity Ultrashort Bond,,Open,0,100
+SAHARA,Sahara Growth Fund Dividend Payout,101529,2.46,,3000,Flexicap,,Limited,0,122
+SAHARA,Sahara Growth Fund Growth,101528,2.46,,3000,Flexicap,,Limited,0,122
+SAHARA,Sahara Infrastructure Fund Fixed Pricing Dividend Payout,103730,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Fixed Pricing Growth,103731,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Variable Pricing Dividend Payout,103732,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Variable Pricing Growth,103733,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Liquid Fund Fixed Pricing Option Monthly Dividend Payout,101398,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Fixed Pricing Option Growth,101394,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Fixed Pricing Option Daily Dividend Reinvestment,101393,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Option Daily Dividend Reinvestment,101399,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Fixed Pricing Option Weekly Dividend Reinvestment,101397,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Option Growth,101402,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Option Monthly Dividend Payout,101401,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Option Weekly Dividend Reinvestment,101400,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Midcap Bonus,100799,3.01,,1000,Small/Mid-Cap,,Limited,0,84
+SAHARA,Sahara Midcap Fund Dividend Payout,100797,3.01,,1000,Small/Mid-Cap,,Limited,0,84
+SAHARA,Sahara Midcap Fund Growth,100796,3.01,,1000,Small/Mid-Cap,,Limited,0,84
+SAHARA,Sahara TaxGain Dividend Payout,100337,2.99,,500,ELSS (Tax Savings),,Limited,0,85
+SAHARA,Sahara TaxGain Growth,100338,2.99,,500,ELSS (Tax Savings),,Limited,0,85
+SAHARA,Sahara Wealth Plus Fund Fixed Pricing Dividend Payout,103119,1.33,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Wealth Plus Fund Fixed Pricing Growth,103120,1.33,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Wealth Plus Fund Variable Pricing Dividend Payout,103121,1.33,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Wealth Plus Fund Variable Pricing Growth,103122,1.33,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Banking and Financial Services Fund Dividend Reinvestment Direct,120374,2.82,,5000,Sector - Financial Services,,Limited,0,59
+SAHARA,Sahara Banking and Financial Services Fund Dividend Reinvestment,109494,2.97,,5000,Sector - Financial Services,,Limited,0,59
+SAHARA,Sahara Growth Fund Dividend Reinvestment Direct,120288,2.72,,3000,Flexicap,,Limited,0,122
+SAHARA,Sahara Growth Fund Dividend Reinvestment,101529,2.46,,3000,Flexicap,,Limited,0,122
+SAHARA,Sahara Infrastructure Fund Fixed Pricing Option Direct Dividend Reinvestment,120352,2.28,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Fixed Pricing Dividend Reinvestment,103730,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Variable Pricing Option Direct Dividend Reinvestment,120354,2.28,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Infrastructure Fund Variable Pricing Dividend Reinvestment,103732,1.81,,5000,Sector - Infrastructure,,Limited,0,51
+SAHARA,Sahara Liquid Fund Fixed Pricing Direct Monthly Dividend Reinvestment Option,120266,0.24,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Fixed Pricing Option Monthly Dividend Reinvestment,101398,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Direct Monthly Dividend Reinvestment Option,120273,0.24,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Liquid Fund Variable Pricing Option Monthly Dividend Reinvestment,101401,0.15,,1000,Liquid,,Limited,0,347
+SAHARA,Sahara Midcap Fund Dividend Reinvestment Direct,120298,2.85,,1000,Small/Mid-Cap,,Limited,0,84
+SAHARA,Sahara Midcap Fund Dividend Reinvestment,100797,3.01,,1000,Small/Mid-Cap,,Limited,0,84
+SAHARA,Sahara Power & Natural Resources Fund Dividend Reinvestment Direct,120370,2.83,,5000,Sector - Energy,,Limited,0,43
+SAHARA,Sahara Power & Natural Resources Fund Dividend Reinvestment,108320,2.97,,5000,Sector - Energy,,Limited,0,43
+SAHARA,Sahara R.E.A.L Fund Dividend Reinvestment Option Direct,120360,2.85,,5000,Equity - Other,,Limited,0,97
+SAHARA,Sahara R.E.A.L Fund Dividend Reinvestment,106744,3.01,,5000,Equity - Other,,Limited,0,97
+SAHARA,Sahara Star Value Fund Dividend Reinvestment Direct,120387,2.53,,5000,Small/Mid-Cap,,Limited,0,102
+SAHARA,Sahara Star Value Dividend Reinvestment,112104,2.31,,5000,Small/Mid-Cap,,Limited,0,102
+SAHARA,Sahara Super 20 Fund Dividend Reinvestment Direct,120383,2.83,,5000,Large-Cap,,Limited,0,172
+SAHARA,Sahara Super 20 Dividend Reinvestment,112036,2.99,,5000,Large-Cap,,Limited,0,172
+SAHARA,Sahara TaxGain Dividend Reinvestment Direct,120290,2.84,,500,ELSS (Tax Savings),,Limited,0,85
+SAHARA,Sahara TaxGain Dividend Reinvestment,100337,2.99,,500,ELSS (Tax Savings),,Limited,0,85
+SAHARA,Sahara Wealth Plus Fund Fixed Pricing Option Direct Dividend Reinvestment Option,120341,2.03,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Wealth Plus Fund Fixed Pricing Dividend Reinvestment,103119,1.33,,1000,Flexicap,,Limited,0,126
+SAHARA,Sahara Wealth Plus Fund Variable Pricing Option Direct Dividend Reinvestment,120344,2.03,,1000,Flexicap,,Limited,0,126
+SBI,SBI Small & Midcap Fund Regular Plan Growth,125494,2.62,,5000,Small/Mid-Cap,,Limited,0,41
+SBI,SBI ETF Gold,111954,1.05,,0,Sector - Precious Metals,,Open,0,0
+SBI,SBI Treasury Advantage Fund Regular Plan Weekly Dividend Payout,125500,1.02,,5000,Ultrashort Bond,,Open,0,639
+SBI,SBI Treasury Advantage Fund Regular Plan Daily Dividend Reinvestment,125499,1.02,,5000,Ultrashort Bond,,Open,0,639
+SBI,SBI Treasury Advantage Fund Regular Plan Monthly Dividend Payout,125501,1.02,,5000,Ultrashort Bond,,Open,0,639
+SBI,SBI Treasury Advantage Fund Regular Plan Growth,125498,1.02,,5000,Ultrashort Bond,,Open,0,639
+SBI,SBI Small & Midcap Fund Regular Plan Dividend Payout,125495,2.62,,5000,Small/Mid-Cap,,Limited,0,41
+SBI,SBI PSU Regular Growth,113099,2.94,,5000,Equity - Other,,Open,0,34
+SBI,SBI PSU Regular Dividend Payout,112923,2.94,,5000,Equity - Other,,Open,0,34
+SBI,SBI Gold Growth,115676,0.75,,5000,Sector - Precious Metals,,Open,0,0
+SBI,SBI Gold Dividend Payout,115677,0.75,,5000,Sector - Precious Metals,,Open,0,0
+SBI,SBI Tax Advantage Fund Series II Dividend,116353,3.06,,500,ELSS (Tax Savings),,Open,0,21
+SBI,SBI Tax Advantage Fund Series II Growth,116352,3.06,,500,ELSS (Tax Savings),,Open,0,21
+SBI,SBI Saving Fund Regular Plan Daily Dividend Reinvestment,114348,1.36,,500,Ultrashort Bond,,Open,0,360
+SBI,SBI Magnum Insta Cash Fund Liquid Floater Regular Plan Daily Dividend Reinvestment,114297,0.40,,5000,Liquid,,Open,0,1633
+SBI,SBI Premier Liquid Fund Regular Plan Weekly Dividend Payout,105282,0.18,,50000,Liquid,,Open,0,649
+SBI,SBI Ultra Short Term Debt Fund Regular Plan Growth,106212,0.49,,5000,Ultrashort Bond,,Open,0,340
+SBI,SBI Short Term Debt Fund Regular Plan Monthly Dividend Payout,106233,0.99,,5000,Short-Term Bond,,Open,0,361
+SBI,SBI Short Term Debt Fund Regular Plan Fortnightly Dividend Payout,106234,0.99,,5000,Short-Term Bond,,Open,0,361
+SBI,SBI Short Term Debt Fund Regular Plan Weekly Dividend Payout,106232,0.99,,5000,Short-Term Bond,,Open,0,361
+SBI,SBI Saving Fund Direct Plan Growth,106231,0.99,,5000,Short-Term Bond,,Open,0,361
+SBI,SBI Short Term Debt Fund Retail Monthly Dividend Payout,106229,0.90,,10000,Short-Term Bond,,Limited,0,361
+SBI,SBI Short Term Debt Fund Retail Fortnightly Dividend Payout,106230,0.90,,5000,Short-Term Bond,,Limited,0,361
+SBI,SBI Short Term Debt Fund Retail Weekly Dividend Payout,106228,0.90,,10000,Short-Term Bond,,Limited,0,361
+SBI,SBI Tax Advantage Fund Series I Dividend,108144,2.80,,500,ELSS (Tax Savings),,Open,0,29
+SBI,SBI Saving Fund Regular Plan Growth,106227,0.90,,10000,Short-Term Bond,,Limited,0,361
+SBI,SBI Tax Advantage Fund Series I Growth,108145,2.80,,500,ELSS (Tax Savings),,Open,0,29
+SBI,SBI Ultra Short Term Debt Fund Institutional Weekly Dividend Payout,106222,0.37,,5000,Ultrashort Bond,,Limited,0,340
+SBI,SBI Ultra Short Term Debt Fund Institutional Daily Dividend Reinvestment,106221,0.37,,5000,Ultrashort Bond,,Limited,0,340
+SBI,SBI Ultra Short Term Debt Fund Institutional Growth,106217,0.37,,5000,Ultrashort Bond,,Limited,0,340
+SBI,SBI Ultra Short Term Debt Fund Regular Plan Monthly Dividend Payout,106216,0.49,,5000,Ultrashort Bond,,Open,0,340
+SBI,SBI Ultra Short Term Debt Fund Regular Plan Fortnightly Dividend Payout,106215,0.49,,5000,Ultrashort Bond,,Open,0,340
+SBI,SBI Ultra Short Term Debt Fund Regular Plan Weekly Dividend Payout,106214,0.49,,5000,Ultrashort Bond,,Open,0,340
+SBI,SBI Ultra Short Term Debt Fund Regular Plan Daily Dividend Reinvestment,106213,0.49,,5000,Ultrashort Bond,,Open,0,340
+SBI,SBI Magnum Insta Cash Fund Regular Plan Daily Dividend Reinvestment,105080,0.22,,5000,Liquid,,Open,0,1165
+SBI,SBI Premier Liquid Fund Regular Plan Daily Dividend Reinvestment,105281,0.18,,50000,Liquid,,Open,0,649
+SBI,SBI Premier Liquid Fund Regular Plan Growth,105280,0.18,,50000,Liquid,,Open,0,649
+SBI,SBI Arbitrage Opportunities Fund Regular Growth,104457,1.14,,5000,Arbitrage Fund,,Open,0,816
+SBI,SBI Arbitrage Opportunities Fund Regular Dividend Payout,104458,1.14,,5000,Arbitrage Fund,,Open,0,816
+SBI,SBI Infrastructure Fund Regular Dividend Payout,106095,2.71,,5000,Sector - Infrastructure,,Open,0,64
+SBI,SBI Infrastructure Fund Regular Growth,106096,2.71,,5000,Sector - Infrastructure,,Open,0,64
+SBI,SBI Magnum Equity Fund Regular Growth,104523,2.48,,1000,Large-Cap,,Open,0,59
+SBI,SBI Magnum Taxgain Scheme Regular Growth,105628,2.35,,500,ELSS (Tax Savings),,Open,0,136
+SBI,SBI Gold Direct Plan Dividend Payout,119789,0,,5000,Sector - Precious Metals,,Open,0,0
+SBI,SBI Arbitrage Opportunities Fund Direct Growth,119574,0.60,,5000,Arbitrage Fund,,Open,0,816
+SBI,SBI Infrastructure Fund Direct Dividend Payout,119695,2.16,,5000,Sector - Infrastructure,,Open,0,64
+SBI,SBI Dynamic Bond Fund Direct Growth,119671,1.01,,5000,Dynamic Bond,,Open,0,1311
+SBI,SBI Magnum Balanced Fund Direct Dividend Payout,119604,1.25,,1000,Moderate Allocation,,Open,0,488
+SBI,SBI Gold Direct Plan Growth,119788,0,,5000,Sector - Precious Metals,,Open,0,0
+SBI,SBI Blue Chip Fund Direct Dividend Payout,119585,1.18,,5000,Large-Cap,,Open,0,115
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Direct Dividend Reinvestment,125712,0,,5000,Moderate Allocation,,Open,0,0
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Regular Dividend Reinvestment,125714,0,,5000,Moderate Allocation,,Open,0,0
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Regular Growth,125713,0,,5000,Moderate Allocation,,Open,0,0
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Regular Dividend Payout,125714,0,,5000,Moderate Allocation,,Open,0,0
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Direct Growth,125711,0,,5000,Moderate Allocation,,Open,0,0
+SHRIRAM,Shriram Equity and Debt Opportunities Fund Direct Dividend Payout,125712,0,,5000,Moderate Allocation,,Open,0,0
+SUNDARAM,Sundaram Banking & PSU Debt Fund - Bonus Option,118326,1.58,,100000,Ultrashort Bond,,Limited,0,387
+SUNDARAM,Sundaram Fixed Term Plan Series ER Direct Growth,125417,0.18,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,26
+SUNDARAM,Sundaram Fixed Term Plan Series ER Regular Growth,125420,0.52,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,26
+SUNDARAM,Sundaram Fixed Term Plan Series ER Regular Half Yearly Dividend,125421,0.52,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,26
+SUNDARAM,Sundaram Select Micro Cap Series 1 Regular Growth,125775,3.02,,5000,Small/Mid-Cap,,Open,0,15
+SUNDARAM,Sundaram Select Micro Cap Series 1 Regular Dividend,125776,3.02,,5000,Small/Mid-Cap,,Open,0,15
+SUNDARAM,Sundaram Select Micro Cap Series 1 Direct Dividend,125777,2.67,,5000,Small/Mid-Cap,,Open,0,15
+SUNDARAM,Sundaram Select Micro Cap Series 1 Direct Growth,125778,2.67,,5000,Small/Mid-Cap,,Open,0,15
+SUNDARAM,Sundaram Select Micro Cap Series II Direct Dividend,126407,2.69,,5000,Small/Mid-Cap,,Open,0,18
+SUNDARAM,Sundaram Select Micro Cap Series II Direct Growth,126408,2.69,,5000,Small/Mid-Cap,,Open,0,18
+SUNDARAM,Sundaram Select Micro Cap Series II Regular Dividend,126409,3.04,,5000,Small/Mid-Cap,,Open,0,18
+SUNDARAM,Sundaram Select Micro Cap Series II Regular Growth,126410,3.04,,5000,Small/Mid-Cap,,Open,0,18
+SUNDARAM,Sundaram Money Fund Regular Fortnightly Dividend Reinvestment,103395,0.14,,1000,Liquid,,Open,0,1072
+SUNDARAM,Sundaram Select Micro Cap Series III Direct Dividend,126847,2.69,,5000,Small/Mid-Cap,,Open,0,17
+SUNDARAM,Sundaram Select Micro Cap Series III Direct Growth,126848,2.69,,5000,Small/Mid-Cap,,Open,0,17
+SUNDARAM,Sundaram Select Micro Cap Series III Regular Dividend,126845,3.04,,5000,Small/Mid-Cap,,Open,0,17
+SUNDARAM,Sundaram Select Micro Cap Series III Regular Growth,126846,3.04,,5000,Small/Mid-Cap,,Open,0,17
+SUNDARAM,Sundaram Ultra Short Term Regular Fortnightly Dividend Payout (Formerly Super Institutional Plan),105557,0.93,,1000,Ultrashort Bond,,Open,0,1496
+SUNDARAM,Sundaram Ultra Short Term Regular Monthly Dividend Payout (Formerly Super Institutional Plan),105566,0.93,,1000,Ultrashort Bond,,Open,0,1496
+SUNDARAM,Sundaram Infrastructure Advantage Fund Regular Plan Dividend Payout,129210,2.69,,100000,Sector - Infrastructure,,Open,0,29
+SUNDARAM,Sundaram Infrastructure Advantage Fund Direct Plan Dividend Payout,129211,2.49,,100000,Sector - Infrastructure,,Open,0,29
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Regular Growth,128427,2.64,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Regular Yearly Dividend,128429,2.64,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Regular Half Yearly Dividend,128428,2.64,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Direct Growth,128424,0.93,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Direct Yearly Dividend,128426,0.93,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Hybrid Fund-Series-F-Direct Half Yearly Dividend,128425,0.93,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+SUNDARAM,Sundaram Select Micro Cap Series IV Regular Growth,127671,2.69,,5000,Small/Mid-Cap,,Open,0,20
+SUNDARAM,Sundaram Select Micro Cap Series IV Regular Dividend,127670,2.69,,5000,Small/Mid-Cap,,Open,0,20
+SUNDARAM,Sundaram Select Micro Cap Series IV Direct Growth,127669,3.04,,5000,Small/Mid-Cap,,Open,0,20
+SUNDARAM,Sundaram Select Micro Cap Series IV Direct Dividend,127668,3.04,,5000,Small/Mid-Cap,,Open,0,20
+SUNDARAM,Sundaram Fixed Term Plan Series FD Regular Growth,127708,0.20,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+SUNDARAM,Sundaram Fixed Term Plan Series FD Regular Quarterly Dividend,127710,0.20,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+SUNDARAM,Sundaram Fixed Term Plan Series FD Direct Growth,127711,0.11,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+SUNDARAM,Sundaram Money Fund - Regular Bonus Option,118328,0.14,,1000,Liquid,,Limited,0,1072
+SUNDARAM,Sundaram Select Debt Short Term Asset Plan - Bonus Option,118332,1.48,,5000,Short-Term Bond,,Limited,0,2537
+SUNDARAM,Sundaram Ultra Short Term Regular Qtrly Dividend Payout (Formerly Super Institutional Plan),105558,0.93,,1000,Ultrashort Bond,,Open,0,1496
+SUNDARAM,Sundaram Value Fund Series I Direct Dividend,133321,2.67,,5000,Flexicap,,Open,0,20
+SUNDARAM,Sundaram Value Fund Series I Direct Growth,133320,2.67,,5000,Flexicap,,Open,0,20
+SUNDARAM,Sundaram Value Fund Series I Regular Dividend,133319,3.02,,5000,Flexicap,,Open,0,20
+SUNDARAM,Sundaram Value Fund Series I Regular Growth,133318,3.02,,5000,Flexicap,,Open,0,20
+SUNDARAM,Sundaram Fixed Term Plan Series GU Regular Growth,133555,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+SUNDARAM,Sundaram Fixed Term Plan Series GU Regular Half Yearly Dividend,133556,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+SUNDARAM,Sundaram Fixed Term Plan Series GU Direct Growth,133552,0,,5000,Fixed Maturity Short-Term Bond,,Open,0,0
+SUNDARAM,Sundaram Money Fund Regular Qrtly Dividend Reinvestment,103393,0.14,,1000,Liquid,,Open,0,1072
+SUNDARAM,Sundaram Value Fund Series II Regular Growth,133557,3.04,,5000,Flexicap,,Open,0,94
+SUNDARAM,Sundaram Value Fund Series II Regular Dividend,133558,3.04,,5000,Flexicap,,Open,0,94
+SUNDARAM,Sundaram Value Fund Series II Direct Growth,133559,2.69,,5000,Flexicap,,Open,0,94
+SUNDARAM,Sundaram Value Fund Series II Direct Dividend,133560,2.69,,5000,Flexicap,,Open,0,94
+SUNDARAM,Sundaram Top 100 Series IV Regular Dividend,133354,3.04,,5000,Large-Cap,,Open,0,35
+TATA,Tata Balanced Fund Regular Dividend Payout,101222,2.19,,5000,Moderate Allocation,,Open,0,43
+TATA,Tata Balanced Fund Regular Growth,100414,2.19,,5000,Moderate Allocation,,Open,0,43
+TATA,Tata Dividend Yield Fund Dividend Payout,102858,2.69,,5000,Flexicap,,Open,0,27
+TATA,Tata Dividend Yield Fund Growth,102859,2.69,,5000,Flexicap,,Open,0,27
+TATA,Tata Dynamic Bond Fund Option Regular Growth,101909,1.25,,5000,Dynamic Bond,,Open,0,693
+TATA,Tata Dynamic Bond Fund Option Regular Dividend Payout,101224,1.25,,5000,Dynamic Bond,,Open,0,693
+TATA,Tata Dynamic Bond Fund Option B Dividend Payout,102031,1.25,,5000,Dynamic Bond,,Open,0,693
+TATA,Tata Dynamic Bond Fund Option B Growth,101910,1.25,,5000,Dynamic Bond,,Open,0,693
+TATA,Tata Equity Opportunities Fund Regular Dividend Payout,101823,2.33,,5000,Flexicap,,Open,0,44
+TATA,Tata Equity Opportunities Fund Regular Growth,101824,2.33,,5000,Flexicap,,Open,0,44
+TATA,Tata Equity P/E Fund Regular Growth,101672,2.79,,5000,Flexicap,,Open,0,98
+TATA,Tata Ultra Short Term Fund Regular Daily Dividend Reinvestment,103160,0.25,,5000,Ultrashort Bond,,Open,0,486
+TATA,Tata Ultra Short Term Fund Regular Growth,103159,0.25,,5000,Ultrashort Bond,,Open,0,486
+TATA,Tata Ultra Short Term Fund Regular Weekly Dividend Payout,103158,0.25,,5000,Ultrashort Bond,,Open,0,486
+TATA,Tata Money Market Fund Growth,102153,0.21,,5000,Liquid,,Limited,0,1212
+TATA,Tata Money Market Dividend Payout,102152,0.21,,5000,Liquid,,Limited,0,1212
+TATA,Tata Money Market Fund Regular Daily Dividend Reinvestment,101714,0.21,,5000,Liquid,,Open,0,1212
+TATA,Tata Money Market Fund Regular Growth,102672,0.21,,5000,Liquid,,Open,0,1212
+TATA,Tata Gilt Securities High Investment Fund Dividend Payout,101902,1.29,,5000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Gilt Securities High Investment Fund Growth,102016,1.29,,50000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Gilt Securities Retirement Plan (280225) Growth,101945,1.29,,50000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Gilt Securities Retirement Plan (280225) Dividend,102046,1.29,,50000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Gilt Securities Retirement Investment Plan Bonus,102263,1.29,,5000,Long-Term Government Bond,,Limited,0,504
+TATA,Tata Gilt Securities Fund Plan A Dividend Payout,101049,1.29,,5000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Gilt Securities Fund Plan A Growth,101042,1.29,,5000,Long-Term Government Bond,,Open,0,504
+TATA,Tata Mid Cap Growth Fund Regular Bonus,102329,2.66,,5000,Small/Mid-Cap,,Limited,0,45
+TATA,Tata Mid Cap Growth Fund Regular Dividend Payout,102326,2.66,,5000,Small/Mid-Cap,,Open,0,45
+TATA,Tata Mid Cap Growth Fund Regular Growth,102328,2.66,,5000,Small/Mid-Cap,,Open,0,45
+TATA,Tata Long Term Debt Fund Regular Income Option Growth,100418,1.65,,5000,Dynamic Bond,,Open,0,466
+TATA,Tata Long Term Debt Fund Regular Income Option Half Yearly Dividend Payout,100417,1.65,,5000,Dynamic Bond,,Open,0,466
+TATA,Tata Long Term Debt Fund Regular Income Option Quarterly Dividend Payout,100416,1.65,,10000,Dynamic Bond,,Open,0,466
+TATA,Tata Long Term Debt Fund Regular Income Option Appreciation Bonus,101419,1.65,,5000,Dynamic Bond,,Limited,0,466
+TATA,Tata Long Term Debt Fund Regular Income Option Dividend Payout,101186,1.65,,5000,Dynamic Bond,,Open,0,466
+TATA,Tata Medium Term Fund High Investment Plan Dividend Payout/Bonus,101606,1.74,,100000,Intermediate Bond,,Open,0,257
+TATA,Tata Medium Term Fund High Investment Plan Growth,101704,1.74,,100000,Intermediate Bond,,Open,0,257
+TATA,Tata Medium Term Fund Regular Bonus/Dividend Payout,101605,1.74,,5000,Intermediate Bond,,Open,0,257
+TATA,Tata Index Fund Nifty Regular Plan,101659,0.81,,5000,Large-Cap,,Open,0,43
+TATA,Tata Medium Term Fund Regular Growth,101703,1.74,,5000,Intermediate Bond,,Open,0,257
+TATA,Tata Index Fund Sensex Regular Plan,101746,0.80,,5000,Large-Cap,,Open,0,22
+TATA,Tata Infrastructure Fund Dividend Payout,101852,2.54,,5000,Sector - Infrastructure,,Open,0,30
+TATA,Tata Infrastructure Fund Growth,101766,2.54,,5000,Sector - Infrastructure,,Open,0,30
+TATA,Tata Liquid Fund High Investment Plan Daily Dividend Reinvestment,101984,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund High Investment Plan Growth,101860,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund High Investment Plan Monthly Dividend Payout,101985,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund High Investment Plan Weekly Dividend Payout,101859,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund Regular Investment Plan Daily Dividend Reinvestment,101982,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund Regular Investment Plan Fortnightly Dividend Payout,101983,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund Regular Investment Plan Growth,101858,0.27,,5000,Liquid,,Limited,0,1379
+TATA,Tata Liquid Fund Regular Daily Dividend Reinvestment,101986,0.27,,5000,Liquid,,Open,0,1379
+TAURUS,Taurus Ethical Fund-Direct Plan-Bonus Option,118878,2.23,,5000,Flexicap,,Limited,0,137
+TAURUS,Taurus Banking & Financial Services Fund-Direct Plan-Growth Option,118868,2.26,,5000,Sector - Financial Services,,Open,0,67
+TAURUS,Taurus Banking & Financial Services Fund-Direct Plan-Dividend Payout Option,118869,2.26,,5000,Sector - Financial Services,,Open,0,67
+TAURUS,Taurus Bonanza Fund-Direct Plan-Growth Option,118870,2.33,,5000,Large-Cap,,Open,0,251
+TAURUS,Taurus Bonanza Fund-Direct Plan-Dividend Payout Option,118871,2.33,,5000,Large-Cap,,Open,0,251
+TAURUS,Taurus Discovery Fund-Direct Plan-Growth Option,118872,2.63,,5000,Flexicap,,Open,0,224
+TAURUS,Taurus Discovery Fund-Direct Plan-Dividend Payout Option,118873,2.63,,5000,Flexicap,,Open,0,224
+TAURUS,Taurus Dynamic Income Fund-Direct Plan-Growth Option,118874,0.49,,5000,Dynamic Bond,,Limited,0,1374
+TAURUS,Taurus Dynamic Income Fund-Direct Plan-Dividend Payout Option,118875,0.49,,5000,Dynamic Bond,,Limited,0,1374
+TAURUS,Taurus Ethical Fund-Direct Plan-Growth Option,118876,2.23,,5000,Flexicap,,Open,0,137
+TAURUS,Taurus Ethical Fund-Direct Plan-Dividend Payout Option,118877,2.23,,5000,Flexicap,,Open,0,137
+TAURUS,Taurus Infrastructure Fund-Direct Plan-Dividend Payout Option,118880,2.41,,5000,Sector - Infrastructure,,Open,0,153
+TAURUS,Taurus Infrastructure Fund-Direct Plan-Growth Option,118879,2.41,,5000,Sector - Infrastructure,,Open,0,153
+TAURUS,Taurus Liquid Fund-Direct Plan-Super Insti Daily Dividend Reinvestment,118891,0.22,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Liquid Fund-Direct Plan-Super Insti Growth Option,118893,0.22,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Liquid Fund-Direct Plan-Super Insti Weekly Dividend Reinvestment,118892,0.22,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Nifty Index Fund-Direct Plan-Dividend Payout Option,118882,1.09,,5000,Large-Cap,,Open,0,115
+TAURUS,Taurus Short Term Income Fund-Direct Plan-Dividend Payout Option,118890,0.62,,5000,Ultrashort Bond,,Limited,0,1457
+TAURUS,Taurus Nifty Index Fund-Direct Plan-Growth Option,118881,1.09,,5000,Large-Cap,,Open,0,115
+TAURUS,Taurus Starshare-Direct Plan-Dividend Payout Option,118884,2.87,,5000,Flexicap,,Open,0,95
+TAURUS,Taurus Short Term Income Fund-Direct Plan-Growth Option,118889,0.62,,5000,Ultrashort Bond,,Limited,0,1457
+TAURUS,Taurus Tax Shield-Direct Plan-Dividend Payout Option,118867,2.44,,500,ELSS (Tax Savings),,Open,0,98
+TAURUS,Taurus Starshare-Direct Plan-Growth Option,118883,2.87,,5000,Flexicap,,Open,0,95
+TAURUS,Taurus Ultra Short Term Bond Fund-Direct Plan-Super Inst Daily Dividend Reinvestment Option,118895,0.38,,5000,Ultrashort Bond,,Limited,0,1363
+TAURUS,Taurus Tax Shield-Direct Plan-Growth Option,118866,2.44,,500,ELSS (Tax Savings),,Open,0,98
+TAURUS,Taurus Ultra Short Term Bond Fund-Direct Plan-Super Inst Weekly Dividend Reinvestment Option,118896,0.38,,5000,Ultrashort Bond,,Limited,0,1363
+TAURUS,Taurus Ultra Short Term Bond Fund-Direct Plan-Super Inst Growth Option,118894,0.38,,5000,Ultrashort Bond,,Limited,0,1363
+TAURUS,Taurus Discovery Fund Dividend Payout Option,111642,2.97,,5000,Flexicap,,Open,0,224
+TAURUS,Taurus Liquid Fund Growth,104241,0.68,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Liquid Fund Dividend Payout,104240,0.68,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Infrastructure Fund Dividend Payout Option,105418,2.92,,5000,Sector - Infrastructure,,Open,0,153
+TAURUS,Taurus Infrastructure Fund - Growth Option,105417,2.92,,5000,Sector - Infrastructure,,Open,0,153
+TAURUS,Taurus Tax Shield-Dividend Payout Option,108402,2.98,,500,ELSS (Tax Savings),,Open,0,98
+TAURUS,Taurus Bonanza Dividend Payout,108403,2.71,,5000,Large-Cap,,Open,0,251
+TAURUS,Taurus Liquid Super Institutional Daily Dividend Reinvestment,111703,0.30,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Liquid Institutional Growth,111760,0.36,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Banking & Financial Services Fund - Growth Option,117312,2.89,,5000,Sector - Financial Services,,Open,0,67
+TAURUS,Taurus Banking & Financial Services Fund Dividend Payout Option,117313,2.89,,5000,Sector - Financial Services,,Open,0,67
+TAURUS,Taurus Dynamic Income Fund - Growth Option,114537,1.23,,5000,Dynamic Bond,,Limited,0,1374
+TAURUS,Taurus Dynamic Income Fund Dividend Payout Option,114538,1.23,,5000,Dynamic Bond,,Limited,0,1374
+TAURUS,Taurus Nifty Index Fund - Growth Option,112948,1.56,,5000,Large-Cap,,Open,0,115
+TAURUS,Taurus Nifty Index Fund Dividend Payout Option,112949,1.56,,5000,Large-Cap,,Open,0,115
+TAURUS,Taurus Ethical Fund - Growth Option,111787,2.94,,5000,Flexicap,,Open,0,137
+TAURUS,Taurus Ethical Fund Dividend Payout Option,111788,2.94,,5000,Flexicap,,Open,0,137
+TAURUS,Taurus Ethical Fund - Bonus Option,111903,2.94,,5000,Flexicap,,Limited,0,137
+TAURUS,Taurus Ultra Short Term Bond Super Institutional Growth,111443,1.03,,5000,Ultrashort Bond,,Limited,0,1363
+TAURUS,Taurus Ultra Short Term Bond Institutional Daily Dividend Reinvestment,111441,0.70,,5000,Ultrashort Bond,,Limited,0,1363
+TAURUS,Taurus Liquid Super Institutional Weekly Dividend Reinvestment,113248,0.30,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Liquid Super Institutional Growth,111915,0.30,,5000,Liquid,,Limited,0,1887
+TAURUS,Taurus Starshare Dividend Payout,111640,2.91,,5000,Flexicap,,Open,0,95
+UNION,Union Cap Protection Fund Series 8 Regular Dividend,141728,0,,5000,Conservative Allocation,,Limited,0,0
+UNION,Union Cap Protection Fund Series 8 Regular Growth,141729,0,,5000,Conservative Allocation,,Limited,0,0
+UNION,Union Cap Protection Fund Series 8 Direct Growth,141727,0,,5000,Conservative Allocation,,Limited,0,0
+UNION,Union Asset Allocation Fund Moderate Plan Dividend Reinvestment Option Direct Plan,119328,1.08,,5000,Hybrid Allocation,,Open,0,263
+UNION,Union Asset Allocation Fund Moderate Plan Dividend Reinvestment,117394,1.73,,5000,Hybrid Allocation,,Open,0,263
+UNION,Union Dynamic Bond Fund Dividend Reinvestment Option Direct Plan,119310,0.98,,5000,Dynamic Bond,,Open,0,483
+UNION,Union Dynamic Bond Dividend Reinvestment,116556,1.90,,5000,Dynamic Bond,,Open,0,483
+UNION,Union Equity Fund Dividend Reinvestment Option Direct Plan,119293,2.05,,5000,Flexicap,,Open,0,60
+UNION,Union Equity Dividend Reinvestment,115290,2.88,,5000,Flexicap,,Open,0,60
+UNION,Union Focussed Largecap Fund Direct Dividend Reinvestment,141249,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Focussed Largecap Fund Regular Dividend Reinvestment,141250,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Liquid Fund Fortnightly Dividend Reinvestment Option Direct Plan,119305,0.14,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Fund Monthly Dividend Reinvestment Option Direct Plan,119302,0.14,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Fortnightly Dividend Reinvestment,115399,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Monthly Dividend Reinvestment,115400,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Small and Midcap Fund Direct Dividend Reinvestment,129646,1.87,,5000,Small/Mid-Cap,,Open,0,98
+UNION,Union Small and Midcap Fund Regular Dividend Reinvestment,129648,2.88,,5000,Small/Mid-Cap,,Open,0,98
+UNION,Union Tax Saver Scheme Dividend Reinvestment Option Direct Plan,119306,1.85,,500,ELSS (Tax Savings),,Open,0,52
+UNION,Union Tax Saver Dividend Reinvestment,116052,3.00,,500,ELSS (Tax Savings),,Open,0,52
+UNION,Union Short Term Fund Fortnightly Dividend Reinvestment Option Direct Plan,119322,0.20,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Monthly Dividend Reinvestment Option Direct Plan,119319,0.20,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Fortnightly Dividend Reinvestment,117280,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Monthly Dividend Reinvestment,117283,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Focussed Largecap Fund Regular Dividend Payout,141250,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Focussed Largecap Fund Regular Growth,141247,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Focussed Largecap Fund Direct Dividend Payout,141249,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Focussed Largecap Fund Direct Growth,141248,0,,5000,Large-Cap,,Open,0,0
+UNION,Union Trigger Fund Series 2 Regular Growth,133835,1.57,,5000,Flexicap,,Open,0,66
+UNION,Union Trigger Fund Series 2 Direct Growth,133834,1.57,,5000,Flexicap,,Open,0,66
+UNION,Union Cap Protection Fund Series 6 Regular Growth,134169,2.12,,5000,Conservative Allocation,,Open,0,5
+UNION,Union Cap Protection Fund Series 6 Direct Dividend,134170,2.12,,5000,Conservative Allocation,,Open,0,5
+UNION,Union Cap Protection Fund Series 6 Direct Growth,134171,2.12,,5000,Conservative Allocation,,Open,0,5
+UNION,Union Cap Protection Fund Series 7 Regular Dividend,140555,0.93,,5000,Conservative Allocation,,Limited,0,65
+UNION,Union Cap Protection Fund Series 7 Regular Growth,140556,0.93,,5000,Conservative Allocation,,Limited,0,65
+UNION,Union Cap Protection Fund Series 7 Direct Dividend,140558,0.93,,5000,Conservative Allocation,,Limited,0,65
+UNION,Union Cap Protection Fund Series 7 Direct Growth,140557,0.93,,5000,Conservative Allocation,,Limited,0,65
+UNION,Union Equity Growth,115270,2.88,,5000,Flexicap,,Open,0,60
+UNION,Union Equity Dividend Payout,115290,2.88,,5000,Flexicap,,Open,0,60
+UNION,Union Liquid Growth,115398,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Daily Dividend Reinvestment,115401,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Weekly Dividend Reinvestment,115402,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Fortnightly Dividend Payout,115399,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Liquid Monthly Dividend Payout,115400,0.26,,5000,Liquid,,Open,0,641
+UNION,Union Tax Saver Growth,116051,3.00,,500,ELSS (Tax Savings),,Open,0,52
+UNION,Union Tax Saver Dividend Payout,116052,3.00,,500,ELSS (Tax Savings),,Open,0,52
+UNION,Union Short Term Fund Monthly Dividend Payout,117283,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Weekly Dividend Reinvestment,117284,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Fortnightly Dividend Payout,117280,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Growth,117281,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UNION,Union Short Term Fund Daily Dividend Reinvestment,117282,0.29,,5000,Ultrashort Bond,,Open,0,3983
+UTI,UTI Fixed Term Income Fund Series XIX - I 1104 Days Regular Growth,130131,0.19,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,10
+UTI,UTI Fixed Term Income Fund Series XIX - I 1104 Days Direct Growth,130125,0.15,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,10
+UTI,UTI Fixed Term Income Fund Series XIX - V 1095 Days Regular Growth,130357,0.94,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,2
+UTI,UTI Fixed Term Income Fund Series XIX - V 1095 Days Direct Growth,130375,0.19,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,2
+UTI,UTI Fixed Term Income Fund Series XIX - III 1103 Days Regular Growth,130240,0.29,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,294
+UTI,UTI Fixed Term Income Fund Series XIX - III 1103 Days Direct Growth,130249,0.11,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,294
+UTI,UTI Fixed Term Income Fund Series XIX - IV 1098 Days Regular Growth,130250,0.19,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,139
+UTI,UTI Fixed Term Income Fund Series XIX - IV 1098 Days Direct Growth,130253,0.05,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,139
+UTI,UTI Fixed Term Income Fund Series XIX - VIII 1098 Days Regular Growth,130363,0.10,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,4
+UTI,UTI Fixed Term Income Fund Series XIX - VIII 1098 Days Direct Growth,130370,0.05,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,4
+UTI,UTI Fixed Term Income Fund Series XIX - VI 1100 Days Regular Growth,130360,0.23,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,200
+UTI,UTI Fixed Term Income Fund Series XIX - VI 1100 Days Direct Growth,130387,0.05,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,200
+UTI,UTI Multi Cap Fund Dividend Payout Option Direct,131162,2.40,,5000,Flexicap,,Open,0,29
+UTI,UTI Multi Cap Fund - Growth Option - Direct,131164,2.40,,5000,Flexicap,,Open,0,29
+UTI,UTI Multi Cap Fund Dividend Payout Option,131161,2.85,,5000,Flexicap,,Open,0,29
+UTI,UTI Multi Cap Fund - Growth Option,131163,2.85,,5000,Flexicap,,Open,0,29
+UTI,UTI Fixed Term Income Fund Series XVIII - VIII 366 Days Regular Growth,129550,0.17,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,3
+UTI,UTI Fixed Term Income Fund Series XVIII - VIII 366 Days Direct Growth,129549,0.15,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,3
+UTI,UTI Fixed Term Income Fund Series XVIII - VII 368 Days Regular Growth,129283,0.36,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,344
+UTI,UTI Fixed Term Income Fund Series XVIII - VII 368 Days Direct Growth,129276,0.16,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,344
+UTI,UTI Fixed Term Income Fund Series XVIII X Regular Growth,129601,0.21,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,26
+UTI,UTI Fixed Term Income Fund Series XVIII X Direct Growth,129603,0.19,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,26
+UTI,UTI Fixed Term Income Fund Series XVIII - IX 1114 Days Regular Growth,129592,0.38,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+UTI,UTI Fixed Term Income Fund Series XVIII - IX 1114 Days Regular Maturity Dividend,129596,0.38,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+UTI,UTI Fixed Term Income Fund Series XVIII - IX 1114 Days Direct Growth,129593,0.13,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+UTI,UTI Fixed Term Income Fund Series XVIII - IX 1114 Days Direct Annual Dividend Payout,129591,0.13,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,31
+UTI,UTI Fixed Term Income Fund Series XVIII - XI 1095 Days Regular Growth,129817,0.69,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,46
+UTI,UTI Fixed Term Income Fund Series XVIII - XI 1095 Days Regular Quarterly Dividend Payout,129821,0.69,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,46
+UTI,UTI Fixed Term Income Fund Series XVIII - XI 1095 Days Direct Growth,129818,0.19,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,46
+UTI,UTI Fixed Term Income Fund Series XVIII - XII 366 Days Direct Growth,129834,0.05,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,407
+UTI,UTI Fixed Term Income Fund Series XVIII - XII 366 Days Regular Growth,129827,0.24,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,407
+UTI,UTI Fixed Term Income Fund Series XVIII - XIII 366 Days Regular Growth,130065,0.13,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+UTI,UTI Fixed Term Income Fund Series XVIII - XIII 366 Days Regular Annual Dividend Payout,130068,0.13,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+UTI,UTI Fixed Term Income Fund Series XVIII - XIII 366 Days Direct Growth,130066,0.10,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+UTI,UTI Fixed Term Income Fund Series XVIII - XIII 366 Days Direct Quarterly Dividend Payout,130070,0.10,,5000,Fixed Maturity Intermediate-Term Bond,,Open,0,22
+UTI,UTI Short Term Income Fund Half Yearly Dividend Payout Option Direct,131425,0.47,,10000,Short-Term Bond,,Open,0,1111
+UTI,UTI Floating Rate STP Monthly Dividend Payout Option,131445,1.00,,5000,Ultrashort Bond,,Open,0,302
+UTI,UTI Focused Equity Fund Series 1 Regular Growth,131018,2.55,,5000,Large-Cap,,Open,0,8
+UTI,UTI Focused Equity Fund Series 1 Regular Dividend,131020,2.55,,5000,Large-Cap,,Open,0,8
+UTI,UTI Focused Equity Fund Series 1 Direct Growth,131019,0.92,,5000,Large-Cap,,Open,0,8
+UTI,UTI Focused Equity Fund Series 1 Direct Dividend,131021,0.92,,5000,Large-Cap,,Open,0,8
+UTI,UTI Floating Rate STP Fortnightly Dividend Payout Option,131511,1.00,,5000,Ultrashort Bond,,Open,0,302
+UTI,UTI Short Term Income Fund Institutional Monthly Dividend Payout Option,131547,0.94,,10000,Short-Term Bond,,Open,0,1111
+UTI,UTI Floating Rate STP Quarterly Dividend Payout Option Direct,133059,0.46,,5000,Ultrashort Bond,,Open,0,302
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Regular Maturity Dividend,132828,0.73,,5000,Fixed Maturity Short-Term Bond,,Open,0,1
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Regular Quarterly Dividend Payout,132823,0.73,,5000,Fixed Maturity Short-Term Bond,,Open,0,1
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Regular Flexi Dividend Payout,132826,0.73,,5000,Fixed Maturity Short-Term Bond,,Open,0,1
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Regular Annual Dividend Payout,132821,0.73,,5000,Fixed Maturity Short-Term Bond,,Open,0,1
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Regular Growth,132827,0.73,,5000,Fixed Maturity Short-Term Bond,,Open,0,1
+UTI,UTI Fixed Term Income Fund Series XX - VI 1100 Days Direct Growth,132820,0.13,,5000,Fixed Maturity Short-Term Bond,,Open,0,1

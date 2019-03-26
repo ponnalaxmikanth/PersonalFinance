@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PersonalFinanceModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="PersonalFinanceModelStoreContainer">
+          <EntitySet Name="MF_Folios" EntityType="PersonalFinanceModel.Store.MF_Folios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_FundCategory" EntityType="PersonalFinanceModel.Store.MF_FundCategory" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_FundHouses" EntityType="PersonalFinanceModel.Store.MF_FundHouses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_FundOptions" EntityType="PersonalFinanceModel.Store.MF_FundOptions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_Funds" EntityType="PersonalFinanceModel.Store.MF_Funds" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_FundTypes" EntityType="PersonalFinanceModel.Store.MF_FundTypes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_Portfolios" EntityType="PersonalFinanceModel.Store.MF_Portfolios" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MF_Transactions" EntityType="PersonalFinanceModel.Store.MF_Transactions" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_MF_Funds_MF_FundCategory1" Association="PersonalFinanceModel.Store.FK_MF_Funds_MF_FundCategory1">
+            <End Role="MF_FundCategory" EntitySet="MF_FundCategory" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundHouses1" Association="PersonalFinanceModel.Store.FK_MF_Funds_MF_FundHouses1">
+            <End Role="MF_FundHouses" EntitySet="MF_FundHouses" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundOptions" Association="PersonalFinanceModel.Store.FK_MF_Funds_MF_FundOptions">
+            <End Role="MF_FundOptions" EntitySet="MF_FundOptions" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundTypes1" Association="PersonalFinanceModel.Store.FK_MF_Funds_MF_FundTypes1">
+            <End Role="MF_FundTypes" EntitySet="MF_FundTypes" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Transactions_MF_Folios1" Association="PersonalFinanceModel.Store.FK_MF_Transactions_MF_Folios1">
+            <End Role="MF_Folios" EntitySet="MF_Folios" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Transactions_MF_Funds" Association="PersonalFinanceModel.Store.FK_MF_Transactions_MF_Funds">
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Transactions_MF_Portfolios1" Association="PersonalFinanceModel.Store.FK_MF_Transactions_MF_Portfolios1">
+            <End Role="MF_Portfolios" EntitySet="MF_Portfolios" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MF_Folios">
+          <Key>
+            <PropertyRef Name="FolioId" />
+          </Key>
+          <Property Name="FolioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FolioNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_FundCategory">
+          <Key>
+            <PropertyRef Name="FundClassId" />
+          </Key>
+          <Property Name="FundClassId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FundClass" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="IsSectorCategory" Type="bit" />
+          <Property Name="Description" Type="nvarchar" MaxLength="250" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_FundHouses">
+          <Key>
+            <PropertyRef Name="FundHouseId" />
+          </Key>
+          <Property Name="FundHouseId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FundHouseName" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_FundOptions">
+          <Key>
+            <PropertyRef Name="OptionId" />
+          </Key>
+          <Property Name="OptionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FundOption" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_Funds">
+          <Key>
+            <PropertyRef Name="FundId" />
+          </Key>
+          <Property Name="FundId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FundHouseId" Type="int" Nullable="false" />
+          <Property Name="FundTypeId" Type="int" Nullable="false" />
+          <Property Name="FundClassId" Type="int" Nullable="false" />
+          <Property Name="FundOptionId" Type="int" Nullable="false" />
+          <Property Name="FundName" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_FundTypes">
+          <Key>
+            <PropertyRef Name="FundTypeId" />
+          </Key>
+          <Property Name="FundTypeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FundType" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_Portfolios">
+          <Key>
+            <PropertyRef Name="PortfolioId" />
+          </Key>
+          <Property Name="PortfolioId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Portfolio" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MF_Transactions">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioId" Type="int" Nullable="false" />
+          <Property Name="FolioId" Type="int" Nullable="false" />
+          <Property Name="FundId" Type="int" Nullable="false" />
+          <Property Name="PurchaseDate" Type="date" Nullable="false" />
+          <Property Name="Amount" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="PurchaseNAV" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Units" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Dividend" Type="decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="ActualNAV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="SellDate" Type="date" />
+          <Property Name="SellNAV" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="SellSTT" Type="decimal" Precision="10" Scale="4" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_MF_Funds_MF_FundCategory1">
+          <End Role="MF_FundCategory" Type="PersonalFinanceModel.Store.MF_FundCategory" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.Store.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundCategory">
+              <PropertyRef Name="FundClassId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundHouses1">
+          <End Role="MF_FundHouses" Type="PersonalFinanceModel.Store.MF_FundHouses" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.Store.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundHouses">
+              <PropertyRef Name="FundHouseId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundHouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundOptions">
+          <End Role="MF_FundOptions" Type="PersonalFinanceModel.Store.MF_FundOptions" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.Store.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundOptions">
+              <PropertyRef Name="OptionId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundOptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundTypes1">
+          <End Role="MF_FundTypes" Type="PersonalFinanceModel.Store.MF_FundTypes" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.Store.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundTypes">
+              <PropertyRef Name="FundTypeId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Transactions_MF_Folios1">
+          <End Role="MF_Folios" Type="PersonalFinanceModel.Store.MF_Folios" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.Store.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Folios">
+              <PropertyRef Name="FolioId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="FolioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Transactions_MF_Funds">
+          <End Role="MF_Funds" Type="PersonalFinanceModel.Store.MF_Funds" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.Store.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Funds">
+              <PropertyRef Name="FundId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="FundId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Transactions_MF_Portfolios1">
+          <End Role="MF_Portfolios" Type="PersonalFinanceModel.Store.MF_Portfolios" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.Store.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Portfolios">
+              <PropertyRef Name="PortfolioId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="PortfolioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PersonalFinanceModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PersonalFinanceEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="MF_Folios" EntityType="PersonalFinanceModel.MF_Folios" />
+          <EntitySet Name="MF_FundCategory" EntityType="PersonalFinanceModel.MF_FundCategory" />
+          <EntitySet Name="MF_FundHouses" EntityType="PersonalFinanceModel.MF_FundHouses" />
+          <EntitySet Name="MF_FundOptions" EntityType="PersonalFinanceModel.MF_FundOptions" />
+          <EntitySet Name="MF_Funds" EntityType="PersonalFinanceModel.MF_Funds" />
+          <EntitySet Name="MF_FundTypes" EntityType="PersonalFinanceModel.MF_FundTypes" />
+          <EntitySet Name="MF_Portfolios" EntityType="PersonalFinanceModel.MF_Portfolios" />
+          <EntitySet Name="MF_Transactions" EntityType="PersonalFinanceModel.MF_Transactions" />
+          <AssociationSet Name="FK_MF_Transactions_MF_Folios1" Association="PersonalFinanceModel.FK_MF_Transactions_MF_Folios1">
+            <End Role="MF_Folios" EntitySet="MF_Folios" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundCategory1" Association="PersonalFinanceModel.FK_MF_Funds_MF_FundCategory1">
+            <End Role="MF_FundCategory" EntitySet="MF_FundCategory" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundHouses1" Association="PersonalFinanceModel.FK_MF_Funds_MF_FundHouses1">
+            <End Role="MF_FundHouses" EntitySet="MF_FundHouses" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundOptions" Association="PersonalFinanceModel.FK_MF_Funds_MF_FundOptions">
+            <End Role="MF_FundOptions" EntitySet="MF_FundOptions" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Funds_MF_FundTypes1" Association="PersonalFinanceModel.FK_MF_Funds_MF_FundTypes1">
+            <End Role="MF_FundTypes" EntitySet="MF_FundTypes" />
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Transactions_MF_Funds" Association="PersonalFinanceModel.FK_MF_Transactions_MF_Funds">
+            <End Role="MF_Funds" EntitySet="MF_Funds" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_MF_Transactions_MF_Portfolios1" Association="PersonalFinanceModel.FK_MF_Transactions_MF_Portfolios1">
+            <End Role="MF_Portfolios" EntitySet="MF_Portfolios" />
+            <End Role="MF_Transactions" EntitySet="MF_Transactions" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="MF_Folios">
+          <Key>
+            <PropertyRef Name="FolioId" />
+          </Key>
+          <Property Name="FolioId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FolioNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Transactions" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Folios1" FromRole="MF_Folios" ToRole="MF_Transactions" />
+        </EntityType>
+        <EntityType Name="MF_FundCategory">
+          <Key>
+            <PropertyRef Name="FundClassId" />
+          </Key>
+          <Property Name="FundClassId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FundClass" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="IsSectorCategory" Type="Boolean" />
+          <Property Name="Description" Type="String" MaxLength="250" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Funds" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundCategory1" FromRole="MF_FundCategory" ToRole="MF_Funds" />
+        </EntityType>
+        <EntityType Name="MF_FundHouses">
+          <Key>
+            <PropertyRef Name="FundHouseId" />
+          </Key>
+          <Property Name="FundHouseId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FundHouseName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Funds" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundHouses1" FromRole="MF_FundHouses" ToRole="MF_Funds" />
+        </EntityType>
+        <EntityType Name="MF_FundOptions">
+          <Key>
+            <PropertyRef Name="OptionId" />
+          </Key>
+          <Property Name="OptionId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FundOption" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Funds" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundOptions" FromRole="MF_FundOptions" ToRole="MF_Funds" />
+        </EntityType>
+        <EntityType Name="MF_Funds">
+          <Key>
+            <PropertyRef Name="FundId" />
+          </Key>
+          <Property Name="FundId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FundHouseId" Type="Int32" Nullable="false" />
+          <Property Name="FundTypeId" Type="Int32" Nullable="false" />
+          <Property Name="FundClassId" Type="Int32" Nullable="false" />
+          <Property Name="FundOptionId" Type="Int32" Nullable="false" />
+          <Property Name="FundName" Type="String" Nullable="false" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_FundCategory" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundCategory1" FromRole="MF_Funds" ToRole="MF_FundCategory" />
+          <NavigationProperty Name="MF_FundHouses" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundHouses1" FromRole="MF_Funds" ToRole="MF_FundHouses" />
+          <NavigationProperty Name="MF_FundOptions" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundOptions" FromRole="MF_Funds" ToRole="MF_FundOptions" />
+          <NavigationProperty Name="MF_FundTypes" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundTypes1" FromRole="MF_Funds" ToRole="MF_FundTypes" />
+          <NavigationProperty Name="MF_Transactions" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Funds" FromRole="MF_Funds" ToRole="MF_Transactions" />
+        </EntityType>
+        <EntityType Name="MF_FundTypes">
+          <Key>
+            <PropertyRef Name="FundTypeId" />
+          </Key>
+          <Property Name="FundTypeId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="FundType" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Funds" Relationship="PersonalFinanceModel.FK_MF_Funds_MF_FundTypes1" FromRole="MF_FundTypes" ToRole="MF_Funds" />
+        </EntityType>
+        <EntityType Name="MF_Portfolios">
+          <Key>
+            <PropertyRef Name="PortfolioId" />
+          </Key>
+          <Property Name="PortfolioId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Portfolio" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Transactions" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Portfolios1" FromRole="MF_Portfolios" ToRole="MF_Transactions" />
+        </EntityType>
+        <EntityType Name="MF_Transactions">
+          <Key>
+            <PropertyRef Name="TransactionId" />
+          </Key>
+          <Property Name="TransactionId" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="PortfolioId" Type="Int32" Nullable="false" />
+          <Property Name="FolioId" Type="Int32" Nullable="false" />
+          <Property Name="FundId" Type="Int32" Nullable="false" />
+          <Property Name="PurchaseDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="PurchaseNAV" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Units" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="Dividend" Type="Decimal" Nullable="false" Precision="10" Scale="4" />
+          <Property Name="ActualNAV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="SellDate" Type="DateTime" Precision="0" />
+          <Property Name="SellNAV" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="SellSTT" Type="Decimal" Precision="10" Scale="4" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="MF_Folios" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Folios1" FromRole="MF_Transactions" ToRole="MF_Folios" />
+          <NavigationProperty Name="MF_Funds" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Funds" FromRole="MF_Transactions" ToRole="MF_Funds" />
+          <NavigationProperty Name="MF_Portfolios" Relationship="PersonalFinanceModel.FK_MF_Transactions_MF_Portfolios1" FromRole="MF_Transactions" ToRole="MF_Portfolios" />
+        </EntityType>
+        <Association Name="FK_MF_Transactions_MF_Folios1">
+          <End Role="MF_Folios" Type="PersonalFinanceModel.MF_Folios" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Folios">
+              <PropertyRef Name="FolioId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="FolioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundCategory1">
+          <End Role="MF_FundCategory" Type="PersonalFinanceModel.MF_FundCategory" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundCategory">
+              <PropertyRef Name="FundClassId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundClassId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundHouses1">
+          <End Role="MF_FundHouses" Type="PersonalFinanceModel.MF_FundHouses" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundHouses">
+              <PropertyRef Name="FundHouseId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundHouseId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundOptions">
+          <End Role="MF_FundOptions" Type="PersonalFinanceModel.MF_FundOptions" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundOptions">
+              <PropertyRef Name="OptionId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundOptionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Funds_MF_FundTypes1">
+          <End Role="MF_FundTypes" Type="PersonalFinanceModel.MF_FundTypes" Multiplicity="1" />
+          <End Role="MF_Funds" Type="PersonalFinanceModel.MF_Funds" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_FundTypes">
+              <PropertyRef Name="FundTypeId" />
+            </Principal>
+            <Dependent Role="MF_Funds">
+              <PropertyRef Name="FundTypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Transactions_MF_Funds">
+          <End Role="MF_Funds" Type="PersonalFinanceModel.MF_Funds" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Funds">
+              <PropertyRef Name="FundId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="FundId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_MF_Transactions_MF_Portfolios1">
+          <End Role="MF_Portfolios" Type="PersonalFinanceModel.MF_Portfolios" Multiplicity="1" />
+          <End Role="MF_Transactions" Type="PersonalFinanceModel.MF_Transactions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MF_Portfolios">
+              <PropertyRef Name="PortfolioId" />
+            </Principal>
+            <Dependent Role="MF_Transactions">
+              <PropertyRef Name="PortfolioId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PersonalFinanceModelStoreContainer" CdmEntityContainer="PersonalFinanceEntities">
+          <EntitySetMapping Name="MF_Folios">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_Folios">
+              <MappingFragment StoreEntitySet="MF_Folios">
+                <ScalarProperty Name="FolioId" ColumnName="FolioId" />
+                <ScalarProperty Name="FolioNumber" ColumnName="FolioNumber" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_FundCategory">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_FundCategory">
+              <MappingFragment StoreEntitySet="MF_FundCategory">
+                <ScalarProperty Name="FundClassId" ColumnName="FundClassId" />
+                <ScalarProperty Name="FundClass" ColumnName="FundClass" />
+                <ScalarProperty Name="IsSectorCategory" ColumnName="IsSectorCategory" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_FundHouses">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_FundHouses">
+              <MappingFragment StoreEntitySet="MF_FundHouses">
+                <ScalarProperty Name="FundHouseId" ColumnName="FundHouseId" />
+                <ScalarProperty Name="FundHouseName" ColumnName="FundHouseName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_FundOptions">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_FundOptions">
+              <MappingFragment StoreEntitySet="MF_FundOptions">
+                <ScalarProperty Name="OptionId" ColumnName="OptionId" />
+                <ScalarProperty Name="FundOption" ColumnName="FundOption" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_Funds">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_Funds">
+              <MappingFragment StoreEntitySet="MF_Funds">
+                <ScalarProperty Name="FundId" ColumnName="FundId" />
+                <ScalarProperty Name="FundHouseId" ColumnName="FundHouseId" />
+                <ScalarProperty Name="FundTypeId" ColumnName="FundTypeId" />
+                <ScalarProperty Name="FundClassId" ColumnName="FundClassId" />
+                <ScalarProperty Name="FundOptionId" ColumnName="FundOptionId" />
+                <ScalarProperty Name="FundName" ColumnName="FundName" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_FundTypes">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_FundTypes">
+              <MappingFragment StoreEntitySet="MF_FundTypes">
+                <ScalarProperty Name="FundTypeId" ColumnName="FundTypeId" />
+                <ScalarProperty Name="FundType" ColumnName="FundType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_Portfolios">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_Portfolios">
+              <MappingFragment StoreEntitySet="MF_Portfolios">
+                <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+                <ScalarProperty Name="Portfolio" ColumnName="Portfolio" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MF_Transactions">
+            <EntityTypeMapping TypeName="PersonalFinanceModel.MF_Transactions">
+              <MappingFragment StoreEntitySet="MF_Transactions">
+                <ScalarProperty Name="TransactionId" ColumnName="TransactionId" />
+                <ScalarProperty Name="PortfolioId" ColumnName="PortfolioId" />
+                <ScalarProperty Name="FolioId" ColumnName="FolioId" />
+                <ScalarProperty Name="FundId" ColumnName="FundId" />
+                <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="PurchaseNAV" ColumnName="PurchaseNAV" />
+                <ScalarProperty Name="Units" ColumnName="Units" />
+                <ScalarProperty Name="Dividend" ColumnName="Dividend" />
+                <ScalarProperty Name="ActualNAV" ColumnName="ActualNAV" />
+                <ScalarProperty Name="SellDate" ColumnName="SellDate" />
+                <ScalarProperty Name="SellNAV" ColumnName="SellNAV" />
+                <ScalarProperty Name="SellSTT" ColumnName="SellSTT" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

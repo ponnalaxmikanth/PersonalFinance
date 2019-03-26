@@ -1,0 +1,143 @@
+﻿<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg modal-1200 font-12px">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                @*<button type="button" class="close" data-dismiss="modal">&times;</button>*@
+                <div class="">
+                    <div class="text-left col-xs-11"><h4 class="modal-title" data-title="MF-Transactions"></h4></div>
+                    @*<div class="text-right col-xs-1"><button type="button" class="btn btn-primary" data-button="MFAdd">Add</button></div>*@
+                </div>
+                
+                <div class="">
+                    <table id="FundTransactions" class="Transactions" style="width:auto;"></table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-button="MFSave">Save</button>
+                <button type="button" class="btn btn-default" data-button="MFCancel" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="NewTransaction" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="">
+                    <div class="text-left col-xs-11"><h4 class="modal-title">First Transaction</h4></div>
+                </div>
+                
+                <div class="">
+                    <table id="AddFundTransaction" class="Transactions" style="width:auto;">
+                        <tr class="">
+                            <td class="">Type</td>
+                            <td class="">
+                                <select data-transaction="type" class="">
+                                    <option value="Select">Select</option>
+                                    <option value="Purchase">Purchase</option>
+                                    <option value="Redeem">Redeem</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Folio</td>
+                            <td class=""><select data-transaction="folios" class="" ></select></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Fund</td>
+                            <td class=""><select data-transaction="funds" data-select="mf-funds" class="" ></select></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Purchase Date</td>
+                            <td class=""><input type="text" data-transaction="purchase-date" class="datepicker" /></td>
+                        </tr>
+                        <tr class="" data-transaction="purchase">
+                            <td class="">Amount</td>
+                            <td class=""><input type="text" data-transaction="amount" class="" /></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Nav</td>
+                            <td class=""><input type="text" data-transaction="nav" class=""/></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">SIP</td>
+                            <td class=""><input type="checkbox" data-transaction="sip" class=""/></td>
+                        </tr>
+                        <tr class="" data-transaction="sell">
+                            <td class="">Units</td>
+                            <td class=""><input type="text" data-transaction="units" class=""/></td>
+                        </tr>
+                        <tr class="" data-transaction="sell">
+                            <td class="">STT</td>
+                            <td class=""><input type="text" data-transaction="STT" class="" value="0" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-button-newtrans="Save">Save</button>
+                <button type="button" class="btn btn-default" data-button-newtrans="Cancel" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="NewDividend" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="">
+                    <div class="text-left col-xs-11"><h4 class="modal-title">Add Dividend</h4></div>
+                </div>
+                
+                <div class="">
+                    <table id="AddFundDividend" class="Transactions" style="width:auto;">
+                        <tr class="">
+                            <td class="">Fund</td>
+                            <td class=""><select data-dividend="fund" data-select="mf-funds" class="" ></select></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Date</td>
+                            <td class=""><input type="text" data-dividend="date" class="datepicker" /></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">NAV</td>
+                            <td class=""><input type="text" data-dividend="nav" class="" /></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Dividend</td>
+                            <td class=""><input type="text" data-dividend="dividend" class="" /></td>
+                        </tr>
+                        <tr class="">
+                            <td class="">Units</td>
+                            <td class=""><input type="text" data-dividend="units" class="" /></td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-button-new-dividend="Save">Save</button>
+                <button type="button" class="btn btn-default" data-button-new-dividend="Cancel" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="mfPerformance" class="modal fade" role="dialog">
+    @RenderPage("~/Views/MutualFunds/_FundPerformance.cshtml")
+</div>

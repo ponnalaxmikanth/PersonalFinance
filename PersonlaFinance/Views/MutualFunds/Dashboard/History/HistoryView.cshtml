@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "History Graph";
+    Layout = "~/Views/Shared/_MFLayout.cshtml";
+}
+
+<style>
+    
+</style>
+
+<div style="text-align:right;">
+   <label for="textBox1"> FromDate </label>
+  @* <input class="col-md-12 datepicker text-right" data-select-graph="from-date" type="text" />*@
+     <input class="datepicker" name="fromDate " type="date" data-new-chart="FROMDATE"   />    
+
+   <label for="textBox2"> ToDate</label>
+<input class="datepicker" name="toDate" type="date" data-new-chart="TODATE" />
+        
+    <button class="button" onclick="onclickbutton()"  data-new-chart="DATEVALUES"> GO </button>
+</div>
+
+
+<div class="row graph">
+    <div class="chart" id="chartdiv" style="width:100%; height:500px;"></div>
+</div>
+
+
+@Scripts.Render("~/bundles/MutualFunds/Common")
+@Scripts.Render("~/bundles/History")
+

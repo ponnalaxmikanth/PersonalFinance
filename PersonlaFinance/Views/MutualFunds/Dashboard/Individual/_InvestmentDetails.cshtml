@@ -1,0 +1,40 @@
+﻿<div class="row investment-details">
+    <div class="row hide" data-invest-filter="">
+        <div class="col-md-4">
+            <select data-portfolio="sector">
+                <option value="Amount">Investment</option>
+                <option value="CurrentValue">Current Value</option>
+                <option value="Profit">Profit</option>
+            </select>
+        </div>
+        <div class="col-md-8 text-center">
+            <div class="col-md-2">
+                <input type="radio" name="Invest" value="All" data-select="A" onclick="InvestChanged(this, 'A');" />
+                All</div>
+            <div class="col-md-3">
+                <input type="radio" name="Invest" value="Invest" data-select="I" onclick="InvestChanged(this, 'I');" checked/>
+                Current Investments</div>
+            <div class="col-md-2">
+                <input type="radio" name="Invest" value="Redeems" data-select="R" onclick="InvestChanged(this, 'R');" />
+                Redeems</div>
+            <div class="col-md-3">
+                <input type="radio" name="Invest" value="RedeemInvest" data-select="S" onclick="InvestChanged(this, 'S');" />
+                Redeemed Investments</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" style="height: 380px;">
+            <div class="chart sector-chart" id="portfoliosector" style="width: 100%; height: 370px;"></div>
+        </div>
+        <div class="col-md-8">
+            @*<div class="row">
+                <div class="col-md-3"></div>
+                    <div class="col-md-9">
+                        
+                    </div>
+            </div>*@
+            <table class="row table table-striped investment-table" data-select="investment-table" cellpadding="0" cellspacing="0" id="investments"></table>
+        </div>
+    </div>
+</div>
+

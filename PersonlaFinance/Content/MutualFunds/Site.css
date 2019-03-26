@@ -1,0 +1,133 @@
+﻿body {
+    /*font-family: Calibri, Verdana, Helvetica, Sans-Serif;*/
+    font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+
+.w-auto {
+    width: auto;
+}
+
+.container-fluid .header {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    background-color: #c1c5cc;
+    /*color: white;*/
+}
+
+    .container-fluid .header .portfoio {
+        padding-left: 0px;
+        padding-right: 0px;
+        cursor: pointer;
+    }
+
+    .container-fluid .header .selected {
+        color: white;
+        font-weight: bold;
+        border-bottom-style: solid;
+        border-bottom-color: red;
+    }
+
+.investments .investments-div .investment-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-right-width: 1px;
+}
+
+.investments .investments-div .invest {
+    /*margin-left: 70px;*/
+}
+
+.investments .investments-div .investment-content .value {
+    margin-top: 10px;
+}
+
+.investments .investments-div .gray-border {
+    border-right-color: gray;
+    border-right-style: solid;
+}
+
+.container-fluid .upcoming-sips {
+    margin-bottom: 10px;
+}
+.container-fluid .upcoming-sips .sips-table .sips-head > tr > th {
+    border-style: solid;
+    border-width: 1px;
+}
+
+.container-fluid .upcoming-sips .sips-table .sips-head .group-header {
+}
+
+.invest-graph {
+    /*border: 1px;
+    border-style: solid;
+    border-color: gray;*/
+    /*height: 350px;*/
+}
+
+    .invest-graph .controls {
+        /*margin-top: 5px;*/
+    }
+
+        .invest-graph .controls .datepicker {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+.invest-graph .line-break {
+    margin-top:5px;
+    margin-bottom:5px;
+    height: 5px;
+    /*border: none;*/
+}
+
+.investments .line-break {
+    border: 1px solid #eee;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+    /*.invest-graph .graph {
+        border: 1px;
+        border-style: solid;
+        border-color: red;
+    }*/
+
+    .invest-graph .graph .chart {
+        width: 100%; 
+        height: 450px; 
+        background-color: #FFFFFF;
+    }
+
+.graph .chart .amcharts-main-div .amChartsLegend {
+    margin-top: -10px;
+}
+
+
+    /*.sector-chart {
+  width: 500px;
+  height: 1000px;
+  font-size: 11px;
+}
+
+.amcharts-pie-slice {
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition-duration: 0.3s;
+  transition: all .3s ease-out;
+  -webkit-transition: all .3s ease-out;
+  -moz-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
+  cursor: pointer;
+  box-shadow: 0 0 30px 0 #000;
+}
+
+.amcharts-pie-slice:hover {
+  transform: scale(1.1);
+  filter: url(#shadow);
+}*/
+
+.dataTables_filter {
+    padding-right : 5px;
+}

@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "History Graph";
+    Layout = "~/Views/Shared/_MFLayout.cshtml";
+}
+
+<div class="row graph">
+    <div class="chart" id="chartdiv" style="width:100%; height:500px;"></div>
+</div>
+
+@Scripts.Render("~/bundles/MutualFunds/Common")
+@Scripts.Render("~/bundles/History")

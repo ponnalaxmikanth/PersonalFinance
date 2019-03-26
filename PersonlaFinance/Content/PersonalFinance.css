@@ -1,0 +1,50 @@
+﻿.html {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    /*background-color: #fff;*/
+    border-top: solid 10px #000;
+    color: #333;
+    /*font-size: .85em;*/
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+}
+
+.float-left { float: left; }
+.float-right { float: right; }
+
+.w-auto { width: auto; }
+.w-60 { width : 60%; }
+.w-100 { width: 100% }
+.w-100-fixed { width: 100px; }
+.w-button { width: 20px; }
+
+.w-30-fixed { width : 30px; }
+.w-70-fixed { width : 70px; }
+
+.dataTables_length { margin-top : 10px; }
+.Transactions { margin-left: 10px !important; margin-right: 10px !important; }
+
+.modal-1200 {
+    width: 1200px;
+}
+
+.modal-body {
+    max-height: 800px;
+}
+
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+.margin-right-20 {
+    margin-right: 20px;
+}
+
+.font-12px {
+    font-size : 12px;
+}
