@@ -13,7 +13,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PersonlaFinance</RootNamespace>
     <AssemblyName>PersonlaFinance</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -211,7 +211,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MFDashboardController.cs" />
     <Compile Include="Controllers\MutualFundsController.cs" />
-	<Compile Include="Controllers\ReportsController.cs" />
+    <Compile Include="Controllers\ReportsController.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Filters\JSONHandler.cs" />
     <Compile Include="Global.asax.cs">
@@ -733,7 +733,7 @@
     <Content Include="Scripts\moment-with-locales.min.js" />
     <Content Include="Scripts\moment.js" />
     <Content Include="Scripts\moment.min.js" />
-	<Content Include="Scripts\MutualFunds\BenchmarkHistory.js" />
+    <Content Include="Scripts\MutualFunds\BenchmarkHistory.js" />
     <Content Include="Scripts\MutualFunds\Dashboard.js" />
     <Content Include="Scripts\MutualFunds\FundPerformances.js" />
     <Content Include="Scripts\MutualFunds\History.js" />
@@ -806,7 +806,7 @@
     <Content Include="Views\MutualFunds\Dashboard\Individual\_KanthInvestments.cshtml" />
     <Content Include="Views\MutualFunds\Dashboard\History\Index.cshtml" />
     <Content Include="Views\MutualFunds\Dashboard\History\HistoryView.cshtml" />
-	<Content Include="Views\MutualFunds\Dashboard\Benchmark\Index.cshtml" />
+    <Content Include="Views\MutualFunds\Dashboard\Benchmark\Index.cshtml" />
     <Content Include="Views\MutualFunds\Dashboard\Benchmark\_Filter.cshtml" />
     <Content Include="Views\MutualFunds\Reports.cshtml" />
     <Content Include="Views\Reports\Index.cshtml" />
