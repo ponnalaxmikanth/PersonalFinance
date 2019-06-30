@@ -55,11 +55,13 @@
     <Compile Include="Contracts\MutualFunds\IDashboardRepository.cs" />
     <Compile Include="Contracts\MutualFunds\IMutualFundDataAccess.cs" />
     <Compile Include="Contracts\MutualFunds\IMutualFundsBusinessAccess.cs" />
+    <Compile Include="Entities\Accounts\AccountMappingDetails.cs" />
     <Compile Include="Entities\Excel.cs" />
     <Compile Include="Entities\MutualFunds\Common.cs" />
     <Compile Include="Entities\MutualFunds\Dashboard.cs" />
     <Compile Include="Entities\MutualFunds\MoneyControl.cs" />
     <Compile Include="Entities\MutualFunds\MutualFunds.cs" />
+    <Compile Include="Entities\Stocks\BSEHistoricalData.cs" />
     <Compile Include="Entities\Stocks\StocksDesign.cs" />
     <Compile Include="MutualFunds\MF_Folios.cs">
       <DependentUpon>MutualFunds.tt</DependentUpon>

@@ -82,7 +82,7 @@ namespace DownloadFundsData
                         webDriver.Url = links.ElementAt(i).Value;
                     }
                     //var trs = webDriver.FindElements(By.XPath("/html/body/div[5]/div[3]/div/table/tbody/tr"));
-                    var trs = GetElements(webDriver, "/html/body/div[5]/div[3]/div/table/tbody/tr");
+                    var trs = GetElementsByXPath(webDriver, "/html/body/div[5]/div[3]/div/table/tbody/tr");
                     string family = string.Empty;
                     string fund = string.Empty;
                     string symbol = string.Empty;
@@ -94,7 +94,7 @@ namespace DownloadFundsData
                     {
                         try
                         {
-                            var x = GetElements(webDriver, "/html/body/div[5]/div[3]/div/table/tbody/tr[" + t + "]/td");
+                            var x = GetElementsByXPath(webDriver, "/html/body/div[5]/div[3]/div/table/tbody/tr[" + t + "]/td");
                             if (x.Count <= 0)
                                 continue;
                             else if (x.Count == 1)
@@ -141,7 +141,7 @@ namespace DownloadFundsData
             try
             {
                 //var links = webDriver.FindElements(By.XPath("/html/body/div[5]/div[3]/div/div[3]/span[2]/a"));
-                var links = GetElements(webDriver, "/html/body/div[5]/div[3]/div/div[3]/span[2]/a");
+                var links = GetElementsByXPath(webDriver, "/html/body/div[5]/div[3]/div/div[3]/span[2]/a");
 
                 for (int i = 0; i < links.Count; i++)
                 {
@@ -160,7 +160,7 @@ namespace DownloadFundsData
             try
             {
                 //var dateEle = webDriver.FindElements(By.XPath("/html/body/div[5]/div[3]/div/div[4]/span[2]"));
-                var dateEle = GetElements(webDriver, "/html/body/div[5]/div[3]/div/div[4]/span[2]");
+                var dateEle = GetElementsByXPath(webDriver, "/html/body/div[5]/div[3]/div/div[4]/span[2]");
                 dt = Convert.ToDateTime(dateEle[0].Text);
             }
             catch (Exception ex) { DisplayMessage("USMFWallStreetJournal -- GetDate" + ex.Message); }

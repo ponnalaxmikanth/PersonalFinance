@@ -1,11 +1,11 @@
 ﻿using BusinessEntities.Entities.MutualFunds;
+using BusinessEntities.Entities.Stocks;
+using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
+using OpenQA.Selenium.Support.UI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Net.Http;
 
 namespace DownloadFundsData
 {
@@ -15,7 +15,7 @@ namespace DownloadFundsData
 
         public GetBSEIndexData()
         {
-            //webDriver = new FirefoxDriver();
+            webDriver = new FirefoxDriver();
         }
 
         ~GetBSEIndexData()
@@ -38,11 +38,11 @@ namespace DownloadFundsData
             {
                 webDriver = new FirefoxDriver();
                 webDriver.Url = "http://www.bseindia.com/indices/IndexArchiveData.aspx";
-                List<string> benchMarks = GetBenchMarks();
+                //List<string> benchMarks = GetBenchMarks();
             }
             catch (Exception ex)
             {
-                
+
             }
         }
 
@@ -111,18 +111,75 @@ namespace DownloadFundsData
             }
         }
 
-        private List<string> GetBenchMarks()
+        internal void GetBseBenchMarkHistoryData(string bseBaseUrl)
         {
-            List<string> result = new List<string>();
             try
             {
+                DisplayMessage("Downloading BSE bench mark history data...");
+                webDriver.Url = bseBaseUrl + "indices/IndexArchiveData.html";
+                //Supremes.Nodes.Document doc = GetDocument(bseBaseUrl + "indices/IndexArchiveData.html");
+                //if (doc == null) return;
+
+                var index = webDriver.FindElement(By.Id("ddlIndex"));
+                var selectElement = new SelectElement(index);
+                var options = index.FindElements(By.TagName("option"));
+
+                for (int i = 0; i < options.Count; i++)
+                {
+                    if (i == 0) continue;
+                    IWebElement currentOption = options[i];
+                    string val = currentOption.GetAttribute("value");
+
+                    GetIndexHistoricalData(val, DateTime.Now.AddMonths(-1), DateTime.Now);
+                }
+
+                //var data = GetElementsById(webDriver, "ddlIndex");
+                //List<string> result = new List<string>();
+                //var res = data[0].Text;
+                //result = res.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None).ToList();
+                //if (result.Count > 0)
+                //    result.RemoveAt(0);
+
+                //foreach (string i in result)
+                //{
+                //    new SelectElement(webDriver.FindElement(By.Id("ddlIndex"))).SelectByText(i);
+                //}
+                //var toDateBox = webDriver.FindElement(By.Id("txtToDt"));
+                ////Fill date as mm/dd/yyyy as 09/25/2013
+                //toDateBox.SendKeys("01/06/2019");
+
             }
             catch (Exception ex)
             {
- 
+                DisplayMessage("Exception while GetBseBenchMarkHistoryData Exception: " + ex.Message);
             }
-            return result;
         }
 
+        private void GetIndexHistoricalData(string val, DateTime fromDate, DateTime toDate)
+        {
+            try
+            {
+                using (var client = new HttpClient())
+                {
+                    string url = "https://api.bseindia.com/BseIndiaAPI/api/IndexArchDaily/w?fmdt="
+                            + fromDate.ToString("dd/MM/yyyy") + "&index=" + val + "&period=D&todt=" + toDate.ToString("dd/MM/yyyy");
+                    client.BaseAddress = new Uri(url);
+                    var responseTask = client.GetAsync(url);
+                    responseTask.Wait();
+
+                    var result = responseTask.Result;
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var jsonString = result.Content.ReadAsStringAsync().Result;
+                        BSEHistoricalData dataRes = JsonConvert.DeserializeObject<BSEHistoricalData>(jsonString);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                DisplayMessage("Exception while GetIndexHistoricalData -  " + val + " Exception: " + ex.Message);
+            }
+        }
     }
 }

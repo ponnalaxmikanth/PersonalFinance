@@ -37,7 +37,13 @@ namespace DownloadFundsData
             if (args[0] == "BSE")
             {
                 Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new GetBSEIndexData().GetBseBenchMarkData(bseBaseUrl);
+                //new GetBSEIndexData().GetBseBenchMarkData(bseBaseUrl);
+                new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl);
+            }
+            if (args[0] == "BSEHistory")
+            {
+                Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+                new DownloadBSEIndicesHistory().DownloadBSEHistory();
             }
             if (args[0] == "NSE")
             {
@@ -78,7 +84,7 @@ namespace DownloadFundsData
 
             DisplayMessage("Processing completed...");
             DisplayMessage("Press any key to exit...");
-            //Console.ReadKey();
+            Console.ReadKey();
         }
 
         #region CAMS NAV

@@ -40,6 +40,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelFinance", "ExcelFinanc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExcelFinanceWeb", "ExcelFinanceWeb\ExcelFinanceWeb.csproj", "{5B4268D9-42BC-4A91-B0B6-AD4E27422804}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{FB45511B-2EF8-4B40-B0C0-3280A607CB92}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Database", "Database\Database.sqlproj", "{C2E4A830-393A-4DAA-8219-CB11FE570517}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Logging.Database", "Logging.Database\Logging.Database.sqlproj", "{D234F5C5-094C-42D7-83CC-43998429DDC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -100,6 +106,22 @@ Global
 		{5B4268D9-42BC-4A91-B0B6-AD4E27422804}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B4268D9-42BC-4A91-B0B6-AD4E27422804}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B4268D9-42BC-4A91-B0B6-AD4E27422804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB45511B-2EF8-4B40-B0C0-3280A607CB92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB45511B-2EF8-4B40-B0C0-3280A607CB92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB45511B-2EF8-4B40-B0C0-3280A607CB92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB45511B-2EF8-4B40-B0C0-3280A607CB92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E4A830-393A-4DAA-8219-CB11FE570517}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D234F5C5-094C-42D7-83CC-43998429DDC0}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

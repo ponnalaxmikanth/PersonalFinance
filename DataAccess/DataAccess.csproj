@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
+    <Compile Include="Logging\LoggingDataAccess.cs" />
     <Compile Include="MutualFunds\CommonDataAccess.cs" />
     <Compile Include="MutualFunds\DashboardDataAccess.cs" />
     <Compile Include="MutualFunds\MutualFundsDataAccess.cs" />

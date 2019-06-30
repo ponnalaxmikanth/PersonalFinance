@@ -49,7 +49,7 @@ namespace DownloadFundsData
             return retVal;
         }
 
-        public ReadOnlyCollection<IWebElement> GetElements(IWebDriver webDriver, string path)
+        public ReadOnlyCollection<IWebElement> GetElementsByXPath(IWebDriver webDriver, string path)
         {
             int count = 0;
             ReadOnlyCollection<IWebElement> collection = null;
@@ -71,5 +71,30 @@ namespace DownloadFundsData
             
             return collection;
         }
+
+        public ReadOnlyCollection<IWebElement> GetElementsById(IWebDriver webDriver, string id)
+        {
+            int count = 0;
+            ReadOnlyCollection<IWebElement> collection = null;
+            do
+            {
+                try
+                {
+                    collection = webDriver.FindElements(By.Id(id));
+                    if (count > 1)
+                        System.Threading.Thread.Sleep(1 * 1000 * 30);
+                    count++;
+                }
+                catch (Exception ex)
+                {
+                    count++;
+                    System.Threading.Thread.Sleep(1 * 1000 * 30);
+                }
+            }
+            while (collection == null && count < 20);
+
+            return collection;
+        }
+
     }
 }

@@ -15,7 +15,7 @@ namespace DataAccess.MutualFunds
     {
         public DataTable GetPortFolios()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_Portfolios", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_Portfolios", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -29,7 +29,7 @@ namespace DataAccess.MutualFunds
             parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
             parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
 
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -37,7 +37,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFolios()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_Folios", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_Folios", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -45,7 +45,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFundCategory()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_FundCategory", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_FundCategory", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -53,7 +53,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFundHouses()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_FundHouses", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_FundHouses", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -61,7 +61,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFundOptions()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_FundOptions", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_FundOptions", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -69,7 +69,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFundTypes()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_FundTypes", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_FundTypes", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -77,7 +77,7 @@ namespace DataAccess.MutualFunds
 
         public DataTable GetFunds()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_MF_Funds", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_Funds", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -92,7 +92,7 @@ namespace DataAccess.MutualFunds
             parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
             parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
 
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "Get_Fund_Transactions", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Fund_Transactions", CommandType.StoredProcedure, parameters);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -116,7 +116,7 @@ namespace DataAccess.MutualFunds
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "SIP", Value = _mfTransactionRequest.IsSIP ? "Y" : "N" });
                 parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Units", Value = _mfTransactionRequest.SellUnits });
 
-                DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "AddMFTransaction", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "AddMFTransaction", CommandType.StoredProcedure, parameters);
 
                 if (ds != null && ds.Tables.Count > 0)
                     return ds.Tables[0];
@@ -130,7 +130,7 @@ namespace DataAccess.MutualFunds
                 parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "nav", Value = _mfTransactionRequest.PurchaseNAV });
                 parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "stt", Value = _mfTransactionRequest.STT });
 
-                DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "AddRedeemTransaction", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "AddRedeemTransaction", CommandType.StoredProcedure, parameters);
                 if (ds != null && ds.Tables.Count > 0)
                     return ds.Tables[0];
 
@@ -148,7 +148,7 @@ namespace DataAccess.MutualFunds
             parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Dividend", Value = _dividendRequest.Dividend });
             parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "NAV", Value = _dividendRequest.NAV });
 
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "UpdateDividend", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "UpdateDividend", CommandType.StoredProcedure, parameters);
 
             if (ds != null && ds.Tables.Count > 0)
                 return ds.Tables[0];
@@ -166,7 +166,7 @@ namespace DataAccess.MutualFunds
                 parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "fundtype", Value = data[i].FundType });
                 parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
 
-                DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
             }
         }
 
@@ -190,7 +190,7 @@ namespace DataAccess.MutualFunds
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fund_type", Value = data[i].Fund_Type });
                 parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
 
-                DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
 
             }
             return null;
@@ -198,12 +198,12 @@ namespace DataAccess.MutualFunds
 
         public void BackUpNAVData()
         {
-            SQLHelper.GetDataFromDB("PersonalFinance", "Backup_FundNavData", CommandType.StoredProcedure, null);
+            SQLHelper.ExecuteProcedure("PersonalFinance", "Backup_FundNavData", CommandType.StoredProcedure, null);
         }
 
         public DataTable GetFundsPerformance()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "GetFundsPerformance", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetFundsPerformance", CommandType.StoredProcedure, null);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -215,7 +215,7 @@ namespace DataAccess.MutualFunds
 
             parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "NavDate", Value = date.Date });
 
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "GetFundsNav", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetFundsNav", CommandType.StoredProcedure, parameters);
             if (ds != null)
                 return ds.Tables[0];
             return null;
@@ -224,7 +224,7 @@ namespace DataAccess.MutualFunds
 
         public string GetLastProcessedDetails()
         {
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "GetLastProcessedDetails", CommandType.StoredProcedure, null);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetLastProcessedDetails", CommandType.StoredProcedure, null);
             if (ds != null && ds.Tables[0].Rows.Count > 0)
                 return ds.Tables[0].Rows[0]["NAVDate"].ToString();
             return null;
@@ -254,7 +254,7 @@ namespace DataAccess.MutualFunds
                         parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "benchmark", Value = fundFamilies[i].FundLinks[f].FundDetails.Benchmark });
                         parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "MScategory", Value = fundFamilies[i].FundLinks[f].FundDetails.MSCategory });
 
-                        DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "UpdateMFFundDetails", CommandType.StoredProcedure, parameters);
+                        DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "UpdateMFFundDetails", CommandType.StoredProcedure, parameters);
                     }
                     catch (Exception ex)
                     {
@@ -307,7 +307,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "TurnOver", Value = DBNull.Value });
                 
 
-                DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "DumpBenchMarkData", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "DumpBenchMarkData", CommandType.StoredProcedure, parameters);
             }
             catch (Exception ex)
             {

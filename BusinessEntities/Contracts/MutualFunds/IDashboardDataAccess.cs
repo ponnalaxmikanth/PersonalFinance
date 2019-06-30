@@ -27,6 +27,6 @@ namespace BusinessEntities.Contracts.MutualFunds
 
         DataTable GetBenchmarkPerformance(DateTime fromDate, DateTime toDate);
 
-        DataTable Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, decimal investValue, decimal currentvalue, decimal profit);
+        DataTable Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, int period, decimal investValue, decimal currentvalue, decimal profit);
     }
 }

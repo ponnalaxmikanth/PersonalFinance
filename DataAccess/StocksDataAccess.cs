@@ -17,7 +17,7 @@ namespace DataAccess
             parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fromdate", Value = fromdate });
             parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "todate", Value = todate });
 
-            DataSet ds = SQLHelper.GetDataFromDB("PersonalFinance", "getstocks", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "getstocks", CommandType.StoredProcedure, parameters);
             if (ds != null)
                 return ds.Tables[0];
             return null;

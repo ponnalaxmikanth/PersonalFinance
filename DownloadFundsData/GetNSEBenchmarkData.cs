@@ -94,7 +94,7 @@ namespace DownloadFundsData
             {
                 webDriver.Url = "https://nseindia.com/products/content/equities/indices/historical_index_data.htm";
                 //var data = webDriver.FindElements(By.XPath("html/body/div[2]/div[3]/div[2]/div[1]/div[4]/div/div[1]/div/div[2]/select"));
-                var data = GetElements(webDriver, "html/body/div[2]/div[3]/div[2]/div[1]/div[4]/div/div[1]/div/div[2]/select");
+                var data = GetElementsByXPath(webDriver, "html/body/div[2]/div[3]/div[2]/div[1]/div[4]/div/div[1]/div/div[2]/select");
 
                 var res = data[0].Text;
                 result = res.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None).ToList();
@@ -116,7 +116,7 @@ namespace DownloadFundsData
                                         + "&fromDate=" + fromDate.ToString("dd-MM-yyyy") + "&toDate=" + toDate.ToString("dd-MM-yyyy");
 
                 //var data = webDriver.FindElements(By.XPath("html/body/table/tbody/tr"));
-                var data = GetElements(webDriver, "html/body/table/tbody/tr");
+                var data = GetElementsByXPath(webDriver, "html/body/table/tbody/tr");
                 for (int i = 3; i < data.Count - 1; i++)
                 {
                     var eles = data[i].FindElements(By.TagName("td"));

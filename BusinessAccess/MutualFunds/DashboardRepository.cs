@@ -59,8 +59,6 @@ namespace BusinessAccess.MutualFunds
             {
                 response.Investments = MapInvestments(dtInvestments);
 
-                dashboardDataAccess.Insert_mf_daily_tracker(request.PortfolioId, DateTime.Now, response.Investments.Investment, response.Investments.CurrentValue, response.Investments.Profit);
-
                 if (dtSipDetails != null && dtSipDetails.Rows.Count > 0)
                 {
                     response.SipDetails = (from dr in dtSipDetails.AsEnumerable()
@@ -97,6 +95,12 @@ namespace BusinessAccess.MutualFunds
                     response.MTD = GetInvestments(GetDate(4), dtInvests);
 
                     response.InvestGrowth = MapInvestGrowth(dtInvests);
+
+                    dashboardDataAccess.Insert_mf_daily_tracker(request.PortfolioId, DateTime.Now, -1, response.Investments.Investment, response.Investments.CurrentValue, response.Investments.Profit);
+                    dashboardDataAccess.Insert_mf_daily_tracker(request.PortfolioId, DateTime.Now, 1, response.MTD.Amount, response.MTD.CurrentValue, response.MTD.Profit);
+                    dashboardDataAccess.Insert_mf_daily_tracker(request.PortfolioId, DateTime.Now, 3, response.QTD.Amount, response.QTD.CurrentValue, response.QTD.Profit);
+                    dashboardDataAccess.Insert_mf_daily_tracker(request.PortfolioId, DateTime.Now, 12, response.YTD.Amount, response.YTD.CurrentValue, response.YTD.Profit);
+
                 }
             }
             catch (Exception ex)
