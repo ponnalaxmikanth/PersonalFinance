@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DownloadFundsData
 {
@@ -29,14 +30,14 @@ namespace DownloadFundsData
                 ICommonRepository _CommonRepository = new CommonRepository(new CommonDataAccess());
 
                 List<DownloadUrls> urls = new List<DownloadUrls>();
-                urls.Add(new DownloadUrls() { Id = 3, Url = "http://www.amfiindia.com/spages/NAVOpen.txt", Message = "Downloading Open Funds Data" });
-                urls.Add(new DownloadUrls() { Id = 4, Url = "http://www.amfiindia.com/spages/NAVClose.txt", Message = "Downloading Closed Funds Data" });
-                urls.Add(new DownloadUrls() { Id = 5, Url = "http://www.amfiindia.com/spages/NAVInterval.txt", Message = "Downloading Interval Funds Data" });
+                urls.Add(new DownloadUrls() { Id = 3, Url = "http://www.amfiindia.com/spages/NAVOpen.txt", Message = "Downloading Open Funds Data", Type = "Open Ended" });
+                urls.Add(new DownloadUrls() { Id = 4, Url = "http://www.amfiindia.com/spages/NAVClose.txt", Message = "Downloading Closed Funds Data", Type = "Close Ended" });
+                urls.Add(new DownloadUrls() { Id = 5, Url = "http://www.amfiindia.com/spages/NAVInterval.txt", Message = "Downloading Interval Funds Data", Type = "Interval Fund" });
 
                 foreach (var u in urls)
                 {
                     DisplayMessage(u.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
-                    DownloadNAVData(u.Url, u.Id, DateTime.Now.Date);
+                    DownloadNAVData(u.Url, u.Id, u.Type, DateTime.Now.Date);
                 }
             }
             catch (Exception ex)
@@ -46,7 +47,7 @@ namespace DownloadFundsData
         }
 
         //public async Task<bool> DownloadNAVData(string link, int fundType, DateTime date)
-        public bool DownloadNAVData(string link, int fundType, DateTime date)
+        public bool DownloadNAVData(string link, int fundType, string type, DateTime date)
         {
             try
             {
@@ -60,7 +61,7 @@ namespace DownloadFundsData
 
                 using (var reader = new StreamReader(resStream))
                 {
-                    UpdateNAVData(date, reader.ReadToEnd(), fundType);
+                    UpdateNAVData(date, reader.ReadToEnd(), fundType, type);
                 }
             }
             catch (Exception ex) {
@@ -69,13 +70,13 @@ namespace DownloadFundsData
             return true;
         }
 
-        private void UpdateNAVData(DateTime date, string data, int fundType)
+        private void UpdateNAVData(DateTime date, string data, int fundType, string type)
         {
             string[] navdata = data.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.None);
             List<NAVData> latestNavData = new List<NAVData>();
             decimal nav;
-            decimal repurchasePrice = -99999999;
-            decimal sellPrice = -99999999;
+            decimal repurchasePrice = -1;
+            decimal sellPrice = -1;
             string fundsHouse = string.Empty;
             for (int i = 0; i < navdata.Length; i++)
             {
@@ -134,9 +135,43 @@ namespace DownloadFundsData
             }
             if (latestNavData != null && latestNavData.Count() > 0)
             {
+                string strXml = GetXMLString(latestNavData);
                 _mfDataAccess.UpdateLatestNAV(latestNavData);
+                _mfDataAccess.UpdateFundsNAV(strXml, type);
                 _CommonDataAccess.InsertDumpDate(date, fundType, latestNavData.Count());
             }
+        }
+
+        private string GetXMLString(List<NAVData> latestNavData)
+        {
+            string returnStr = string.Empty;
+            try
+            {
+                returnStr = new XElement("root",
+                    (from n in latestNavData
+                     select
+                     new XElement("fund",
+                           new XElement("FundHouse", n.FundHouse),
+                           new XElement("Code", n.SchemaCode),
+                           new XElement("ISINGrowth", n.ISINGrowth),
+                           new XElement("ISINDivReinv", n.ISINDivReinvestment),
+                           new XElement("Name", n.SchemaName),
+                           new XElement("NAV", n.NAV),
+                           new XElement("RepurchasePrice", n.RepurchasePrice),
+                           new XElement("SellPrice", n.SellPrice),
+                           new XElement("Date", n.Date.ToString("MM/dd/yyyy")),
+                           new XElement("FundOption", n.FundOption),
+                           new XElement("Fund_Type", n.Fund_Type),
+                           new XElement("FundType", n.FundType)
+                           )
+                            )
+                         ).ToString().Replace("'", "''");
+            }
+            catch(Exception ex)
+            {
+
+            }
+            return returnStr;
         }
 
         private decimal GetValue(string val)

@@ -170,6 +170,14 @@ namespace DataAccess.MutualFunds
             }
         }
 
+        public void UpdateNAVHistory(string xmlData)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+
+            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xml", Value = xmlData });
+            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
+        }
+
         public DataTable UpdateLatestNAV(List<NAVData> data)
         {
             for (int i = 0; i < data.Count; i++)
@@ -193,6 +201,16 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
 
             }
+            return null;
+        }
+
+        public DataTable UpdateFundsNAV(string strXml, string type)
+        {
+            List<SqlParameter> parameters = new List<SqlParameter>();
+            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xml", Value = strXml });
+            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "schemaType", Value = type });
+
+            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "DownloadFundsNAV", CommandType.StoredProcedure, parameters);
             return null;
         }
 

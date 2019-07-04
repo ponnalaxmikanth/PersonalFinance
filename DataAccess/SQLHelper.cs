@@ -19,7 +19,8 @@ namespace DataAccess
             DataSet ds = new DataSet();
             try
             {
-                string appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+                //string appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+                string appName = System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
                 string connstr = Helper.GetConnectionString(key);
                 watch.Start();
                 using (SqlConnection conn = new SqlConnection(connstr))
@@ -36,7 +37,7 @@ namespace DataAccess
                         da.Fill(ds);
                         watch.Stop();
                         if(procName != "LogMetric" && procName != "LogMessage")
-                        LoggingDataAccess.LogMetric("Proc:" + procName, appName, "Database" , watch.ElapsedMilliseconds);
+                        LoggingDataAccess.LogMetric("DB:" + key + " Proc:" + procName, appName, "Database" , watch.ElapsedMilliseconds);
                     }
                 }
             }

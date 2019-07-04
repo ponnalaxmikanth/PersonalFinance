@@ -7,8 +7,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DownloadFundsData
 {
@@ -51,7 +51,7 @@ namespace DownloadFundsData
             {
                 DisplayMessage("[" + DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss.ffff") + "]:" + " Getting NAV data - " + toDate.ToString("dd-MMM-yyyy"));
                 List<NAVData> navData = _mutualBusinessAccess.GetFundsNAV(toDate);
-                
+
                 Parallel.ForEach(urls, optns, u =>
                 {
                     DownloadFundNavHistory(toDate, navData, u.Url + toDate.ToString("dd-MMM-yyyy") + "&todt=" + toDate.ToString("dd-MMM-yyyy"), u.Id, u.Message);
@@ -131,8 +131,33 @@ namespace DownloadFundsData
             if (latestNavData != null && latestNavData.Count() > 0)
             {
                 _mfDataAccess.UpdateNAVHistory(latestNavData);
+                string xml = GetXMLString(latestNavData);
                 _CommonRepository.InsertDumpDate(date, fundType, latestNavData.Count());
             }
+        }
+
+        private string GetXMLString(List<NAVData> latestNavData)
+        {
+            string returnStr = string.Empty;
+            try
+            {
+                returnStr = new XElement("root",
+                    (from n in latestNavData
+                     select
+                     new XElement("fund",
+                           new XElement("code", n.SchemaCode),
+                           new XElement("nav", n.NAV),
+                           new XElement("type", n.FundType),
+                           new XElement("date", n.Date.ToString("MM/dd/yyyy"))
+                           )
+                    )
+                  ).ToString();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            return returnStr;
         }
     }
 }
