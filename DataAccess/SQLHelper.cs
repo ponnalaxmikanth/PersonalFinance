@@ -20,7 +20,7 @@ namespace DataAccess
             try
             {
                 //string appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                string appName = System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
+                string appName = System.Reflection.Assembly.GetEntryAssembly() == null ? string.Empty : System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
                 string connstr = Helper.GetConnectionString(key);
                 watch.Start();
                 using (SqlConnection conn = new SqlConnection(connstr))

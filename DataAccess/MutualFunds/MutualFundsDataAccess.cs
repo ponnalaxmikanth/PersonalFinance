@@ -175,7 +175,7 @@ namespace DataAccess.MutualFunds
             List<SqlParameter> parameters = new List<SqlParameter>();
 
             parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xml", Value = xmlData });
-            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAVHistory", CommandType.StoredProcedure, parameters);
         }
 
         public DataTable UpdateLatestNAV(List<NAVData> data)
