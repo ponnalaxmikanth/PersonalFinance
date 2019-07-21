@@ -22,23 +22,14 @@ namespace DownloadFundsData
         public void DownloadData(int noOfDays = 30)
         {
             List<DownloadUrls> urls = new List<DownloadUrls>();
-            urls.Add(new DownloadUrls()
-            {
-                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=1&frmdt=",
-                Id = 3,
-                Message = " Open Ended - "
+            urls.Add(new DownloadUrls() {
+                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=1&frmdt=", Id = 3, Message = " Open Ended - "
             });
-            urls.Add(new DownloadUrls()
-            {
-                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=2&frmdt=",
-                Id = 4,
-                Message = " Close Ended - "
+            urls.Add(new DownloadUrls() {
+                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=2&frmdt=", Id = 4, Message = " Close Ended - "
             });
-            urls.Add(new DownloadUrls()
-            {
-                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=3&frmdt=",
-                Id = 5,
-                Message = " Interval - "
+            urls.Add(new DownloadUrls() {
+                Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=3&frmdt=", Id = 5, Message = " Interval - "
             });
 
             DateTime fromDate = DateTime.Now.AddDays(-noOfDays).Date;
@@ -132,6 +123,7 @@ namespace DownloadFundsData
             {
                 _mfDataAccess.UpdateNAVHistory(latestNavData);
                 string xml = GetXMLString(latestNavData);
+                _mfDataAccess.UpdateNAVHistory(xml);
                 _CommonRepository.InsertDumpDate(date, fundType, latestNavData.Count());
             }
         }
