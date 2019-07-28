@@ -52,9 +52,10 @@ namespace DownloadFundsData
             }
             if (args[0] == "NAV")
             {
+                int noOfProcesses = args.Length > 1 ? int.Parse(args[1]) : 1;
                 Console.Title = "Downloading MF NAV: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
                 //GetNAVDataFromCAMS();
-                new FundsNAV().DownloadNAVData();
+                new FundsNAV().DownloadNAVData(noOfProcesses);
             }
             if (args[0] == "NAVHistory")
             {

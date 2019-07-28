@@ -23,7 +23,7 @@ namespace DownloadFundsData
             _mfDataAccess = new MutualFundsDataAccess();
             _CommonDataAccess = new CommonDataAccess();
         }
-        public void DownloadNAVData()
+        public void DownloadNAVData(int noOfProcesses)
         {
             try
             {
@@ -34,11 +34,17 @@ namespace DownloadFundsData
                 urls.Add(new DownloadUrls() { Id = 4, Url = "http://www.amfiindia.com/spages/NAVClose.txt", Message = "Downloading Closed Funds Data", Type = "Close Ended" });
                 urls.Add(new DownloadUrls() { Id = 5, Url = "http://www.amfiindia.com/spages/NAVInterval.txt", Message = "Downloading Interval Funds Data", Type = "Interval Fund" });
 
-                foreach (var u in urls)
+                ParallelOptions optns = new ParallelOptions() { MaxDegreeOfParallelism = noOfProcesses };
+
+                Parallel.ForEach(urls, optns, u =>
                 {
-                    DisplayMessage(u.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
-                    DownloadNAVData(u.Url, u.Id, u.Type, DateTime.Now.Date);
-                }
+                    DownloadNAVData(u);
+                });
+                //foreach (var u in urls)
+                //{
+                //    DisplayMessage(u.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
+                //    DownloadNAVData(u.Url, u.Id, u.Type, DateTime.Now.Date);
+                //}
             }
             catch (Exception ex)
             {
@@ -47,10 +53,15 @@ namespace DownloadFundsData
         }
 
         //public async Task<bool> DownloadNAVData(string link, int fundType, DateTime date)
-        public bool DownloadNAVData(string link, int fundType, string type, DateTime date)
+        public bool DownloadNAVData(DownloadUrls url)
         {
+            string link = url.Url;
+            int fundType = url.Id;
+            string type = url.Type;
+            DateTime date = DateTime.Now;
             try
             {
+                DisplayMessage(url.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
                 //await Task.Delay(1);
                 StringBuilder sb = new StringBuilder();
                 byte[] buf = new byte[8192];
