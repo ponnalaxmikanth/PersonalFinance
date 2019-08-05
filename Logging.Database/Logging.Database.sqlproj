@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <Name>Inestments.Database</Name>
+    <Name>Logging.Database</Name>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
-    <ProjectGuid>{6501c181-7d03-4652-ac43-5a5e2db69625}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <ProjectGuid>{d234f5c5-094c-42d7-83cc-43998429ddc0}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
-    <RootNamespace>Inestments.Database</RootNamespace>
-    <AssemblyName>Inestments.Database</AssemblyName>
+    <RootNamespace>Logging.Database</RootNamespace>
+    <AssemblyName>Logging.Database</AssemblyName>
     <ModelCollation>1033, CI</ModelCollation>
     <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
     <DeployToDatabase>True</DeployToDatabase>
@@ -57,31 +57,13 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="Procedures" />
     <Folder Include="Tables" />
+    <Folder Include="Procedures" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Tables\MF_FundHouses.sql" />
-    <Build Include="Tables\FundsNav.sql" />
-    <Build Include="Tables\FundsNav_History.sql" />
-    <Build Include="Procedures\DownloadFundsNAV.sql" />
-    <Build Include="Procedures\UpdateFundNAVHistory.sql" />
-    <Build Include="Procedures\BackupFundNavData.sql" />
-    <Build Include="Tables\FundSwitches.sql" />
-    <Build Include="Tables\mf_daily_tracker.sql" />
-    <Build Include="Tables\MF_DataDumpDates.sql" />
-    <Build Include="Tables\MF_Dividends.sql" />
-    <Build Include="Tables\MF_Folios.sql" />
-    <Build Include="Tables\MF_FundCategory.sql" />
-    <Build Include="Tables\MF_FundDetails.sql" />
-    <Build Include="Tables\MF_FundOptions.sql" />
-    <Build Include="Tables\MF_Funds.sql" />
-    <Build Include="Tables\MF_FundTypes.sql" />
-    <Build Include="Tables\MF_Portfolios.sql" />
-    <Build Include="Tables\MF_Purchases.sql" />
-    <Build Include="Tables\MF_Redeems.sql" />
-    <Build Include="Tables\MF_SIPS.sql" />
-    <Build Include="Tables\StockPurchases.sql" />
-    <Build Include="Procedures\calculate_mf_daily_value.sql" />
+    <Build Include="Tables\TLogMessage.sql" />
+    <Build Include="Tables\TLogMetrics.sql" />
+    <Build Include="Procedures\LogMessage.sql" />
+    <Build Include="Procedures\LogMetric.sql" />
   </ItemGroup>
 </Project>

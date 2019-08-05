@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <ignoredSheets>
+    <sheet name="Overview"></sheet>
+    <sheet name="Expenses"></sheet>
+    <sheet name="Commitments"></sheet>
+    <sheet name="Income"></sheet>
+    <sheet name="Tax"></sheet>
+    <sheet name="NWFC"></sheet>
+    <sheet name="Budget"></sheet>
+    <sheet name="Data"></sheet>
+  </ignoredSheets>
+</root>
