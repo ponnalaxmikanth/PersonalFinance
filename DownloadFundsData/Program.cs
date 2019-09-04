@@ -80,6 +80,12 @@ namespace DownloadFundsData
                 Console.Title = "Downloading MF  Data from Wall Street Journal: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
                 new USMFWallStreetJournal().DownloadData();
             }
+
+            if (args[0] == "Stocks")
+            {
+                Console.Title = "Downloading Stocks Data: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+                new Stocks().GetLatestStockValues();
+            }
             //if(args[0] == "MS")
             //    DownloadMorningStarMFData();
 
