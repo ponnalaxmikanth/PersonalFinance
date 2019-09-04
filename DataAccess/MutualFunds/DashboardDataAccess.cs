@@ -152,7 +152,7 @@ namespace DataAccess.MutualFunds
             parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "currentvalue", Value = currentvalue });
             parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "profit", Value = profit });
 
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "insert_mf_daily_tracker", CommandType.StoredProcedure, parameters);
+            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "insert_mf_daily_tracker", CommandType.StoredProcedure, parameters);
             //if (ds != null)
             //    return ds.Tables[0];
             return null;

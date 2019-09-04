@@ -81,7 +81,11 @@
     <Build Include="Tables\MF_Purchases.sql" />
     <Build Include="Tables\MF_Redeems.sql" />
     <Build Include="Tables\MF_SIPS.sql" />
-    <Build Include="Tables\StockPurchases.sql" />
+    <Build Include="Tables\Stocks.sql" />
     <Build Include="Procedures\calculate_mf_daily_value.sql" />
+    <Build Include="Procedures\insert_mf_daily_tracker.sql" />
+    <Build Include="Tables\Stock_Redeems.sql" />
+    <Build Include="Tables\Stock_Dividends.sql" />
+    <Build Include="Procedures\GetStocks.sql" />
   </ItemGroup>
 </Project>

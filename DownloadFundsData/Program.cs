@@ -86,6 +86,8 @@ namespace DownloadFundsData
             DisplayMessage("Processing completed...");
             DisplayMessage("Press any key to exit...");
             Console.ReadKey();
+            DisplayMessage("exiting application...");
+            return;
         }
 
         #region CAMS NAV

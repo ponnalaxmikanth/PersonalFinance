@@ -62,7 +62,6 @@
     <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Procedures\GetBudgetTransactions.sql" />
     <Build Include="Tables\HomeTransactions.sql" />
     <Build Include="Tables\Accounts.sql" />
     <Build Include="Tables\AccountTypes.sql" />

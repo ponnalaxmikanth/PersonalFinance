@@ -17,10 +17,11 @@ namespace DataAccess
         {
             Stopwatch watch = new Stopwatch();
             DataSet ds = new DataSet();
+            string appName = string.Empty;
             try
             {
                 //string appName = System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-                string appName = System.Reflection.Assembly.GetEntryAssembly() == null ? string.Empty : System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
+                appName = System.Reflection.Assembly.GetEntryAssembly() == null ? string.Empty : System.Reflection.Assembly.GetEntryAssembly().GetName().Name;
                 string connstr = Helper.GetConnectionString(key);
                 watch.Start();
                 using (SqlConnection conn = new SqlConnection(connstr))
@@ -37,12 +38,13 @@ namespace DataAccess
                         da.Fill(ds);
                         watch.Stop();
                         if(procName != "LogMetric" && procName != "LogMessage")
-                        LoggingDataAccess.LogMetric("DB:" + key + " Proc:" + procName, appName, "Database" , watch.ElapsedMilliseconds);
+                            LoggingDataAccess.LogMetric("DB:" + key + " Proc:" + procName, appName, "Database" , watch.ElapsedMilliseconds);
                     }
                 }
             }
             catch (Exception ex)
             {
+                LoggingDataAccess.LogException(appName, component, ex.Message + " Proc:" + procName, ex.StackTrace);
                 throw;
             }
             finally

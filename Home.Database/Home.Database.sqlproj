@@ -66,5 +66,6 @@
     <Build Include="Tables\AccountTypes.sql" />
     <Build Include="Procedures\Insert_Account_Transactions.sql" />
     <Build Include="Procedures\GetBudgetTransactions.sql" />
+    <Build Include="Tables\Budget.sql" />
   </ItemGroup>
 </Project>

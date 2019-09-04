@@ -77,6 +77,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex) {
                 DisplayMessage("Exception occurred: " + ex.Message);
+                DisplayMessage("Exception occurred: " + ex.StackTrace);
             }
             return true;
         }

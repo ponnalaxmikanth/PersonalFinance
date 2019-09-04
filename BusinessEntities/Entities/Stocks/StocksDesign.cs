@@ -9,13 +9,14 @@ namespace BusinessEntity
     public class StocksDesign
     {
     }
-    public class StockPurchases
+    public class Stock
     {
-        public string StocksId { get; set; }
+        public string ID { get; set; }
         public DateTime PurchaseDate { get; set; }
-        public int NumbersofStocks { get; set; }
-        public decimal StocksPrice { get; set; }
-
+        public int Quantity { get; set; }
+        public decimal Price { get; set; }
+        public decimal MarketPrice { get; set; }
+        public decimal Dividend { get; set; }
     }
 
 }

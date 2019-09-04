@@ -11,24 +11,26 @@ namespace BusinessAccess
 {
     public class StocksBusinessAccess
     {
-        public List<StockPurchases> ToGetStocks(DateTime fromdate, DateTime todate)
+        public List<Stock> ToGetStocks(DateTime fromdate, DateTime todate)
         {
             StocksDataAccess sda = new StocksDataAccess();
-           List<StockPurchases> sp = new List<StockPurchases>();
-            DataTable da = sda.GetToStocks(fromdate, todate);
-            sp = MapsStocks(da);
-           return sp;
+            //List<Stock> sp = new List<Stock>();
+            // DataTable da = sda.GetToStocks(fromdate, todate);
+            // sp = MapsStocks(da);
+            //return sp;
+            return null;
         }
-        private List<StockPurchases> MapsStocks(DataTable da)
+
+        private List<Stock> MapsStocks(DataTable da)
         {
-            List<StockPurchases> lsp = new List<StockPurchases>();
+            List<Stock> lsp = new List<Stock>();
             lsp = (from DataRow dr in da.Rows
-                   select new StockPurchases()
+                   select new Stock()
                            {
-                               NumbersofStocks = Convert.ToInt32(dr["No_of_Stocks"]),
-                               StocksId = dr["StockID"].ToString(),
+                               Quantity = Convert.ToInt32(dr["No_of_Stocks"]),
+                               ID = dr["StockID"].ToString(),
                                PurchaseDate = Convert.ToDateTime(dr["Purchasedatetime"].ToString()),
-                               StocksPrice = decimal.Round(Convert.ToDecimal(dr["Stockprice"].ToString()), 3, MidpointRounding.AwayFromZero),
+                               Price = decimal.Round(Convert.ToDecimal(dr["Stockprice"].ToString()), 3, MidpointRounding.AwayFromZero),
 
                                //  PurchaseDate = dr["PurchaseDate"].ToString(),
                                //  StocksPrice = dr["StocksPrice"].ToString()
