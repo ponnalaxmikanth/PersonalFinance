@@ -36,7 +36,50 @@ namespace Utilities
             return retValue;
         }
 
-        static public DateTime? GetDate(object val, DateTime? defaultValue = null)
+        public static decimal? ToDecimal(object param)
+        {
+            decimal retValue = decimal.MinValue;
+            try
+            {
+                if (param == null) return null;
+                if (decimal.TryParse(param.ToString(), out retValue)) return retValue;
+                else return null;
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
+        public static decimal ToDecimal(object param, decimal defaultValue)
+        {
+            decimal retValue = defaultValue;
+            try
+            {
+                if (param == null) return defaultValue;
+                decimal.TryParse(param.ToString(), out retValue);
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
+        public static double ToDouble(object param, double defaultValue)
+        {
+            double retValue = defaultValue;
+            try
+            {
+                if (param == null) return defaultValue;
+                double.TryParse(param.ToString(), out retValue);
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
+        static public DateTime ToDateTime(object val, DateTime defaultValue)
         {
             DateTime retValue = DateTime.Now;
             try
@@ -52,8 +95,40 @@ namespace Utilities
         public static string DataTableToJSON(DataTable table)
         {
             string JSONString = string.Empty;
-            JSONString = JsonConvert.SerializeObject(table);
+            try
+            {
+                JSONString = JsonConvert.SerializeObject(table);
+            }
+            catch (Exception ex) {
+            }
             return JSONString;
         }
+
+        public static int ToInt(object param, int defaultValue) {
+            int retValue = defaultValue;
+            try
+            {
+                if (param == null) return defaultValue;
+                int.TryParse(param.ToString(), out retValue);
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
+        public static string ToString(object param, string defaultValue) {
+            string retValue = defaultValue;
+            try
+            {
+                if (param == null) return defaultValue;
+                retValue = param.ToString();
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
     }
 }

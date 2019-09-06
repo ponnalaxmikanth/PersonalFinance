@@ -1,5 +1,7 @@
 ﻿using BusinessEntities.Contracts.MutualFunds;
+using BusinessEntities.Entities;
 using BusinessEntities.Entities.MutualFunds;
+using Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +15,8 @@ namespace BusinessAccess.MutualFunds
     public class DashboardRepository : IDashboardRepository
     {
         IDashboardDataAccess dashboardDataAccess;
+        string _application = "BusinessAccess";
+        string _component = "DashboardRepository";
 
         public void SetPath(string path)
         {
@@ -43,7 +47,7 @@ namespace BusinessAccess.MutualFunds
                 dtInvests = dashboardDataAccess.GetIndividualInvestments(new DashboardIndividual()
                     {
                         FromDate = request.FromDate,
-                        PortfolioId = request.PortfolioId,
+                        PortfolioId = request.PortfolioId.ToString(),
                         ToDate = request.ToDate,
                         Type = ""
                     });
@@ -52,7 +56,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return response;
         }
@@ -111,7 +115,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
 
 
@@ -157,6 +161,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -185,6 +190,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return invest;
         }
@@ -254,6 +260,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return retvalue;
         }
@@ -267,10 +274,10 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return retvalue;
         }
-
 
         public List<InvestmentsByMonth> GetDashboardChartData(DashboardRequest request)
         {
@@ -281,6 +288,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -316,8 +324,6 @@ namespace BusinessAccess.MutualFunds
             return null;
         }
 
-
-
         public Individual GetIndividualData(DashboardRequest request)
         {
             Individual response = null;
@@ -332,7 +338,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return response;
         }
@@ -397,6 +403,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result.OrderByDescending(r => r.Date).ToList();
         }
@@ -417,7 +424,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return Math.Round(result * 100, 2, MidpointRounding.AwayFromZero);
         }
@@ -458,6 +465,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -486,12 +494,11 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
 
         }
-
 
         public List<Investments> GetPerfOfMoreThanYear(DashboardIndividual request)
         {
@@ -518,7 +525,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -549,8 +556,6 @@ namespace BusinessAccess.MutualFunds
             return result;
         }
 
-
-
         public List<BenchmarkHistory> GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
         {
             List<BenchmarkHistory> result = MapBenchMarkHistoryValues(dashboardDataAccess.GetBenchmarkHistoryValues(fromDate, toDate));
@@ -578,14 +583,14 @@ namespace BusinessAccess.MutualFunds
                                                       Open = Conversions.GetDecimalValue(h["OpenValue"]),
                                                       TurnOver = Conversions.GetDecimalValue(h["TurnOver"]),
                                                       SharesTraded = Conversions.Getulong(h["SharesTraded"]),
-                                                      Date = Conversions.GetDate(h["Date"]).Value.Date
+                                                      Date = Conversions.ToDateTime(h["Date"], DateTime.Now)
                                                   }).ToList().OrderBy(r => r.Date).ToList()
                             }).ToList();
                 }
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return null;
         }
@@ -594,8 +599,6 @@ namespace BusinessAccess.MutualFunds
         {
             return (dashboardDataAccess.GetNewGraph(fromDate, toDate));
         }
-
-
 
         public object GetBenchMarks(DateTime fromDate, DateTime toDate)
         {
@@ -624,7 +627,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return null;
         }
@@ -646,8 +649,6 @@ namespace BusinessAccess.MutualFunds
 
             return result;
         }
-
-
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using BusinessEntities.Contracts.MutualFunds;
+using BusinessEntities.Entities;
 using BusinessEntities.Entities.MutualFunds;
 using System;
 using System.Collections.Generic;

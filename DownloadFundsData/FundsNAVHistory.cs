@@ -1,6 +1,8 @@
 ﻿using BusinessAccess.MutualFunds;
 using BusinessEntities.Contracts.MutualFunds;
 using BusinessEntities.Entities;
+using DataAccess;
+using DataAccess.Logging;
 using DataAccess.MutualFunds;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,8 @@ namespace DownloadFundsData
         static ICommonDataAccess _CommonDataAccess = new CommonDataAccess();
         static ICommonRepository _CommonRepository = new CommonRepository(_CommonDataAccess);
         static MutualFundsRepository _mutualBusinessAccess = new MutualFundsRepository(_CommonDataAccess, _mfDataAccess);
+        readonly string _application = "DownloadFundsData";
+        readonly string _component = "FundsNAVHistory";
 
         public void DownloadData(int noOfDays = 30)
         {
@@ -64,7 +68,9 @@ namespace DownloadFundsData
                     UpdateNAVHistoryData(date, reader.ReadToEnd(), navData, fundType, message);
                 }
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
         }
 
         private void UpdateNAVHistoryData(DateTime date, string data, List<NAVData> navData, int fundType, string message)
@@ -109,6 +115,7 @@ namespace DownloadFundsData
                     {
                         DisplayMessage("");
                         DisplayMessage(message + date.ToString("dd-MMM-yyyy") + " Exception: " + ex.Message);
+                        LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
                     }
                 }
                 else if (navdata[i].Trim().Length > 0)
@@ -147,7 +154,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return returnStr;
         }

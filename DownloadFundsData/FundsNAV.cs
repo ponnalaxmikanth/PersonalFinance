@@ -1,6 +1,8 @@
 ﻿using BusinessAccess.MutualFunds;
 using BusinessEntities.Contracts.MutualFunds;
 using BusinessEntities.Entities;
+using DataAccess;
+using DataAccess.Logging;
 using DataAccess.MutualFunds;
 using System;
 using System.Collections.Generic;
@@ -17,7 +19,8 @@ namespace DownloadFundsData
     {
         MutualFundsDataAccess _mfDataAccess;
         ICommonDataAccess _CommonDataAccess;
-
+        readonly string _application = "DownloadFundsData";
+        readonly string _component = "DumpData";
         public FundsNAV()
         {
             _mfDataAccess = new MutualFundsDataAccess();
@@ -48,7 +51,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 
@@ -78,6 +81,7 @@ namespace DownloadFundsData
             catch (Exception ex) {
                 DisplayMessage("Exception occurred: " + ex.Message);
                 DisplayMessage("Exception occurred: " + ex.StackTrace);
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return true;
         }
@@ -135,6 +139,7 @@ namespace DownloadFundsData
                     }
                     catch (Exception ex)
                     {
+                        LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
                     }
                 }
                 else if (navdata[i].Trim().Length > 0
@@ -181,7 +186,7 @@ namespace DownloadFundsData
             }
             catch(Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return returnStr;
         }

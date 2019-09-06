@@ -6,12 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using BusinessEntities.Entities.Accounts;
 using DataAccess.Accounts;
+using Logging;
 
 namespace BusinessAccess.Accounts
 {
     public class DownloadExcelAccountInfo
     {
         DownloadExcelAccountInfoDataAccess _dataAccess = new DownloadExcelAccountInfoDataAccess();
+        readonly string _application = "BusinessAccess";
+        readonly string _component = "DownloadExcelAccountInfo";
         public List<AccountMappingDetails> GetAccountMappingDetails()
         {
             return MapAccountMappingDetails(_dataAccess.GetAccountMappingDetails());
@@ -38,7 +41,7 @@ namespace BusinessAccess.Accounts
             }
             catch(Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -51,7 +54,7 @@ namespace BusinessAccess.Accounts
             }
             catch(Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
     }

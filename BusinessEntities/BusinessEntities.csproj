@@ -56,79 +56,24 @@
     <Compile Include="Contracts\MutualFunds\IMutualFundDataAccess.cs" />
     <Compile Include="Contracts\MutualFunds\IMutualFundsBusinessAccess.cs" />
     <Compile Include="Entities\Accounts\AccountMappingDetails.cs" />
-    <Compile Include="Entities\Excel.cs" />
+    <Compile Include="Entities\Expenses\ExpenseTracker.cs" />
     <Compile Include="Entities\MutualFunds\Common.cs" />
     <Compile Include="Entities\MutualFunds\Dashboard.cs" />
     <Compile Include="Entities\MutualFunds\MoneyControl.cs" />
     <Compile Include="Entities\MutualFunds\MutualFunds.cs" />
     <Compile Include="Entities\Stocks\BSEHistoricalData.cs" />
-    <Compile Include="Entities\Stocks\StocksDesign.cs" />
-    <Compile Include="MutualFunds\MF_Folios.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_FundCategory.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_FundHouses.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_FundOptions.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_Funds.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_FundTypes.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_Portfolios.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MF_Transactions.cs">
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MutualFunds.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MutualFunds.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MutualFunds.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MutualFunds.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MutualFunds\MutualFunds.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MutualFunds.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Entities\Stocks\Stocks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="MutualFunds\MutualFunds.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MutualFunds.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config" />
-    <None Include="MutualFunds\MutualFunds.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MutualFunds.edmx</DependentUpon>
-      <LastGenOutput>MutualFunds.Context.cs</LastGenOutput>
-    </None>
-    <None Include="MutualFunds\MutualFunds.edmx.diagram">
-      <DependentUpon>MutualFunds.edmx</DependentUpon>
-    </None>
-    <None Include="MutualFunds\MutualFunds.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MutualFunds.edmx</DependentUpon>
-      <LastGenOutput>MutualFunds.cs</LastGenOutput>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MutualFunds\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

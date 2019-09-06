@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Logging;
 
 namespace ParseExcel
 {
@@ -17,6 +18,8 @@ namespace ParseExcel
         static List<string> ignoreSheets = new List<string>();
         static DownloadExcelAccountInfo _downloadExcelAccountInfo = new DownloadExcelAccountInfo();
         static List<AccountMappingDetails> _accountMappingDetails = null;
+        readonly static string _application = "ParseExcel";
+        readonly static string _component = "Program";
 
         static void Main(string[] args)
         {
@@ -53,7 +56,7 @@ namespace ParseExcel
             }
             catch(Exception ex)
             {
-
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 
@@ -153,6 +156,7 @@ namespace ParseExcel
             catch(Exception ex)
             {
                 DisplayMessage("Exception while GetTransactionsXML Exception: " + ex.Message);
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -199,6 +203,7 @@ namespace ParseExcel
             catch(Exception ex)
             {
                 DisplayMessage("Exception while processing sheet:" + sheetName + " row number: " + rowNumber + " Exception: " + ex.Message);
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return _transaction;
         }
@@ -217,6 +222,7 @@ namespace ParseExcel
             catch(Exception ex)
             {
                 DisplayMessage("Exception ParseDateValue: " + ex.Message);
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return retVal;
         }
@@ -237,6 +243,7 @@ namespace ParseExcel
             catch (Exception ex)
             {
                 DisplayMessage("Exception ParseDecimalValue: " + ex.Message);
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return retVal;
         }
