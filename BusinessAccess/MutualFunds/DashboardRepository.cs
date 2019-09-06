@@ -13,6 +13,12 @@ namespace BusinessAccess.MutualFunds
     public class DashboardRepository : IDashboardRepository
     {
         IDashboardDataAccess dashboardDataAccess;
+
+        public void SetPath(string path)
+        {
+            dashboardDataAccess.SetPath(path);
+        }
+
         public DashboardRepository(IDashboardDataAccess dashbrdDataAccess)
         {
             dashboardDataAccess = dashbrdDataAccess;

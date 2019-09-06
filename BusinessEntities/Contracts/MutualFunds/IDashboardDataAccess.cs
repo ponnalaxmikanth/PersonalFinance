@@ -10,11 +10,16 @@ namespace BusinessEntities.Contracts.MutualFunds
 {
     public interface IDashboardDataAccess
     {
+        void SetPath(string path);
+
         DataTable GetInvestmentDetails(DashboardRequest request);
+
         DataTable GetUpcomingSipDetails(DashboardRequest request);
+
         DataTable GetInvestmentsByMonth(DashboardRequest request);
 
         DataTable GetIndividualInvestments(DashboardIndividual request);
+
         DataTable GetSectorBreakup(DashboardRequest request);
 
         DataTable GetInvestments(DashboardIndividual request);

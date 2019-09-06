@@ -17,7 +17,11 @@ namespace DataAccess.MutualFunds
         {
             DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_Portfolios", CommandType.StoredProcedure, null);
             if (ds != null)
+            {
+                string jsonString = Utilities.Conversions.DataTableToJSON(ds.Tables[0]);
+                Utilities.WriteToFile.Write(@"C:\Temp\PortFolios.json", jsonString);
                 return ds.Tables[0];
+            }
             return null;
         }
 

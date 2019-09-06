@@ -12,6 +12,12 @@ namespace DataAccess.MutualFunds
 {
     public class DashboardDataAccess : IDashboardDataAccess
     {
+        static string serverPath = string.Empty;
+
+        public void SetPath(string path)
+        {
+            serverPath = path;
+        }
 
         public DataTable GetInvestmentDetails(DashboardRequest request)
         {
@@ -23,7 +29,11 @@ namespace DataAccess.MutualFunds
 
             DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
             if (ds != null)
+            {
+                string jsonString = Utilities.Conversions.DataTableToJSON(ds.Tables[0]);
+                Utilities.WriteToFile.Write(serverPath + "\\InvestmentDetails.json", jsonString);
                 return ds.Tables[0];
+            }
             return null;
         }
 
