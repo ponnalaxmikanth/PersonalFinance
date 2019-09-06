@@ -11,14 +11,25 @@ namespace PersonlaFinance.Controllers
     public class MFDashboardController : BaseController
     {
         IDashboardRepository dashboardRepository;
+        string path = string.Empty;
+
         public MFDashboardController(IDashboardRepository dashbrdrepository)
         {
             dashboardRepository = dashbrdrepository;
+            
         }
+
+        private void setPath() {
+            string _path = Server.MapPath("");
+            dashboardRepository.SetPath(_path + "\\Data\\");
+        }
+
         //
         // GET: /MFDashboard/
         public ActionResult Index()
         {
+            string _path = Server.MapPath("");
+            dashboardRepository.SetPath(_path + "\\Data\\");
             return View("~/Views/MutualFunds/Dashboard/Index.cshtml");
         }
 
@@ -38,6 +49,7 @@ namespace PersonlaFinance.Controllers
         public ActionResult GetDashboardData(DashboardRequest request)
         {
             ViewBag.PortfolioId = request.PortfolioId;
+            //setPath();
             return Json(dashboardRepository.GetDashboardData(request));
         }
 
@@ -66,6 +78,7 @@ namespace PersonlaFinance.Controllers
         {
             return Json(dashboardRepository.GetULIP());
         }
+
         public ActionResult History()
         {
             return View("~/Views/MutualFunds/Dashboard/History/HistoryView.cshtml");
@@ -76,6 +89,7 @@ namespace PersonlaFinance.Controllers
         {
             return Json(dashboardRepository.GetBenchmarkHistoryValues(fromDate, toDate));
         }
+
         public ActionResult GetGraphHistory(DateTime fromDate,DateTime toDate)
         { 
             return Json(dashboardRepository.GetNewDashboard(fromDate,toDate));
