@@ -3,3 +3,56 @@
 ################################################################################
 
 /.vs
+/BusinessEntities/bin
+/BusinessAccess/obj
+/BusinessAccess/bin
+/BusinessEntities/obj
+/DataAccess/obj
+/DataAccess/bin
+/Database/obj
+/Database/bin
+/DownloadFundsData/ConnectionStrings
+/DownloadFundsData/obj
+/DownloadFundsData/bin
+/DownloadFundsData/DownloadFundsData.csproj.user
+/DownloadFundsData/2017.12.06_124019_MFFundLinks.txt
+/DownloadFundsData/2017.12.06_124019_MFFundDetails.txt
+/DownloadFundsData/2017.11.12_202403_MFFundLinks.txt
+/DownloadFundsData/2017.11.12_202403_MFFundDetails.txt
+/DownloadFundsData/2017.10.21_121022_MFFundDetails.txt
+/DownloadFundsData/2017.10.13_225510_MFFundDetails.txt
+/DownloadFundsData/2017.10.11_202048_MFFundDetails.txt
+/DownloadFundsData/04.10.2018WSJ FundsNAV.csv
+/DownloadNavHistory/obj
+/DownloadNavHistory/ConnectionStrings
+/DownloadNavHistory/bin
+/Home.Database/obj
+/Home.Database/bin
+/ExcelFinance
+/ExcelFinanceWeb
+/Inestments.Database/obj
+/Inestments.Database/bin
+/hooks
+/info
+/Logging/obj
+/Logging/ConnectionStrings
+/Logging/bin
+/Logging.Database/obj
+/Logging.Database/bin
+/packages - Copy
+/packages
+/ParseExcel/obj
+/ParseExcel/ConnectionStrings
+/ParseExcel/bin
+/PersonalAPI/obj
+/PersonalAPI/ConnectionStrings
+/PersonalAPI/bin
+/PersonalAPI.Tests
+/PersonlaFinance/ConnectionStrings
+/PersonlaFinance/obj
+/PersonlaFinance/bin
+/PersonlaFinance.Tests/bin
+/PersonlaFinance.Tests/obj
+/SQL DB Profiles
+/Utilities/bin
+/Utilities/obj
