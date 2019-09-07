@@ -13,6 +13,14 @@ namespace DataAccess.Accounts
     {
         readonly string _application = "DataAccess.Accounts";
         readonly string _component = "DownloadExcelAccountInfoDataAccess";
+
+        static string serverPath = string.Empty;
+        public void SetPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\Accounts\\";
+        }
+
         public DataTable GetAccountMappingDetails()
         {
             try

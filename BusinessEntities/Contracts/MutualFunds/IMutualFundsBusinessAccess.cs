@@ -31,5 +31,7 @@ namespace BusinessEntities.Contracts
 
 
         string GetLastProcessedDetails();
+
+        void SetPath(string path);
     }
 }

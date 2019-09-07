@@ -11,6 +11,14 @@ namespace DataAccess
     {
         readonly string _application = "DataAccess";
         readonly string _component = "ExpensesTrackerDataAccess";
+
+        static string serverPath = string.Empty;
+        public void SetPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\ExpensesTracker\\";
+        }
+
         public DataTable GetAccountTypes()
         {
             try
@@ -19,6 +27,7 @@ namespace DataAccess
                 DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountTypes", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\AccountTypes.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -37,6 +46,7 @@ namespace DataAccess
                 DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountDetails", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\AccountDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -55,6 +65,7 @@ namespace DataAccess
                 DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseGroups", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -73,6 +84,7 @@ namespace DataAccess
                 DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseSubGroups", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseSubGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -85,13 +97,15 @@ namespace DataAccess
 
         public DataTable GetStores()
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\Stores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {
@@ -102,15 +116,17 @@ namespace DataAccess
 
         public DataTable GetItem(string item)
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = item });
-
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetItem", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = item });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetItem", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\Item.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {
@@ -121,15 +137,17 @@ namespace DataAccess
 
         public DataTable GetStores(string store)
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = store });
-
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = store });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\GetStores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {
@@ -141,23 +159,25 @@ namespace DataAccess
 
         public DataTable AddExpenseTransaction(ExpenseTransaction transaction)
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-
-            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "transactionDate", Value = transaction.Date });
-            parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "groupId", Value = transaction.GroupId });
-            parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "subgroupid", Value = transaction.SubGroupId });
-            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = transaction.Item });
-            parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "amount", Value = transaction.Amount });
-            parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountid", Value = transaction.AccountId });
-            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "transactedBy", Value = transaction.TransactedBy });
-            parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = transaction.Store });
-
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "AddHomeTransactions", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+
+                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "transactionDate", Value = transaction.Date });
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "groupId", Value = transaction.GroupId });
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "subgroupid", Value = transaction.SubGroupId });
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = transaction.Item });
+                parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "amount", Value = transaction.Amount });
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountid", Value = transaction.AccountId });
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "transactedBy", Value = transaction.TransactedBy });
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = transaction.Store });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "AddHomeTransactions", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {
@@ -168,18 +188,20 @@ namespace DataAccess
 
         public DataTable GetExpenses(GetExpenses request)
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-
-            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
-            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
-            parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountId", Value = request.AccountId });
-
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetHomeTransactions", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+
+                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
+                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountId", Value = request.AccountId });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetHomeTransactions", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\Expenses.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {
@@ -190,17 +212,19 @@ namespace DataAccess
 
         public DataTable GetBudget(GetExpenses request)
         {
-            try { 
-            List<SqlParameter> parameters = new List<SqlParameter>();
-
-            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
-            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
-
-            DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetBudgetTransactions", CommandType.StoredProcedure, parameters);
-            if (ds != null)
+            try
             {
-                return ds.Tables[0];
-            }
+                List<SqlParameter> parameters = new List<SqlParameter>();
+
+                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
+                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetBudgetTransactions", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    Utilities.WriteToFile.Write(serverPath + "\\Budget.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds.Tables[0];
+                }
             }
             catch (Exception ex)
             {

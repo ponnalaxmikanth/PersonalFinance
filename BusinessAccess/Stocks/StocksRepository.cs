@@ -31,6 +31,11 @@ namespace BusinessAccess.Stocks
             _stocksDataAccess = stocksDataAccess;
         }
 
+        public void SetPath(string path)
+        {
+            _stocksDataAccess.SetPath(path);
+        }
+
         //public List<Stock> GetToStocks()
         //{
         //    return MapStocks(_stocksDataAccess.GetToStocks());

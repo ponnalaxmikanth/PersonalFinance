@@ -17,9 +17,15 @@ namespace BusinessAccess.MutualFunds
         ICommonDataAccess CommonDataAccess;
         readonly string _application = "BusinessAccess";
         readonly string _component = "CommonRepository";
+
         public CommonRepository(ICommonDataAccess common)
         {
             CommonDataAccess = common;
+        }
+
+        public void SetPath(string path)
+        {
+            CommonDataAccess.SetPath(path);
         }
 
         public List<MFDumpDates> GetDumpData(DateTime fromDate, DateTime toDate)

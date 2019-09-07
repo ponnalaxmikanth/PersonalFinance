@@ -60,5 +60,7 @@ namespace BusinessEntities.Contracts
 
         DataTable GetInvestments(DashboardIndividual request);
 
+        void SetPath(string path);
+
     }
 }

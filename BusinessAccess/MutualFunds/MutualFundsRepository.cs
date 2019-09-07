@@ -36,6 +36,11 @@ namespace BusinessAccess.MutualFunds
             _mfDataAccess = mfDataAccess;
         }
 
+        public void SetPath(string path)
+        {
+            _mfDataAccess.SetPath(path);
+        }
+
         public List<MF_Portfolio> GetMutualFundPortfolios()
         {
             return MapMFPortfolios(_mfDataAccess.GetPortFolios());
