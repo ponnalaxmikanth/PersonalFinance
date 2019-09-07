@@ -1,11 +1,13 @@
-﻿################################################################################
+################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
 /.vs
 /BusinessEntities/bin
+/BusinessAccess/bin
 /BusinessAccess/obj
 /BusinessAccess/bin
+/BusinessEntities/bin
 /BusinessEntities/obj
 /DataAccess/obj
 /DataAccess/bin
@@ -44,6 +46,43 @@
 /ParseExcel/obj
 /ParseExcel/ConnectionStrings
 /ParseExcel/bin
+/DataAccess/bin
+/DataAccess/obj
+/Database/bin
+/Database/obj
+/Database/bin
+/Database/obj
+#Ignore thumbnails created by Windows
+Thumbs.db
+#Ignore files built by Visual Studio
+*.obj
+*.exe
+*.pdb
+*.user
+*.aps
+*.pch
+*.vspscc
+*_i.c
+*_p.c
+*.ncb
+*.suo
+*.tlb
+*.tlh
+*.bak
+*.cache
+*.ilk
+*.log
+[Bb]in
+[Dd]ebug*/
+*.lib
+*.sbr
+obj/
+[Rr]elease*/
+_ReSharper*/
+[Tt]est[Rr]esult*
+.vs/
+#Nuget packages folder
+packages/
 /PersonalAPI/obj
 /PersonalAPI/ConnectionStrings
 /PersonalAPI/bin

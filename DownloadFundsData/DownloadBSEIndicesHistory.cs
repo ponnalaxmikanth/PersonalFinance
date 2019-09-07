@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using DataAccess.Logging;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,8 @@ namespace DownloadFundsData
     {
         IWebDriver webDriver = null;
         string baseUrl = "https://www.bseindia.com/";
+        readonly string _application = "DownloadFundsData";
+        readonly string _component = "DownloadBSEIndicesHistory";
 
         public DownloadBSEIndicesHistory()
         {
@@ -44,7 +47,9 @@ namespace DownloadFundsData
                 if (result.Count > 0)
                     result.RemoveAt(0);
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
             return result;
         }
     }

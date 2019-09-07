@@ -41,11 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
+    <Compile Include="HomeExpenses\ExpensesTrackerRepository.cs" />
     <Compile Include="MutualFunds\CommonRepository.cs" />
     <Compile Include="MutualFunds\DashboardRepository.cs" />
     <Compile Include="MutualFunds\MutualFundsRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StocksBusinessAccess.cs" />
     <Compile Include="Stocks\StocksRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,6 +56,10 @@
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{af3d4466-3371-4ba1-8ccb-6792e5e0f0f8}</Project>
       <Name>DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{fb45511b-2ef8-4b40-b0c0-3280a607cb92}</Project>
+      <Name>Logging</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utilities\Utilities.csproj">
       <Project>{394e802e-fd87-4ba6-aa91-f61972e43fc4}</Project>

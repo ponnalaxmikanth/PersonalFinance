@@ -1,4 +1,5 @@
 ﻿using BusinessEntities.Entities.MutualFunds;
+using DataAccess.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using System;
@@ -13,6 +14,8 @@ namespace DownloadFundsData
     {
         IWebDriver webDriver = null;
         DumpData _dumpData = null;
+        readonly string _application = "DownloadFundsData";
+        readonly string _component = "GetNSEBenchmarkData";
 
         public GetNSEBenchmarkData()
         {
@@ -65,7 +68,9 @@ namespace DownloadFundsData
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
         }
 
         public void DownloadNSEBenchMarkData()
@@ -84,7 +89,9 @@ namespace DownloadFundsData
                 }
             }
             catch (Exception ex)
-            { }
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
         }
 
         private List<string> GetBenchMarks()
@@ -101,7 +108,9 @@ namespace DownloadFundsData
                 if (result.Count > 0)
                     result.RemoveAt(0);
             }
-            catch (Exception ex) { }
+            catch (Exception ex) {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
             return result;
         }
 
@@ -135,6 +144,7 @@ namespace DownloadFundsData
             }
             catch(Exception ex)
             {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -148,22 +158,26 @@ namespace DownloadFundsData
                     return null;
             }
             catch (Exception ex)
-            { }
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
             return retValue;
         }
 
-        private decimal? GetDecimalValue(string val)
-        {
-            decimal retValue = 0;
-            try
-            {
-                if(!decimal.TryParse(val, out retValue))
-                    return null;
-            }
-            catch (Exception ex)
-            { }
-            return retValue;
-        }
+        //private decimal? GetDecimalValue(string val)
+        //{
+        //    decimal retValue = 0;
+        //    try
+        //    {
+        //        if(!decimal.TryParse(val, out retValue))
+        //            return null;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return retValue;
+        //}
 
     }
 }

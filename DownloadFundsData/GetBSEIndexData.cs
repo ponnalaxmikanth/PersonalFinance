@@ -1,5 +1,6 @@
 ﻿using BusinessEntities.Entities.MutualFunds;
 using BusinessEntities.Entities.Stocks;
+using DataAccess.Logging;
 using Newtonsoft.Json;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
@@ -12,6 +13,8 @@ namespace DownloadFundsData
     public class GetBSEIndexData : BaseClass
     {
         IWebDriver webDriver = null;
+        readonly string _application = "DownloadFundsData";
+        readonly string _component = "GetBSEIndexData";
 
         public GetBSEIndexData()
         {
@@ -42,7 +45,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 
@@ -107,7 +110,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 
@@ -152,6 +155,7 @@ namespace DownloadFundsData
             catch (Exception ex)
             {
                 DisplayMessage("Exception while GetBseBenchMarkHistoryData Exception: " + ex.Message);
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 
@@ -179,6 +183,7 @@ namespace DownloadFundsData
             catch (Exception ex)
             {
                 DisplayMessage("Exception while GetIndexHistoricalData -  " + val + " Exception: " + ex.Message);
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
     }

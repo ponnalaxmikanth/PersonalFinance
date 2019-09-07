@@ -58,9 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <Content Include="ConnectionStrings\connections.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="ConnectionStrings\connections.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +72,10 @@
     <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
       <Project>{96191db8-de55-4003-94af-2289871291ba}</Project>
       <Name>BusinessEntities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{fb45511b-2ef8-4b40-b0c0-3280a607cb92}</Project>
+      <Name>Logging</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

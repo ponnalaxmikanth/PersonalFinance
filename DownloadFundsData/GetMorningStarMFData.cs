@@ -1,6 +1,7 @@
 ﻿using BusinessAccess.MutualFunds;
 using BusinessEntities.Contracts.MutualFunds;
 using BusinessEntities.Entities.MutualFunds;
+using DataAccess;
 using DataAccess.MutualFunds;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;

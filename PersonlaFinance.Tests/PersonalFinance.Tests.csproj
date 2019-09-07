@@ -126,9 +126,9 @@
       <Project>{96191db8-de55-4003-94af-2289871291ba}</Project>
       <Name>BusinessEntities</Name>
     </ProjectReference>
-    <ProjectReference Include="..\PersonlaFinance\PersonlaFinance.csproj">
+    <ProjectReference Include="..\PersonlaFinance\PersonalFinance.csproj">
       <Project>{6a7c24fc-042b-41fb-a603-0ec93d28bfb0}</Project>
-      <Name>PersonlaFinance</Name>
+      <Name>PersonalFinance</Name>
     </ProjectReference>
     <ProjectReference Include="..\Utilities\Utilities.csproj">
       <Project>{394e802e-fd87-4ba6-aa91-f61972e43fc4}</Project>

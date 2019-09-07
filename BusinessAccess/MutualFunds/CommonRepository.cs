@@ -1,6 +1,7 @@
 ﻿using BusinessEntities.Contracts.MutualFunds;
 using BusinessEntities.Entities.MutualFunds;
 using DataAccess;
+using Logging;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -14,7 +15,8 @@ namespace BusinessAccess.MutualFunds
     public class CommonRepository : ICommonRepository
     {
         ICommonDataAccess CommonDataAccess;
-
+        readonly string _application = "BusinessAccess";
+        readonly string _component = "CommonRepository";
         public CommonRepository(ICommonDataAccess common)
         {
             CommonDataAccess = common;
@@ -42,7 +44,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
- 
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return result;
         }
@@ -55,7 +57,7 @@ namespace BusinessAccess.MutualFunds
             }
             catch (Exception ex)
             {
- 
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
 

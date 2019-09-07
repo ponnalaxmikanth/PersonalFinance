@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccess.Logging;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -10,12 +11,21 @@ namespace DataAccess.Accounts
 {
     public class DownloadExcelAccountInfoDataAccess
     {
+        readonly string _application = "DataAccess.Accounts";
+        readonly string _component = "DownloadExcelAccountInfoDataAccess";
         public DataTable GetAccountMappingDetails()
         {
-            List<SqlParameter> parameters = new List<SqlParameter>();
-            DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
-            if (ds != null)
-                return ds.Tables[0];
+            try
+            {
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                    return ds.Tables[0];
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
             return null;
         }
 
@@ -31,7 +41,7 @@ namespace DataAccess.Accounts
             }
             catch(Exception ex)
             {
-
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
     }

@@ -18,6 +18,8 @@ namespace BusinessEntities.Entities
         public string FolioNumber { get; set; }
         public string Description { get; set; }
         public DateTime CreatedDate { get; set; }
+        public int PortfolioId { get; set; }
+        public bool isDefaultFolio { get; set; }
 
         //public virtual ICollection<MF_Transactions> MF_Transactions { get; set; }
     }
@@ -75,12 +77,25 @@ namespace BusinessEntities.Entities
             //this.MF_Transactions = new HashSet<MF_Transactions>();
         }
 
+        public int PortfolioId { get; set; }
+
         public int FundId { get; set; }
-        public int FundHouseId { get; set; }
-        public int FundTypeId { get; set; }
-        public int FundClassId { get; set; }
-        public int FundOptionId { get; set; }
+
+        public MF_FundHouses FundHouse { get; set; }
+        public MF_FundTypes FundType { get; set; }
+        public MF_FundCategory FundCategory { get; set; }
+        public MF_FundOptions FundOptions { get; set; }
+
+        //public int FundHouseId { get; set; }
+        //public int FundTypeId { get; set; }
+        //public int FundClassId { get; set; }
+        //public int FundOptionId { get; set; }
         public string FundName { get; set; }
+        public int SchemaCode { get; set; }
+        public string GrowthISIN { get; set; }
+        public string DividendReInvestISIN { get; set; }
+        public int GrowthSchemaCode { get; set; }
+        public string GrowthFundName { get; set; }
         public DateTime CreatedDate { get; set; }
 
         //public virtual MF_FundCategory MF_FundCategory { get; set; }
@@ -148,6 +163,11 @@ namespace BusinessEntities.Entities
         public int FundId { get; set; }
         public DateTime FromDate { get; set; }
         public DateTime ToDate { get; set; }
+    }
+
+    public class DashboardIndividual : GetMFTransactions
+    {
+        public string Type { get; set; }
     }
 
     public partial class MF_Transactions
@@ -229,6 +249,21 @@ namespace BusinessEntities.Entities
         public Nullable<decimal> STT { get; set; }
 
         public bool IsSIP { get; set; }
+
+        public int FundHouseId { get; set; }
+        public int FundTypeId { get; set; }
+        public int FundCategoryId { get; set; }
+        public int FundOptionsId { get; set; }
+        public int SchemaCode { get; set; }
+        public int GrowthSchemaCode { get; set; }
+        public string FundName { get; set; }
+        public decimal Units { get; set; }
+    }
+
+    public partial class AddMFTransactionResponse
+    {
+        public int ReturnCode { get; set; }
+        public string ReturnMessage { get; set; }
     }
 
     public partial class NAVData
@@ -285,6 +320,104 @@ namespace BusinessEntities.Entities
         public string Url { get; set; }
         public string Message { get; set; }
         public int Id { get; set; }
+        public string Type { get; set; }
+    }
+
+    public class GetMyFundsRequest
+    {
+        public string Type { get; set; }
+        public int PortfolioId { get; set; }
+    }
+
+    public partial class GetFundNavRequest
+    {
+        public int SchemaCode { get; set; }
+        public DateTime Date { get; set; }
+    }
+
+    public partial class GetFundValueRequst
+    {
+        public int PortfolioId { get; set; }
+        public int SchemaCode { get; set; }
+        public int FolioId { get; set; }
+        public int OptionId { get; set; }
+    }
+
+    public partial class FundValueResponse
+    {
+        public int SchemaCode { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Units { get; set; }
+        public decimal Dividend { get; set; }
+        public decimal AvgNav { get; set; }
+        public decimal LatestNav { get; set; }
+        public DateTime Date { get; set; }
+        public decimal LatestValue { get; set; }
+    }
+
+    public class GetMFFundInvestmentsRequest
+    {
+        public int PortfolioId { get; set; }
+        public int FolioId { get; set; }
+        public int FundId { get; set; }
+    }
+
+    public class MFTransactions
+    {
+        public int TransactionId { get; set; }
+
+        public int FolioId { get; set; }
+        public string FolioNumber { get; set; }
+
+        public MF_FundHouses FundHouses { get; set; }
+
+        public MF_Funds FundDetails { get; set; }
+
+        public DateTime PurchaseDate { get; set; }
+        public decimal Amount { get; set; }
+        public decimal Units { get; set; }
+        public decimal DividendPerNAV { get; set; }
+        public decimal Dividend { get; set; }
+
+        public decimal CurrentValue { get; set; }
+        public DateTime SellDate { get; set; }
+
+        public string Type { get; set; }
+    }
+
+    public class DailyMFTracker
+    {
+        public int PortfolioId { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Investment { get; set; }
+        public decimal CurrentValue { get; set; }
+        public decimal Profit { get; set; }
+    }
+
+    public class GetMFDailyTracker
+    {
+        public DateTime fromDate { get; set; }
+        public DateTime toDate { get; set; }
+    }
+
+    public class Investments
+    {
+        //public MF_Portfolio Portfolio { get; set; }
+        public string FundName { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Investment { get; set; }
+        public decimal CurrentValue { get; set; }
+        public decimal Profit { get; set; }
+        public decimal RedeemInvest { get; set; }
+        public decimal Value { get; set; }
+
+        public decimal CurrentProfit { get; set; }
+        public decimal Dividend { get; set; }
+
+        public decimal ProfitPer { get; set; }
+        public decimal RedeemValue { get; set; }
+
+        public decimal AgePer { get; set; }
         public string Type { get; set; }
     }
 
