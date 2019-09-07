@@ -87,5 +87,6 @@
     <Build Include="Tables\Stock_Redeems.sql" />
     <Build Include="Tables\Stock_Dividends.sql" />
     <Build Include="Procedures\GetStocks.sql" />
+    <Build Include="Procedures\GetLastProcessedDetails.sql" />
   </ItemGroup>
 </Project>
