@@ -1,12 +1,18 @@
 ﻿CREATE TABLE [dbo].[FundsNav_History](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
 	[SchemaCode] [int] NOT NULL,
+	[ISINGrowth] [nvarchar](100) NULL,
+	[ISIN_DIV_Reinvestment] [nvarchar](100) NULL,
+	[SchemaName] [nvarchar](max) NULL,
 	[NAV] [decimal](10, 4) NULL,
 	[RepurchasePrice] [decimal](10, 4) NULL,
 	[SalePrice] [decimal](10, 4) NULL,
 	[Date] [datetime] NOT NULL,
-	[CreateDateTime] [datetime] NOT NULL default(getdate()),
-	[LastUpdateDateTime] [datetime] NOT NULL default(getdate())
+	[CreateDateTime] [datetime] NOT NULL,
+	[LastUpdateDateTime] [datetime] NOT NULL,
+	[FundType] [int] NULL,
+	[FundOption] [int] NULL,
+	[Fund_Type] [int] NULL,
  CONSTRAINT [PK_FundsNav_History] PRIMARY KEY CLUSTERED 
 (
 	[SchemaCode] ASC,
@@ -15,4 +21,5 @@
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
+
 

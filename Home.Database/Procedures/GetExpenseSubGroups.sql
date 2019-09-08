@@ -13,5 +13,5 @@ BEGIN
 	SET NOCOUNT ON;
 
     -- Insert statements for procedure here
-	select g.GroupId, g.Id, g.SubGroupName from ExpensesSubGroup g
+	select g.Id, g.SubGroupName from ExpensesSubGroup g
 END

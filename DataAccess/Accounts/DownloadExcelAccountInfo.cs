@@ -26,7 +26,7 @@ namespace DataAccess.Accounts
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                     return ds.Tables[0];
             }
