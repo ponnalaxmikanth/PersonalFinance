@@ -91,5 +91,6 @@
     <Build Include="Procedures\DumpBenchMarkData.sql" />
     <Build Include="Tables\BenchMark_History.sql" />
     <Build Include="Tables\BenchMarks.sql" />
+    <Build Include="Procedures\UpdateFundNAV.sql" />
   </ItemGroup>
 </Project>
