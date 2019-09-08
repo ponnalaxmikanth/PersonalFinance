@@ -277,28 +277,28 @@ namespace DataAccess.MutualFunds
 
             return null;
         }
+        //public void UpdateNAVHistory(List<NAVData> data)
+        //{
+        //    try
+        //    {
+        //        for (int i = 0; i < data.Count; i++)
+        //        {
+        //            List<SqlParameter> parameters = new List<SqlParameter>();
 
-        public void UpdateNAVHistory(List<NAVData> data)
-        {
-            try
-            {
-                for (int i = 0; i < data.Count; i++)
-                {
-                    List<SqlParameter> parameters = new List<SqlParameter>();
+        //            parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = data[i].SchemaCode });
+        //            parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "nav", Value = data[i].NAV });
+        //            parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "fundtype", Value = data[i].FundType });
+        //            parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
 
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = data[i].SchemaCode });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "nav", Value = data[i].NAV });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "fundtype", Value = data[i].FundType });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
+        //            DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //}
 
-                    DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV_History", CommandType.StoredProcedure, parameters);
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-        }
 
         public void UpdateNAVHistory(string xmlData)
         {
