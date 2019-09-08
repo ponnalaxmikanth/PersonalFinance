@@ -74,5 +74,6 @@
     <Build Include="Procedures\GetExpenseSubGroups.sql" />
     <Build Include="Procedures\GetAccountMappingDetails.sql" />
     <Build Include="Tables\ExpensesSubGroup.sql" />
+    <Build Include="Procedures\GetCreditCardPayments.sql" />
   </ItemGroup>
 </Project>
