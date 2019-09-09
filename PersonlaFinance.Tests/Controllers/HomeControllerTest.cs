@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PersonlaFinance;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PersonlaFinance.Controllers;
+using System.Web.Mvc;
 
-namespace PersonlaFinance.Tests.Controllers
+namespace PersonalFinance.Tests.Controllers
 {
     [TestClass]
     public class HomeControllerTest

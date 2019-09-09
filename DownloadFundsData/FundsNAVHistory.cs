@@ -128,7 +128,7 @@ namespace DownloadFundsData
 
             if (latestNavData != null && latestNavData.Count() > 0)
             {
-                _mfDataAccess.UpdateNAVHistory(latestNavData);
+                //_mfDataAccess.UpdateNAVHistory(latestNavData);
                 string xml = GetXMLString(latestNavData);
                 _mfDataAccess.UpdateNAVHistory(xml);
                 _CommonRepository.InsertDumpDate(date, fundType, latestNavData.Count());

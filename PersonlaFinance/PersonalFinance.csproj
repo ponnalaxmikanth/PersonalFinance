@@ -719,6 +719,13 @@
     <Content Include="ConnectionStrings\connections.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Data\MutualFunds\IndividualInvestments.json" />
+    <Content Include="Data\MutualFunds\InvestmentDetails.json" />
+    <Content Include="Data\MutualFunds\Investments.json" />
+    <Content Include="Data\MutualFunds\InvestmentsByMonth.json" />
+    <Content Include="Data\MutualFunds\SectorBreakup.json" />
+    <Content Include="Data\MutualFunds\ULIP.json" />
+    <Content Include="Data\MutualFunds\UpcomingSipDetails.json" />
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />
@@ -836,6 +843,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Data\Accounts\" />
+    <Folder Include="Data\ExpensesTracker\" />
+    <Folder Include="Data\Stocks\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config">

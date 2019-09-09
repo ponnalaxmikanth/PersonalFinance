@@ -88,5 +88,10 @@
     <Build Include="Tables\Stock_Redeems.sql" />
     <Build Include="Tables\Stock_Dividends.sql" />
     <Build Include="Procedures\GetStocks.sql" />
+    <Build Include="Procedures\GetLastProcessedDetails.sql" />
+    <Build Include="Procedures\DumpBenchMarkData.sql" />
+    <Build Include="Tables\BenchMark_History.sql" />
+    <Build Include="Tables\BenchMarks.sql" />
+    <Build Include="Procedures\UpdateFundNAV.sql" />
   </ItemGroup>
 </Project>

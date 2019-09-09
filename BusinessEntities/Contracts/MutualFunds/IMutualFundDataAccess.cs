@@ -38,7 +38,7 @@ namespace BusinessEntities.Contracts
 
         void BackUpNAVData();
 
-        void UpdateNAVHistory(List<NAVData> data);
+        //void UpdateNAVHistory(List<NAVData> data);
 
         DataTable GetFundNav(DateTime date);
 
@@ -59,6 +59,8 @@ namespace BusinessEntities.Contracts
         DataTable GetMFDdailyTracker(GetMFDailyTracker request);
 
         DataTable GetInvestments(DashboardIndividual request);
+
+        void SetPath(string path);
 
     }
 }

@@ -9,6 +9,8 @@ namespace BusinessEntities.Contracts.MutualFunds
 {
     public interface ICommonDataAccess
     {
+        void SetPath(string path);
+
         DataTable Get_MF_DataDumpDates(DateTime fromDate, DateTime toDate);
 
         void InsertDumpDate(DateTime date, int fundType, int count);

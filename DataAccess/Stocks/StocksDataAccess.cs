@@ -10,6 +10,13 @@ namespace DataAccess.Stocks
     {
         readonly string _application = "DataAccess.Stocks";
         readonly string _component = "StocksDataAccess";
+
+        static string serverPath = string.Empty;
+        public void SetPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\Stocks\\";
+        }
         //public DataTable GetStocks()
         //{
         //    try

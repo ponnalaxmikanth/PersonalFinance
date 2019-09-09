@@ -68,5 +68,12 @@
     <Build Include="Procedures\Insert_Account_Transactions.sql" />
     <Build Include="Procedures\GetBudgetTransactions.sql" />
     <Build Include="Tables\Budget.sql" />
+    <Build Include="Procedures\GetAccountDetails.sql" />
+    <Build Include="Procedures\GetAccountTypes.sql" />
+    <Build Include="Procedures\GetExpenseGroups.sql" />
+    <Build Include="Procedures\GetExpenseSubGroups.sql" />
+    <Build Include="Procedures\GetAccountMappingDetails.sql" />
+    <Build Include="Tables\ExpensesSubGroup.sql" />
+    <Build Include="Procedures\GetCreditCardPayments.sql" />
   </ItemGroup>
 </Project>

@@ -13,12 +13,20 @@ namespace DataAccess.Accounts
     {
         readonly string _application = "DataAccess.Accounts";
         readonly string _component = "DownloadExcelAccountInfoDataAccess";
+
+        static string serverPath = string.Empty;
+        public void SetPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\Accounts\\";
+        }
+
         public DataTable GetAccountMappingDetails()
         {
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                     return ds.Tables[0];
             }

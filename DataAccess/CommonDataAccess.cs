@@ -11,6 +11,14 @@ namespace DataAccess
     {
         readonly string _application = "DataAccess";
         readonly string _component = "CommonDataAccess";
+
+        static string serverPath = string.Empty;
+        public void SetPath(string path)
+        {
+            if (string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\Common";
+        }
+
         public DataTable Get_MF_DataDumpDates(DateTime fromDate, DateTime toDate)
         {
             try

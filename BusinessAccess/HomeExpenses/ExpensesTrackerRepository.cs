@@ -14,9 +14,15 @@ namespace BusinessAccess.HomeExpenses
         readonly ExpensesTrackerDataAccess _expensesTrackerDataAccess;
         readonly string _application = "BusinessAccess";
         readonly string _component = "ExpensesTrackerRepository";
+
         public ExpensesTrackerRepository()
         {
             _expensesTrackerDataAccess = new ExpensesTrackerDataAccess();
+        }
+
+        public void SetPath(string path)
+        {
+            _expensesTrackerDataAccess.SetPath(path);
         }
 
         public List<AccountType> GetAccountTypes()

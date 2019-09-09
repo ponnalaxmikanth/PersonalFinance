@@ -17,7 +17,8 @@ namespace DataAccess.MutualFunds
 
         public void SetPath(string path)
         {
-            serverPath = path;
+            if(string.IsNullOrWhiteSpace(serverPath))
+                serverPath = path + "\\MutualFunds\\";
         }
 
         public DataTable GetInvestmentDetails(DashboardRequest request)
@@ -33,8 +34,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
-                    string jsonString = Utilities.Conversions.DataTableToJSON(ds.Tables[0]);
-                    Utilities.WriteToFile.Write(serverPath + "\\InvestmentDetails.json", jsonString);
+                    Utilities.WriteToFile.Write(serverPath + "\\InvestmentDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -54,6 +54,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_SIP_Details", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\UpcomingSipDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -77,6 +78,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\InvestmentsByMonth.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -99,6 +101,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetTransactions", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\IndividualInvestments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -120,6 +123,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetInvestmentsByFundCategory", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\SectorBreakup.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -143,6 +147,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\Investments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -161,6 +166,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetULIPValue", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\ULIP.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -183,6 +189,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkHistoryValues", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\BenchmarkHistoryValues.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -205,6 +212,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetMyFundsHistoryValues", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\NewGraph.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -230,6 +238,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkPerformance", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
+                    Utilities.WriteToFile.Write(serverPath + "\\BenchmarkPerformance.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
