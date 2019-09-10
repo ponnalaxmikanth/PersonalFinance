@@ -726,6 +726,9 @@
     <Content Include="Data\MutualFunds\SectorBreakup.json" />
     <Content Include="Data\MutualFunds\ULIP.json" />
     <Content Include="Data\MutualFunds\UpcomingSipDetails.json" />
+    <Content Include="AppSettings\App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Scripts\jquery-2.2.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.4.js" />
     <Content Include="Scripts\jquery-2.2.4.min.js" />

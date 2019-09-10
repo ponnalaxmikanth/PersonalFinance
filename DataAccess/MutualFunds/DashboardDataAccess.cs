@@ -4,6 +4,7 @@ using BusinessEntities.Entities.MutualFunds;
 using DataAccess.Logging;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -14,11 +15,17 @@ namespace DataAccess.MutualFunds
         static string serverPath = string.Empty;
         readonly string _application = "DataAccess.MutualFunds";
         readonly string _component = "DashboardDataAccess";
+        static string DataStorePath = ConfigurationManager.AppSettings["DataStorePath"];
 
         public void SetPath(string path)
         {
             if(string.IsNullOrWhiteSpace(serverPath))
                 serverPath = path + "\\MutualFunds\\";
+        }
+
+        string GetDataSourceOath() {
+            string path = ConfigurationManager.AppSettings["DataStorePath"];
+            return path;
         }
 
         public DataTable GetInvestmentDetails(DashboardRequest request)
@@ -34,7 +41,7 @@ namespace DataAccess.MutualFunds
                 DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\InvestmentDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    Utilities.WriteToFile.Write(GetDataSourceOath() + "\\InvestmentDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
