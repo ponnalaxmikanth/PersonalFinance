@@ -20,11 +20,6 @@ namespace BusinessAccess.HomeExpenses
             _expensesTrackerDataAccess = new ExpensesTrackerDataAccess();
         }
 
-        public void SetPath(string path)
-        {
-            _expensesTrackerDataAccess.SetPath(path);
-        }
-
         public List<AccountType> GetAccountTypes()
         {
             List<AccountType> result = null;
@@ -39,14 +34,14 @@ namespace BusinessAccess.HomeExpenses
             return result;
         }
 
-        private List<AccountType> MapAccountTypes(DataTable dataTable)
+        private List<AccountType> MapAccountTypes(DataSet resultDataSet)
         {
             List<AccountType> result = null;
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    result = (from dr in dataTable.AsEnumerable()
+                    result = (from dr in resultDataSet.Tables[0].AsEnumerable()
                               select new AccountType()
                               {
                                   Id = int.Parse(dr["AccountTypeId"].ToString()),
@@ -76,14 +71,14 @@ namespace BusinessAccess.HomeExpenses
             return result;
         }
 
-        private List<AccountDetails> MapAccountDetails(DataTable dataTable)
+        private List<AccountDetails> MapAccountDetails(DataSet resultDataSet)
         {
             List<AccountDetails> result = null;
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    result = (from dr in dataTable.AsEnumerable()
+                    result = (from dr in resultDataSet.Tables[0].AsEnumerable()
                               select new AccountDetails()
                               {
                                   Id = int.Parse(dr["AccountId"].ToString()),
@@ -120,14 +115,14 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private List<ExpenseGroup> MapExpenseGroups(DataTable dataTable)
+        private List<ExpenseGroup> MapExpenseGroups(DataSet resultDataSet)
         {
             List<ExpenseGroup> result = null;
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    result = (from dr in dataTable.AsEnumerable()
+                    result = (from dr in resultDataSet.Tables[0].AsEnumerable()
                               select new ExpenseGroup()
                               {
                                   Id = int.Parse(dr["GroupId"].ToString()),
@@ -156,13 +151,13 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private List<ExpenseSubGroup> MapExpenseSubGroups(DataTable dataTable)
+        private List<ExpenseSubGroup> MapExpenseSubGroups(DataSet resultDataSet)
         {
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    return (from dr in dataTable.AsEnumerable()
+                    return (from dr in resultDataSet.Tables[0].AsEnumerable()
                             select new ExpenseSubGroup()
                             {
                                 GroupId = int.Parse(dr["GroupId"].ToString()),
@@ -222,13 +217,13 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private List<string> MapItems(DataTable dataTable)
+        private List<string> MapItems(DataSet resultDataSet)
         {
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    return (from dr in dataTable.AsEnumerable()
+                    return (from dr in resultDataSet.Tables[0].AsEnumerable()
                             select dr["Item"].ToString()).ToList();
                 }
             }
@@ -253,13 +248,13 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private List<string> MapStores(DataTable dataTable)
+        private List<string> MapStores(DataSet resultDataSet)
         {
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    return (from dr in dataTable.AsEnumerable()
+                    return (from dr in resultDataSet.Tables[0].AsEnumerable()
                             select dr["Store"].ToString()).ToList();
                 }
             }
@@ -283,14 +278,14 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private List<Expenses> MapExpenses(DataTable dataTable)
+        private List<Expenses> MapExpenses(DataSet resultDataSet)
         {
             try
             {
-                if (dataTable != null)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
                     //decimal d = -1;
-                    return (from dr in dataTable.AsEnumerable()
+                    return (from dr in resultDataSet.Tables[0].AsEnumerable()
                             group dr by new
                             {
                                 AccountId = int.Parse(dr["AccountId"].ToString()),
@@ -378,14 +373,14 @@ namespace BusinessAccess.HomeExpenses
             return null;
         }
 
-        private ExpenseTracker MapBudget(DataTable dataTable)
+        private ExpenseTracker MapBudget(DataSet resultDataSet)
         {
             ExpenseTracker epenseTracker = new ExpenseTracker();
             try
             {
-                if (dataTable != null && dataTable.Rows.Count > 0)
+                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
                 {
-                    epenseTracker.Expenses = (from dr in dataTable.AsEnumerable()
+                    epenseTracker.Expenses = (from dr in resultDataSet.Tables[0].AsEnumerable()
                             where dr["Group"].ToString().ToUpper() != "TOTAL"
                             select new Budget()
                             {
@@ -398,7 +393,7 @@ namespace BusinessAccess.HomeExpenses
                                 Level = int.Parse(dr["level"].ToString())
                             }).ToList();
 
-                    epenseTracker.Summary = (from dr in dataTable.AsEnumerable()
+                    epenseTracker.Summary = (from dr in resultDataSet.Tables[0].AsEnumerable()
                                               where dr["Group"].ToString().ToUpper() == "TOTAL"
                                               select new Budget()
                                               {

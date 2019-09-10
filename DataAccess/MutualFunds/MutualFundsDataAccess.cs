@@ -9,160 +9,67 @@ using System.Data.SqlClient;
 
 namespace DataAccess.MutualFunds
 {
-    public class MutualFundsDataAccess : IMutualFundDataAccess
+    public class MutualFundsDataAccess : BaseDataAccess, IMutualFundDataAccess
     {
         readonly string _application = "DataAccess.MutualFunds";
         readonly string _component = "MutualFundsDataAccess";
 
-        static string serverPath = string.Empty;
-        public void SetPath(string path)
-        {
-            if (string.IsNullOrWhiteSpace(serverPath))
-                serverPath = path + "\\MutualFunds\\";
-        }
+        readonly string serverPath = "\\MutualFunds\\";
+        //public void SetPath(string path)
+        //{
+        //    if (string.IsNullOrWhiteSpace(serverPath))
+        //        serverPath = path + "\\MutualFunds\\";
+        //}
 
-        public DataTable GetPortFolios()
+        public DataSet GetPortFolios()
         {
+            DataSet ds = null;
             try
             {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Portfolios", CommandType.StoredProcedure, null);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Portfolios", CommandType.StoredProcedure, null);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\PortFolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\PortFolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetPortfolioTransactions(GetMFTransactions getMFTransactions)
+        public DataSet GetPortfolioTransactions(GetMFTransactions getMFTransactions)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = getMFTransactions.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
-                if (ds != null)
+                if (UseMockData)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\PortfolioTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
                 }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-
-            return null;
-        }
-
-        public DataTable GetFolios()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Folios", CommandType.StoredProcedure, null);
-                if (ds != null)
+                else
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Folios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = getMFTransactions.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
+
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
                 }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetFundCategory()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundCategory", CommandType.StoredProcedure, null);
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundCategory.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetFundHouses()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundHouses", CommandType.StoredProcedure, null);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundHouses.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetFundOptions()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundOptions", CommandType.StoredProcedure, null);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundOptions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetFundTypes()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundTypes", CommandType.StoredProcedure, null);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundTypes.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetFunds()
-        {
-            try
-            {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Funds", CommandType.StoredProcedure, null);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\Funds.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\PortfolioTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
@@ -170,104 +77,291 @@ namespace DataAccess.MutualFunds
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
 
-            return null;
+            return ds;
         }
 
-        public DataTable GetFundTransactions(GetMFTransactions getMFTransactions)
+        public DataSet GetFolios()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = getMFTransactions.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = getMFTransactions.FundId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_Fund_Transactions", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Folios", CommandType.StoredProcedure, null);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\Folios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable AddUpdateMFTransaction(AddMFTransactionRequest _mfTransactionRequest)
+        public DataSet GetFundCategory()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-
-                if (_mfTransactionRequest.TransactionType.ToLower() == "Purchase".ToLower())
+                if (UseMockData)
                 {
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "TransactionId", Value = _mfTransactionRequest.TransactionId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "PortfolioId", Value = _mfTransactionRequest.PortfolioId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FolioId", Value = _mfTransactionRequest.FolioId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = _mfTransactionRequest.FundId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "PurchaseDate", Value = _mfTransactionRequest.PurchaseDate });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Amount", Value = _mfTransactionRequest.Amount });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "PurchaseNAV", Value = _mfTransactionRequest.PurchaseNAV });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Dividend", Value = _mfTransactionRequest.Dividend });
-                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "SIP", Value = _mfTransactionRequest.IsSIP ? "Y" : "N" });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Units", Value = _mfTransactionRequest.SellUnits });
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundCategory", CommandType.StoredProcedure, null);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\FundCategory.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
 
-                    DataSet ds = SQLHelper.ExecuteProcedure("Investments", "AddMFTransaction", CommandType.StoredProcedure, parameters);
+        public DataSet GetFundHouses()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundHouses", CommandType.StoredProcedure, null);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\FundHouses.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
 
-                    if (ds != null && ds.Tables.Count > 0)
+        public DataSet GetFundOptions()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundOptions", CommandType.StoredProcedure, null);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\FundOptions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
+
+        public DataSet GetFundTypes()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_FundTypes", CommandType.StoredProcedure, null);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\FundTypes.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
+
+        public DataSet GetFunds()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Funds", CommandType.StoredProcedure, null);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\Funds.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+
+            return ds;
+        }
+
+        public DataSet GetFundTransactions(GetMFTransactions getMFTransactions)
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = getMFTransactions.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = getMFTransactions.FundId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "FromDate", Value = getMFTransactions.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "ToDate", Value = getMFTransactions.ToDate });
+
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_Fund_Transactions", CommandType.StoredProcedure, parameters);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\FundTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
+
+        public DataSet AddUpdateMFTransaction(AddMFTransactionRequest _mfTransactionRequest)
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+
+
+                    if (_mfTransactionRequest.TransactionType.ToLower() == "Purchase".ToLower())
                     {
-                        Utilities.WriteToFile.Write(serverPath + "\\PurchaseUpdateMFTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                        return ds.Tables[0];
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "TransactionId", Value = _mfTransactionRequest.TransactionId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "PortfolioId", Value = _mfTransactionRequest.PortfolioId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FolioId", Value = _mfTransactionRequest.FolioId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = _mfTransactionRequest.FundId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "PurchaseDate", Value = _mfTransactionRequest.PurchaseDate });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Amount", Value = _mfTransactionRequest.Amount });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "PurchaseNAV", Value = _mfTransactionRequest.PurchaseNAV });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Dividend", Value = _mfTransactionRequest.Dividend });
+                        parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "SIP", Value = _mfTransactionRequest.IsSIP ? "Y" : "N" });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Units", Value = _mfTransactionRequest.SellUnits });
+
+                        ds = SQLHelper.ExecuteProcedure("Investments", "AddMFTransaction", CommandType.StoredProcedure, parameters);
+
+                        if (ds != null && ds.Tables.Count > 0)
+                        {
+                            Utilities.FileOperations.Write(serverPath + "\\PurchaseUpdateMFTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+
+                        }
+                    }
+                    else if (_mfTransactionRequest.TransactionType.ToLower() == "Redeem".ToLower())
+                    {
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "fundid", Value = _mfTransactionRequest.FundId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolio", Value = _mfTransactionRequest.PortfolioId });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "selldate", Value = _mfTransactionRequest.SellDate });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "units", Value = _mfTransactionRequest.SellUnits });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "nav", Value = _mfTransactionRequest.PurchaseNAV });
+                        parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "stt", Value = _mfTransactionRequest.STT });
+
+                        ds = SQLHelper.ExecuteProcedure("Investments", "AddRedeemTransaction", CommandType.StoredProcedure, parameters);
+                        if (ds != null && ds.Tables.Count > 0)
+                        {
+                            Utilities.FileOperations.Write(serverPath + "\\RedeemUpdateMFTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+
+                        }
                     }
                 }
-                else if (_mfTransactionRequest.TransactionType.ToLower() == "Redeem".ToLower())
-                {
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "fundid", Value = _mfTransactionRequest.FundId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolio", Value = _mfTransactionRequest.PortfolioId });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "selldate", Value = _mfTransactionRequest.SellDate });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "units", Value = _mfTransactionRequest.SellUnits });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "nav", Value = _mfTransactionRequest.PurchaseNAV });
-                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "stt", Value = _mfTransactionRequest.STT });
-
-                    DataSet ds = SQLHelper.ExecuteProcedure("Investments", "AddRedeemTransaction", CommandType.StoredProcedure, parameters);
-                    if (ds != null && ds.Tables.Count > 0)
-                    {
-                        Utilities.WriteToFile.Write(serverPath + "\\RedeemUpdateMFTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                        return ds.Tables[0];
-                    }
-                }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
 
-            return null;
+            return ds;
         }
 
-        public DataTable AddDividend(AddDividendRequest _dividendRequest)
+        public DataSet AddDividend(AddDividendRequest _dividendRequest)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = _dividendRequest.FundId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "DividendDate", Value = _dividendRequest.DividendDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Dividend", Value = _dividendRequest.Dividend });
-                parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "NAV", Value = _dividendRequest.NAV });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundId", Value = _dividendRequest.FundId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "DividendDate", Value = _dividendRequest.DividendDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Dividend", Value = _dividendRequest.Dividend });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "NAV", Value = _dividendRequest.NAV });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateDividend", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "UpdateDividend", CommandType.StoredProcedure, parameters);
+                }
 
                 if (ds != null && ds.Tables.Count > 0)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\AddDividend.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\AddDividend.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
@@ -275,7 +369,7 @@ namespace DataAccess.MutualFunds
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
 
-            return null;
+            return ds;
         }
         //public void UpdateNAVHistory(List<NAVData> data)
         //{
@@ -315,8 +409,9 @@ namespace DataAccess.MutualFunds
             }
         }
 
-        public DataTable UpdateLatestNAV(List<NAVData> data)
+        public DataSet UpdateLatestNAV(List<NAVData> data)
         {
+            DataSet ds = null;
             try
             {
                 for (int i = 0; i < data.Count; i++)
@@ -337,7 +432,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fund_type", Value = data[i].Fund_Type });
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
 
-                    DataSet ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
 
                 }
             }
@@ -345,24 +440,25 @@ namespace DataAccess.MutualFunds
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable UpdateFundsNAV(string strXml, string type)
+        public DataSet UpdateFundsNAV(string strXml, string type)
         {
+            DataSet ds = null;
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xml", Value = strXml });
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "schemaType", Value = type });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "DownloadFundsNAV", CommandType.StoredProcedure, parameters);
+                 ds = SQLHelper.ExecuteProcedure("Investments", "DownloadFundsNAV", CommandType.StoredProcedure, parameters);
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
         public void BackUpNAVData()
@@ -377,55 +473,82 @@ namespace DataAccess.MutualFunds
             }
         }
 
-        public DataTable GetFundsPerformance()
+        public DataSet GetFundsPerformance()
         {
+            DataSet ds = null;
             try
             {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetFundsPerformance", CommandType.StoredProcedure, null);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetFundsPerformance", CommandType.StoredProcedure, null);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundsPerformance.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\FundsPerformance.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetFundNav(DateTime date)
+        public DataSet GetFundNav(DateTime date)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "NavDate", Value = date.Date });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "NavDate", Value = date.Date });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetFundsNav", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetFundsNav", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundNav.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\FundNav.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
 
         public string GetLastProcessedDetails()
         {
+            DataSet ds = null;
             try
             {
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetLastProcessedDetails", CommandType.StoredProcedure, null);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetLastProcessedDetails", CommandType.StoredProcedure, null);
+                }
                 if (ds != null && ds.Tables[0].Rows.Count > 0)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\LastProcessedDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    Utilities.FileOperations.Write(serverPath + "\\LastProcessedDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0].Rows[0]["NAVDate"].ToString();
                 }
             }
@@ -433,7 +556,7 @@ namespace DataAccess.MutualFunds
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return string.Empty;
         }
 
         public void RefreshFundDetails(List<FundHouse> fundFamilies)
@@ -550,50 +673,69 @@ namespace DataAccess.MutualFunds
             }
         }
 
-        public DataTable GetPortfolios()
+        public DataSet GetPortfolios()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Portfolios", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Portfolios", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Portfolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\Portfolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetMyFunds(GetMyFundsRequest request)
+        public DataSet GetMyFunds(GetMyFundsRequest request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "transaction", Value = request.Type });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = request.PortfolioId });
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "transaction", Value = request.Type });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = request.PortfolioId });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetMyFunds", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetMyFunds", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\MyFunds.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\MyFunds.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable AddTransaction(AddMFTransactionRequest request)
+        public DataSet AddTransaction(AddMFTransactionRequest request)
         {
+            DataSet ds = null;
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
@@ -613,140 +755,185 @@ namespace DataAccess.MutualFunds
                 parameters.Add(new SqlParameter() { DbType = DbType.Decimal, ParameterName = "Units", Value = request.Units });
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "SIP", Value = (request.IsSIP == true ? "Y" : "N") });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "AddMFPurchase", CommandType.StoredProcedure, parameters);
+                ds = SQLHelper.ExecuteProcedure("Investments", "AddMFPurchase", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
-                    return ds.Tables[0];
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
 
         }
 
-        public DataTable GetFundNav(GetFundNavRequest getFundNavRequest)
+        public DataSet GetFundNav(GetFundNavRequest getFundNavRequest)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = getFundNavRequest.SchemaCode });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = getFundNavRequest.Date.Date });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = getFundNavRequest.SchemaCode });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = getFundNavRequest.Date.Date });
 
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetFundPrice", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetFundPrice", CommandType.StoredProcedure, parameters);
+                }
 
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundNav.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\FundNav.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetFundValue(GetFundValueRequst getFundValueRequest)
+        public DataSet GetFundValue(GetFundValueRequst getFundValueRequest)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolio", Value = getFundValueRequest.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = getFundValueRequest.SchemaCode });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "folioId", Value = getFundValueRequest.FolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "optionId", Value = getFundValueRequest.OptionId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolio", Value = getFundValueRequest.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "schemaCode", Value = getFundValueRequest.SchemaCode });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "folioId", Value = getFundValueRequest.FolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "optionId", Value = getFundValueRequest.OptionId });
 
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetFundValue", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetFundValue", CommandType.StoredProcedure, parameters);
+                }
 
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\FundValue.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\FundValue.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetMyMFFundInvestments(GetMFFundInvestmentsRequest request)
+        public DataSet GetMyMFFundInvestments(GetMFFundInvestmentsRequest request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = request.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "fundid", Value = request.FundId });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "folioId", Value = request.FolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = request.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "fundid", Value = request.FundId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "folioId", Value = request.FolioId });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetMyMFFundInvestments", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetMyMFFundInvestments", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\MyMFFundInvestments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\MyMFFundInvestments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetMFDdailyTracker(GetMFDailyTracker request)
+        public DataSet GetMFDdailyTracker(GetMFDailyTracker request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.fromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.toDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.fromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.toDate });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetMFDdailyTracker", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetMFDdailyTracker", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\MFDdailyTracker.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\MFDdailyTracker.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetInvestments(DashboardIndividual request)
+        public DataSet GetInvestments(DashboardIndividual request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "PortfolioId", Value = request.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "Type", Value = request.Type });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "PortfolioId", Value = request.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "Type", Value = request.Type });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\GetIndividualTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\GetIndividualTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
     }

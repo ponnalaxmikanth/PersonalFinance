@@ -18,10 +18,10 @@ namespace BusinessAccess.MutualFunds
         string _application = "BusinessAccess";
         string _component = "DashboardRepository";
 
-        public void SetPath(string path)
-        {
-            dashboardDataAccess.SetPath(path);
-        }
+        //public void SetPath(string path)
+        //{
+        //    dashboardDataAccess.SetPath(path);
+        //}
 
         public DashboardRepository(IDashboardDataAccess dashbrdDataAccess)
         {
@@ -39,9 +39,9 @@ namespace BusinessAccess.MutualFunds
                 DataTable dtInvByMonth = new DataTable();
                 DataTable dtInvests = new DataTable();
 
-                dtInvestments = dashboardDataAccess.GetInvestmentDetails(request);
+                dtInvestments = dashboardDataAccess.GetInvestmentDetails(request).Tables[0];
                 //dtInvestments = dashboardDataAccess.GetIndividualInvestments(request);
-                dtSipDetails = dashboardDataAccess.GetUpcomingSipDetails(request);
+                dtSipDetails = dashboardDataAccess.GetUpcomingSipDetails(request).Tables[0];
                 //dtInvByMonth = dashboardDataAccess.GetInvestmentsByMonth(request);
 
                 dtInvests = dashboardDataAccess.GetIndividualInvestments(new DashboardIndividual()
@@ -50,7 +50,7 @@ namespace BusinessAccess.MutualFunds
                         PortfolioId = request.PortfolioId.ToString(),
                         ToDate = request.ToDate,
                         Type = ""
-                    });
+                    }).Tables[0];
 
                 response = MapDasbhoardResponse(request, dtInvestments, dtSipDetails, dtInvests);
             }
@@ -284,7 +284,7 @@ namespace BusinessAccess.MutualFunds
             List<InvestmentsByMonth> result = null;
             try
             {
-                result = MapDasbhoardChartResponse(dashboardDataAccess.GetInvestmentsByMonth(request));
+                result = MapDasbhoardChartResponse(dashboardDataAccess.GetInvestmentsByMonth(request).Tables[0]);
             }
             catch (Exception ex)
             {
@@ -332,7 +332,7 @@ namespace BusinessAccess.MutualFunds
             {
                 DataTable dtInvestments = new DataTable();
 
-                dtInvestments = dashboardDataAccess.GetInvestmentDetails(request);
+                dtInvestments = dashboardDataAccess.GetInvestmentDetails(request).Tables[0];
 
                 response.Investments = MapInvestments(dtInvestments);
             }
@@ -346,7 +346,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<Investments> GetIndividualInvestments(DashboardIndividual request)
         {
-            return MapIndividualInvestments(request, dashboardDataAccess.GetInvestments(request));
+            return MapIndividualInvestments(request, dashboardDataAccess.GetInvestments(request).Tables[0]);
         }
 
         private List<Investments> MapIndividualInvestments(DashboardIndividual request, DataTable dataTable)
@@ -472,7 +472,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<SectorInvestments> GetSectorBreakup(DashboardRequest request)
         {
-            return MapSectorBreakup(dashboardDataAccess.GetSectorBreakup(request));
+            return MapSectorBreakup(dashboardDataAccess.GetSectorBreakup(request).Tables[0]);
         }
 
         private List<SectorInvestments> MapSectorBreakup(DataTable dataTable)
@@ -502,7 +502,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<Investments> GetPerfOfMoreThanYear(DashboardIndividual request)
         {
-            return MapPerfOfMoreThanYear(request, dashboardDataAccess.GetIndividualInvestments(request));
+            return MapPerfOfMoreThanYear(request, dashboardDataAccess.GetIndividualInvestments(request).Tables[0]);
         }
 
         private List<Investments> MapPerfOfMoreThanYear(DashboardIndividual request, DataTable dataTable)
@@ -534,7 +534,7 @@ namespace BusinessAccess.MutualFunds
         {
             ULIPValue result = null;
 
-            result = MapULIP(dashboardDataAccess.GetULIP());
+            result = MapULIP(dashboardDataAccess.GetULIP().Tables[0]);
             return result;
         }
 
@@ -558,7 +558,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<BenchmarkHistory> GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
         {
-            List<BenchmarkHistory> result = MapBenchMarkHistoryValues(dashboardDataAccess.GetBenchmarkHistoryValues(fromDate, toDate));
+            List<BenchmarkHistory> result = MapBenchMarkHistoryValues(dashboardDataAccess.GetBenchmarkHistoryValues(fromDate, toDate).Tables[0]);
 
             return result;
         }
@@ -597,12 +597,12 @@ namespace BusinessAccess.MutualFunds
 
         public DataTable GetNewDashboard(DateTime fromDate, DateTime toDate)
         {
-            return (dashboardDataAccess.GetNewGraph(fromDate, toDate));
+            return (dashboardDataAccess.GetNewGraph(fromDate, toDate).Tables[0]);
         }
 
         public object GetBenchMarks(DateTime fromDate, DateTime toDate)
         {
-            return MapBenchMarks(dashboardDataAccess.GetBenchmarkPerformance(fromDate, toDate));
+            return MapBenchMarks(dashboardDataAccess.GetBenchmarkPerformance(fromDate, toDate).Tables[0]);
 
         }
 

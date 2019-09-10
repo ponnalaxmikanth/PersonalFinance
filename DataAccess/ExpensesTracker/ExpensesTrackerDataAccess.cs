@@ -7,28 +7,88 @@ using System.Data.SqlClient;
 
 namespace DataAccess
 {
-    public class ExpensesTrackerDataAccess
+    public class ExpensesTrackerDataAccess: BaseDataAccess
     {
         readonly string _application = "DataAccess";
         readonly string _component = "ExpensesTrackerDataAccess";
 
-        static string serverPath = string.Empty;
-        public void SetPath(string path)
-        {
-            if (string.IsNullOrWhiteSpace(serverPath))
-                serverPath = path + "\\ExpensesTracker\\";
-        }
+        readonly string serverPath = "\\ExpensesTracker\\";
+        //public void SetPath(string path)
+        //{
+        //    if (string.IsNullOrWhiteSpace(serverPath))
+        //        serverPath = "\\ExpensesTracker\\";
+        //}
 
-        public DataTable GetAccountTypes()
+        public DataSet GetAccountTypes()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountTypes", CommandType.StoredProcedure, parameters);
-                if (ds != null)
+                if (UseMockData)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\AccountTypes.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "AccountTypes.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountTypes", CommandType.StoredProcedure, new List<SqlParameter>(), _component);
+                }
+                if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
+                {
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "AccountTypes.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
+
+        public DataSet GetAccountDetails()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "AccountDetails.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountDetails", CommandType.StoredProcedure, new List<SqlParameter>(), _component);
+                    if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
+                    {
+                        Utilities.FileOperations.Write(DataStorePath + serverPath + "\\AccountDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
+
+        public DataSet GetExpenseGroups()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ExpenseGroups.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseGroups", CommandType.StoredProcedure, new List<SqlParameter>(), _component);
+                }
+                    if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
+                    {
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\ExpenseGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
@@ -38,122 +98,118 @@ namespace DataAccess
             return null;
         }
 
-        public DataTable GetAccountDetails()
+        public DataSet GetExpenseSubGroups()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountDetails", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ExpenseSubGroups.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseSubGroups", CommandType.StoredProcedure, new List<SqlParameter>(), _component);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\AccountDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\ExpenseSubGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetExpenseGroups()
+        public DataSet GetStores()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseGroups", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Stores.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, new List<SqlParameter>(), _component);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\Stores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetExpenseSubGroups()
+        public DataSet GetItem(string item)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetExpenseSubGroups", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Item.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = item });
+
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetItem", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseSubGroups.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\Item.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetStores()
+        public DataSet GetStores(string store)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Stores.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = store });
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
+                }
+                
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Stores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\Stores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
-        }
-
-        public DataTable GetItem(string item)
-        {
-            try
-            {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "item", Value = item });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetItem", CommandType.StoredProcedure, parameters);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\Item.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
-
-        public DataTable GetStores(string store)
-        {
-            try
-            {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "store", Value = store });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetStore", CommandType.StoredProcedure, parameters);
-                if (ds != null)
-                {
-                    Utilities.WriteToFile.Write(serverPath + "\\GetStores.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
+            return ds;
         }
 
 
@@ -175,7 +231,7 @@ namespace DataAccess
                 DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "AddHomeTransactions", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\ExpenseTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\ExpenseTransaction.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                     return ds.Tables[0];
                 }
             }
@@ -186,51 +242,69 @@ namespace DataAccess
             return null;
         }
 
-        public DataTable GetExpenses(GetExpenses request)
+        public DataSet GetExpenses(GetExpenses request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Expenses.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountId", Value = request.AccountId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountId", Value = request.AccountId });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetHomeTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetHomeTransactions", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Expenses.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\Expenses.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetBudget(GetExpenses request)
+        public DataSet GetBudget(GetExpenses request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Budget.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = request.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = request.ToDate });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetBudgetTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetBudgetTransactions", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Budget.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\Budget.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
     }

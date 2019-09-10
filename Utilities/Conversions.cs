@@ -104,6 +104,30 @@ namespace Utilities
             return JSONString;
         }
 
+        public static string DataSetToJSON(DataSet dataSet)
+        {
+            string JSONString = string.Empty;
+            try
+            {
+                JSONString = JsonConvert.SerializeObject(dataSet);
+            }
+            catch (Exception ex)
+            {
+            }
+            return JSONString;
+        }
+
+        public static DataSet JSONToDataSet(string jsonString) {
+            DataSet resultDataSet = null;
+            try {
+                resultDataSet = JsonConvert.DeserializeObject<DataSet>(jsonString);
+            }
+            catch (Exception ex)
+            {
+            }
+            return resultDataSet;
+        }
+
         public static int ToInt(object param, int defaultValue) {
             int retValue = defaultValue;
             try

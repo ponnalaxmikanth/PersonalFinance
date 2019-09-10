@@ -11,7 +11,7 @@ namespace BusinessEntities.Contracts.MutualFunds
 {
     public interface IDashboardRepository
     {
-        void SetPath(string path);
+        //void SetPath(string path);
 
         DashboardResponse GetDashboardData(DashboardRequest request);
 

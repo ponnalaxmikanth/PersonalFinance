@@ -10,253 +10,326 @@ using System.Data.SqlClient;
 
 namespace DataAccess.MutualFunds
 {
-    public class DashboardDataAccess : IDashboardDataAccess
+    public class DashboardDataAccess : BaseDataAccess, IDashboardDataAccess
     {
-        static string serverPath = string.Empty;
+        readonly string serverPath = "\\MFDashboard\\";
         readonly string _application = "DataAccess.MutualFunds";
         readonly string _component = "DashboardDataAccess";
-        static string DataStorePath = ConfigurationManager.AppSettings["DataStorePath"];
+        //static string DataStorePath = ConfigurationManager.AppSettings["DataStorePath"];
 
-        public void SetPath(string path)
+        //public void SetPath(string path)
+        //{
+        //    if(string.IsNullOrWhiteSpace(serverPath))
+        //        serverPath = path + "\\MutualFunds\\";
+        //}
+
+        //string GetDataSourceOath() {
+        //    string path = ConfigurationManager.AppSettings["DataStorePath"];
+        //    return path;
+        //}
+
+        public DataSet GetInvestmentDetails(DashboardRequest request)
         {
-            if(string.IsNullOrWhiteSpace(serverPath))
-                serverPath = path + "\\MutualFunds\\";
-        }
-
-        string GetDataSourceOath() {
-            string path = ConfigurationManager.AppSettings["DataStorePath"];
-            return path;
-        }
-
-        public DataTable GetInvestmentDetails(DashboardRequest request)
-        {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
-                if (ds != null)
+                if (UseMockData)
                 {
-                    Utilities.WriteToFile.Write(GetDataSourceOath() + "\\InvestmentDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "InvestmentDetails.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
+                }
+                if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
+                {
+                    Utilities.FileOperations.Write(DataStorePath + "\\InvestmentDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetUpcomingSipDetails(DashboardRequest request)
+        public DataSet GetUpcomingSipDetails(DashboardRequest request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_SIP_Details", CommandType.StoredProcedure, parameters);
-                if (ds != null)
+                if (UseMockData)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\UpcomingSipDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "UpcomingSipDetails.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_SIP_Details", CommandType.StoredProcedure, parameters);
+                }
+                if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
+                {
+                    Utilities.FileOperations.Write(serverPath + "\\UpcomingSipDetails.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetInvestmentsByMonth(DashboardRequest request)
+        public DataSet GetInvestmentsByMonth(DashboardRequest request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "InvestmentsByMonth.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\InvestmentsByMonth.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\InvestmentsByMonth.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-
-        public DataTable GetIndividualInvestments(DashboardIndividual request)
+        public DataSet GetIndividualInvestments(DashboardIndividual request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "IndividualInvestments.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetTransactions", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\IndividualInvestments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\IndividualInvestments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetSectorBreakup(DashboardRequest request)
+        public DataSet GetSectorBreakup(DashboardRequest request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
-
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetInvestmentsByFundCategory", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "SectorBreakup.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetInvestmentsByFundCategory", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\SectorBreakup.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\SectorBreakup.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-
-        public DataTable GetInvestments(DashboardIndividual request)
+        public DataSet GetInvestments(DashboardIndividual request)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Investments.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "Type", Value = request.Type });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "Type", Value = request.Type });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\Investments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\Investments.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    return ds;
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetULIP()
+        public DataSet GetULIP()
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetULIPValue", CommandType.StoredProcedure, parameters);
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetULIPValue", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\ULIP.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\ULIP.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
+        public DataSet GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkHistoryValues", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkHistoryValues", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\BenchmarkHistoryValues.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\BenchmarkHistoryValues.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable GetNewGraph(DateTime fromDate, DateTime toDate)
+        public DataSet GetNewGraph(DateTime fromDate, DateTime toDate)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetMyFundsHistoryValues", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetMyFundsHistoryValues", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\NewGraph.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\NewGraph.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-
-
-        public DataTable GetBenchmarkPerformance(DateTime fromDate, DateTime toDate)
+        public DataSet GetBenchmarkPerformance(DateTime fromDate, DateTime toDate)
         {
+            DataSet ds = null;
             try
             {
-                List<SqlParameter> parameters = new List<SqlParameter>();
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
 
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
-                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "benchMark", Value = "%" });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "benchMark", Value = "%" });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkPerformance", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkPerformance", CommandType.StoredProcedure, parameters);
+                }
                 if (ds != null)
                 {
-                    Utilities.WriteToFile.Write(serverPath + "\\BenchmarkPerformance.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                    return ds.Tables[0];
+                    Utilities.FileOperations.Write(serverPath + "\\BenchmarkPerformance.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
-            return null;
+            return ds;
         }
 
-        public DataTable Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, int period, decimal investValue, decimal currentvalue, decimal profit)
+        public DataSet Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, int period, decimal investValue, decimal currentvalue, decimal profit)
         {
             try
             {

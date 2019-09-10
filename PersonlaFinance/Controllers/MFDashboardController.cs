@@ -12,25 +12,24 @@ namespace PersonlaFinance.Controllers
     public class MFDashboardController : BaseController
     {
         IDashboardRepository dashboardRepository;
-        string path = string.Empty;
+        //string path = string.Empty;
 
         public MFDashboardController(IDashboardRepository dashbrdrepository)
         {
             dashboardRepository = dashbrdrepository;
-            
         }
 
-        private void setPath() {
-            string _path = Server.MapPath("");
-            dashboardRepository.SetPath(_path + "\\Data\\");
-        }
+        //private void setPath() {
+        //    string _path = Server.MapPath("");
+        //    dashboardRepository.SetPath(_path + "\\Data\\");
+        //}
 
         //
         // GET: /MFDashboard/
         public ActionResult Index()
         {
-            string _path = Server.MapPath("");
-            dashboardRepository.SetPath(_path + "\\Data\\");
+            //string _path = Server.MapPath("");
+            //dashboardRepository.SetPath(_path + "\\Data\\");
             return View("~/Views/MutualFunds/Dashboard/Index.cshtml");
         }
 

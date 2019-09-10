@@ -10,57 +10,57 @@ namespace BusinessEntities.Contracts
 {
     public interface IMutualFundDataAccess
     {
-        DataTable GetFolios();
+        DataSet GetFolios();
 
-        DataTable GetFundCategory();
+        DataSet GetFundCategory();
 
-        DataTable GetFundHouses();
+        DataSet GetFundHouses();
 
-        DataTable GetFundOptions();
+        DataSet GetFundOptions();
 
-        DataTable GetFunds();
+        DataSet GetFunds();
 
-        DataTable GetFundTypes();
+        DataSet GetFundTypes();
 
-        DataTable GetPortFolios();
+        DataSet GetPortFolios();
 
-        DataTable GetPortfolioTransactions(GetMFTransactions getMFTransactions);
+        DataSet GetPortfolioTransactions(GetMFTransactions getMFTransactions);
 
-        DataTable GetFundTransactions(GetMFTransactions getMFTransactions);
+        DataSet GetFundTransactions(GetMFTransactions getMFTransactions);
 
-        DataTable AddUpdateMFTransaction(AddMFTransactionRequest _mfTransactionRequest);
+        DataSet AddUpdateMFTransaction(AddMFTransactionRequest _mfTransactionRequest);
 
-        DataTable AddDividend(AddDividendRequest _dividendRequest);
+        DataSet AddDividend(AddDividendRequest _dividendRequest);
 
-        DataTable UpdateLatestNAV(List<NAVData> data);
+        DataSet UpdateLatestNAV(List<NAVData> data);
 
-        DataTable GetFundsPerformance();
+        DataSet GetFundsPerformance();
 
         void BackUpNAVData();
 
         //void UpdateNAVHistory(List<NAVData> data);
 
-        DataTable GetFundNav(DateTime date);
+        DataSet GetFundNav(DateTime date);
 
         string GetLastProcessedDetails();
 
-        DataTable GetPortfolios();
+        DataSet GetPortfolios();
 
-        DataTable GetMyFunds(GetMyFundsRequest request);
+        DataSet GetMyFunds(GetMyFundsRequest request);
 
-        DataTable AddTransaction(AddMFTransactionRequest request);
+        DataSet AddTransaction(AddMFTransactionRequest request);
 
-        DataTable GetFundNav(GetFundNavRequest getFundNavRequest);
+        DataSet GetFundNav(GetFundNavRequest getFundNavRequest);
 
-        DataTable GetFundValue(GetFundValueRequst getFundValueRequest);
+        DataSet GetFundValue(GetFundValueRequst getFundValueRequest);
 
-        DataTable GetMyMFFundInvestments(GetMFFundInvestmentsRequest request);
+        DataSet GetMyMFFundInvestments(GetMFFundInvestmentsRequest request);
 
-        DataTable GetMFDdailyTracker(GetMFDailyTracker request);
+        DataSet GetMFDdailyTracker(GetMFDailyTracker request);
 
-        DataTable GetInvestments(DashboardIndividual request);
+        DataSet GetInvestments(DashboardIndividual request);
 
-        void SetPath(string path);
+        //void SetPath(string path);
 
     }
 }

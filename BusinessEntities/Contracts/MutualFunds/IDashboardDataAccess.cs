@@ -11,28 +11,26 @@ namespace BusinessEntities.Contracts.MutualFunds
 {
     public interface IDashboardDataAccess
     {
-        void SetPath(string path);
+        DataSet GetInvestmentDetails(DashboardRequest request);
 
-        DataTable GetInvestmentDetails(DashboardRequest request);
+        DataSet GetUpcomingSipDetails(DashboardRequest request);
 
-        DataTable GetUpcomingSipDetails(DashboardRequest request);
+        DataSet GetInvestmentsByMonth(DashboardRequest request);
 
-        DataTable GetInvestmentsByMonth(DashboardRequest request);
+        DataSet GetIndividualInvestments(DashboardIndividual request);
 
-        DataTable GetIndividualInvestments(DashboardIndividual request);
+        DataSet GetSectorBreakup(DashboardRequest request);
 
-        DataTable GetSectorBreakup(DashboardRequest request);
+        DataSet GetInvestments(DashboardIndividual request);
 
-        DataTable GetInvestments(DashboardIndividual request);
+        DataSet GetULIP();
 
-        DataTable GetULIP();
+        DataSet GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate);
 
-        DataTable GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate);
+        DataSet GetNewGraph(DateTime fromDate, DateTime toDate);
 
-        DataTable GetNewGraph(DateTime fromDate, DateTime toDate);
+        DataSet GetBenchmarkPerformance(DateTime fromDate, DateTime toDate);
 
-        DataTable GetBenchmarkPerformance(DateTime fromDate, DateTime toDate);
-
-        DataTable Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, int period, decimal investValue, decimal currentvalue, decimal profit);
+        DataSet Insert_mf_daily_tracker(int portfolioId, DateTime trackdate, int period, decimal investValue, decimal currentvalue, decimal profit);
     }
 }

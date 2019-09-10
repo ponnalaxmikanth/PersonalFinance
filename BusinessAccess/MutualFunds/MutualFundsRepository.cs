@@ -36,14 +36,14 @@ namespace BusinessAccess.MutualFunds
             _mfDataAccess = mfDataAccess;
         }
 
-        public void SetPath(string path)
-        {
-            _mfDataAccess.SetPath(path);
-        }
+        //public void SetPath(string path)
+        //{
+        //    _mfDataAccess.SetPath(path);
+        //}
 
         public List<MF_Portfolio> GetMutualFundPortfolios()
         {
-            return MapMFPortfolios(_mfDataAccess.GetPortFolios());
+            return MapMFPortfolios(_mfDataAccess.GetPortFolios().Tables[0]);
         }
 
         private List<MF_Portfolio> MapMFPortfolios(DataTable dataTable)
@@ -77,7 +77,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<MFPortfolioData> GetPortfolioTransactions(GetMFTransactions getMFTransactions)
         {
-            return MapPortfolioTransactions(_mfDataAccess.GetPortfolioTransactions(getMFTransactions));
+            return MapPortfolioTransactions(_mfDataAccess.GetPortfolioTransactions(getMFTransactions).Tables[0]);
         }
 
         private List<MFPortfolioData> MapPortfolioTransactions(DataTable dataTable)
@@ -168,13 +168,13 @@ namespace BusinessAccess.MutualFunds
 
             try
             {
-                DataTable dtPortFolios = _mfDataAccess.GetPortFolios();
-                DataTable dtFolios = _mfDataAccess.GetFolios();
-                DataTable dtFundCategory = _mfDataAccess.GetFundCategory();
-                DataTable dtFundHouses = _mfDataAccess.GetFundHouses();
-                DataTable dtFundOptions = _mfDataAccess.GetFundOptions();
-                DataTable dtFundTypes = _mfDataAccess.GetFundTypes();
-                DataTable dtFunds = _mfDataAccess.GetFunds();
+                DataTable dtPortFolios = _mfDataAccess.GetPortFolios().Tables[0];
+                DataTable dtFolios = _mfDataAccess.GetFolios().Tables[0];
+                DataTable dtFundCategory = _mfDataAccess.GetFundCategory().Tables[0];
+                DataTable dtFundHouses = _mfDataAccess.GetFundHouses().Tables[0];
+                DataTable dtFundOptions = _mfDataAccess.GetFundOptions().Tables[0];
+                DataTable dtFundTypes = _mfDataAccess.GetFundTypes().Tables[0];
+                DataTable dtFunds = _mfDataAccess.GetFunds().Tables[0];
 
                 response = new MFFundDetails();
                 response.LstPortfolios = MapMFPortfolios(dtPortFolios);
@@ -387,7 +387,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<MF_Transactions> GetFundTransactions(GetMFTransactions getMFTransactions)
         {
-            return MapFundTransactions(_mfDataAccess.GetFundTransactions(getMFTransactions));
+            return MapFundTransactions(_mfDataAccess.GetFundTransactions(getMFTransactions).Tables[0]);
         }
 
         private List<MF_Transactions> MapFundTransactions(DataTable dataTable)
@@ -440,7 +440,7 @@ namespace BusinessAccess.MutualFunds
                 FundId = _mfTransactionRequest.FundId,
                 PortfolioId = _mfTransactionRequest.PortfolioId.ToString()
             };
-            return MapFundTransactions(_mfDataAccess.GetFundTransactions(getMFTransactions));
+            return MapFundTransactions(_mfDataAccess.GetFundTransactions(getMFTransactions).Tables[0]);
         }
 
 
@@ -553,7 +553,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<FundPerformance> GetFundsPerformance()
         {
-            return MapFundsPerformance(_mfDataAccess.GetFundsPerformance());
+            return MapFundsPerformance(_mfDataAccess.GetFundsPerformance().Tables[0]);
         }
 
         private List<FundPerformance> MapFundsPerformance(DataTable dataTable)
@@ -677,7 +677,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<NAVData> GetFundsNAV(DateTime date)
         {
-            return MapFundsNAV(_mfDataAccess.GetFundNav(date));
+            return MapFundsNAV(_mfDataAccess.GetFundNav(date).Tables[0]);
         }
 
         private List<NAVData> MapFundsNAV(DataTable dataTable)
@@ -714,32 +714,32 @@ namespace BusinessAccess.MutualFunds
 
         public List<MF_FundHouses> GetFundHouses()
         {
-            return MapFundHouses(_mfDataAccess.GetFundHouses());
+            return MapFundHouses(_mfDataAccess.GetFundHouses().Tables[0]);
         }
 
         public List<MF_FundTypes> GetFundTypes()
         {
-            return MapFundTypes(_mfDataAccess.GetFundTypes());
+            return MapFundTypes(_mfDataAccess.GetFundTypes().Tables[0]);
         }
 
         public List<MF_FundCategory> GetFundCategory()
         {
-            return MapFundCategory(_mfDataAccess.GetFundCategory());
+            return MapFundCategory(_mfDataAccess.GetFundCategory().Tables[0]);
         }
 
         public List<MF_FundOptions> GetFundOptions()
         {
-            return MapFundOptions(_mfDataAccess.GetFundOptions());
+            return MapFundOptions(_mfDataAccess.GetFundOptions().Tables[0]);
         }
 
         public List<MF_Funds> GetFunds()
         {
-            return MapFunds(_mfDataAccess.GetFunds());
+            return MapFunds(_mfDataAccess.GetFunds().Tables[0]);
         }
 
         public List<MF_Folios> GetFolios()
         {
-            return MapFolios(_mfDataAccess.GetFolios());
+            return MapFolios(_mfDataAccess.GetFolios().Tables[0]);
         }
 
         private List<MF_Folios> MapFolios(DataTable datatable)
@@ -764,7 +764,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<MF_Portfolio> GetPortfolios()
         {
-            return MapPortFolioDetails(_mfDataAccess.GetPortfolios());
+            return MapPortFolioDetails(_mfDataAccess.GetPortfolios().Tables[0]);
         }
 
         private List<MF_Portfolio> MapPortFolioDetails(DataTable datatable)
@@ -785,14 +785,14 @@ namespace BusinessAccess.MutualFunds
 
         public List<MF_Funds> GetMyFunds(GetMyFundsRequest request)
         {
-            return MapFunds(_mfDataAccess.GetMyFunds(request));
+            return MapFunds(_mfDataAccess.GetMyFunds(request).Tables[0]);
         }
 
         public AddMFTransactionResponse AddTransaction(AddMFTransactionRequest mfTransactionRequest)
         {
             int retVal = -1;
             AddMFTransactionResponse response = new AddMFTransactionResponse();
-            DataTable dtResult = _mfDataAccess.AddTransaction(mfTransactionRequest);
+            DataTable dtResult = _mfDataAccess.AddTransaction(mfTransactionRequest).Tables[0];
 
             if (dtResult == null || dtResult.Rows.Count <= 0)
             {
@@ -827,7 +827,7 @@ namespace BusinessAccess.MutualFunds
 
         public decimal GetFundNav(GetFundNavRequest getFundNavRequest)
         {
-            DataTable dtResult = _mfDataAccess.GetFundNav(getFundNavRequest);
+            DataTable dtResult = _mfDataAccess.GetFundNav(getFundNavRequest).Tables[0];
 
             if (dtResult != null && dtResult.Rows.Count > 0)
                 return decimal.Parse(dtResult.Rows[0]["NAV"].ToString());
@@ -837,7 +837,7 @@ namespace BusinessAccess.MutualFunds
 
         public FundValueResponse GetFundValue(GetFundValueRequst getFundValueRequest)
         {
-            DataTable dtResult = _mfDataAccess.GetFundValue(getFundValueRequest);
+            DataTable dtResult = _mfDataAccess.GetFundValue(getFundValueRequest).Tables[0];
 
             return MapFundValue(dtResult);
         }
@@ -865,7 +865,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<MFTransactions> GetMFFundInvestments(GetMFFundInvestmentsRequest _getMFFundInvestmentsRequest)
         {
-            DataTable dtResult = _mfDataAccess.GetMyMFFundInvestments(_getMFFundInvestmentsRequest);
+            DataTable dtResult = _mfDataAccess.GetMyMFFundInvestments(_getMFFundInvestmentsRequest).Tables[0];
 
             return MapMFFundInvestments(dtResult);
         }
@@ -898,7 +898,7 @@ namespace BusinessAccess.MutualFunds
         {
             try
             {
-                return MapMFDdailyTracker(_mfDataAccess.GetMFDdailyTracker(request));
+                return MapMFDdailyTracker(_mfDataAccess.GetMFDdailyTracker(request).Tables[0]);
             }
             catch (Exception ex)
             {
@@ -933,7 +933,7 @@ namespace BusinessAccess.MutualFunds
 
         public List<Investments> GetIndividualInvestments(DashboardIndividual request)
         {
-            return MapIndividualInvestments(request, _mfDataAccess.GetInvestments(request));
+            return MapIndividualInvestments(request, _mfDataAccess.GetInvestments(request).Tables[0]);
         }
 
         private List<Investments> MapIndividualInvestments(DashboardIndividual request, DataTable dataTable)
