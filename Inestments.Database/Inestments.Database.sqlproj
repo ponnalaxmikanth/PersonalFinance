@@ -93,5 +93,10 @@
     <Build Include="Tables\BenchMark_History.sql" />
     <Build Include="Tables\BenchMarks.sql" />
     <Build Include="Procedures\UpdateFundNAV.sql" />
+    <Build Include="Procedures\Insetrt_MF_DataDumpDates.sql" />
+    <Build Include="Procedures\Get_Investments_Details.sql" />
+    <Build Include="Procedures\Get_Portfolio_Value.sql" />
+    <Build Include="Procedures\Get_SIP_Details.sql" />
+    <Build Include="Procedures\GetTransactions.sql" />
   </ItemGroup>
 </Project>

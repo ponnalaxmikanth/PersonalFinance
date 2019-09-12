@@ -102,7 +102,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {

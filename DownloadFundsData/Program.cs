@@ -1,17 +1,12 @@
-﻿using Supremes;
+﻿using BusinessAccess.MutualFunds;
+using BusinessEntities.Contracts.MutualFunds;
+using BusinessEntities.Entities;
+using BusinessEntities.Entities.MutualFunds;
+using DataAccess;
+using DataAccess.MutualFunds;
+using Supremes;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessEntities.Entities.MutualFunds;
-using DataAccess.MutualFunds;
-using BusinessAccess.MutualFunds;
-using BusinessEntities.Contracts.MutualFunds;
-using System.IO;
-using System.Net;
-using System.Windows.Forms;
-using BusinessEntities.Entities;
 
 namespace DownloadFundsData
 {
@@ -84,7 +79,7 @@ namespace DownloadFundsData
             if (args[0] == "Stocks")
             {
                 Console.Title = "Downloading Stocks Data: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new Stocks().GetLatestStockValues();
+                //new Stocks().GetLatestStockValues();
             }
             //if(args[0] == "MS")
             //    DownloadMorningStarMFData();
@@ -208,5 +203,6 @@ namespace DownloadFundsData
         {
             Console.WriteLine("[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "] " + msg);
         }
+
     }
 }

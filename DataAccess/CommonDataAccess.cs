@@ -28,7 +28,7 @@ namespace DataAccess
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fromDate", Value = fromDate });
                 parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
 
-                DataSet ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_MF_DataDumpDates", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_DataDumpDates", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                 {
                     return ds.Tables[0];
@@ -52,7 +52,7 @@ namespace DataAccess
                 parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "FundType", Value = fundType });
                 parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "Count", Value = count });
 
-                SQLHelper.ExecuteProcedure("PersonalFinance", "Insetrt_MF_DataDumpDates", CommandType.StoredProcedure, parameters);
+                SQLHelper.ExecuteProcedure("Investments", "Insetrt_MF_DataDumpDates", CommandType.StoredProcedure, parameters);
             }
             catch (Exception ex)
             {
