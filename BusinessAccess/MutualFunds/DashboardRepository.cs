@@ -530,31 +530,31 @@ namespace BusinessAccess.MutualFunds
             return result;
         }
 
-        public ULIPValue GetULIP()
-        {
-            ULIPValue result = null;
+        //public ULIPValue GetULIP()
+        //{
+        //    ULIPValue result = null;
 
-            result = MapULIP(dashboardDataAccess.GetULIP().Tables[0]);
-            return result;
-        }
+        //    result = MapULIP(dashboardDataAccess.GetULIP().Tables[0]);
+        //    return result;
+        //}
 
-        private ULIPValue MapULIP(DataTable dataTable)
-        {
-            ULIPValue result = null;
-            if (dataTable != null && dataTable.Rows.Count > 0)
-            {
-                result = (from dr in dataTable.AsEnumerable()
-                          select new ULIPValue()
-                          {
-                              CurrentValue = decimal.Parse(dr["CurrentValue"].ToString()),
-                              Invest = decimal.Parse(dr["Invest"].ToString()),
-                              NAV = decimal.Parse(dr["NAV"].ToString()),
-                              Units = decimal.Parse(dr["Units"].ToString())
-                          }).FirstOrDefault();
+        //private ULIPValue MapULIP(DataTable dataTable)
+        //{
+        //    ULIPValue result = null;
+        //    if (dataTable != null && dataTable.Rows.Count > 0)
+        //    {
+        //        result = (from dr in dataTable.AsEnumerable()
+        //                  select new ULIPValue()
+        //                  {
+        //                      CurrentValue = decimal.Parse(dr["CurrentValue"].ToString()),
+        //                      Invest = decimal.Parse(dr["Invest"].ToString()),
+        //                      NAV = decimal.Parse(dr["NAV"].ToString()),
+        //                      Units = decimal.Parse(dr["Units"].ToString())
+        //                  }).FirstOrDefault();
 
-            }
-            return result;
-        }
+        //    }
+        //    return result;
+        //}
 
         public List<BenchmarkHistory> GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
         {

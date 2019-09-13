@@ -13,15 +13,23 @@ namespace WebAPI.Controllers
     public class ExpensesTrackerController : ApiController
     {
         readonly ExpensesTrackerRepository _expensesTrackerRepository;
+
         public ExpensesTrackerController()
         {
             _expensesTrackerRepository = new ExpensesTrackerRepository();
         }
 
+        //private void setPath()
+        //{
+        //    string _path = System.Web.Hosting.HostingEnvironment.MapPath("~");
+        //    _expensesTrackerRepository.SetPath(_path + "\\Data\\");
+        //}
+
         [HttpGet]
         [Route("api/Expenses/GetAccountTypes")]
         public HttpResponseMessage GetAccountTypes()
         {
+            //setPath();
             List<AccountType> result = _expensesTrackerRepository.GetAccountTypes();
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }

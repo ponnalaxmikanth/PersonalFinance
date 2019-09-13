@@ -432,8 +432,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fund_type", Value = data[i].Fund_Type });
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "date", Value = data[i].Date });
 
-                    ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
-
+                    //ds = SQLHelper.ExecuteProcedure("Investments", "UpdateFundNAV", CommandType.StoredProcedure, parameters);
                 }
             }
             catch (Exception ex)

@@ -25,7 +25,7 @@ namespace BusinessEntities.Contracts.MutualFunds
 
         List<Investments> GetPerfOfMoreThanYear(DashboardIndividual request);
 
-        ULIPValue GetULIP();
+        //ULIPValue GetULIP();
 
         List<BenchmarkHistory> GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate);
 

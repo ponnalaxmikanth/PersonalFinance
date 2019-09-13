@@ -45,7 +45,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_Portfolio_Value", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
                 {
@@ -72,7 +72,7 @@ namespace DataAccess.MutualFunds
                 else
                 {
                     List<SqlParameter> parameters = new List<SqlParameter>();
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_SIP_Details", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_SIP_Details", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null && ds.Tables.Count > 0 && !UseMockData && EnableStoreDataAsJson)
                 {
@@ -102,7 +102,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "FromDate", Value = request.FromDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "ToDate", Value = request.ToDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_Investments_Details", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -133,7 +133,7 @@ namespace DataAccess.MutualFunds
 
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
 
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetTransactions", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -162,7 +162,7 @@ namespace DataAccess.MutualFunds
                 {
                     List<SqlParameter> parameters = new List<SqlParameter>();
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "portfolioId", Value = request.PortfolioId });
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetInvestmentsByFundCategory", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetInvestmentsByFundCategory", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -193,7 +193,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "PortfolioId", Value = request.PortfolioId });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "Type", Value = request.Type });
 
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetIndividualTransactions", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -208,32 +208,32 @@ namespace DataAccess.MutualFunds
             return ds;
         }
 
-        public DataSet GetULIP()
-        {
-            DataSet ds = null;
-            try
-            {
-                if (UseMockData)
-                {
-                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
-                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
-                }
-                else
-                {
-                    List<SqlParameter> parameters = new List<SqlParameter>();
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetULIPValue", CommandType.StoredProcedure, parameters);
-                }
-                if (ds != null)
-                {
-                    Utilities.FileOperations.Write(serverPath + "\\ULIP.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
-                }
-            }
-            catch (Exception ex)
-            {
-                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return ds;
-        }
+        //public DataSet GetULIP()
+        //{
+        //    DataSet ds = null;
+        //    try
+        //    {
+        //        if (UseMockData)
+        //        {
+        //            string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "ULIP.json");
+        //            ds = Utilities.Conversions.JSONToDataSet(fileContent);
+        //        }
+        //        else
+        //        {
+        //            List<SqlParameter> parameters = new List<SqlParameter>();
+        //            ds = SQLHelper.ExecuteProcedure("Investments", "GetULIPValue", CommandType.StoredProcedure, parameters);
+        //        }
+        //        if (ds != null)
+        //        {
+        //            Utilities.FileOperations.Write(serverPath + "\\ULIP.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return ds;
+        //}
 
         public DataSet GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate)
         {
@@ -252,7 +252,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
 
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkHistoryValues", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetBenchmarkHistoryValues", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -283,7 +283,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "fromDate", Value = fromDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
 
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetMyFundsHistoryValues", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetMyFundsHistoryValues", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -315,7 +315,7 @@ namespace DataAccess.MutualFunds
                     parameters.Add(new SqlParameter() { DbType = DbType.Date, ParameterName = "toDate", Value = toDate });
                     parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "benchMark", Value = "%" });
 
-                    ds = SQLHelper.ExecuteProcedure("PersonalFinance", "GetBenchmarkPerformance", CommandType.StoredProcedure, parameters);
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetBenchmarkPerformance", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
