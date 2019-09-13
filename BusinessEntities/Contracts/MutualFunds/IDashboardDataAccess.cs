@@ -23,7 +23,7 @@ namespace BusinessEntities.Contracts.MutualFunds
 
         DataSet GetInvestments(DashboardIndividual request);
 
-        DataSet GetULIP();
+        //DataSet GetULIP();
 
         DataSet GetBenchmarkHistoryValues(DateTime fromDate, DateTime toDate);
 

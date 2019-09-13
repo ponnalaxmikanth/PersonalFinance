@@ -74,10 +74,10 @@ namespace PersonlaFinance.Controllers
             return Json(dashboardRepository.GetSectorBreakup(request));
         }
 
-        public ActionResult GetULIPValue()
-        {
-            return Json(dashboardRepository.GetULIP());
-        }
+        //public ActionResult GetULIPValue()
+        //{
+        //    return Json(dashboardRepository.GetULIP());
+        //}
 
         public ActionResult History()
         {
