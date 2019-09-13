@@ -60,6 +60,7 @@
     <Folder Include="Properties" />
     <Folder Include="Procedures" />
     <Folder Include="Tables" />
+    <Folder Include="Security\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\MF_FundHouses.sql" />
@@ -98,5 +99,11 @@
     <Build Include="Procedures\Get_Portfolio_Value.sql" />
     <Build Include="Procedures\Get_SIP_Details.sql" />
     <Build Include="Procedures\GetTransactions.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="Procedures\GetFundsNav.sql" />
+    <Build Include="Procedures\GetIndividualTransactions.sql" />
+    <Build Include="Procedures\GetInvestmentsByFundCategory.sql" />
+    <Build Include="Procedures\GetULIPValue.sql" />
+    <Build Include="Procedures\InsertStockPurchase.sql" />
   </ItemGroup>
 </Project>
