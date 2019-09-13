@@ -61,6 +61,8 @@
     <Folder Include="Procedures" />
     <Folder Include="Tables" />
     <Folder Include="Security\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\MF_FundHouses.sql" />
@@ -105,5 +107,13 @@
     <Build Include="Procedures\GetInvestmentsByFundCategory.sql" />
     <Build Include="Procedures\GetULIPValue.sql" />
     <Build Include="Procedures\InsertStockPurchase.sql" />
+    <Build Include="dbo\Stored Procedures\GetMyFunds.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_Portfolios.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_FundTypes.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_Funds.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_FundOptions.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_FundHouses.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_FundCategory.sql" />
+    <Build Include="dbo\Stored Procedures\Get_MF_Folios.sql" />
   </ItemGroup>
 </Project>

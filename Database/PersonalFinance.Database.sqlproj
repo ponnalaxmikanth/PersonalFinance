@@ -60,10 +60,14 @@
     <Folder Include="Procedures" />
     <Folder Include="Functions" />
     <Folder Include="Tables" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\HomeTransactions.sql" />
     <Build Include="Tables\Accounts.sql" />
-    <Build Include="Tables\AccountTypes.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Stored Procedures\GetXIRR.sql" />
   </ItemGroup>
 </Project>
