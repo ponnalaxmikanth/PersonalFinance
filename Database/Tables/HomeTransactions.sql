@@ -21,10 +21,10 @@
 
 GO
 
-ALTER TABLE [dbo].[HomeTransactions]  WITH CHECK ADD  CONSTRAINT [FK_HomeTransactions_Accounts] FOREIGN KEY([AccountId])
-REFERENCES [dbo].[Accounts] ([AccountId])
-GO
+--ALTER TABLE [dbo].[HomeTransactions]  WITH CHECK ADD  CONSTRAINT [FK_HomeTransactions_Accounts] FOREIGN KEY([AccountId])
+--REFERENCES [dbo].[Accounts] ([AccountId])
+--GO
 
-ALTER TABLE [dbo].[HomeTransactions] CHECK CONSTRAINT [FK_HomeTransactions_Accounts]
-GO
+--ALTER TABLE [dbo].[HomeTransactions] CHECK CONSTRAINT [FK_HomeTransactions_Accounts]
+--GO
 

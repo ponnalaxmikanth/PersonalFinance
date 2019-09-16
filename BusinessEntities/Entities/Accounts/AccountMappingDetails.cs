@@ -18,6 +18,7 @@ namespace BusinessEntities.Entities.Accounts
 
     public class Transactions
     {
+        public int rowNumber { get; set; }
         public int AccountId { get; set; }
         public DateTime TransactDate { get; set; }
         public DateTime PostedDate { get; set; }

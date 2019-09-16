@@ -101,7 +101,6 @@
     <Build Include="Procedures\Get_Portfolio_Value.sql" />
     <Build Include="Procedures\Get_SIP_Details.sql" />
     <Build Include="Procedures\GetTransactions.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="Procedures\GetFundsNav.sql" />
     <Build Include="Procedures\GetIndividualTransactions.sql" />
     <Build Include="Procedures\GetInvestmentsByFundCategory.sql" />

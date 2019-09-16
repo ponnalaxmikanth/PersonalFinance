@@ -67,7 +67,6 @@
   <ItemGroup>
     <Build Include="Tables\HomeTransactions.sql" />
     <Build Include="Tables\Accounts.sql" />
-    <Build Include="Security\RoleMemberships.sql" />
     <Build Include="dbo\Stored Procedures\GetXIRR.sql" />
   </ItemGroup>
 </Project>

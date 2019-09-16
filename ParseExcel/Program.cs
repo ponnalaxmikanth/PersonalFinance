@@ -108,10 +108,9 @@ namespace ParseExcel
                     if(transactions.Count() > 0)
                     {
                         transactions = transactions
-                                        //.Where(t => t != null && t.Date < DateTime.Now.AddYears(1) && t.Date>= _minDate)
                                         .Where(t => t != null && t.PostedDate < DateTime.Now.AddDays(30) && t.PostedDate >= _minDate)
-                                        .Where(t => t.Debit != 0 || t.Credit != 0)
-                                        //.OrderBy(t => t.Date)
+                                        //.Where(t => t.Debit != 0 || t.Credit != 0)
+                                        .OrderBy(t => t.rowNumber)
                                         .ToList();
 
                         DisplayMessage("Total Records processed for sheet " + sheetName + " : " + rows.Count() + " transactions: " + transactions.Count() + " min date: " + _minDate.ToString("MM/dd/yyyy"));
@@ -139,7 +138,7 @@ namespace ParseExcel
                           select 
                           new XElement("row",
                                 new XElement("acctNo", accountId),
-                                new XElement("transactdate", t.TransactDate.ToString("MM/dd/yyyy")),
+                                new XElement("rowNum", t.rowNumber),
                                 new XElement("posteddate", t.PostedDate.ToString("MM/dd/yyyy")),
                                 new XElement("description", t.Description),
                                 new XElement("debit", t.Debit),
@@ -164,6 +163,8 @@ namespace ParseExcel
         private static Transactions ParseTransaction(SpreadsheetDocument spreadSheetDocument, string sheetName, Row row, int rowNumber)
         {
             Transactions _transaction = null;
+            int cellCount = 0;
+            string firstCellValue = "";
             try
             {
                 if (rowNumber == 0)
@@ -178,34 +179,69 @@ namespace ParseExcel
                 {
                     var cellValues = from cell in row.Descendants<Cell>()
                                      select cell;
-                    int cellCount = cellValues.Count();
+                    cellCount = cellValues.Count();
 
-                    if (cellCount > 5)
+                    firstCellValue = GetCellValue(spreadSheetDocument, cellValues, "A", rowNumber + 1);
+                    DateTime dtPostedDate = DateTime.Now.AddYears(1);
+                    if (!string.IsNullOrWhiteSpace(firstCellValue) && ParseDateValue(firstCellValue) <= DateTime.Now.AddMonths(1))
                     {
-                        _transaction = new Transactions()
-                        {
-                            TransactDate = ParseDateValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(0))),
-                            PostedDate = ParseDateValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(1))),
-                            Description = GetCellValue(spreadSheetDocument, cellValues.ElementAt(2)),
-                            Debit = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(3))),
-                            Credit = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(4))),
-                            Total = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(5))),
-                            TransactedBy = cellCount > 6 ? GetCellValue(spreadSheetDocument, cellValues.ElementAt(6)) : string.Empty,
-                            Group = cellCount > 7 ? GetCellValue(spreadSheetDocument, cellValues.ElementAt(7)) : string.Empty,
-                            SubGroup = cellCount > 8 ? GetCellValue(spreadSheetDocument, cellValues.ElementAt(8)) : string.Empty,
-                            Comments = cellCount > 9 ? GetCellValue(spreadSheetDocument, cellValues.ElementAt(9)) : string.Empty
-                        };
-                        _transaction.TransactDate = _transaction.TransactDate > DateTime.Now.AddDays(30) ? _transaction.PostedDate : _transaction.TransactDate;
-
+                        try {
+                            _transaction = new Transactions()
+                            {
+                                rowNumber = rowNumber + 1,
+                                //TransactDate = ParseDateValue(GetCellValue(spreadSheetDocument, cellValues.ElementAt(0))),
+                                PostedDate = ParseDateValue(firstCellValue),
+                                Description = GetCellValue(spreadSheetDocument, cellValues, "B", rowNumber + 1),
+                                Debit = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues, "C", rowNumber + 1)),
+                                Credit = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues, "D", rowNumber + 1)),
+                                Total = ParseDecimalValue(GetCellValue(spreadSheetDocument, cellValues, "E", rowNumber + 1)),
+                                TransactedBy = cellCount > 4 ? GetCellValue(spreadSheetDocument, cellValues, "F", rowNumber + 1) : string.Empty,
+                                Group = cellCount > 5 ? GetCellValue(spreadSheetDocument, cellValues, "G", rowNumber + 1) : string.Empty,
+                                SubGroup = cellCount > 6 ? GetCellValue(spreadSheetDocument, cellValues, "H", rowNumber + 1) : string.Empty,
+                                Comments = cellCount > 7 ? GetCellValue(spreadSheetDocument, cellValues, "I", rowNumber + 1) : string.Empty
+                            };
+                            _transaction.TransactDate = _transaction.TransactDate > DateTime.Now.AddDays(30) ? _transaction.PostedDate : _transaction.TransactDate;
+                        }
+                        catch (Exception ex) {
+                            DisplayMessage("Exception while processing sheet:" + sheetName + " row number: " + rowNumber + " Cell count: " + cellCount + " first cell: " + firstCellValue + " Exception: " + ex.Message);
+                            DisplayMessage(ex.StackTrace);
+                        }   
+                    }
+                    else {
+                        //DisplayMessage("sheetName: " + sheetName + " rowNumber: " + rowNumber + " cellCount: " + cellCount + " firstCellValue: " + firstCellValue);
                     }
                 }
             }
             catch(Exception ex)
             {
-                DisplayMessage("Exception while processing sheet:" + sheetName + " row number: " + rowNumber + " Exception: " + ex.Message);
+                DisplayMessage("Exception while processing sheet:" + sheetName + " row number: " + rowNumber + " Cell count: " + cellCount + " first cell: " + firstCellValue + " Exception: " + ex.Message);
+                DisplayMessage(ex.StackTrace);
                 DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return _transaction;
+        }
+
+        private static string GetCellValue(SpreadsheetDocument document, IEnumerable<Cell> cellValues, string v1, int v2)
+        {
+            string reusltStr = string.Empty;
+            try {
+                Cell cell = cellValues.Where(c=>c.CellReference.Value == (v1 + v2.ToString())).FirstOrDefault();
+                SharedStringTablePart stringTablePart = document.WorkbookPart.SharedStringTablePart;
+                string value = (cell == null || cell.CellValue == null) ? string.Empty : cell.CellValue.InnerXml;
+
+                if (cell != null && cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
+                {
+                    return stringTablePart.SharedStringTable.ChildElements[Int32.Parse(value)].InnerText;
+                }
+                else
+                {
+                    return value;
+                }
+            }
+            catch (Exception ex) {
+                DisplayMessage("GetCellValue cell reference: " + v1 + v2 + " Exception: " + ex.Message);
+            }
+            return reusltStr;
         }
 
         public static DateTime ParseDateValue(string val)
@@ -248,20 +284,20 @@ namespace ParseExcel
             return retVal;
         }
 
-        public static string GetCellValue(SpreadsheetDocument document, Cell cell)
-        {
-            SharedStringTablePart stringTablePart = document.WorkbookPart.SharedStringTablePart;
-            string value = cell.CellValue == null ? string.Empty : cell.CellValue.InnerXml;
+        //public static string GetCellValue(SpreadsheetDocument document, Cell cell)
+        //{
+        //    SharedStringTablePart stringTablePart = document.WorkbookPart.SharedStringTablePart;
+        //    string value = (cell == null || cell.CellValue == null) ? string.Empty : cell.CellValue.InnerXml;
 
-            if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
-            {
-                return stringTablePart.SharedStringTable.ChildElements[Int32.Parse(value)].InnerText;
-            }
-            else
-            {
-                return value;
-            }
-        }
+        //    if (cell.DataType != null && cell.DataType.Value == CellValues.SharedString)
+        //    {
+        //        return stringTablePart.SharedStringTable.ChildElements[Int32.Parse(value)].InnerText;
+        //    }
+        //    else
+        //    {
+        //        return value;
+        //    }
+        //}
 
         public static void DisplayMessage(string msg)
         {
