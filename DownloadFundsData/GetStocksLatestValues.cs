@@ -1,4 +1,5 @@
-﻿using BusinessEntity;
+﻿using BusinessAccess.Stocks;
+using BusinessEntity;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -11,17 +12,24 @@ namespace DownloadFundsData
 {
     public class Stocks
     {
+        private StocksRepository _stocksRepository = new StocksRepository();
+        public Stocks()
+        {
+
+        }
+
         public void GetLatestStockValues() {
             List<StocksEntity> _stocks = GetStocks();
 
             foreach(var eachStock in _stocks) {
                 LoadData(eachStock.Symbol);
+                System.Threading.Thread.Sleep(60* 2 * 1000);
             }
         }
 
         private List<StocksEntity> GetStocks()
         {
-            throw new NotImplementedException();
+            return _stocksRepository.GetStocks(DateTime.Now, DateTime.Now, 0);
         }
 
         private void LoadData(string quote)
@@ -96,12 +104,12 @@ namespace DownloadFundsData
 
         private void UpdateDividends(List<StocksEntity> list)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         private void UpdateStockValue(StocksEntity stocksEntity)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
     }

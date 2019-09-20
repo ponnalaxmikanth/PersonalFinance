@@ -79,7 +79,7 @@ namespace DownloadFundsData
             if (args[0] == "Stocks")
             {
                 Console.Title = "Downloading Stocks Data: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                //new Stocks().GetLatestStockValues();
+                new Stocks().GetLatestStockValues();
             }
             //if(args[0] == "MS")
             //    DownloadMorningStarMFData();

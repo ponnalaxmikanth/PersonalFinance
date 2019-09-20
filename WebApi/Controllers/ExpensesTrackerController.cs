@@ -42,21 +42,21 @@ namespace WebAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
-        [HttpGet]
-        [Route("api/Expenses/GetExpenseGroups")]
-        public HttpResponseMessage GetExpenseGroups()
-        {
-            List<ExpenseGroup> result = _expensesTrackerRepository.GetExpenseGroups();
-            return Request.CreateResponse(HttpStatusCode.OK, result);
-        }
+        //[HttpGet]
+        //[Route("api/Expenses/GetExpenseGroups")]
+        //public HttpResponseMessage GetExpenseGroups()
+        //{
+        //    List<ExpenseGroup> result = _expensesTrackerRepository.GetExpenseGroups();
+        //    return Request.CreateResponse(HttpStatusCode.OK, result);
+        //}
 
-        [HttpGet]
-        [Route("api/Expenses/GetExpenseSubGroups")]
-        public HttpResponseMessage GetExpenseSubGroups()
-        {
-            List<ExpenseSubGroup> result = _expensesTrackerRepository.GetExpenseSubGroups();
-            return Request.CreateResponse(HttpStatusCode.OK, result);
-        }
+        //[HttpGet]
+        //[Route("api/Expenses/GetExpenseSubGroups")]
+        //public HttpResponseMessage GetExpenseSubGroups()
+        //{
+        //    List<ExpenseSubGroup> result = _expensesTrackerRepository.GetExpenseSubGroups();
+        //    return Request.CreateResponse(HttpStatusCode.OK, result);
+        //}
 
         [HttpGet]
         [Route("api/Expenses/GetItems/{item}")]
