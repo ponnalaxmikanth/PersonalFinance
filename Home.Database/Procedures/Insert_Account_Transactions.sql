@@ -13,8 +13,9 @@ BEGIN
 
 	declare @table table (
 		acctNo  varchar(100),
+		rowNum int,
 		--date datetime,
-		transactdate datetime,
+		--transactdate datetime,
 		posteddate datetime,
 		description varchar(100),
 		debit decimal(10,4),
@@ -26,10 +27,11 @@ BEGIN
 		comments varchar(100)
 	)
 
-	insert into @table (acctNo, transactdate, posteddate, description, debit, credit, total, transactby, grp, subgroup, comments)
+	insert into @table (acctNo, rowNum, posteddate, description, debit, credit, total, transactby, grp, subgroup, comments)
 	select distinct 
 	'accountnumber' = x.v.value('acctNo[1]', 'int'),
-	'transactdate' = x.v.value('transactdate[1]', 'datetime'),
+	'rowNum' = x.v.value('rowNum[1]', 'int'),
+	--'transactdate' = x.v.value('transactdate[1]', 'datetime'),
 	'posteddate' = x.v.value('posteddate[1]', 'datetime'),
 	'description' = x.v.value('description[1]', 'varchar(100)'),
 	'debit' = x.v.value('debit[1]', 'decimal(18,4)'),
@@ -41,16 +43,17 @@ BEGIN
 	'comments' = x.v.value('comments[1]', 'nvarchar(100)')
 	from @xml.nodes('/root/row') x(v)
 
-	update @table set transactdate = posteddate where posteddate is null
+	--update @table set transactdate = posteddate where posteddate is null
 	select * from @table
 
 
-	delete from HomeTransactions where AccountId = @accountId and TransactionDate >= @minDate
+	delete from HomeTransactions where AccountId = @accountId and PostedDate >= @minDate
 
-	insert into HomeTransactions (TransactionDate, PostedDate, [Group], SubGroup, Description, Debit, Credit, Total, AccountId, TransactedBy, Store, Comments, CreatedDate, LastModifiedDate)
-	select tbl.transactdate, tbl.posteddate, tbl.grp, tbl.subgroup, tbl.description, tbl.debit, tbl.credit, tbl.total, tbl.acctNo, tbl.transactby, '', tbl.comments, GETDATE(), GETDATE() --e.election_id, e.title, v.user_id
+	insert into HomeTransactions (RowNumber, PostedDate, [Group], SubGroup, Description, Debit, Credit, Total, AccountId, TransactedBy, Store, Comments, CreatedDate, LastModifiedDate)
+	select tbl.rowNum, tbl.posteddate, tbl.grp, tbl.subgroup, tbl.description, tbl.debit, tbl.credit, tbl.total, tbl.acctNo, tbl.transactby, '', tbl.comments, GETDATE(), GETDATE()
 	from HomeTransactions t
-	 right JOIN @table tbl ON tbl.acctNo = t.AccountId and tbl.transactdate = t.TransactionDate and tbl.description = t.Description and tbl.debit = t.Debit and tbl.credit = t.Credit
+	 right JOIN @table tbl ON tbl.acctNo = t.AccountId and tbl.posteddate = t.PostedDate and tbl.description = t.Description and tbl.debit = t.Debit and tbl.credit = t.Credit
 	 where t.AccountId is null
+	 order by tbl.rowNum
 
     END

@@ -1,15 +1,13 @@
 ﻿CREATE TABLE [dbo].[Budget] (
-	[ID] [int] IDENTITY(1,1) NOT NULL,
-	[FromDate] [date] NOT NULL CONSTRAINT DF_Budget_FromDate DEFAULT(GETDATE()),
-	[ToDate] [date] NOT NULL CONSTRAINT DF_Budget_ToDate DEFAULT(GETDATE()),
-	[Group] [nvarchar](100) NOT NULL CONSTRAINT DF_Budget_Group DEFAULT(' '),
-	[Amount] [decimal](18, 4) NOT NULL CONSTRAINT DF_Budget_Amount DEFAULT(0),
-	[CreatedDate] [datetime] NOT NULL CONSTRAINT DF_Budget_CreatedDate DEFAULT(GETDATE())
- CONSTRAINT [PK_Budget] PRIMARY KEY CLUSTERED 
-(
-	[ID] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
+    [ID]          INT             IDENTITY (1, 1) NOT NULL,
+    [FromDate]    DATE            CONSTRAINT [DF_Budget_FromDate] DEFAULT (getdate()) NOT NULL,
+    [ToDate]      DATE            CONSTRAINT [DF_Budget_ToDate] DEFAULT (getdate()) NOT NULL,
+    [Group]       NVARCHAR (100)  CONSTRAINT [DF_Budget_Group] DEFAULT (' ') NOT NULL,
+    [Amount]      DECIMAL (18, 4) CONSTRAINT [DF_Budget_Amount] DEFAULT ((0)) NOT NULL,
+    [CreatedDate] DATETIME        CONSTRAINT [DF_Budget_CreatedDate] DEFAULT (getdate()) NOT NULL
+);
+
+
 
 
 GO

@@ -11,11 +11,11 @@ BEGIN
 
 	declare @result table (
 		StockID nvarchar(50),
+		PurchaseDate date,
 		Quantity int,
 		Price money,
 		MarketPrice money,
 		Dividend money, 
-		PurchaseDate date,
 		Profit money
 	)
 
