@@ -60,6 +60,8 @@
     <Folder Include="Properties" />
     <Folder Include="Tables" />
     <Folder Include="Procedures" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\HomeTransactions.sql" />
@@ -73,10 +75,9 @@
     <Build Include="Procedures\GetExpenseGroups.sql" />
     <Build Include="Procedures\GetExpenseSubGroups.sql" />
     <Build Include="Procedures\GetAccountMappingDetails.sql" />
-    <Build Include="Tables\ExpensesSubGroup.sql" />
     <Build Include="Procedures\GetCreditCardPayments.sql" />
     <Build Include="Procedures\GetHomeTransactions.sql" />
-    <Build Include="Tables\ExpenseGroups.sql" />
     <Build Include="Procedures\GetCreditCardBalances.sql" />
+    <Build Include="dbo\Stored Procedures\GetAccountsCurrentStatus.sql" />
   </ItemGroup>
 </Project>

@@ -63,6 +63,7 @@
     <Folder Include="Security\" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\MF_FundHouses.sql" />
@@ -114,5 +115,12 @@
     <Build Include="dbo\Stored Procedures\Get_MF_FundHouses.sql" />
     <Build Include="dbo\Stored Procedures\Get_MF_FundCategory.sql" />
     <Build Include="dbo\Stored Procedures\Get_MF_Folios.sql" />
+    <Build Include="dbo\Tables\DigitalCurrency.sql" />
+    <Build Include="dbo\Tables\Digital_Currency_Redeems.sql" />
+    <Build Include="Security\Priya.sql" />
+    <Build Include="dbo\Stored Procedures\GetStocksInvestmentDetails.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundsInvestmentDetails.sql" />
+    <Build Include="Security\Stocks.sql" />
+    <Build Include="Security\Funds.sql" />
   </ItemGroup>
 </Project>
