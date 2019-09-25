@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace DataAccess.MutualFunds
 {
-    public class MutualFundsDataAccess : BaseDataAccess, IMutualFundDataAccess
+    public partial class MutualFundsDataAccess : BaseDataAccess, IMutualFundDataAccess
     {
         readonly string _application = "DataAccess.MutualFunds";
         readonly string _component = "MutualFundsDataAccess";
@@ -37,7 +37,7 @@ namespace DataAccess.MutualFunds
                 }
                 if (ds != null)
                 {
-                    Utilities.FileOperations.Write(serverPath + "\\PortFolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\PortFolios.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
                 }
             }
             catch (Exception ex)

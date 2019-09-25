@@ -47,6 +47,7 @@
     <Compile Include="Logging\LoggingDataAccess.cs" />
     <Compile Include="CommonDataAccess.cs" />
     <Compile Include="MutualFunds\DashboardDataAccess.cs" />
+    <Compile Include="MutualFunds\FundsDataAccess.cs" />
     <Compile Include="MutualFunds\MutualFundsDataAccess.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SQLHelper.cs" />

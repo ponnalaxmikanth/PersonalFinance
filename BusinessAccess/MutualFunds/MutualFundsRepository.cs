@@ -16,7 +16,7 @@ using Logging;
 
 namespace BusinessAccess.MutualFunds
 {
-    public class MutualFundsRepository : IMutualFundsBusinessAccess
+    public partial class MutualFundsRepository : IMutualFundsBusinessAccess
     {
         IMutualFundDataAccess _mfDataAccess;
         ICommonDataAccess CommonDataAccess;

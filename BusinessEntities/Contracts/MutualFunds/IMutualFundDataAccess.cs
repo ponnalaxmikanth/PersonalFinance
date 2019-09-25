@@ -62,5 +62,7 @@ namespace BusinessEntities.Contracts
 
         //void SetPath(string path);
 
+        DataSet GetInvestmentDetails();
+
     }
 }

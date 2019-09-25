@@ -9,9 +9,9 @@ using System.Web.Http.Cors;
 namespace WebAPI.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class MutualFundsController : ApiController
+    public partial class MutualFundsController : ApiController
     {
-        readonly MutualFundsRepository _mutualFundsRepository = new MutualFundsRepository();
+        MutualFundsRepository _mutualFundsRepository = new MutualFundsRepository();
 
         public MutualFundsController()
         {
