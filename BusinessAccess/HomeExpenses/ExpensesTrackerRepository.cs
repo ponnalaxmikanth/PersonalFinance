@@ -102,76 +102,76 @@ namespace BusinessAccess.HomeExpenses
             return result;
         }
 
-        public List<ExpenseGroup> GetExpenseGroups()
-        {
-            try
-            {
-                return MapExpenseGroups(_expensesTrackerDataAccess.GetExpenseGroups());
-            }
-            catch (Exception ex)
-            {
-                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
+        //public List<ExpenseGroup> GetExpenseGroups()
+        //{
+        //    try
+        //    {
+        //        return MapExpenseGroups(_expensesTrackerDataAccess.GetExpenseGroups());
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return null;
+        //}
 
-        private List<ExpenseGroup> MapExpenseGroups(DataSet resultDataSet)
-        {
-            List<ExpenseGroup> result = null;
-            try
-            {
-                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
-                {
-                    result = (from dr in resultDataSet.Tables[0].AsEnumerable()
-                              select new ExpenseGroup()
-                              {
-                                  Id = int.Parse(dr["GroupId"].ToString()),
-                                  Name = dr["GroupName"].ToString(),
-                              }).ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return result;
-        }
+        //private List<ExpenseGroup> MapExpenseGroups(DataSet resultDataSet)
+        //{
+        //    List<ExpenseGroup> result = null;
+        //    try
+        //    {
+        //        if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
+        //        {
+        //            result = (from dr in resultDataSet.Tables[0].AsEnumerable()
+        //                      select new ExpenseGroup()
+        //                      {
+        //                          Id = int.Parse(dr["GroupId"].ToString()),
+        //                          Name = dr["GroupName"].ToString(),
+        //                      }).ToList();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return result;
+        //}
 
 
-        public List<ExpenseSubGroup> GetExpenseSubGroups()
-        {
-            try
-            {
-                return MapExpenseSubGroups(_expensesTrackerDataAccess.GetExpenseSubGroups());
-            }
-            catch (Exception ex)
-            {
-                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
+        //public List<ExpenseSubGroup> GetExpenseSubGroups()
+        //{
+        //    try
+        //    {
+        //        return MapExpenseSubGroups(_expensesTrackerDataAccess.GetExpenseSubGroups());
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return null;
+        //}
 
-        private List<ExpenseSubGroup> MapExpenseSubGroups(DataSet resultDataSet)
-        {
-            try
-            {
-                if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
-                {
-                    return (from dr in resultDataSet.Tables[0].AsEnumerable()
-                            select new ExpenseSubGroup()
-                            {
-                                GroupId = int.Parse(dr["GroupId"].ToString()),
-                                Id = int.Parse(dr["Id"].ToString()),
-                                SubGroupName = dr["SubGroupName"].ToString(),
-                            }).ToList();
-                }
-            }
-            catch (Exception ex)
-            {
-                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return null;
-        }
+        //private List<ExpenseSubGroup> MapExpenseSubGroups(DataSet resultDataSet)
+        //{
+        //    try
+        //    {
+        //        if (resultDataSet != null && resultDataSet.Tables.Count > 0 && resultDataSet.Tables[0].Rows.Count > 0)
+        //        {
+        //            return (from dr in resultDataSet.Tables[0].AsEnumerable()
+        //                    select new ExpenseSubGroup()
+        //                    {
+        //                        GroupId = int.Parse(dr["GroupId"].ToString()),
+        //                        Id = int.Parse(dr["Id"].ToString()),
+        //                        SubGroupName = dr["SubGroupName"].ToString(),
+        //                    }).ToList();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return null;
+        //}
 
 
         public bool AddExpenseTransaction(ExpenseTransaction transaction)
@@ -337,18 +337,18 @@ namespace BusinessAccess.HomeExpenses
                                                     TransactedBy = t["TransactedBy"].ToString(),
 
 
-                                                    ExpenseGroup = new ExpenseGroup()
-                                                    {
-                                                        Id = int.Parse(t["GroupId"].ToString()),
-                                                        Name = t["GroupName"].ToString(),
-                                                    },
+                                                    //ExpenseGroup = new ExpenseGroup()
+                                                    //{
+                                                    //    Id = int.Parse(t["GroupId"].ToString()),
+                                                    //    Name = t["GroupName"].ToString(),
+                                                    //},
 
-                                                    ExpenseSubGroup = new ExpenseSubGroup()
-                                                    {
-                                                        Id = int.Parse(t["SubGroupId"].ToString()),
-                                                        //GroupId = int.Parse(t["GroupId"].ToString()),
-                                                        SubGroupName = t["SubGroupName"].ToString(),
-                                                    }
+                                                    //ExpenseSubGroup = new ExpenseSubGroup()
+                                                    //{
+                                                    //    Id = int.Parse(t["SubGroupId"].ToString()),
+                                                    //    //GroupId = int.Parse(t["GroupId"].ToString()),
+                                                    //    SubGroupName = t["SubGroupName"].ToString(),
+                                                    //}
                                                 }).ToList()
                             }).ToList();
                 }
@@ -386,10 +386,10 @@ namespace BusinessAccess.HomeExpenses
                             {
                                 Group = dr["Group"].ToString(),
                                 SubGroup = dr["SubGroup"].ToString(),
-                                Credit = Conversions.ToDecimal(dr["credit"].ToString(), Convert.ToDecimal(-999999.99)),
-                                Debit = decimal.Parse(dr["debit"].ToString()),
-                                BudgetAmount = decimal.Parse(dr["Budget"].ToString()),
-                                Balance = decimal.Parse(dr["Balance"].ToString()),
+                                Credit = Conversions.ToDecimal(dr["credit"].ToString(), Convert.ToDecimal(0)),
+                                Debit = Conversions.ToDecimal(dr["debit"].ToString(), Convert.ToDecimal(0)),
+                                BudgetAmount = Conversions.ToDecimal(dr["Budget"].ToString(), Convert.ToDecimal(0)),
+                                Balance = Conversions.ToDecimal(dr["Balance"].ToString(), Convert.ToDecimal(0)),
                                 Level = int.Parse(dr["level"].ToString())
                             }).ToList();
 
@@ -399,12 +399,12 @@ namespace BusinessAccess.HomeExpenses
                                               {
                                                   Group = dr["Group"].ToString(),
                                                   SubGroup = dr["SubGroup"].ToString(),
-                                                  Credit = Conversions.ToDecimal(dr["credit"].ToString(), Convert.ToDecimal(-999999.99)),
-                                                  Debit = decimal.Parse(dr["debit"].ToString()),
-                                                  BudgetAmount = decimal.Parse(dr["Budget"].ToString()),
-                                                  Balance = decimal.Parse(dr["Balance"].ToString()),
+                                                  Credit = Conversions.ToDecimal(dr["credit"].ToString(), Convert.ToDecimal(0)),
+                                                  Debit = Conversions.ToDecimal(dr["debit"].ToString(), Convert.ToDecimal(0)),
+                                                  BudgetAmount = Conversions.ToDecimal(dr["Budget"].ToString(), Convert.ToDecimal(0)),
+                                                  Balance = Conversions.ToDecimal(dr["Balance"].ToString(), Convert.ToDecimal(0)),
                                                   Level = int.Parse(dr["level"].ToString())
-                                              }).ToList();
+                                              }).FirstOrDefault();
                 }
             }
             catch (Exception ex)
@@ -412,6 +412,44 @@ namespace BusinessAccess.HomeExpenses
                 DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return epenseTracker;
+        }
+
+        public List<ExpensesChartData> GetExpensesChartData()
+        {
+            try
+            {
+                return MapExpensesChartData(_expensesTrackerDataAccess.GetExpensesChartData());
+            }
+            catch (Exception ex)
+            {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return null;
+        }
+
+        private List<ExpensesChartData> MapExpensesChartData(DataSet dataSet)
+        {
+            List<ExpensesChartData> result = null;
+            try
+            {
+                if (dataSet != null && dataSet.Tables.Count > 0 && dataSet.Tables[0].Rows.Count > 0)
+                {
+                    result = (from dr in dataSet.Tables[0].AsEnumerable()
+                              select new ExpensesChartData()
+                              {
+                                  FromDate = Conversions.ToDateTime(dr["fromDate"], DateTime.Now),
+                                  ToDate = Conversions.ToDateTime(dr["toDate"], DateTime.Now),
+                                  Budget = Conversions.ToDecimal(dr["Budget"], Convert.ToDecimal(0)),
+                                  Credit = Conversions.ToDecimal(dr["credit"], Convert.ToDecimal(0)),
+                                  Expense = Conversions.ToDecimal(dr["debit"], Convert.ToDecimal(0)),
+                              }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return result;
         }
     }
 }

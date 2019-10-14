@@ -3,7 +3,7 @@
 -- Create date: 9/7/2019
 -- Description:	Get Credit Card Payments by Date Range
 -- =============================================
-CREATE PROCEDURE GetCreditCardPayments
+CREATE PROCEDURE [dbo].[GetCreditCardPayments]
 	@fromDate date, @toDate date
 	--exec GetCreditCardPayments @fromDate = '2019-09-01', @toDate = '2019-09-30'
 AS

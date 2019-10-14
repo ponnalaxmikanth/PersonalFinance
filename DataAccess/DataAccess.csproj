@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\AccountsDataAccess.cs" />
     <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
     <Compile Include="BaseDataAccess.cs" />
     <Compile Include="ExpensesTracker\ExpensesTrackerDataAccess.cs" />

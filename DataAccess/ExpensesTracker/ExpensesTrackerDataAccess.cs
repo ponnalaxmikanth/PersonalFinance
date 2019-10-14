@@ -307,5 +307,31 @@ namespace DataAccess
             return ds;
         }
 
+        public DataSet GetExpensesChartData()
+        {
+            DataSet ds = null;
+            try
+            {
+                if (UseMockData)
+                {
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "LastYearTransactions.json");
+                    ds = Utilities.Conversions.JSONToDataSet(fileContent);
+                }
+                else
+                {
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetLastYearTransactions", CommandType.StoredProcedure, parameters);
+                }
+                if (ds != null)
+                {
+                    Utilities.FileOperations.Write(DataStorePath + serverPath + "\\LastYearTransactions.json", Utilities.Conversions.DataTableToJSON(ds.Tables[0]));
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return ds;
+        }
     }
 }

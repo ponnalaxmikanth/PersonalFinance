@@ -14,6 +14,8 @@ BEGIN
 	-- =============================================
 
 	declare @result table (
+		fromDate date, 
+		toDate date,
 		[Group] nvarchar(100),
 		SubGroup nvarchar(100),
 		debit decimal(18,4), 
@@ -66,7 +68,7 @@ BEGIN
 		select 'Total', 'Total', sum(debit), sum(credit), sum(Budget), 1 from @result
 	END
 
-	update @result set Balance = [Budget] - [debit]
+	update @result set Balance = [Budget] - [debit], fromDate = @fromDate, toDate = @toDate
 	update @result set [Group] ='Unknown', [SubGroup] ='Unknown' where [Group] = ''
 	select * from @result order by [level], [Group]
 

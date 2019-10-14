@@ -25,18 +25,18 @@ namespace BusinessEntity.Expenses
         public AccountType AccountType { get; set; }
     }
 
-    public class ExpenseGroup
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-    }
+    //public class ExpenseGroup
+    //{
+    //    public int Id { get; set; }
+    //    public string Name { get; set; }
+    //}
 
-    public class ExpenseSubGroup
-    {
-        public int Id { get; set; }
-        public string SubGroupName { get; set; }
-        public int GroupId { get; set; }
-    }
+    //public class ExpenseSubGroup
+    //{
+    //    public int Id { get; set; }
+    //    public string SubGroupName { get; set; }
+    //    public int GroupId { get; set; }
+    //}
 
     public class ExpenseTransaction
     {
@@ -83,8 +83,8 @@ namespace BusinessEntity.Expenses
         public string Store { get; set; }
         public string TransactedBy { get; set; }
 
-        public ExpenseGroup ExpenseGroup { get; set; }
-        public ExpenseSubGroup ExpenseSubGroup { get; set; }
+        //public ExpenseGroup ExpenseGroup { get; set; }
+        //public ExpenseSubGroup ExpenseSubGroup { get; set; }
     }
 
     public class Budget
@@ -98,9 +98,18 @@ namespace BusinessEntity.Expenses
         public int Level { get; set; }
     }
 
+    public class ExpensesChartData
+    {
+        public DateTime FromDate { get; set; }
+        public DateTime ToDate { get; set; }
+        public decimal Expense { get; set; }
+        public decimal Credit { get; set; }
+        public decimal Budget { get; set; }
+    }
+
     public class ExpenseTracker {
         public List<Budget> Expenses { get; set; }
-        public List<Budget> Summary { get; set; }
+        public Budget Summary { get; set; }
     }
 
 }

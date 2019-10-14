@@ -98,5 +98,13 @@ namespace WebAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, result);
         }
 
+        [HttpGet]
+        [Route("api/Expenses/GetExpensesChartData")]
+        public HttpResponseMessage GetExpensesChartData()
+        {
+            List<ExpensesChartData> result = _expensesTrackerRepository.GetExpensesChartData();
+            return Request.CreateResponse(HttpStatusCode.OK, result);
+        }
+
     }
 }
