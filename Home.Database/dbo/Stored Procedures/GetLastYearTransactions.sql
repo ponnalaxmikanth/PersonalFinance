@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE GetLastYearTransactions
+﻿CREATE PROCEDURE [dbo].[GetLastYearTransactions]
 	--exec GetLastYearTransactions
 AS
 BEGIN
@@ -66,6 +66,7 @@ BEGIN
 	select fromDate, toDate, SUM(debit) debit, SUM(credit) credit, sum(Budget) Budget
 		from @result
 		group by fromDate, toDate
+	order by fromDate
 
 
 END

@@ -31,6 +31,7 @@ BEGIN
 	where h.PostedDate between @fromDate and @toDate
 		and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends'
 		and h.[Group] <> 'Car'
+		and h.[SubGroup] <> 'Withdraw'
 	group by h.[Group], h.SubGroup
 	Union all
 	select h.[Group], 'Car' SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
