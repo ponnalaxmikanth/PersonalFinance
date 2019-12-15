@@ -139,5 +139,14 @@ namespace WebAPI.Controllers
             return Request.CreateResponse(HttpStatusCode.OK, _mutualFundsRepository.GetIndividualInvestments(request));
         }
 
+        [HttpGet]
+        [Route("api/MutualFunds/GetInvestmentPerformance")]
+        public HttpResponseMessage GetInvestmentPerformance(int portfolioId)
+        {
+            List<FundsPerformance> lsp = _mutualFundsRepository.GetInvestmentPerformance(portfolioId);
+            return Request.CreateResponse(HttpStatusCode.OK, lsp);
+        }
+
     }
+
 }

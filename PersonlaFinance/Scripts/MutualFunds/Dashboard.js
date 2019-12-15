@@ -376,7 +376,6 @@ function GenerateChartNew(data) {
                         "valueAxis": "v1",
                         "lineColor": "#84b761",
                         "fillColors": "#84b761",
-                        "fillAlphas": 1,
                         "clustered": false,
                         "columnWidth": 0.8,
                     },

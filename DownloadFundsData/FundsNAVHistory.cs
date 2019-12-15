@@ -44,7 +44,7 @@ namespace DownloadFundsData
 
             while (toDate > fromDate)
             {
-                DisplayMessage("[" + DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss.ffff") + "]:" + " Getting NAV data - " + toDate.ToString("dd-MMM-yyyy"));
+                DisplayMessage("Getting NAV data - " + toDate.ToString("dd-MMM-yyyy"));
                 List<NAVData> navData = _mutualBusinessAccess.GetFundsNAV(toDate);
 
                 Parallel.ForEach(urls, optns, u =>
@@ -124,7 +124,7 @@ namespace DownloadFundsData
                 }
             }
             //DisplayMessage(" No Of Records - " + latestNavData.Count());
-            DisplayMessage("[" + DateTime.Now.ToString("dd-MMM-yyyy HH:mm:ss.ffff") + "]:" + message + date.ToString("dd-MMM-yyyy") + "  Count: " + latestNavData.Count());
+            DisplayMessage(message + date.ToString("dd-MMM-yyyy") + "  Count: " + latestNavData.Count());
 
             if (latestNavData != null && latestNavData.Count() > 0)
             {

@@ -73,10 +73,10 @@ namespace BusinessAccess.Stocks
 
         public List<StocksEntity> GetStocks(DateTime fromdate, DateTime todate, int Detail)
         {
-            return MapsStocks(_stocksDataAccess.GetStocks(fromdate, todate, Detail));
+            return MapStocks(_stocksDataAccess.GetStocks(fromdate, todate, Detail));
         }
 
-        private List<StocksEntity> MapsStocks(DataTable da)
+        private List<StocksEntity> MapStocks(DataTable da)
         {
             try
             {
@@ -95,7 +95,6 @@ namespace BusinessAccess.Stocks
                 DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return null;
-
         }
     }
 }

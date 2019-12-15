@@ -141,12 +141,14 @@ namespace Utilities
             return retValue;
         }
 
-        public static string ToString(object param, string defaultValue) {
+        public static string ToString(object param, string defaultValue)
+        {
             string retValue = defaultValue;
             try
             {
                 if (param == null) return defaultValue;
-                retValue = param.ToString();
+                //int.TryParse(param.ToString(), out retValue);
+                retValue = string.IsNullOrWhiteSpace(param.ToString()) ? defaultValue : param.ToString();
             }
             catch (Exception ex)
             {

@@ -40,8 +40,6 @@ namespace DataAccess.Stocks
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
 
-                //parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "fromdate", Value = fromdate });
-                //parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "todate", Value = todate });
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "details", Value = Detail });
 
                 DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetStocks", CommandType.StoredProcedure, parameters);
@@ -56,6 +54,8 @@ namespace DataAccess.Stocks
             }
             return null;
         }
+
+        
 
         public DataTable SoldStocks()
         {

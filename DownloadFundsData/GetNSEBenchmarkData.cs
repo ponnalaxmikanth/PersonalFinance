@@ -15,7 +15,7 @@ namespace DownloadFundsData
         IWebDriver webDriver = null;
         DumpData _dumpData = null;
         readonly string _application = "DownloadFundsData";
-        readonly string _component = "GetNSEBenchmarkData";
+        readonly string _component = "GetNSEBenchmarkData"; 
 
         public GetNSEBenchmarkData()
         {

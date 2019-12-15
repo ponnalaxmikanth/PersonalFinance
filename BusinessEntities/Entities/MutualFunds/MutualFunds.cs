@@ -421,4 +421,13 @@ namespace BusinessEntities.Entities
         public string Type { get; set; }
     }
 
+    public class FundsPerformance
+    {
+        public DateTime Date { get; set; }
+        public int Period { get; set; }
+        public double Investment { get; set; }
+        public double CurrentValue { get; set; }
+        public double Profit { get; set; }
+    }
+
 }

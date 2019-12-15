@@ -14,7 +14,7 @@ namespace DataAccess.MutualFunds
         readonly string _application = "DataAccess.MutualFunds";
         readonly string _component = "MutualFundsDataAccess";
 
-        readonly string serverPath = "\\MutualFunds\\";
+        readonly string serverPath = @"C:\Kanth\Projects\dotNet\PersonalFinance\PersonlaFinance\Data\MutualFunds\";
         //public void SetPath(string path)
         //{
         //    if (string.IsNullOrWhiteSpace(serverPath))
@@ -219,12 +219,16 @@ namespace DataAccess.MutualFunds
             {
                 if (UseMockData)
                 {
-                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "Funds.json");
                     ds = Utilities.Conversions.JSONToDataSet(fileContent);
                 }
                 else
                 {
-                    ds = SQLHelper.ExecuteProcedure("Investments", "Get_MF_Funds", CommandType.StoredProcedure, null);
+                    List<SqlParameter> parameters = new List<SqlParameter>();
+                    parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "transaction", Value = "add" });
+                    parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = 1 });
+
+                    ds = SQLHelper.ExecuteProcedure("Investments", "GetMyFunds", CommandType.StoredProcedure, parameters);
                 }
                 if (ds != null)
                 {
@@ -708,7 +712,7 @@ namespace DataAccess.MutualFunds
             {
                 if (UseMockData)
                 {
-                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "PortFolios.json");
+                    string fileContent = Utilities.FileOperations.ReadFileContent(DataStorePath + serverPath + "MyFunds.json");
                     ds = Utilities.Conversions.JSONToDataSet(fileContent);
                 }
                 else
@@ -933,6 +937,28 @@ namespace DataAccess.MutualFunds
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return ds;
+        }
+
+        public DataSet GetInvestmentPerformance(int portfolioId)
+        {
+            try
+            {
+                List<SqlParameter> parameters = new List<SqlParameter>();
+
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolioId", Value = portfolioId });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetInvestmentPerformance", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    return ds;
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return null;
+
         }
 
     }

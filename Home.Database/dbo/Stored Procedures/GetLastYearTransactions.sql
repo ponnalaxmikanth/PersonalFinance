@@ -7,9 +7,10 @@ BEGIN
 -- Create date: 09/29/2019
 -- Description:	
 -- =============================================
-		DECLARE @Today DATETIME, @nMonths TINYINT, @fromDate date, @toDate date
-	SET @nMonths = 12
-	SET @Today = DATEADD(month, (-1) * @nMonths, GETDATE())
+	DECLARE @Today DATETIME, @nMonths TINYINT, @fromDate date, @toDate date
+	SET @nMonths = 11
+	--SET @Today = DATEADD(month, (-1) * @nMonths, GETDATE())
+	SET @Today = GETDATE()
 
 	declare @dates table (
 		dates date,
@@ -29,16 +30,21 @@ BEGIN
 			[level] int
 		)
 
-	;WITH q AS
-	(
-		SELECT  @Today AS datum
-		UNION ALL
-		SELECT  DATEADD(month, 1, datum) 
-		FROM q WHERE datum + 1 < GETDATE()
-	)
+	--;WITH q AS
+	--(
+	--	SELECT  @Today AS datum
+	--	UNION ALL
+	--	SELECT  DATEADD(month, 1, datum) 
+	--	FROM q WHERE datum + 1 < GETDATE()
+	--)
+	--insert into @dates(dates)
+	--SELECT datum --SUBSTRING(DATENAME(MONTH, datum), 1, 3) + CAST(YEAR(datum) AS VARCHAR(4))
+	--FROM q
+
 	insert into @dates(dates)
-	SELECT datum --SUBSTRING(DATENAME(MONTH, datum), 1, 3) + CAST(YEAR(datum) AS VARCHAR(4))
-	FROM q
+	SELECT	DATEADD(MM, -1*number, @Today) --RIGHT(CONVERT(VARCHAR,DATEADD(MM, -1*number, @Today),106),8)
+	FROM	master.dbo.spt_values
+	WHERE TYPE = 'P' and number between 0 and @nMonths
 
 	update @dates set fromDate = DATEADD(mm, DATEDIFF(mm, 0, dates), 0),  toDate = DATEADD(s,-1,DATEADD(mm, DATEDIFF(m,0,dates)+1,0))
 

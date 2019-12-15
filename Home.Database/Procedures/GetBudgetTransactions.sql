@@ -1,7 +1,7 @@
 ﻿CREATE PROCEDURE [dbo].[GetBudgetTransactions]
 	-- Add the parameters for the stored procedure here
 	@fromDate date, @toDate date
-	--exec GetBudgetTransactions @fromDate = '06/01/2019', @toDate = '06/30/2019'
+	--exec GetBudgetTransactions @fromDate = '11/01/2019', @toDate = '11/30/2019'
 AS
 BEGIN
 
@@ -26,21 +26,43 @@ BEGIN
 	)
 	
 	insert into @result([Group], SubGroup, debit, credit, [level])
-	select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
-	from HomeTransactions h 
-	where h.PostedDate between @fromDate and @toDate
-		and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends'
-		and h.[Group] <> 'Car'
-		and h.[SubGroup] <> 'Withdraw'
-	group by h.[Group], h.SubGroup
-	Union all
-	select h.[Group], 'Car' SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
-		from HomeTransactions h 
+	select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0 AS [level]
+	from (
+		select h.Debit, h.Credit,
+			case when h.[Group] = 'Car' then 'Home' 
+				 when h.[Group] ='Home' and h.[SubGroup] = 'Rewards' then 'Home' 
+			else h.[Group] end AS [Group],
+			case when h.[Group] = 'Car' then 'Transport' 
+				 when h.[Group] ='Home' and h.[SubGroup] = 'Rewards' then 'Income' 
+			else h.SubGroup end AS SubGroup
+		from HomeTransactions h
 		where h.PostedDate between @fromDate and @toDate
-			and h.[Group] = 'Car'
-	group by h.[Group]
-	order by h.[Group], h.SubGroup
+				and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends' and h.[SubGroup] <> 'Withdraw'
+		union all
+		select i.Debit, i.Credit, i.[Group], i.SubGroup 
+		from HealthInsurance i
+		where i.PostedDate between @fromDate and @toDate
+	) h
+	group by h.[Group], h.SubGroup
 
+
+	--select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
+	--from HomeTransactions h 
+	--where h.PostedDate between @fromDate and @toDate
+	--	and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends'
+	--	and h.[Group] <> 'Car'
+	--	and h.[SubGroup] <> 'Withdraw'
+	--group by h.[Group], h.SubGroup
+	--Union all
+	--select h.[Group], 'Car' SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
+	--	from HomeTransactions h 
+	--	where h.PostedDate between @fromDate and @toDate
+	--		and h.[Group] = 'Car'
+	--group by h.[Group]
+	--order by h.[Group], h.SubGroup
+
+	--update @result set [Group] ='Home', [SubGroup] = 'Income' where [Group] ='Home' and [SubGroup] = 'Rewards'
+	--update @result set [Group] ='Home', [SubGroup] = 'Transport' where [Group] ='Car' and [SubGroup] = 'Car'
 
 	update r set r.Budget = b.Amount
 	from @result r
@@ -71,6 +93,7 @@ BEGIN
 
 	update @result set Balance = [Budget] - [debit], fromDate = @fromDate, toDate = @toDate
 	update @result set [Group] ='Unknown', [SubGroup] ='Unknown' where [Group] = ''
-	select * from @result order by [level], [Group]
+
+	select * from @result order by [level], Budget desc
 
 END

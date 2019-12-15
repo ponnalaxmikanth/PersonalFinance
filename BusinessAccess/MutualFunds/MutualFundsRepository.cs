@@ -115,6 +115,32 @@ namespace BusinessAccess.MutualFunds
             return lstTransactions;
         }
 
+        public List<FundsPerformance> GetInvestmentPerformance(int portfolioId)
+        {
+            return MapInvestmentPerformance(_mfDataAccess.GetInvestmentPerformance(portfolioId).Tables[0]);
+        }
+
+        private List<FundsPerformance> MapInvestmentPerformance(DataTable dataTable)
+        {
+            try
+            {
+                return (from DataRow dr in dataTable.Rows
+                        select new FundsPerformance()
+                        {
+                            Date = DateTime.Parse(dr["date"].ToString()),
+                            Period = int.Parse(dr["period"].ToString()),
+                            CurrentValue = Conversions.ToDouble(dr["currentvalue"].ToString(), 0),
+                            Investment = Conversions.ToDouble(dr["investment"].ToString(), 0),
+                            Profit = Conversions.ToDouble(dr["profit"].ToString(), 0)
+                        }).ToList();
+            }
+            catch (Exception ex)
+            {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return null;
+        }
+
         //private List<MF_Transactions> MapPortfolioTransactions(DataTable dataTable)
         //{
         //    List<MF_Transactions> lstTransactions = null;
@@ -205,34 +231,34 @@ namespace BusinessAccess.MutualFunds
                         FundCategory = new MF_FundCategory()
                         {
                             FundClassId = Conversions.ToInt("FundClassId", 0),
-                            FundClass = r["FundClass"].ToString()
+                            FundClass = Conversions.ToString(r["FundClass"], "FundClass")
                         },
                         FundHouse = new MF_FundHouses()
                         {
                             FundHouseId = int.Parse(r["FundHouseId"].ToString()),
-                            FundHouseName = r["FundHouseName"].ToString()
+                            FundHouseName = Conversions.ToString(r["FundHouseName"], "FundHouseName")
                         },
                         FundOptions = new MF_FundOptions()
                         {
                             OptionId = int.Parse(r["FundOptionId"].ToString()),
-                            FundOption = r["FundOption"].ToString()
+                            FundOption = Conversions.ToString(r["FundOption"], "FundOption")
                         },
                         FundType = new MF_FundTypes()
                         {
                             FundTypeId = int.Parse(r["FundTypeId"].ToString()),
-                            FundType = r["FundType"].ToString()
+                            FundType = Conversions.ToString(r["FundType"], "FundType")
                         },
-                        FundId = r.Field<int>("FundId"),
-                        FundName = r.Field<string>("FundName"),
-                        SchemaCode = r.Field<int>("SchemaCode"),
-                        DividendReInvestISIN = r.Field<string>("ISIN_DIV_Reinvestment"),
-                        GrowthISIN = r.Field<string>("ISINGrowth"),
-                        CreatedDate = r.Field<DateTime>("CreatedDate"),
+                        FundId = Conversions.ToInt("FundId", 0),
+                        FundName = Conversions.ToString(r["FundName"], "FundName"),
+                        SchemaCode = Conversions.ToInt("SchemaCode", 0),
+                        // DividendReInvestISIN = Conversions.ToString(r["ISIN_DIV_Reinvestment"], "ISIN_DIV_Reinvestment"),
+                        // GrowthISIN = Conversions.ToString(r["ISINGrowth"], "ISINGrowth"),
+                        // CreatedDate = r.Field<DateTime>("CreatedDate"),
 
-                        PortfolioId = int.Parse(r["PortfolioId"].ToString()),
+                        // PortfolioId = Conversions.ToInt(r["PortfolioId"], 0),
 
-                        GrowthSchemaCode = int.Parse(r["GrowthSchemaCode"].ToString()),
-                        GrowthFundName = r["SchemaName"].ToString()
+                        GrowthSchemaCode = Conversions.ToInt(r["GrowthSchemaCode"], 0),
+                        GrowthFundName = Conversions.ToString(r["GrowthFundName"], "GrowthFundName")
                     }).ToList();
                 }
                 else if (dtFunds != null && dtFunds.Rows.Count == 0)
@@ -310,10 +336,10 @@ namespace BusinessAccess.MutualFunds
                 {
                     lstFundHouses = dtFundHouses.AsEnumerable().Select(r => new MF_FundHouses()
                     {
-                        FundHouseId = Conversions.ToInt("FundHouseId", 0),
-                        FundHouseName = Conversions.ToString("FundHouseName", string.Empty),
-                        Description = Conversions.ToString("Description", string.Empty),
-                        CreatedDate = Conversions.ToDateTime("CreatedDate", DateTime.Now)
+                        FundHouseId = Conversions.ToInt( r["FundHouseId"], 0),
+                        FundHouseName = Conversions.ToString(r["FundHouseName"], "FundHouseName"),
+                        Description = Conversions.ToString(r["Description"], string.Empty),
+                        CreatedDate = Conversions.ToDateTime(r["CreatedDate"], DateTime.Now)
                     }).ToList();
                 }
                 else if (dtFundHouses != null && dtFundHouses.Rows.Count == 0)
@@ -337,10 +363,10 @@ namespace BusinessAccess.MutualFunds
                 {
                     lstFundCategory = dtFundCategory.AsEnumerable().Select(r => new MF_FundCategory()
                     {
-                        FundClass = r.Field<string>("FundClass"),
-                        FundClassId = r.Field<int>("FundClassId"),
+                        FundClass = Conversions.ToString(r["FundClass"], "FundClass"),
+                        FundClassId = Conversions.ToInt(r["FundClassId"], 0),
                         IsSectorCategory = r.Field<bool>("IsSectorCategory"),
-                        Description = r.Field<string>("Description"),
+                        Description = Conversions.ToString(r["Description"], "Description"),
                         CreatedDate = r.Field<DateTime>("CreatedDate")
                     }).ToList();
                 }

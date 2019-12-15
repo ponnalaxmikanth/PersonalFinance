@@ -43,17 +43,27 @@ BEGIN
 	'comments' = x.v.value('comments[1]', 'nvarchar(100)')
 	from @xml.nodes('/root/row') x(v)
 
-	--update @table set transactdate = posteddate where posteddate is null
-	select * from @table
 
+	--delete from HomeTransactions where AccountId = @accountId and PostedDate >= @minDate
 
-	delete from HomeTransactions where AccountId = @accountId and PostedDate >= @minDate
+	-- update the records which exists in data base and changed
+	update h set h.Description = t.description, h.Debit = t.debit, h.Credit = t.credit, h.Total = t.total, h.[Group] = t.grp
+		, h.SubGroup = t.subgroup, h.TransactedBy = t.transactby, h.Comments = t.comments, h.LastModifiedDate = GETDATE()
+	from @table t
+	inner join HomeTransactions h on h.AccountId = t.acctNo and h.RowNumber = t.rowNum
+	--where t.description <> h.Description or t.debit <> h.Debit or t.credit <> h.Credit or t.total <> h.Total or t.transactby <> h.TransactedBy
+	--		or t.grp <> h.[Group] or t.subgroup <> h.SubGroup or t.[comments] <> h.[Comments]
 
-	insert into HomeTransactions (RowNumber, PostedDate, [Group], SubGroup, Description, Debit, Credit, Total, AccountId, TransactedBy, Store, Comments, CreatedDate, LastModifiedDate)
-	select tbl.rowNum, tbl.posteddate, tbl.grp, tbl.subgroup, tbl.description, tbl.debit, tbl.credit, tbl.total, tbl.acctNo, tbl.transactby, '', tbl.comments, GETDATE(), GETDATE()
+	insert into HomeTransactions (RowNumber, PostedDate, [Group], SubGroup, Description, Debit, Credit, Total, AccountId, TransactedBy, Store, Comments, CreatedDate
+									,LastModifiedDate)
+	select tbl.rowNum, tbl.posteddate, tbl.grp, tbl.subgroup, tbl.description, tbl.debit, tbl.credit, tbl.total, tbl.acctNo, tbl.transactby, '', tbl.comments, GETDATE()
+								,GETDATE()
 	from HomeTransactions t
-	 right JOIN @table tbl ON tbl.acctNo = t.AccountId and tbl.posteddate = t.PostedDate and tbl.description = t.Description and tbl.debit = t.Debit and tbl.credit = t.Credit
+	 right JOIN @table tbl ON tbl.acctNo = t.AccountId  and tbl.rowNum = t.RowNumber 
+		--and tbl.posteddate = t.PostedDate and tbl.description = t.Description and tbl.debit = t.Debit and tbl.credit = t.Credit
 	 where t.AccountId is null
 	 order by tbl.rowNum
+
+	select * from @table
 
     END

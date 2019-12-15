@@ -10,7 +10,7 @@ BEGIN
 	if(@transaction = 'add')
 	begin
 		select distinct -1 PortfolioId, f.FundId, f.FundName , f.FundHouseId, h.FundHouseName, f.FundTypeId, t.FundType, f.FundClassId, c.FundClass,
-		 f.FundOptionId, o.FundOption, f.SchemaCode, f.GrowthSchemaCode, g.SchemaName
+		 f.FundOptionId, o.FundOption, f.SchemaCode, f.GrowthSchemaCode, g.SchemaName GrowthFundName
 		from MF_Funds f
 		inner join MF_FundHouses h on f.FundHouseId = h.FundHouseId
 		inner join MF_FundTypes t on f.FundTypeId = t.FundTypeId
@@ -22,7 +22,7 @@ BEGIN
 	else
 	begin
 		select distinct p.PortfolioId, f.FundId, f.FundName , f.FundHouseId, h.FundHouseName, f.FundTypeId, t.FundType, f.FundClassId, c.FundClass,
-		 f.FundOptionId, o.FundOption, f.SchemaCode, f.GrowthSchemaCode, g.SchemaName
+		 f.FundOptionId, o.FundOption, f.SchemaCode, f.GrowthSchemaCode, g.SchemaName GrowthFundName
 		from MF_Funds f
 		inner join MF_Purchases p on f.FundId = p.FundId
 		inner join MF_FundHouses h on f.FundHouseId = h.FundHouseId
