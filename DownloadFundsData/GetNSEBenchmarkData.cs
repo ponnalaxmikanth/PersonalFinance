@@ -73,7 +73,7 @@ namespace DownloadFundsData
             }
         }
 
-        public void DownloadNSEBenchMarkData()
+        public void DownloadNSEBenchMarkData(DateTime fromDate, DateTime toDate)
         {
             try
             {
@@ -85,7 +85,7 @@ namespace DownloadFundsData
                 {
                     //date = startDate;
                     //GetHistoryData(date, date.AddMonths(1).AddDays(-1), benchmark);
-                    GetHistoryData(DateTime.Now.Date.AddDays(-15), DateTime.Now.Date, benchMarks[i], i, benchMarks.Count);
+                    GetHistoryData(toDate, fromDate, benchMarks[i], i, benchMarks.Count);
                 }
             }
             catch (Exception ex)
@@ -116,13 +116,16 @@ namespace DownloadFundsData
 
         public List<BenchMark> GetHistoryData(DateTime fromDate, DateTime toDate, string indexType, int index, int count)
         {
-            DisplayMessage("From: " + fromDate.ToString("MM/dd/yyyy") + " To: " + toDate.ToString("MM/dd/yyyy") + " (" + index + "/" + count + ") Benchmark: " + indexType);
+            DisplayMessage((index + 1) + "/" + count + ": Benchmark: " + indexType);
             List<BenchMark> result = null;
             try
             {
                 //webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2017&toDate=31-01-2017";
-                webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=" + indexType 
+                webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=29-12-2019&toDate=13-01-2020";
+                webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=" + indexType
                                         + "&fromDate=" + fromDate.ToString("dd-MM-yyyy") + "&toDate=" + toDate.ToString("dd-MM-yyyy");
+
+                // webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2020&toDate=20-01-2020";
 
                 //var data = webDriver.FindElements(By.XPath("html/body/table/tbody/tr"));
                 var data = GetElementsByXPath(webDriver, "html/body/table/tbody/tr");

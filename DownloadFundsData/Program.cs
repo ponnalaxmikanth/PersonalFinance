@@ -42,8 +42,11 @@ namespace DownloadFundsData
             }
             if (args[0] == "NSE")
             {
-                Console.Title = "Downloading NSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new GetNSEBenchmarkData().DownloadNSEBenchMarkData();
+                
+                DateTime fromdate = DateTime.Now.Date;
+                DateTime todate = DateTime.Now.Date.AddDays(-15);
+                Console.Title = "Downloading NSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + todate.Date.ToString("MM/dd/yyyy") + " - " + fromdate.Date.ToString("MM/dd/yyyy");
+                new GetNSEBenchmarkData().DownloadNSEBenchMarkData(fromdate, todate);
             }
             if (args[0] == "NAV")
             {

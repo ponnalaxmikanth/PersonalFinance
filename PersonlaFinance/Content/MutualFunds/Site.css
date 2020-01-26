@@ -10,12 +10,26 @@
     width: auto;
 }
 
-.container-fluid .header {
-    padding-top: 5px;
-    margin-bottom: 5px;
-    background-color: #c1c5cc;
-    /*color: white;*/
+.container-fluid {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
+
+    .container-fluid .dashboard-view .invest-graph {
+        padding-top: 5px;
+    }
+
+    .container-fluid .header {
+        padding-top: 5px;
+        margin-bottom: 5px;
+        background-color: #c1c5cc;
+        /*color: white;*/
+    }
+
+.container-fluid .border-bottom {
+    border-bottom: 2px solid #eeeeee;
+}
+
 
     .container-fluid .header .portfoio {
         padding-left: 0px;
