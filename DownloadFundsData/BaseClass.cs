@@ -49,6 +49,21 @@ namespace DownloadFundsData
             return retVal;
         }
 
+        public ulong? GetUInt64(string val)
+        {
+            ulong retValue = 0;
+            try
+            {
+                if (!ulong.TryParse(val, out retValue))
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                //LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return retValue;
+        }
+
         public ReadOnlyCollection<IWebElement> GetElementsByXPath(IWebDriver webDriver, string path)
         {
             int count = 0;

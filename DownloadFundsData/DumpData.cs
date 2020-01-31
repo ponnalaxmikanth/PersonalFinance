@@ -40,5 +40,17 @@ namespace DownloadFundsData
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
+
+        public void DumpBenchMarkData(string xmlData, string benhmark)
+        {
+            try
+            {
+                _mfDataAccess.DumpBenchMarkData(benhmark, xmlData);
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+        }
     }
 }

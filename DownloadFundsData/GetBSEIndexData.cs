@@ -6,7 +6,10 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Firefox;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using System.Xml.Linq;
+using System.Linq;
 
 namespace DownloadFundsData
 {
@@ -15,10 +18,12 @@ namespace DownloadFundsData
         IWebDriver webDriver = null;
         readonly string _application = "DownloadFundsData";
         readonly string _component = "GetBSEIndexData";
+        DumpData _dumpData = null;
 
         public GetBSEIndexData()
         {
             webDriver = new FirefoxDriver();
+            _dumpData = new DumpData();
         }
 
         ~GetBSEIndexData()
@@ -67,7 +72,7 @@ namespace DownloadFundsData
                 string low = string.Empty;
                 string closeValue;
                 string date;
-                DumpData _dumpData = new DumpData();
+                // DumpData _dumpData = new DumpData();
                 foreach (var link in links[0].Children)
                 {
                     i++;
@@ -114,7 +119,7 @@ namespace DownloadFundsData
             }
         }
 
-        internal void GetBseBenchMarkHistoryData(string bseBaseUrl)
+        internal void GetBseBenchMarkHistoryData(string bseBaseUrl, DateTime fromdate, DateTime todate)
         {
             try
             {
@@ -126,14 +131,32 @@ namespace DownloadFundsData
                 var index = webDriver.FindElement(By.Id("ddlIndex"));
                 var selectElement = new SelectElement(index);
                 var options = index.FindElements(By.TagName("option"));
+                DisplayMessage("options: " + options.Count);
 
+                List<string> opts = new List<string>();
                 for (int i = 0; i < options.Count; i++)
                 {
                     if (i == 0) continue;
                     IWebElement currentOption = options[i];
-                    string val = currentOption.GetAttribute("value");
+                    string val = currentOption.GetAttribute("value").Trim();
 
-                    GetIndexHistoricalData(val, DateTime.Now.AddMonths(-1), DateTime.Now);
+                    opts.Add(val);
+                }
+
+                if (webDriver != null)
+                {
+                    webDriver.Close();
+                    webDriver.Dispose();
+                }
+
+                DisplayMessage("total options: " + opts.Count);
+                for (int i = 0; i < opts.Count; i++)
+                {
+                    if (i == 0) continue;
+                    //IWebElement currentOption = options[i];
+                    //string val = currentOption.GetAttribute("value");
+
+                    GetIndexHistoricalData(i, opts.Count, opts[i], fromdate, todate);
                 }
 
                 //var data = GetElementsById(webDriver, "ddlIndex");
@@ -159,32 +182,90 @@ namespace DownloadFundsData
             }
         }
 
-        private void GetIndexHistoricalData(string val, DateTime fromDate, DateTime toDate)
+        private void GetIndexHistoricalData(int index, int total, string val, DateTime fromDate, DateTime toDate)
         {
             try
             {
-                using (var client = new HttpClient())
+                DateTime _todate = fromDate.AddDays(15);
+                List<BenchMark> historydata = new List<BenchMark>();
+                while (_todate <= toDate && fromDate <= _todate)
                 {
-                    string url = "https://api.bseindia.com/BseIndiaAPI/api/IndexArchDaily/w?fmdt="
-                            + fromDate.ToString("dd/MM/yyyy") + "&index=" + val + "&period=D&todt=" + toDate.ToString("dd/MM/yyyy");
-                    client.BaseAddress = new Uri(url);
-                    var responseTask = client.GetAsync(url);
-                    responseTask.Wait();
-
-                    var result = responseTask.Result;
-                    if (result.IsSuccessStatusCode)
+                    using (var client = new HttpClient())
                     {
-                        var jsonString = result.Content.ReadAsStringAsync().Result;
-                        BSEHistoricalData dataRes = JsonConvert.DeserializeObject<BSEHistoricalData>(jsonString);
-                    }
-                }
+                        // DisplayMessage("index: " + val + " " + (index + 1) + "/" + total + " " + fromDate.ToString("dd/MM/yyyy") + " - " + _todate.ToString("dd/MM/yyyy"));
+                        string url = "https://api.bseindia.com/BseIndiaAPI/api/IndexArchDaily/w?fmdt=" + fromDate.ToString("dd/MM/yyyy") + "&index=" + val + "&period=D&todt=" + _todate.ToString("dd/MM/yyyy");
+                        client.BaseAddress = new Uri(url);
+                        var responseTask = client.GetAsync(url);
+                        responseTask.Wait();
 
+                        var result = responseTask.Result;
+                        if (result.IsSuccessStatusCode)
+                        {
+                            var jsonString = result.Content.ReadAsStringAsync().Result;
+                            BSEHistoricalData dataRes = JsonConvert.DeserializeObject<BSEHistoricalData>(jsonString);
+                            // DisplayMessage("total records: " + dataRes.Table.Length);
+                            DisplayMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
+                                + fromDate.ToString("MM/dd/yyyy") + " - " + _todate.ToString("MM/dd/yyyy") + " records: " + dataRes.Table.Length);
+                            foreach (var data in dataRes.Table)
+                            {
+                                historydata.Add(new BenchMark()
+                                {
+                                    BenchMarkName = val,
+                                    Date = data.tdate,
+                                    Open = GetDecimalValue(data.I_open.ToString()),
+                                    High = GetDecimalValue(data.I_high.ToString()),
+                                    Low = GetDecimalValue(data.I_low.ToString()),
+                                    Close = GetDecimalValue(data.I_close.ToString()),
+                                    SharesTraded = GetUInt64(data.TOTAL_SHARES_TRADED.ToString()),
+                                    TurnOver = GetDecimalValue(data.Turnover.ToString())
+                                });
+                            }
+                        }
+                        else
+                        {
+                            DisplayMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
+                                + fromDate.ToString("MM/dd/yyyy") + " - " + _todate.ToString("MM/dd/yyyy") + " Failed to get response");
+                        }
+                    }
+                    fromDate = _todate.AddDays(1);
+                    _todate = fromDate.AddDays(15) > toDate ? toDate : fromDate.AddDays(15);
+                }
+                if (historydata != null && historydata.Count > 0)
+                {
+                    string xmlStr = GetXMLString(historydata);
+                    _dumpData.DumpBenchMarkData(val, xmlStr);
+                }
             }
             catch (Exception ex)
             {
                 DisplayMessage("Exception while GetIndexHistoricalData -  " + val + " Exception: " + ex.Message);
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
+        }
+
+        private string GetXMLString(List<BenchMark> data)
+        {
+            string returnStr = string.Empty;
+            try
+            {
+                returnStr = new XElement("root",
+                    (from n in data
+                     select
+                     new XElement("data",
+                           new XElement("open", n.Open),
+                           new XElement("high", n.High),
+                           new XElement("low", n.Low),
+                           new XElement("close", n.Close),
+                           new XElement("date", n.Date.ToString("MM/dd/yyyy"))
+                           )
+                    )
+                  ).ToString();
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return returnStr;
         }
     }
 }

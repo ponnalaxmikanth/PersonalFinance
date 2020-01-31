@@ -676,6 +676,22 @@ namespace DataAccess.MutualFunds
             }
         }
 
+        public void DumpBenchMarkData(string xmlData, string benchMark)
+        {
+            try
+            {
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "benchmark", Value = benchMark });
+                parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xmldata", Value = xmlData });
+
+                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "DumpBenchMarkDataBulk", CommandType.StoredProcedure, parameters);
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+        }
+
         public DataSet GetPortfolios()
         {
             DataSet ds = null;
@@ -959,6 +975,25 @@ namespace DataAccess.MutualFunds
             }
             return null;
 
+        }
+
+        public DataSet GetInvestmentFundsDetails(int portfolioId)
+        {
+            try
+            {
+                List<SqlParameter> parameters = new List<SqlParameter>();
+                parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "portfolio", Value = portfolioId });
+                DataSet ds = SQLHelper.ExecuteProcedure("Investments", "GetFundsValue", CommandType.StoredProcedure, parameters);
+                if (ds != null)
+                {
+                    return ds;
+                }
+            }
+            catch (Exception ex)
+            {
+                LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return null;
         }
 
     }

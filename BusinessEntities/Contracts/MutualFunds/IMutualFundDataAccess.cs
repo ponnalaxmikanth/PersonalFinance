@@ -66,5 +66,7 @@ namespace BusinessEntities.Contracts
 
         DataSet GetInvestmentPerformance(int portfolioId);
 
+        DataSet GetInvestmentFundsDetails(int portfolioId);
+
     }
 }

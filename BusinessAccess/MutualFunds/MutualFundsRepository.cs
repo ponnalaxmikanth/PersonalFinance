@@ -1060,5 +1060,45 @@ namespace BusinessAccess.MutualFunds
             return result;
         }
 
+
+        public List<FundsDetails> GetInvestmentFundsDetails(int portfolioId)
+        {
+            return MapInvestmentFundsDetails(_mfDataAccess.GetInvestmentFundsDetails(portfolioId).Tables[0]);
+        }
+
+        private List<FundsDetails> MapInvestmentFundsDetails(DataTable dataTable)
+        {
+            List<FundsDetails> result = null;
+            try
+            {
+                if (dataTable != null)
+                {
+                    result = (from dr in dataTable.AsEnumerable()
+                              select new FundsDetails()
+                              {
+                                  FundId = Conversions.ToInt(dr["FundId"].ToString(), 0),
+                                  SchemaCode = Conversions.ToInt(dr["SchemaCode"].ToString(), 0),
+                                  FundName = Conversions.ToString(dr["SchemaName"].ToString(), ""),
+                                  Category = Conversions.ToString(dr["Category"].ToString(), ""),
+                                  FundType = Conversions.ToString(dr["FundType"].ToString(), ""),
+                                  FundOption = Conversions.ToString(dr["FundOption"].ToString(), ""),
+                                  averageDays = Conversions.ToInt(dr["avgDays"].ToString(), 0),
+                                  Units = Conversions.ToDouble(dr["Units"].ToString(), 0),
+                                  Dividend = Conversions.ToDouble(dr["Dividend"].ToString(), 0),
+                                  PurchaseNAV = Conversions.ToDouble(dr["PurchaseNAV"].ToString(), 0),
+                                  ActualNAV = Conversions.ToDouble(dr["ActualNAV"].ToString(), 0),
+                                  NAV = Conversions.ToDouble(dr["NAV"].ToString(), 0),
+                                  Amount = Conversions.ToDouble(dr["Amount"].ToString(), 0),
+                                  CurrentValue = Conversions.ToDouble(dr["currentValue"].ToString(), 0)
+                              }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                DBLogging.LogException(_application, _component, ex.Message, ex.StackTrace);
+            }
+            return result;
+        }
+
     }
 }

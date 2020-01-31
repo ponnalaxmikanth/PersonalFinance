@@ -430,4 +430,22 @@ namespace BusinessEntities.Entities
         public double Profit { get; set; }
     }
 
+    public class FundsDetails
+    {
+        public int FundId { get; set; }
+        public int SchemaCode { get; set; }
+        public string FundName { get; set; }
+        public string Category { get; set; }
+        public string FundType { get; set; }
+        public string FundOption { get; set; }
+        public int averageDays { get; set; }
+        public double Units { get; set; }
+        public double Dividend { get; set; }
+        public double PurchaseNAV { get; set; }
+        public double ActualNAV { get; set; }
+        public double NAV { get; set; }
+        public double Amount { get; set; }
+        public double CurrentValue { get; set; }
+    }
+
 }
