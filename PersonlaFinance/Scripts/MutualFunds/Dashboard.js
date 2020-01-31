@@ -47,13 +47,11 @@ function GetDashboardData(portfolioId) {
 };
 
 function GetDashboardDataSuccess(response) {
-    console.log(JSON.stringify(response));
-
-    if (response != null && response != undefined) {
+    if (response !== null && response !== undefined) {
         GenerateSips(response.SipDetails);
     }
 
-    if (response != null && response != undefined) {
+    if (response !== null && response !== undefined) {
         SetInvesetments(response);
     }
 };
@@ -182,7 +180,6 @@ function GetDashboardView(id) {
 };
 
 function GetDashboardViewSuccess(response) {
-    console.log('getview success');
 
     $('[data-container="view"]').html(response);
 
@@ -629,7 +626,6 @@ function GetIndividualInvestments(portfolioId) {
 
 function GetIndividualInvestmentsSuccess(response) {
     try {
-        console.log('GetIndividualInvestmentsSuccess');
         individualInvests = response;
         GenerateInvestmentDetails(response);
         $("input[name=Invest][value='Invest']").prop("checked", true);
@@ -735,7 +731,6 @@ function GetPerfOfMoreThanYear(portfolioId) {
 
 function GetPerfOfMoreThanYearSuccess(response) {
     try {
-        console.log('GetPerfOfMoreThanYearSuccess');
         GetPerfOfMoreThanYearDetails(response);
     }
     catch (ex) {

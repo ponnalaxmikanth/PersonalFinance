@@ -31,20 +31,22 @@ namespace DownloadFundsData
 
             if (args[0] == "BSE")
             {
-                Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                //new GetBSEIndexData().GetBseBenchMarkData(bseBaseUrl);
-                new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl);
+                int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
+                DateTime fromdate = DateTime.Now.Date.AddDays(-noOfDays);
+                DateTime todate = DateTime.Now.Date;
+                Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + fromdate.Date.ToString("MM/dd/yyyy") + " - " + todate.Date.ToString("MM/dd/yyyy");
+                new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl, fromdate, todate);
             }
-            if (args[0] == "BSEHistory")
-            {
-                Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new DownloadBSEIndicesHistory().DownloadBSEHistory();
-            }
+            //if (args[0] == "BSEHistory")
+            //{
+            //    Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            //    new DownloadBSEIndicesHistory().DownloadBSEHistory();
+            //}
             if (args[0] == "NSE")
             {
-                
+                int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
                 DateTime fromdate = DateTime.Now.Date;
-                DateTime todate = DateTime.Now.Date.AddDays(-15);
+                DateTime todate = DateTime.Now.Date.AddDays(-noOfDays);
                 Console.Title = "Downloading NSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + todate.Date.ToString("MM/dd/yyyy") + " - " + fromdate.Date.ToString("MM/dd/yyyy");
                 new GetNSEBenchmarkData().DownloadNSEBenchMarkData(fromdate, todate);
             }
@@ -88,8 +90,9 @@ namespace DownloadFundsData
             //    DownloadMorningStarMFData();
 
             DisplayMessage("Processing completed...");
-            DisplayMessage("Press any key to exit...");
-            Console.ReadKey();
+            DisplayMessage("waiting to close app");
+            System.Threading.Thread.Sleep(30 * 1000);
+            //Console.ReadKey();
             DisplayMessage("exiting application...");
             return;
         }
