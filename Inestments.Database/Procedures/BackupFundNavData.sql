@@ -9,6 +9,6 @@ BEGIN
 		ON n.SchemaCode = h.SchemaCode and n.[Date] = h.[Date]
 
 
-	insert into FundsNav_History(SchemaCode, NAV, RepurchasePrice, SalePrice, [Date] ,CreateDateTime, LastUpdateDateTime)
-	select SchemaCode, NAV, RepurchasePrice, SalePrice, [Date], GETDATE(), GETDATE() from FundsNav
+	insert into FundsNav_History(SchemaCode, NAV, RepurchasePrice, SalePrice, [Date])
+	select SchemaCode, NAV, RepurchasePrice, SalePrice, [Date] from FundsNav
 END

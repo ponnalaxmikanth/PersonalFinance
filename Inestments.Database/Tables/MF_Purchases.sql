@@ -11,8 +11,8 @@
 	[Dividend] [decimal](10, 4) NULL,
 	[ActualNAV] [decimal](10, 4) NULL,
 	[Broker] [nvarchar](50) NULL,
-	[CreateDate] [datetime] NOT NULL default(getdate()),
-	[LastUpdateDateTime] [datetime] NULL default(getdate()),
+	[CreateDate] [datetime] NOT NULL CONSTRAINT [DF_MF_Purchases_CreatedDate] default(getdate()),
+	[LastUpdateDateTime] [datetime] NULL CONSTRAINT [DF_MF_Purchases_LastUpdateDateTime] default(getdate()),
 	[IsSipInvestment] [nvarchar](1) NULL,
 	[SIPID] [int] NULL,
  CONSTRAINT [PK_MF_Purchases] PRIMARY KEY CLUSTERED 

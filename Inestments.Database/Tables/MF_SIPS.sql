@@ -8,7 +8,8 @@
 	[IsActive] [nvarchar](1) NOT NULL CONSTRAINT [DF_MF_SIPS_IsActive]  DEFAULT (N'N'),
 	[SIPDate] [int] NOT NULL,
 	[Frequency] [nvarchar](50) NULL,
-	[CreateDate] [datetime] NOT NULL default(getdate()),
+	[CreateDate] [datetime] NOT NULL CONSTRAINT [DF_MF_SIPS_CreatedDate] DEFAULT (getdate()),
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_SIPS_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_MF_SIPS] PRIMARY KEY CLUSTERED 
 (
 	[SIPId] ASC

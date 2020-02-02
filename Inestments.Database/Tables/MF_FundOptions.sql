@@ -2,7 +2,8 @@
 	[OptionId] [int] IDENTITY(1,1) NOT NULL,
 	[FundOption] [nvarchar](100) NOT NULL,
 	[Description] [nvarchar](150) NULL,
-	[CreatedDate] [datetime] NOT NULL default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_FundOptions_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_FundOptions_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_FundOptions] PRIMARY KEY CLUSTERED 
 (
 	[OptionId] ASC

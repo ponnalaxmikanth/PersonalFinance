@@ -9,7 +9,8 @@
 	[ToSchemaCode] [int] NOT NULL,
 	[ToUnits] [decimal](10, 4) NOT NULL,
 	[PurchaseNAV] [decimal](10, 4) NOT NULL,
-	[CreateDate] [datetime] NOT NULL default(getdate()),
+	[CreateDate] [datetime]  CONSTRAINT [DF_FundSwitches_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_FundSwitches_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_FundSwitches] PRIMARY KEY CLUSTERED 
 (
 	[transactionId] ASC

@@ -68,10 +68,9 @@ BEGIN
 	CLOSE contacts_cursor;
 	DEALLOCATE contacts_cursor;
 
-	delete from @result where level = 1
-	select fromDate, toDate, SUM(debit) debit, SUM(credit) credit, sum(Budget) Budget
-		from @result
-		group by fromDate, toDate
+	--delete from @result where level = 1
+	--select fromDate, toDate, SUM(debit) debit, SUM(credit) credit, sum(Budget) Budget from @result group by fromDate, toDate
+	select * from @result where level = 1
 	order by fromDate
 
 

@@ -3,7 +3,8 @@
 	[Portfolio] [nvarchar](50) NOT NULL,
 	[IsActive] [nvarchar](2) NULL,
 	[Description] [nvarchar](150) NULL,
-	[CreatedDate] [datetime] NOT NULL default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_Portfolios_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_Portfolios_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_PortfolioId] PRIMARY KEY CLUSTERED 
 (
 	[PortfolioId] ASC

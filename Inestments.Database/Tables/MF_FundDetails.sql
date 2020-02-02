@@ -7,8 +7,8 @@
 	[MinimumInvestment] [decimal](10, 4) NULL,
 	[BenchMark] [nvarchar](100) NULL,
 	[MSCategory] [nvarchar](100) NULL,
-	[CreatedDatetime] [datetime] NOT NULL default(getdate()),
-	[LastUpdateDateTime] [datetime] NOT NULL default(getdate()),
+	[CreatedDatetime] [datetime]  CONSTRAINT [DF_MF_FundDetails_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastUpdateDateTime] [datetime]CONSTRAINT [DF_MF_FundDetails_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_MF_FundDetails] PRIMARY KEY CLUSTERED 
 (
 	[SchemaCode] ASC

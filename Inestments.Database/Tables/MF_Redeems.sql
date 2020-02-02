@@ -14,8 +14,9 @@
 	[SellNAV] [decimal](10, 4) NULL,
 	[SellSTT] [decimal](10, 4) NULL,
 	[Broker] [nvarchar](50) NULL,
-	[CreateDate] [datetime] NOT NULL default(getdate()),
-	[LastUpdateDateTime] [datetime] NULL default(getdate()),
+	[CreateDate] [datetime] NOT NULL CONSTRAINT [DF_MF_Redeems_CreatedDate] DEFAULT (getdate()),
+	[LastUpdateDateTime] [datetime] NULL  CONSTRAINT [DF_LastUpdateDateTime_CreatedDate] default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_Redeems_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
 	[IsSipInvestment] [nvarchar](1) NULL,
 	[SIPID] [int] NULL,
  CONSTRAINT [PK_MF_Redeems] PRIMARY KEY CLUSTERED 

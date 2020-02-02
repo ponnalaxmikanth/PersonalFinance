@@ -2,7 +2,8 @@
 	[FundTypeId] [int] IDENTITY(1,1) NOT NULL,
 	[FundType] [nvarchar](100) NOT NULL,
 	[Description] [nvarchar](100) NULL,
-	[CreatedDate] [datetime] NOT NULL default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_FundTypes_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_FundTypes_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_FundType] PRIMARY KEY CLUSTERED 
 (
 	[FundTypeId] ASC

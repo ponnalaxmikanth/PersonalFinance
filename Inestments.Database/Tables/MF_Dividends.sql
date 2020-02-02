@@ -4,8 +4,8 @@
 	[DividendDate] [date] NOT NULL,
 	[Nav] [decimal](10, 4) NOT NULL,
 	[Dividend] [decimal](10, 4) NOT NULL,
-	[CreateDateTime] [datetime] NOT NULL default(getdate()),
-	[LastUpdateDateTime] [datetime] NOT NULL default(getdate()),
+	[CreateDateTime] [datetime]  CONSTRAINT [DF_MF_Dividends_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastUpdateDateTime] [datetime] CONSTRAINT [DF_MF_Dividends_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
 	[IsActive] [nvarchar](5) NULL,
  CONSTRAINT [PK_MF_Dividends] PRIMARY KEY CLUSTERED 
 (

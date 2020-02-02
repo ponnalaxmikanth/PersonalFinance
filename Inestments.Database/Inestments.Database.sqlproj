@@ -124,5 +124,7 @@
     <Build Include="dbo\Stored Procedures\GetInvestmentPerformance.sql" />
     <Build Include="dbo\Stored Procedures\AddMFPurchase.sql" />
     <Build Include="dbo\Stored Procedures\AddMFDividend.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundsValue.sql" />
+    <Build Include="dbo\Stored Procedures\DumpBenchMarkDataBulk.sql" />
   </ItemGroup>
 </Project>

@@ -4,7 +4,8 @@
 	[DsiplayName] [nvarchar](100) NULL,
 	[Site] [nvarchar](100) NULL,
 	[Description] [nvarchar](100) NULL,
-	[CreatedDate] [datetime] NOT NULL,
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_FundHouses_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_FundHouses_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_FundHouseId] PRIMARY KEY CLUSTERED 
 (
 	[FundHouseId] ASC

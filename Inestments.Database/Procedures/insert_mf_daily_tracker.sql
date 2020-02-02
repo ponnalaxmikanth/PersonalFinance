@@ -17,8 +17,8 @@ BEGIN
 	end
 	else
 	begin
-		insert into mf_daily_tracker (portfolioId ,date, period, investment, currentvalue, profit, lastupdatedate, createdate)
-		values (@portfolioId, @trackdate, @period, @investValue, @currentvalue, @profit, GETDATE(), GETDATE())
+		insert into mf_daily_tracker (portfolioId ,date, period, investment, currentvalue, profit)
+		values (@portfolioId, @trackdate, @period, @investValue, @currentvalue, @profit)
 	end
 END
 

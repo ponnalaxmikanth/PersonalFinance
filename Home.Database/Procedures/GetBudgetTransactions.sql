@@ -24,6 +24,8 @@ BEGIN
 		[Balance] money default(0),
 		[level] int
 	)
+
+	declare @income money
 	
 	insert into @result([Group], SubGroup, debit, credit, [level])
 	select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0 AS [level]
@@ -37,7 +39,9 @@ BEGIN
 			else h.SubGroup end AS SubGroup
 		from HomeTransactions h
 		where h.PostedDate between @fromDate and @toDate
-				and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends' and h.[SubGroup] <> 'Withdraw'
+				and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' 
+				and h.[SubGroup] <> 'Balance Transfer'
+				and h.[Group] <> 'Friends' and h.[SubGroup] <> 'Withdraw'
 		union all
 		select i.Debit, i.Credit, i.[Group], i.SubGroup 
 		from HealthInsurance i
@@ -45,38 +49,12 @@ BEGIN
 	) h
 	group by h.[Group], h.SubGroup
 
-
-	--select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
-	--from HomeTransactions h 
-	--where h.PostedDate between @fromDate and @toDate
-	--	and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' and h.[Group] <> 'Friends'
-	--	and h.[Group] <> 'Car'
-	--	and h.[SubGroup] <> 'Withdraw'
-	--group by h.[Group], h.SubGroup
-	--Union all
-	--select h.[Group], 'Car' SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0
-	--	from HomeTransactions h 
-	--	where h.PostedDate between @fromDate and @toDate
-	--		and h.[Group] = 'Car'
-	--group by h.[Group]
-	--order by h.[Group], h.SubGroup
-
-	--update @result set [Group] ='Home', [SubGroup] = 'Income' where [Group] ='Home' and [SubGroup] = 'Rewards'
-	--update @result set [Group] ='Home', [SubGroup] = 'Transport' where [Group] ='Car' and [SubGroup] = 'Car'
-
 	update r set r.Budget = b.Amount
 	from @result r
 	inner join (select b.[Group], SUM(b.Amount) Amount from
 	Budget b 
 		where b.FromDate >= @fromDate and b.ToDate <= @toDate
 	group by b.[Group]) b  on r.SubGroup = b.[Group]
-
-	--update r set r.Budget = SUM(b.Amount)
-	--(select b.[Group], SUM(b.Amount) Amount from
-	--Budget b 
-	--	where b.FromDate >= @fromDate and b.ToDate <= @toDate
-	--group by b.[Group]) b
-	--JOIN @result r on r.SubGroup = b.[Group]
 
 	insert into @result([Group], SubGroup, debit, credit, [level], Budget)
 	select 'Home', b.[Group], 0, 0, 0, sum(b.Amount)
@@ -93,6 +71,10 @@ BEGIN
 
 	update @result set Balance = [Budget] - [debit], fromDate = @fromDate, toDate = @toDate
 	update @result set [Group] ='Unknown', [SubGroup] ='Unknown' where [Group] = ''
+
+	--select @income = SUM(credit) from @result where [SubGroup] = 'Income'
+	
+	--update @result set [Budget] = [Budget] - @income, [Balance] = [Balance] - @income where level = 1
 
 	select * from @result order by [level], Budget desc
 

@@ -8,8 +8,8 @@
 	[CloseValue] [decimal](18, 4) NULL,
 	[SharesTraded] [bigint] NULL,
 	[TurnOver] [decimal](18, 4) NULL,
-	[LastUpdateDate] [datetime] NOT NULL,
-	[CreateDate] [datetime] NOT NULL,
+	[LastUpdateDate] [datetime]  CONSTRAINT [DF_BenchMark_History_LastUpdateDate] DEFAULT (getdate()) NOT NULL,
+	[CreateDate] [datetime] CONSTRAINT [DF_BenchMark_History_CreatedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_BenchMark_History] PRIMARY KEY CLUSTERED 
 (
 	[BenchMarkId] ASC,

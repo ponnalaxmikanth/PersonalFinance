@@ -3,7 +3,8 @@
 	[Date] [date] NOT NULL,
 	[FundType] [int] NOT NULL,
 	[Count] [int] NULL,
-	[CreateDate] [datetime] NOT NULL default(getdate()),
+	[CreateDate] [datetime] CONSTRAINT [DF_MF_DataDumpDates_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_DataDumpDates_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_MF_DataDumpDates] PRIMARY KEY CLUSTERED 
 (
 	[Id] ASC

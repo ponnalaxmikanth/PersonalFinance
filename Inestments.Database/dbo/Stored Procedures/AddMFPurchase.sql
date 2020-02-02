@@ -19,8 +19,8 @@ BEGIN
 
 	select @fId = FundId from MF_Funds where SchemaCode = @schemaCode and FundOptionId = @optionsId
 
-	insert into MF_Purchases(PortfolioId, FolioId, FundId, PurchaseDate, Amount, PurchaseNAV, Units, DividendPerNAV, Dividend, ActualNAV, Broker, CreateDate, LastUpdateDateTime, IsSipInvestment, SIPID)
-	select @PortfolioId, @FolioId, @fId, @PurchaseDate, @Amount, @PurchaseNAV, @Units, 0.00, 0.00, @PurchaseNAV, 'Direct', GETDATE(), GETDATE(), @SIP, null
+	insert into MF_Purchases(PortfolioId, FolioId, FundId, PurchaseDate, Amount, PurchaseNAV, Units, DividendPerNAV, Dividend, ActualNAV, Broker, IsSipInvestment, SIPID)
+	select @PortfolioId, @FolioId, @fId, @PurchaseDate, @Amount, @PurchaseNAV, @Units, 0.00, 0.00, @PurchaseNAV, 'Direct', @SIP, null
 
 
 	select @@error

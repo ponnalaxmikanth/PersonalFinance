@@ -2,8 +2,8 @@
 (
 	[AccountTypeId] [int] IDENTITY(1,1) NOT NULL,
 	[AccountType] [nvarchar](100) NOT NULL,
-	[CreateDate] [datetime] NOT NULL default GETDATE(),
-	[ModifiedDate] [datetime] NOT NULL default GETDATE(),
+	[CreateDate] [datetime] CONSTRAINT [DF_AccountTypes_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[ModifiedDate] [datetime] CONSTRAINT [DF_AccountTypes_ModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_AccountTypes] PRIMARY KEY CLUSTERED 
 (
 	[AccountTypeId] ASC

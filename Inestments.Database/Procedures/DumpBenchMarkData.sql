@@ -17,8 +17,8 @@ BEGIN
 	select @benchmarkId = BenchMarkId from BenchMarks where BenchMark = @BenchMark
 	if(@benchmarkId is null)
 	begin
-		insert into BenchMarks (BenchMark, CreatedDate, LastUpdatedDate)
-		select @BenchMark, GETDATE(), GETDATE()
+		insert into BenchMarks (BenchMark)
+		select @BenchMark
 
 		select @benchmarkId = BenchMarkId from BenchMarks where BenchMark = @BenchMark
 	end
@@ -32,8 +32,8 @@ BEGIN
 		end
 		else
 		begin
-			insert into BenchMark_History (BenchMarkId, CloseValue, HighValue, LowValue, OpenValue, TurnOver, Date, SharesTraded, LastUpdateDate, CreateDate)
-			select @benchmarkId, @CloseValue, @HighValue, @LowValue, @OpenValue, @TurnOver, @Date, @SharesTraded, GETDATE(), GETDATE()
+			insert into BenchMark_History (BenchMarkId, CloseValue, HighValue, LowValue, OpenValue, TurnOver, Date, SharesTraded)
+			select @benchmarkId, @CloseValue, @HighValue, @LowValue, @OpenValue, @TurnOver, @Date, @SharesTraded
 		end
 	end
 END

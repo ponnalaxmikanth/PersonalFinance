@@ -18,7 +18,7 @@ BEGIN
 	--if((select count(*) from FundsNav where SchemaCode = @schemaCode) > 0)
 	--if((select count(*) from MF_DataDumpDates where [Date] = @Date and FundType = @FundType) = 0)
 	--begin
-		insert into MF_DataDumpDates (Date, FundType, [Count], CreateDate)
-		select @Date, @FundType, @Count, GETDATE()
+		insert into MF_DataDumpDates (Date, FundType, [Count])
+		select @Date, @FundType, @Count
 	--end
 END

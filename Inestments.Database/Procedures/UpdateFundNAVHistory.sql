@@ -31,8 +31,8 @@ BEGIN
 		from @table t
 		inner join FundsNav_History h on h.SchemaCode = t.schemaCode and h.[Date] = t.date
 
-	insert into FundsNav_History(SchemaCode, NAV, [Date], CreateDateTime, LastUpdateDateTime)--, ISINGrowth, ISIN_DIV_Reinvestment, SchemaName, RepurchasePrice, SalePrice)
-	select t.schemaCode, t.nav, t.date, GETDATE(), GETDATE()--, null, null, null, null, null
+	insert into FundsNav_History(SchemaCode, NAV, [Date]) --, ISINGrowth, ISIN_DIV_Reinvestment, SchemaName, RepurchasePrice, SalePrice)
+	select t.schemaCode, t.nav, t.date--, null, null, null, null, null
 	from @table t
 	left join FundsNav_History h on t.schemaCode = h.SchemaCode and t.date = h.[Date]
 	where h.SchemaCode is null

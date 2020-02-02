@@ -56,8 +56,8 @@ select @cnt = count(*) from MF_Dividends where IsActive='Y' and DividendDate = @
 
 if(@cnt <= 0)
 begin
-	insert into MF_Dividends (FundId, DividendDate, Nav, Dividend, CreateDateTime, LastUpdateDateTime, isactive)
-	select @FundId, @DividendDate, @NAV, @Dividend, GETDATE(), GETDATE(), 'Y'
+	insert into MF_Dividends (FundId, DividendDate, Nav, Dividend, isactive)
+	select @FundId, @DividendDate, @NAV, @Dividend, 'Y'
 end
 --COMMIT TRAN -- Transaction Success!
 

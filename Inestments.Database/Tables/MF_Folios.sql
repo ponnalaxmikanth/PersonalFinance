@@ -7,7 +7,8 @@
 	[RegistredOwner] [nvarchar](100) NULL,
 	[Owner] [nvarchar](100) NULL,
 	[Description] [nvarchar](100) NULL,
-	[CreatedDate] [datetime] NOT NULL default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_Folios_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_Folios_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [FolioId] PRIMARY KEY CLUSTERED 
 (
 	[FolioId] ASC

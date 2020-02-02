@@ -6,8 +6,8 @@
 	[investment] [decimal](18, 4) NOT NULL,
 	[currentvalue] [decimal](18, 4) NOT NULL,
 	[profit] [decimal](10, 4) NOT NULL,
-	[lastupdatedate] [datetime] NOT NULL default(getdate()),
-	[createdate] [datetime] NOT NULL default(getdate()),
+	[lastupdatedate] [datetime] NOT NULL CONSTRAINT [DF_mf_daily_tracker_lastupdatedate] default(getdate()),
+	[createdate] [datetime] NOT NULL CONSTRAINT [DF_mf_daily_tracker_createdate] default(getdate()),
  CONSTRAINT [PK_mf_daily_tracker] PRIMARY KEY CLUSTERED 
 (
 	[id] ASC

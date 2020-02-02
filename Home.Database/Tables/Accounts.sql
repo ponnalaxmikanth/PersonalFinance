@@ -5,14 +5,16 @@
 	[Name] [nvarchar](250) NOT NULL,
 	[DisplayName] [nvarchar](250) NULL,
 	[ExcelMapping] [nvarchar](50) NULL,
+	[ClosingDay] [int] NULL,
+	[DueDay] [int] NULL,
 	[DisplayOrder] [int] NOT NULL,
 	[OpenDate] [datetime] NOT NULL,
 	[Status] [char](1) NOT NULL,
 	[Limit] [decimal](18, 2) NULL,
 	[LimitIncreaseDate] [datetime] NULL,
 	[LimitIncreaseStatus] [nvarchar](50) NULL,
-	[CreateDate] [datetime] NOT NULL default GETDATE(),
-	[ModifiedDate] [datetime] NOT NULL default GETDATE(),
+	[CreateDate] DATETIME CONSTRAINT [DF_Accounts_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[ModifiedDate] DATETIME CONSTRAINT [DF_Accounts_ModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_Accounts] PRIMARY KEY CLUSTERED 
 (
 	[AccountId] ASC

@@ -7,7 +7,8 @@
 	[SchemaCode] [nvarchar](100) NULL,
 	[GrowthSchemaCode] [nvarchar](100) NULL,
 	[FundName] [nvarchar](500) NOT NULL,
-	[CreatedDate] [datetime] NOT NULL default(getdate()),
+	[CreatedDate] [datetime] CONSTRAINT [DF_MF_Funds_CreatedDate] DEFAULT (getdate()) NOT NULL,
+	[LastModifiedDate] DATETIME CONSTRAINT [DF_MF_Funds_LastModifiedDate] DEFAULT (getdate()) NOT NULL,
  CONSTRAINT [PK_MF_Funds] PRIMARY KEY CLUSTERED 
 (
 	[FundId] ASC

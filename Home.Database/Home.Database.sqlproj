@@ -62,6 +62,7 @@
     <Folder Include="Procedures" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\HomeTransactions.sql" />
@@ -79,5 +80,7 @@
     <Build Include="dbo\Stored Procedures\GetAccountsCurrentStatus.sql" />
     <Build Include="dbo\Stored Procedures\CalculateAccountTotal.sql" />
     <Build Include="dbo\Stored Procedures\GetLastYearTransactions.sql" />
+    <Build Include="dbo\Tables\HealthInsurance.sql" />
+    <Build Include="dbo\Tables\Income.sql" />
   </ItemGroup>
 </Project>
