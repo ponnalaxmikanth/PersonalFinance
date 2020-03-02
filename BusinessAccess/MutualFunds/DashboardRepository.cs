@@ -185,7 +185,7 @@ namespace BusinessAccess.MutualFunds
                     invest.RedeemValue = decimal.Round(filterRecs.Where(r => r["Type"].ToString() == "R").Sum(r => Convert.ToDecimal(r["RedeemValue"].ToString())), 2, MidpointRounding.AwayFromZero);
 
                     invest.RedeemProfit = invest.RedeemValue - invest.Redeem;
-                    invest.RedeemProfitPer = decimal.Round(invest.Amount == 0 ? 0 : (invest.RedeemValue - invest.Redeem) * 100 / invest.Redeem, 2, MidpointRounding.AwayFromZero);
+                    invest.RedeemProfitPer = decimal.Round(invest.Redeem == 0 ? 0 : (invest.RedeemValue - invest.Redeem) * 100 / invest.Redeem, 2, MidpointRounding.AwayFromZero);
                 }
             }
             catch (Exception ex)

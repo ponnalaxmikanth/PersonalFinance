@@ -106,21 +106,21 @@ namespace DownloadFundsData
                                 fund = x[0].Text.Trim();
                                 symbol = x[1].Text.Trim();
                                 NAV = x[2].Text.Trim();
-                                DisplayMessage(family + " -- " + fund  + " -- " + symbol  + " -- " + NAV);
+                                LogMessage(family + " -- " + fund  + " -- " + symbol  + " -- " + NAV);
                                 swr.WriteLine(links.ElementAt(i).Key + "," + family + "," + fund + "," + symbol + "," + date.ToString("MM/dd/yyyy") + "," + NAV);
                             }
                         }
                         catch (Exception ex) { 
-                            DisplayMessage("USMFWallStreetJournal -- DownloadData: " + t + " -- " + ex.Message);
-                            DisplayMessage("USMFWallStreetJournal: " + ex.StackTrace); 
+                            LogMessage("USMFWallStreetJournal -- DownloadData: " + t + " -- " + ex.Message);
+                            LogMessage("USMFWallStreetJournal: " + ex.StackTrace); 
                         }
                     }
                 }
                 swr.Close();
             }
             catch (Exception ex) { 
-                DisplayMessage("USMFWallStreetJournal -- DownloadData " + ex.Message);
-                DisplayMessage("USMFWallStreetJournal -- " + ex.StackTrace);
+                LogMessage("USMFWallStreetJournal -- DownloadData " + ex.Message);
+                LogMessage("USMFWallStreetJournal -- " + ex.StackTrace);
             }
         }
 
@@ -163,7 +163,7 @@ namespace DownloadFundsData
                 var dateEle = GetElementsByXPath(webDriver, "/html/body/div[5]/div[3]/div/div[4]/span[2]");
                 dt = Convert.ToDateTime(dateEle[0].Text);
             }
-            catch (Exception ex) { DisplayMessage("USMFWallStreetJournal -- GetDate" + ex.Message); }
+            catch (Exception ex) { LogMessage("USMFWallStreetJournal -- GetDate" + ex.Message); }
             return dt;
         }
     }

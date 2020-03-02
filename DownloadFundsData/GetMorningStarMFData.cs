@@ -85,7 +85,7 @@ namespace DownloadFundsData
 
                         if (fhLink != null)
                         {
-                            DisplayMessage("Adding: " + fhouse);
+                            LogMessage("Adding: " + fhouse);
                             fundHouse.Add(new FundHouse() { FamilyName = fhouse, FundLinks = new List<FundLinks>(), Uri = fhLink });
                         }
                     }
@@ -113,7 +113,7 @@ namespace DownloadFundsData
                     try
                     {
                         webDriver.Url = eachHouse.Uri;
-                        DisplayMessage("Processing: " + eachHouse.FamilyName);
+                        LogMessage("Processing: " + eachHouse.FamilyName);
                         fundsCount = GetElementById(webDriver, "ctl00_ContentPlaceHolder1_lblTotalCount");
                         nextButton = GetElementsByXPath(webDriver, "html/body/form/div[4]/div[2]/div/div/div/div[2]/div[2]/div[2]/div[1]/span/input[3]");
                         totalCount = int.Parse(fundsCount.Text);
@@ -121,7 +121,7 @@ namespace DownloadFundsData
                         int count = 1;
                         do
                         {
-                            DisplayMessage("Downloading page: " + pageCount++);
+                            LogMessage("Downloading page: " + pageCount++);
                             try
                             {
                                 fundslist = GetFundsList(webDriver);
@@ -134,7 +134,7 @@ namespace DownloadFundsData
                                         if (alink == null) continue;
                                         ahref = alink.GetAttribute("href");
                                         category = GetElementsByXPath(fund, "div[2]");// fund.FindElement(By.XPath("div[2]"));
-                                        DisplayMessage("Parsing : " + count++ + " " + alink.Text);
+                                        LogMessage("Parsing : " + count++ + " " + alink.Text);
                                         if (eachHouse.FundLinks.Where(l => l.Url == ahref).Count() <= 0)
                                         {
                                             links.Add(new FundLinks()
@@ -349,7 +349,7 @@ namespace DownloadFundsData
                     {
                         try
                         {
-                            DisplayMessage("Parsing: " + fund.Title);
+                            LogMessage("Parsing: " + fund.Title);
                             Supremes.Nodes.Document doc = null;
                             Supremes.Nodes.Document docPortfolio = null;
 
@@ -413,14 +413,14 @@ namespace DownloadFundsData
                                 }
                             }
                             else
-                                DisplayMessage("Failed to load: " + fund.Title);
+                                LogMessage("Failed to load: " + fund.Title);
                         }
-                        catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+                        catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
                     });
                     RefreshMFFundsData(house);
                 }
             }
-            catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+            catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
             return true;
         }
 
@@ -434,7 +434,7 @@ namespace DownloadFundsData
                 {
                     try
                     {
-                        DisplayMessage("Parsing: " + fund.Title);
+                        LogMessage("Parsing: " + fund.Title);
                         Supremes.Nodes.Document doc = null;
                         Supremes.Nodes.Document docPortfolio = null;
 
@@ -497,13 +497,13 @@ namespace DownloadFundsData
                             }
                         }
                         else
-                            DisplayMessage("Failed to load: " + fund.Title);
+                            LogMessage("Failed to load: " + fund.Title);
                     }
-                    catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+                    catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
                 });
                 RefreshMFFundsData(house);
             }
-            catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+            catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
             return true;
         }
 
@@ -514,7 +514,7 @@ namespace DownloadFundsData
                 //await Task.Delay(1);
                 try
                 {
-                    DisplayMessage("Parsing: " + fund.Title);
+                    LogMessage("Parsing: " + fund.Title);
                     Supremes.Nodes.Document doc = null;
                     Supremes.Nodes.Document docPortfolio = null;
 
@@ -566,12 +566,12 @@ namespace DownloadFundsData
                         }
                     }
                     else
-                        DisplayMessage("Failed to load: " + fund.Title);
+                        LogMessage("Failed to load: " + fund.Title);
                 }
-                catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+                catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
                 RefreshMFFundsData(familyName, fund);
             }
-            catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+            catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
             return true;
         }
 
@@ -584,7 +584,7 @@ namespace DownloadFundsData
                 {
                     try
                     {
-                        DisplayMessage("Parsing: " + fund.Title);
+                        LogMessage("Parsing: " + fund.Title);
                         Supremes.Nodes.Document doc = null;
                         Supremes.Nodes.Document docPortfolio = null;
 
@@ -649,9 +649,9 @@ namespace DownloadFundsData
                             RefreshMFFundsData(familyName, fund);
                         }
                         else
-                            DisplayMessage("Failed to load: " + fund.Title);
+                            LogMessage("Failed to load: " + fund.Title);
                     }
-                    catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+                    catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
                 });
             }
             catch (Exception ex) { }
@@ -757,7 +757,7 @@ namespace DownloadFundsData
                     decimal.TryParse(expratio.Replace("%", "").Replace(",", "").Trim(), out retValue);
                 }
             }
-            catch (Exception ex) { DisplayMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
+            catch (Exception ex) { LogMessage("Exception: " + ex.Message + Environment.NewLine + "Stack Trace: " + ex.StackTrace); }
             return retValue;
         }
 

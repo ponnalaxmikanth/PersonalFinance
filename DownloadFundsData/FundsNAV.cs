@@ -64,7 +64,7 @@ namespace DownloadFundsData
             DateTime date = DateTime.Now;
             try
             {
-                DisplayMessage(url.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
+                LogMessage(url.Message + " : " + DateTime.Now.Date.ToString("MM/dd/yyyy"));
                 //await Task.Delay(1);
                 StringBuilder sb = new StringBuilder();
                 byte[] buf = new byte[8192];
@@ -79,8 +79,8 @@ namespace DownloadFundsData
                 }
             }
             catch (Exception ex) {
-                DisplayMessage("Exception occurred: " + ex.Message);
-                DisplayMessage("Exception occurred: " + ex.StackTrace);
+                LogMessage("Exception occurred: " + ex.Message);
+                LogMessage("Exception occurred: " + ex.StackTrace);
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
             return true;
@@ -135,7 +135,7 @@ namespace DownloadFundsData
                         };
                         latestNavData.Add(funddata);
 
-                        DisplayMessage(fundsHouse + " : " + funddata.SchemaName);
+                        LogMessage(fundsHouse + " : " + funddata.SchemaName);
                     }
                     catch (Exception ex)
                     {

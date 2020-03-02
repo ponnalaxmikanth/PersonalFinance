@@ -5,6 +5,7 @@ using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Utilities;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -116,14 +117,18 @@ namespace DownloadFundsData
 
         public List<BenchMark> GetHistoryData(DateTime fromDate, DateTime toDate, string indexType, int index, int count)
         {
-            DisplayMessage((index + 1) + "/" + count + ": Benchmark: " + indexType);
+            //LogMessage((index + 1) + "/" + count + ": Benchmark: " + indexType + " - " + fromDate.ToString("dd-MM-yyyy") + " " + toDate.ToString("dd-MM-yyyy"));
             List<BenchMark> result = null;
             try
             {
                 //webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2017&toDate=31-01-2017";
                 webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=29-12-2019&toDate=13-01-2020";
-                webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=" + indexType
+                string url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=" + indexType
                                         + "&fromDate=" + fromDate.ToString("dd-MM-yyyy") + "&toDate=" + toDate.ToString("dd-MM-yyyy");
+
+                webDriver.Url = url;
+
+                LogMessage((index + 1) + "/" + count + ": Benchmark: " + indexType + " - " + url);
 
                 // webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2020&toDate=20-01-2020";
 
@@ -136,12 +141,12 @@ namespace DownloadFundsData
                     {
                         BenchMarkName = indexType,
                         Date = Convert.ToDateTime(eles[0].Text),
-                        Open = GetDecimalValue(eles[1].Text),
-                        High = GetDecimalValue(eles[2].Text),
-                        Low = GetDecimalValue(eles[3].Text),
-                        Close = GetDecimalValue(eles[4].Text),
-                        SharesTraded = GetUInt64(eles[5].Text),
-                        TurnOver = GetDecimalValue(eles[6].Text)
+                        Open = Conversions.ToDecimal(eles[1].Text),
+                        High = Conversions.ToDecimal(eles[2].Text),
+                        Low = Conversions.ToDecimal(eles[3].Text),
+                        Close = Conversions.ToDecimal(eles[4].Text),
+                        SharesTraded = Conversions.GetUInt64(eles[5].Text),
+                        TurnOver = Conversions.ToDecimal(eles[6].Text)
                     });
                 }
             }

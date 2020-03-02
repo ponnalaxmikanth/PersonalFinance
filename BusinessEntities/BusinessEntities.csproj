@@ -57,6 +57,7 @@
     <Compile Include="Contracts\MutualFunds\IMutualFundsBusinessAccess.cs" />
     <Compile Include="Entities\Accounts\AccountMappingDetails.cs" />
     <Compile Include="Entities\Accounts\Accounts.cs" />
+    <Compile Include="Entities\Accounts\Income.cs" />
     <Compile Include="Entities\CommonEntities.cs" />
     <Compile Include="Entities\Expenses\ExpenseTracker.cs" />
     <Compile Include="Entities\MutualFunds\Common.cs" />

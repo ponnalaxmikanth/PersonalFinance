@@ -11,6 +11,7 @@ using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Utilities;
 
 namespace DownloadFundsData
 {
@@ -44,7 +45,7 @@ namespace DownloadFundsData
 
             while (toDate > fromDate)
             {
-                DisplayMessage("Getting NAV data - " + toDate.ToString("dd-MMM-yyyy"));
+                LogMessage("Getting NAV data - " + toDate.ToString("dd-MMM-yyyy"));
                 List<NAVData> navData = _mutualBusinessAccess.GetFundsNAV(toDate);
 
                 Parallel.ForEach(urls, optns, u =>
@@ -92,8 +93,8 @@ namespace DownloadFundsData
                         NAVData record = navData.Where(r => r.SchemaCode == Convert.ToInt32(result[0].Trim()) && r.Date == Convert.ToDateTime(result[7].Trim()))
                                                 .Select(r => r)
                                                 .FirstOrDefault();
-                        repurchasePrice = GetDecimalValue(result[5].Trim());
-                        sellPrice = GetDecimalValue(result[6].Trim());
+                        repurchasePrice = Conversions.ToDecimal(result[5].Trim(), 0);
+                        sellPrice = Conversions.ToDecimal(result[6].Trim(), 0);
                         if (record == null || record.NAV != Convert.ToDecimal(result[4].Trim()))
                         {
                             NAVData funddata = new NAVData()
@@ -113,8 +114,8 @@ namespace DownloadFundsData
                     }
                     catch (Exception ex)
                     {
-                        DisplayMessage("");
-                        DisplayMessage(message + date.ToString("dd-MMM-yyyy") + " Exception: " + ex.Message);
+                        LogMessage("");
+                        LogMessage(message + date.ToString("dd-MMM-yyyy") + " Exception: " + ex.Message);
                         LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
                     }
                 }
@@ -124,7 +125,7 @@ namespace DownloadFundsData
                 }
             }
             //DisplayMessage(" No Of Records - " + latestNavData.Count());
-            DisplayMessage(message + date.ToString("dd-MMM-yyyy") + "  Count: " + latestNavData.Count());
+            LogMessage(message + date.ToString("dd-MMM-yyyy") + "  Count: " + latestNavData.Count());
 
             if (latestNavData != null && latestNavData.Count() > 0)
             {

@@ -28,20 +28,8 @@ namespace DownloadFundsData
             
             nseBaseUrl = "https://www.nseindia.com/";
             bseBaseUrl = "http://www.bseindia.com/";
+            Boolean exceptionOccurred = false;
 
-            if (args[0] == "BSE")
-            {
-                int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
-                DateTime fromdate = DateTime.Now.Date.AddDays(-noOfDays);
-                DateTime todate = DateTime.Now.Date;
-                Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + fromdate.Date.ToString("MM/dd/yyyy") + " - " + todate.Date.ToString("MM/dd/yyyy");
-                new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl, fromdate, todate);
-            }
-            //if (args[0] == "BSEHistory")
-            //{
-            //    Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-            //    new DownloadBSEIndicesHistory().DownloadBSEHistory();
-            //}
             if (args[0] == "NSE")
             {
                 int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
@@ -50,42 +38,82 @@ namespace DownloadFundsData
                 Console.Title = "Downloading NSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + todate.Date.ToString("MM/dd/yyyy") + " - " + fromdate.Date.ToString("MM/dd/yyyy");
                 new GetNSEBenchmarkData().DownloadNSEBenchMarkData(fromdate, todate);
             }
+
+            if (args[0] == "NAVHistory")
+            {
+                Console.Title = "Downloading MF NAV History: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+                new FundsNAVHistory().DownloadData(args.Length == 2 ? int.Parse(args[1]) : 30);
+            }
             if (args[0] == "NAV")
             {
                 int noOfProcesses = args.Length > 1 ? int.Parse(args[1]) : 1;
                 Console.Title = "Downloading MF NAV: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                //GetNAVDataFromCAMS();
                 new FundsNAV().DownloadNAVData(noOfProcesses);
             }
-            if (args[0] == "NAVHistory")
+            if (args[0] == "BSE")
             {
-                Console.Title = "Downloading MF NAV History: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new FundsNAVHistory().DownloadData(args.Length  == 2 ? int.Parse(args[1]) : 30);
+                int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
+                DateTime fromdate = DateTime.Now.Date.AddDays(-noOfDays);
+                DateTime todate = DateTime.Now.Date;
+                Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + fromdate.Date.ToString("MM/dd/yyyy") + " - " + todate.Date.ToString("MM/dd/yyyy");
+                new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl, fromdate, todate);
             }
-            if (args[0] == "NSEHistory")
+            if(args[0] == "USAccounts")
             {
-                Console.WriteLine("Enter From Date: ");
-                string fromDate = Console.ReadLine();
-                Console.WriteLine("Enter To Date: ");
-                string toDate = Console.ReadLine();
-                Console.Title = "Downloading NSE Benchmark : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss" + " " + fromDate + " - " + toDate);
-                new GetNSEBenchmarkData().DownloadNSEBenchMarkHistory(fromDate, toDate);
-            }
-            if (args[0] == "MS")
-            {
-                new GetMorningStarMFData().GetMFDataFromMorningStar();
-            }
-            if (args[0] == "WSMF")
-            {
-                Console.Title = "Downloading MF  Data from Wall Street Journal: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new USMFWallStreetJournal().DownloadData();
-            }
+                int noOfDays = args.Length == 3 ? int.Parse(args[2]) : 30;
+                DateTime _minDate = new DateTime(1900, 1, 1);
+                if (noOfDays > 0)
+                    _minDate = DateTime.Now.AddDays(-noOfDays).Date;
 
-            if (args[0] == "Stocks")
-            {
-                Console.Title = "Downloading Stocks Data: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new Stocks().GetLatestStockValues();
+                Console.Title = "Uploading US Accounts : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " - " + _minDate.Date.ToString("MM/dd/yyyy");
+
+                exceptionOccurred = new UploadUSAccountsData().UploadData(args[1], _minDate);
             }
+            if (args[0] == "IndianAccounts")
+            {
+                int noOfDays = args.Length == 3 ? int.Parse(args[2]) : 30;
+                DateTime _minDate = new DateTime(1900, 1, 1);
+                if (noOfDays > 0)
+                    _minDate = DateTime.Now.AddDays(-noOfDays).Date;
+
+                Console.Title = "Uploading Indian Accounts: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " - " + _minDate.Date.ToString("MM/dd/yyyy");
+
+                exceptionOccurred = new UploadIndiaAccountsData().UploadData(args[1], _minDate);
+            }
+            
+            
+                //if (args[0] == "BSEHistory")
+            //{
+            //    Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            //    new DownloadBSEIndicesHistory().DownloadBSEHistory();
+            //}
+
+
+
+            //if (args[0] == "NSEHistory")
+            //{
+            //    Console.WriteLine("Enter From Date: ");
+            //    string fromDate = Console.ReadLine();
+            //    Console.WriteLine("Enter To Date: ");
+            //    string toDate = Console.ReadLine();
+            //    Console.Title = "Downloading NSE Benchmark : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss" + " " + fromDate + " - " + toDate);
+            //    new GetNSEBenchmarkData().DownloadNSEBenchMarkHistory(fromDate, toDate);
+            //}
+            //if (args[0] == "MS")
+            //{
+            //    new GetMorningStarMFData().GetMFDataFromMorningStar();
+            //}
+            //if (args[0] == "WSMF")
+            //{
+            //    Console.Title = "Downloading MF  Data from Wall Street Journal: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            //    new USMFWallStreetJournal().DownloadData();
+            //}
+
+            //if (args[0] == "Stocks")
+            //{
+            //    Console.Title = "Downloading Stocks Data: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
+            //    new Stocks().GetLatestStockValues();
+            //}
             //if(args[0] == "MS")
             //    DownloadMorningStarMFData();
 

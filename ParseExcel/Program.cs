@@ -36,7 +36,7 @@ namespace ParseExcel
             {
                 int.TryParse(args[1], out DaysOld);
             }
-            _accountMappingDetails = _downloadExcelAccountInfo.GetAccountMappingDetails();
+            _accountMappingDetails = _downloadExcelAccountInfo.GetAccountMappingDetails("HomeTransactions");
             //ParseConfigurationFile();
             ParseExcel(args[0], DaysOld);
         }
@@ -119,7 +119,7 @@ namespace ParseExcel
                         if (transactions.Count() > 0)
                         {
                             string xml = GetTransactionsXML(transactions, res.ElementAt(0).AccountId);
-                            _downloadExcelAccountInfo.UpdateTransactions(xml, res.ElementAt(0).AccountId, _minDate);
+                            _downloadExcelAccountInfo.UpdateTransactions("HomeTransactions", xml, res.ElementAt(0).AccountId, _minDate);
                         }
                         transactions.Clear();
                     }

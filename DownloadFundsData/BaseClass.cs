@@ -11,7 +11,7 @@ namespace DownloadFundsData
 {
     public class BaseClass
     {
-        public void DisplayMessage(string msg)
+        public void LogMessage(string msg)
         {
             Console.WriteLine("[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "] " + msg);
         }
@@ -34,35 +34,35 @@ namespace DownloadFundsData
             return doc;
         }
 
-        public decimal GetDecimalValue(string value)
-        {
-            decimal retVal = 0;
-            try
-            {
-                if (!string.IsNullOrWhiteSpace(value))
-                {
-                    decimal.TryParse(value, out retVal);
-                }
-            }
-            catch (Exception ex)
-            { }
-            return retVal;
-        }
+        //public decimal GetDecimalValue(string value)
+        //{
+        //    decimal retVal = 0;
+        //    try
+        //    {
+        //        if (!string.IsNullOrWhiteSpace(value))
+        //        {
+        //            decimal.TryParse(value, out retVal);
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    { }
+        //    return retVal;
+        //}
 
-        public ulong? GetUInt64(string val)
-        {
-            ulong retValue = 0;
-            try
-            {
-                if (!ulong.TryParse(val, out retValue))
-                    return null;
-            }
-            catch (Exception ex)
-            {
-                //LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
-            }
-            return retValue;
-        }
+        //public ulong? GetUInt64(string val)
+        //{
+        //    ulong retValue = 0;
+        //    try
+        //    {
+        //        if (!ulong.TryParse(val, out retValue))
+        //            return null;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        //LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+        //    }
+        //    return retValue;
+        //}
 
         public ReadOnlyCollection<IWebElement> GetElementsByXPath(IWebDriver webDriver, string path)
         {

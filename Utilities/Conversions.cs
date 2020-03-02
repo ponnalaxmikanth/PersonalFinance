@@ -51,7 +51,7 @@ namespace Utilities
             return retValue;
         }
 
-        public static decimal ToDecimal(object param, decimal defaultValue)
+        public static decimal ToDecimal(object param, decimal defaultValue = 0)
         {
             decimal retValue = defaultValue;
             try
@@ -149,6 +149,20 @@ namespace Utilities
                 if (param == null) return defaultValue;
                 //int.TryParse(param.ToString(), out retValue);
                 retValue = string.IsNullOrWhiteSpace(param.ToString()) ? defaultValue : param.ToString();
+            }
+            catch (Exception ex)
+            {
+            }
+            return retValue;
+        }
+
+        public static ulong? GetUInt64(string val)
+        {
+            ulong retValue = 0;
+            try
+            {
+                if (!ulong.TryParse(val, out retValue))
+                    return null;
             }
             catch (Exception ex)
             {

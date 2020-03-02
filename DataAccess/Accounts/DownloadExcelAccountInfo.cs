@@ -21,12 +21,12 @@ namespace DataAccess.Accounts
                 serverPath = path + "\\Accounts\\";
         }
 
-        public DataTable GetAccountMappingDetails()
+        public DataTable GetAccountMappingDetails(string connection)
         {
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure(connection, "GetAccountMappingDetails", CommandType.StoredProcedure, parameters);
                 if (ds != null)
                     return ds.Tables[0];
             }
@@ -37,7 +37,7 @@ namespace DataAccess.Accounts
             return null;
         }
 
-        public void UpdateTransactions(string xml, int accountId, DateTime _minDate)
+        public void UpdateTransactions(string connection, string xml, int accountId, DateTime _minDate)
         {
             try
             {
@@ -45,7 +45,7 @@ namespace DataAccess.Accounts
                 parameters.Add(new SqlParameter() { DbType = DbType.Xml, ParameterName = "xml", Value = xml });
                 parameters.Add(new SqlParameter() { DbType = DbType.DateTime, ParameterName = "minDate", Value = _minDate });
                 parameters.Add(new SqlParameter() { DbType = DbType.Int32, ParameterName = "accountId", Value = accountId }); 
-                DataSet ds = SQLHelper.ExecuteProcedure("HomeTransactions", "Insert_Account_Transactions", CommandType.StoredProcedure, parameters);
+                DataSet ds = SQLHelper.ExecuteProcedure(connection, "Insert_Account_Transactions", CommandType.StoredProcedure, parameters);
             }
             catch(Exception ex)
             {

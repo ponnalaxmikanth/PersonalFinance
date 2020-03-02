@@ -15,9 +15,10 @@ namespace BusinessAccess.Accounts
         DownloadExcelAccountInfoDataAccess _dataAccess = new DownloadExcelAccountInfoDataAccess();
         readonly string _application = "BusinessAccess";
         readonly string _component = "DownloadExcelAccountInfo";
-        public List<AccountMappingDetails> GetAccountMappingDetails()
+
+        public List<AccountMappingDetails> GetAccountMappingDetails(string connection)
         {
-            return MapAccountMappingDetails(_dataAccess.GetAccountMappingDetails());
+            return MapAccountMappingDetails(_dataAccess.GetAccountMappingDetails(connection));
         }
 
         private List<AccountMappingDetails> MapAccountMappingDetails(DataTable dataTable)
@@ -46,11 +47,11 @@ namespace BusinessAccess.Accounts
             return result;
         }
 
-        public void UpdateTransactions(string xml, int accountId, DateTime _minDate)
+        public void UpdateTransactions(string connection, string xml, int accountId, DateTime _minDate)
         {
             try
             {
-                _dataAccess.UpdateTransactions(xml, accountId, _minDate);
+                _dataAccess.UpdateTransactions(connection, xml, accountId, _minDate);
             }
             catch(Exception ex)
             {

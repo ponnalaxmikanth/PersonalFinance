@@ -82,5 +82,7 @@
     <Build Include="dbo\Stored Procedures\GetLastYearTransactions.sql" />
     <Build Include="dbo\Tables\HealthInsurance.sql" />
     <Build Include="dbo\Tables\Income.sql" />
+    <Build Include="dbo\Stored Procedures\AddIncome.sql" />
+    <Build Include="dbo\Stored Procedures\GetIncomeDetails.sql" />
   </ItemGroup>
 </Project>

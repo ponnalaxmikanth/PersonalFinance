@@ -45,6 +45,7 @@
     <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
     <Compile Include="BaseDataAccess.cs" />
     <Compile Include="ExpensesTracker\ExpensesTrackerDataAccess.cs" />
+    <Compile Include="IncomeDataAccess.cs" />
     <Compile Include="Logging\LoggingDataAccess.cs" />
     <Compile Include="CommonDataAccess.cs" />
     <Compile Include="MutualFunds\DashboardDataAccess.cs" />

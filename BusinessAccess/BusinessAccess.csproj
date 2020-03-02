@@ -44,6 +44,7 @@
     <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
     <Compile Include="HomeExpenses\ExpensesTrackerRepository.cs" />
     <Compile Include="BaseRepository.cs" />
+    <Compile Include="IncomeRepository.cs" />
     <Compile Include="MutualFunds\CommonRepository.cs" />
     <Compile Include="MutualFunds\DashboardRepository.cs" />
     <Compile Include="MutualFunds\FundsRepository.cs" />

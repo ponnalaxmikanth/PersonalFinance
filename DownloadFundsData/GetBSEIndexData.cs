@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Xml.Linq;
 using System.Linq;
+using Utilities;
 
 namespace DownloadFundsData
 {
@@ -58,7 +59,7 @@ namespace DownloadFundsData
         {
             try
             {
-                DisplayMessage("Downloading BSE bench mark data...");
+                LogMessage("Downloading BSE bench mark data...");
                 Supremes.Nodes.Document doc = GetDocument(bseBaseUrl + "sensexview/IndexHighlight.aspx?expandable=2");
                 if (doc == null) return;
 
@@ -84,11 +85,11 @@ namespace DownloadFundsData
                     var benckmarkDoc = GetDocument(bseBaseUrl + "SensexView/SensexViewbackPage.aspx?flag=INDEX&indexcode=" + value);
                     if (benckmarkDoc != null)
                     {
-                        DisplayMessage("Processing : " + benchMark);
+                        LogMessage("Processing : " + benchMark);
                         string[] values = benckmarkDoc.Body.Text.ToString().Split('@');
                         if (values.Length < 10)
                         {
-                            DisplayMessage("not enough values: " + benckmarkDoc.Body.Text);
+                            LogMessage("not enough values: " + benckmarkDoc.Body.Text);
                             continue;
                         }
                         open = values[2];
@@ -103,14 +104,14 @@ namespace DownloadFundsData
                         _dumpData.DumpBenchMarkData(new BenchMark()
                         {
                             BenchMarkName = benchMark,
-                            Close = GetDecimalValue(closeValue),
+                            Close = Conversions.ToDecimal(closeValue, 0),
                             Date = dt,
-                            High = GetDecimalValue(high),
-                            Low = GetDecimalValue(low),
-                            Open = GetDecimalValue(open)
+                            High = Conversions.ToDecimal(high, 0),
+                            Low = Conversions.ToDecimal(low, 0),
+                            Open = Conversions.ToDecimal(open, 0)
                         });
                     }
-                    else { DisplayMessage("null document"); }
+                    else { LogMessage("null document"); }
                 }
             }
             catch (Exception ex)
@@ -123,7 +124,7 @@ namespace DownloadFundsData
         {
             try
             {
-                DisplayMessage("Downloading BSE bench mark history data...");
+                LogMessage("Downloading BSE bench mark history data...");
                 webDriver.Url = bseBaseUrl + "indices/IndexArchiveData.html";
                 //Supremes.Nodes.Document doc = GetDocument(bseBaseUrl + "indices/IndexArchiveData.html");
                 //if (doc == null) return;
@@ -131,7 +132,7 @@ namespace DownloadFundsData
                 var index = webDriver.FindElement(By.Id("ddlIndex"));
                 var selectElement = new SelectElement(index);
                 var options = index.FindElements(By.TagName("option"));
-                DisplayMessage("options: " + options.Count);
+                LogMessage("options: " + options.Count);
 
                 List<string> opts = new List<string>();
                 for (int i = 0; i < options.Count; i++)
@@ -149,7 +150,7 @@ namespace DownloadFundsData
                     webDriver.Dispose();
                 }
 
-                DisplayMessage("total options: " + opts.Count);
+                LogMessage("total options: " + opts.Count);
                 for (int i = 0; i < opts.Count; i++)
                 {
                     if (i == 0) continue;
@@ -177,7 +178,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-                DisplayMessage("Exception while GetBseBenchMarkHistoryData Exception: " + ex.Message);
+                LogMessage("Exception while GetBseBenchMarkHistoryData Exception: " + ex.Message);
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }
@@ -203,28 +204,30 @@ namespace DownloadFundsData
                         {
                             var jsonString = result.Content.ReadAsStringAsync().Result;
                             BSEHistoricalData dataRes = JsonConvert.DeserializeObject<BSEHistoricalData>(jsonString);
-                            // DisplayMessage("total records: " + dataRes.Table.Length);
-                            DisplayMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
+                            LogMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
                                 + fromDate.ToString("MM/dd/yyyy") + " - " + _todate.ToString("MM/dd/yyyy") + " records: " + dataRes.Table.Length);
+                            if (dataRes == null || dataRes.Table == null) continue;
                             foreach (var data in dataRes.Table)
                             {
+                                if (data == null) continue;
+
                                 historydata.Add(new BenchMark()
                                 {
                                     BenchMarkName = val,
                                     Date = data.tdate,
-                                    Open = GetDecimalValue(data.I_open.ToString()),
-                                    High = GetDecimalValue(data.I_high.ToString()),
-                                    Low = GetDecimalValue(data.I_low.ToString()),
-                                    Close = GetDecimalValue(data.I_close.ToString()),
-                                    SharesTraded = GetUInt64(data.TOTAL_SHARES_TRADED.ToString()),
-                                    TurnOver = GetDecimalValue(data.Turnover.ToString())
+                                    Open = Conversions.ToDecimal(data.I_open, 0),
+                                    High = Conversions.ToDecimal(data.I_high, 0),
+                                    Low = Conversions.ToDecimal(data.I_low, 0),
+                                    Close = Conversions.ToDecimal(data.I_close, 0),
+                                    SharesTraded = Conversions.Getulong(data.TOTAL_SHARES_TRADED, 0),
+                                    TurnOver = Conversions.ToDecimal(data.Turnover, 0)
                                 });
                             }
                         }
                         else
                         {
-                            DisplayMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
-                                + fromDate.ToString("MM/dd/yyyy") + " - " + _todate.ToString("MM/dd/yyyy") + " Failed to get response");
+                            LogMessage("index: " + val + " " + (index + 1) + "/" + total + " " 
+                                + fromDate.ToString("MM/dd/yyyy") + " - " + _todate.ToString("MM/dd/yyyy") + " Failed to get response, return status code" + result.StatusCode);
                         }
                     }
                     fromDate = _todate.AddDays(1);
@@ -238,7 +241,7 @@ namespace DownloadFundsData
             }
             catch (Exception ex)
             {
-                DisplayMessage("Exception while GetIndexHistoricalData -  " + val + " Exception: " + ex.Message);
+                LogMessage("Exception while GetIndexHistoricalData -  " + val + " Exception: " + ex.Message);
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
             }
         }

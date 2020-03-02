@@ -51,10 +51,21 @@ BEGIN
 
 	update r set r.Budget = b.Amount
 	from @result r
-	inner join (select b.[Group], SUM(b.Amount) Amount from
-	Budget b 
+	inner join (
+		select b.[Group], SUM(b.Amount) Amount 
+			from Budget b 
 		where b.FromDate >= @fromDate and b.ToDate <= @toDate
-	group by b.[Group]) b  on r.SubGroup = b.[Group]
+		group by b.[Group]
+	) b on r.SubGroup = b.[Group]
+
+	update r set r.debit = r.debit + b.Debit, r.credit = r.credit + b.Credit
+	from @result r
+	inner join (
+		select 0  Debit, SUM(i.Debit) Credit, 'Home' [Group], 'Income' SubGroup 
+		from HealthInsurance i
+		where i.PostedDate between @fromDate and @toDate
+		group by i.[Group], i.SubGroup 
+	) b on r.[Group] = b.[Group] and r.SubGroup = b.SubGroup
 
 	insert into @result([Group], SubGroup, debit, credit, [level], Budget)
 	select 'Home', b.[Group], 0, 0, 0, sum(b.Amount)
