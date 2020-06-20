@@ -21,7 +21,7 @@ namespace DownloadFundsData
         List<AccountMappingDetails> _accountMappingDetails;
         readonly string _application = "ParseExcel";
         readonly string _component = "Program";
-        Boolean exceptionOccurred = false;
+        bool exceptionOccurred = false;
 
 
         public UploadUSAccountsData()
@@ -29,14 +29,14 @@ namespace DownloadFundsData
             _downloadExcelAccountInfo = new DownloadExcelAccountInfo();
         }
 
-        public bool UploadData(string file, DateTime minDate)
+        public bool UploadData(string file, DateTime minDate, int accountId)
         {
             _accountMappingDetails = _downloadExcelAccountInfo.GetAccountMappingDetails("HomeTransactions");
-            ParseExcel(file, minDate);
+            ParseExcel(file, minDate, accountId);
             return true;
         }
 
-        private Boolean ParseExcel(string file, DateTime minDate)
+        private bool ParseExcel(string file, DateTime minDate, int accountId)
         {
             try
             {
@@ -51,11 +51,9 @@ namespace DownloadFundsData
                         List<Transactions> transactions = new List<Transactions>();
                         string sheetName = sheet.Name;
 
-                        var res = from ac in _accountMappingDetails
-                                  where ac.ExcelMapping == sheetName
-                                  select ac;
+                        var res = _accountMappingDetails.Where(a => a.ExcelMapping == sheetName).FirstOrDefault();
 
-                        if (res != null && res.Count() <= 0)//if (ignoreSheets.Contains(sheetName.ToUpper()))
+                        if (res == null || (accountId != -1 && accountId != res.AccountId))
                         {
                             LogMessage("Ignoring Sheet: " + sheetName);
                             continue;
@@ -69,7 +67,6 @@ namespace DownloadFundsData
                         SheetData sheetData = workSheet.GetFirstChild<SheetData>();
                         IEnumerable<Row> rows = sheetData.Descendants<Row>();
 
-
                         for (int i = 0; i < rows.Count(); i++)
                         {
                             if (i == 0) continue;
@@ -78,22 +75,20 @@ namespace DownloadFundsData
                             if (_transaction != null)
                                 transactions.Add(_transaction);
                         }
+                        transactions = transactions
+                                        .Where(t => t != null && t.PostedDate < DateTime.Now.AddDays(30) && t.PostedDate >= minDate)
+                                        .OrderBy(t => t.rowNumber)
+                                        .ToList();
+
+                        LogMessage("Total Records processed for sheet " + sheetName + " : " + rows.Count() + " transactions: " + transactions.Count());
+
                         if (transactions.Count() > 0)
                         {
-                            transactions = transactions
-                                            .Where(t => t != null && t.PostedDate < DateTime.Now.AddDays(30) && t.PostedDate >= minDate)
-                                            .OrderBy(t => t.rowNumber)
-                                            .ToList();
-
-                            LogMessage("Total Records processed for sheet " + sheetName + " : " + rows.Count() + " transactions: " + transactions.Count());
-
-                            if (transactions.Count() > 0)
-                            {
-                                string xml = GetTransactionsXML(transactions, res.ElementAt(0).AccountId);
-                                _downloadExcelAccountInfo.UpdateTransactions("HomeTransactions", xml, res.ElementAt(0).AccountId, minDate);
-                            }
-                            transactions.Clear();
+                            string xml = GetTransactionsXML(transactions, res.AccountId);
+                            _downloadExcelAccountInfo.UpdateTransactions("HomeTransactions", xml, res.AccountId, minDate);
                         }
+                        transactions.Clear();
+                        
                     }
                 }
             }

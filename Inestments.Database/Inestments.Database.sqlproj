@@ -64,6 +64,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Stored Procedures\" />
     <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\MF_FundHouses.sql" />
@@ -126,5 +127,11 @@
     <Build Include="dbo\Stored Procedures\AddMFDividend.sql" />
     <Build Include="dbo\Stored Procedures\GetFundsValue.sql" />
     <Build Include="dbo\Stored Procedures\DumpBenchMarkDataBulk.sql" />
+    <Build Include="dbo\Functions\GetXIRR.sql" />
+    <Build Include="dbo\Stored Procedures\GetFundDetails.sql" />
+    <Build Include="dbo\Stored Procedures\GetDCTransactions.sql" />
+    <Build Include="dbo\Stored Procedures\GetDCAvgPRices.sql" />
+    <Build Include="dbo\Stored Procedures\SellUSAStock.sql" />
+    <Build Include="dbo\Stored Procedures\AddDividendForUSStock.sql" />
   </ItemGroup>
 </Project>

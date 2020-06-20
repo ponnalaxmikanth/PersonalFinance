@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NewRelic.Api.Agent;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +10,8 @@ using System.Web.Http.Cors;
 namespace WebApi.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
+    //[Transaction(Web = true)]
+    //[Trace]
     public class BaseController : ApiController
     {
     }

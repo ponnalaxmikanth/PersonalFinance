@@ -36,13 +36,18 @@ namespace DownloadFundsData
                 DateTime fromdate = DateTime.Now.Date;
                 DateTime todate = DateTime.Now.Date.AddDays(-noOfDays);
                 Console.Title = "Downloading NSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + todate.Date.ToString("MM/dd/yyyy") + " - " + fromdate.Date.ToString("MM/dd/yyyy");
+                DisplayMessage("From Date: " + fromdate.Date.ToString("MM/dd/yyyy") + " To Date:" + todate.Date.ToString("MM/dd/yyyy"));
                 new GetNSEBenchmarkData().DownloadNSEBenchMarkData(fromdate, todate);
             }
 
             if (args[0] == "NAVHistory")
             {
                 Console.Title = "Downloading MF NAV History: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
-                new FundsNAVHistory().DownloadData(args.Length == 2 ? int.Parse(args[1]) : 30);
+                int noOfDays = args.Length == 2 ? int.Parse(args[1]) : 30;
+                DateTime fromDate = DateTime.Now.AddDays(-noOfDays).Date;
+                DateTime toDate = DateTime.Now.Date.AddDays(-1).Date;
+                DisplayMessage("From Date: " + fromDate.Date.ToString("MM/dd/yyyy") + " To Date:" + toDate.Date.ToString("MM/dd/yyyy"));
+                new FundsNAVHistory().DownloadData(fromDate, toDate);
             }
             if (args[0] == "NAV")
             {
@@ -56,18 +61,20 @@ namespace DownloadFundsData
                 DateTime fromdate = DateTime.Now.Date.AddDays(-noOfDays);
                 DateTime todate = DateTime.Now.Date;
                 Console.Title = "Downloading BSE Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " " + fromdate.Date.ToString("MM/dd/yyyy") + " - " + todate.Date.ToString("MM/dd/yyyy");
+                DisplayMessage("From Date: " + fromdate.Date.ToString("MM/dd/yyyy") + " To Date:" + todate.Date.ToString("MM/dd/yyyy"));
                 new GetBSEIndexData().GetBseBenchMarkHistoryData(bseBaseUrl, fromdate, todate);
             }
             if(args[0] == "USAccounts")
             {
-                int noOfDays = args.Length == 3 ? int.Parse(args[2]) : 30;
+                int noOfDays = args.Length >= 3 ? int.Parse(args[2]) : 30;
+                int accountId = args.Length == 4 ? int.Parse(args[3]) : -1;
                 DateTime _minDate = new DateTime(1900, 1, 1);
                 if (noOfDays > 0)
                     _minDate = DateTime.Now.AddDays(-noOfDays).Date;
 
                 Console.Title = "Uploading US Accounts : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " - " + _minDate.Date.ToString("MM/dd/yyyy");
-
-                exceptionOccurred = new UploadUSAccountsData().UploadData(args[1], _minDate);
+                DisplayMessage("From Date: " + _minDate.Date.ToString("MM/dd/yyyy"));
+                exceptionOccurred = new UploadUSAccountsData().UploadData(args[1], _minDate, accountId);
             }
             if (args[0] == "IndianAccounts")
             {
@@ -77,12 +84,12 @@ namespace DownloadFundsData
                     _minDate = DateTime.Now.AddDays(-noOfDays).Date;
 
                 Console.Title = "Uploading Indian Accounts: " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + " - " + _minDate.Date.ToString("MM/dd/yyyy");
-
+                DisplayMessage("From Date: " + _minDate.Date.ToString("MM/dd/yyyy"));
                 exceptionOccurred = new UploadIndiaAccountsData().UploadData(args[1], _minDate);
             }
-            
-            
-                //if (args[0] == "BSEHistory")
+
+
+            //if (args[0] == "BSEHistory")
             //{
             //    Console.Title = "Downloading BSE History Index : " + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss");
             //    new DownloadBSEIndicesHistory().DownloadBSEHistory();
@@ -118,9 +125,12 @@ namespace DownloadFundsData
             //    DownloadMorningStarMFData();
 
             DisplayMessage("Processing completed...");
-            DisplayMessage("waiting to close app");
-            System.Threading.Thread.Sleep(30 * 1000);
-            //Console.ReadKey();
+            if (exceptionOccurred)
+            {
+                DisplayMessage("Exception occurred!!");
+                DisplayMessage("Press any key to exit....");
+                Console.ReadKey();
+            }
             DisplayMessage("exiting application...");
             return;
         }
@@ -216,23 +226,6 @@ namespace DownloadFundsData
         #region Common Methods
         #endregion
         
-
-        //private static void GetFundsData(List<FundFamilies> fundFamilies)
-        //{
-        //    try
-        //    {
-        //        foreach (var fund in fundFamilies)
-        //        {
-        //            var doc = Dcsoup.Parse(new Uri(moneyControlBaseurl + fund.Uri), 5000);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DisplayMessage("Exception: " + ex.Message);
-        //        DisplayMessage("Stack Trace: " + ex.StackTrace);
-        //    }
-        //}
-
         private static void DisplayMessage(string msg)
         {
             Console.WriteLine("[" + DateTime.Now.ToString("MM/dd/yyyy HH:mm:ss") + "] " + msg);

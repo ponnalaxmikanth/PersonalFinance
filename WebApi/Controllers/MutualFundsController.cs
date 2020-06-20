@@ -5,11 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using WebApi.Controllers;
 
 namespace WebAPI.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public partial class MutualFundsController : ApiController
+    public partial class MutualFundsController : BaseController
     {
         MutualFundsRepository _mutualFundsRepository = new MutualFundsRepository();
 

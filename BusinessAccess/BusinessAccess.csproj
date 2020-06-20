@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Accounts\AccountsRepository.cs" />
     <Compile Include="Accounts\DownloadExcelAccountInfo.cs" />
+    <Compile Include="DigitalCurrencyRepository.cs" />
     <Compile Include="HomeExpenses\ExpensesTrackerRepository.cs" />
     <Compile Include="BaseRepository.cs" />
     <Compile Include="IncomeRepository.cs" />

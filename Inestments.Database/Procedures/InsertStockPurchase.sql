@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE InsertStockPurchase
+﻿CREATE PROCEDURE [dbo].[InsertStockPurchase]
 	@StockID [nvarchar](30), @PurchaseDate [date], @Quantity [int], @Price [money]
 AS
 BEGIN
@@ -10,7 +10,9 @@ BEGIN
 
 	SET NOCOUNT ON;
 
-    insert into Stocks(StockID, PurchaseDate, Quantity, Price)
-	select @StockID, @PurchaseDate, @Quantity, @Price
+    insert into Stocks(StockID, PurchaseDate, Quantity, Price, MarketPrice, Dividend, DividendPerStock)
+	select @StockID, @PurchaseDate, @Quantity, @Price, 0, 0, 0
+
+	select * from Stocks where StockID = @StockID order by PurchaseDate desc
 
 END

@@ -6,11 +6,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using WebApi.Controllers;
 
 namespace WebAPI.Controllers
 {
     [EnableCors(origins: "*", headers: "*", methods: "*")]
-    public class ExpensesTrackerController : ApiController
+    public class ExpensesTrackerController : BaseController
     {
         readonly ExpensesTrackerRepository _expensesTrackerRepository;
 

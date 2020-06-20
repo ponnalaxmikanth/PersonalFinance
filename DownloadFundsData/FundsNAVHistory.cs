@@ -24,7 +24,7 @@ namespace DownloadFundsData
         readonly string _application = "DownloadFundsData";
         readonly string _component = "FundsNAVHistory";
 
-        public void DownloadData(int noOfDays = 30)
+        public void DownloadData(DateTime fromDate, DateTime toDate)
         {
             List<DownloadUrls> urls = new List<DownloadUrls>();
             urls.Add(new DownloadUrls() {
@@ -37,8 +37,8 @@ namespace DownloadFundsData
                 Url = "http://portal.amfiindia.com/DownloadNAVHistoryReport_Po.aspx?tp=3&frmdt=", Id = 5, Message = " Interval - "
             });
 
-            DateTime fromDate = DateTime.Now.AddDays(-noOfDays).Date;
-            DateTime toDate = DateTime.Now.Date.AddDays(-1).Date;
+            
+            //DateTime toDate = DateTime.Now.Date.AddDays(-1).Date;
 
             ParallelOptions optns = new ParallelOptions() { MaxDegreeOfParallelism = 1 };
 

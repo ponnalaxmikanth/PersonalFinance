@@ -31,23 +31,38 @@ BEGIN
 	select h.[Group], h.SubGroup, sum(h.Debit) debit, sum(h.Credit) credit, 0 AS [level]
 	from (
 		select h.Debit, h.Credit,
-			case when h.[Group] = 'Car' then 'Home' 
-				 when h.[Group] ='Home' and h.[SubGroup] = 'Rewards' then 'Home' 
+			case when h.[Group] in ('Transport', 'Income') then 'Home' 
+				 when h.[Group] = 'India' and h.SubGroup = 'Ticket' then 'Home'
+				 when h.[Group] = 'India' and h.SubGroup = 'Gifts' then 'Home'
 			else h.[Group] end AS [Group],
-			case when h.[Group] = 'Car' then 'Transport' 
-				 when h.[Group] ='Home' and h.[SubGroup] = 'Rewards' then 'Income' 
+			case when h.[Group] = 'Transport' then 'Transport' 
+				 when h.[Group] ='Income' then 'Income'
+				 when h.[Group] = 'India' and h.SubGroup = 'Ticket' then 'Transport'
+				 when h.[Group] = 'India' and h.SubGroup = 'Gifts' then 'shopping'
+				 when h.[Group] = 'Kanth' and h.SubGroup in('Hair Cut', 'Kanth') then 'Kanth'
 			else h.SubGroup end AS SubGroup
 		from HomeTransactions h
 		where h.PostedDate between @fromDate and @toDate
-				and h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment' and h.SubGroup <> 'Transfer' 
-				and h.[SubGroup] <> 'Balance Transfer'
-				and h.[Group] <> 'Friends' and h.[SubGroup] <> 'Withdraw'
+				and (h.[Group] <> 'Account' and h.SubGroup <> 'Transfer') and (h.[Group] <> 'Credit Card' and h.SubGroup <> 'Payment')
+				and (h.[Group] <> 'Credit Card' and h.SubGroup <> 'Reversal')
+				and h.SubGroup not in ('Transfer' , 'Withdraw')
+				and h.[Group] <> 'Friends'
 		union all
 		select i.Debit, i.Credit, i.[Group], i.SubGroup 
 		from HealthInsurance i
 		where i.PostedDate between @fromDate and @toDate
+		union all
+		select 0 Debit, i.Credit, 'Home', 'Income' 
+		from HealthInsurance i
+		where i.PostedDate between @fromDate and @toDate
 	) h
 	group by h.[Group], h.SubGroup
+
+	--if not exists (select 1 from @result where [Group] = 'Home' and  SubGroup = 'Income')
+	--BEGIN
+	--	insert into @result([Group], SubGroup, debit, credit, [level])
+	--	select 'Home', 'Income', 0, 0, 0
+	--END
 
 	update r set r.Budget = b.Amount
 	from @result r
@@ -77,16 +92,19 @@ BEGIN
 	if exists (select top 1 * from @result)
 	BEGIN
 		insert into @result([Group], SubGroup, debit, credit, Budget, [level])
-		select 'Total', 'Total', sum(debit), sum(credit), sum(Budget), 1 from @result
+		select 'Total', 'Total', sum(debit), sum(credit), sum(Budget), 1 
+		from @result
+		where [Group] <> 'Credit Card' and SubGroup <> 'Payment'
 	END
 
 	update @result set Balance = [Budget] - [debit], fromDate = @fromDate, toDate = @toDate
 	update @result set [Group] ='Unknown', [SubGroup] ='Unknown' where [Group] = ''
+	update @result set [Group] ='Home', [SubGroup] ='Utilities' where [Group] = 'Utilities'
+	update @result set [Group] ='Home', [SubGroup] ='Utilities' where [Group] = 'Home' and SubGroup = 'Electricity'
 
-	--select @income = SUM(credit) from @result where [SubGroup] = 'Income'
-	
-	--update @result set [Budget] = [Budget] - @income, [Balance] = [Balance] - @income where level = 1
-
-	select * from @result order by [level], Budget desc
+	select fromDate, toDate, [Group], SubGroup, SUM(debit) debit, SUM(credit) credit, sum(Budget) Budget, sum(Balance) Balance, [level]
+	from @result
+	group by fromDate, toDate, [Group], SubGroup, [level]
+	order by [level], Budget desc
 
 END
