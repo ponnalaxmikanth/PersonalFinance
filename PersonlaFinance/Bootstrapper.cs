@@ -37,14 +37,14 @@ namespace PersonlaFinance
 
     public static void RegisterTypes(IUnityContainer container)
     {
-            container.RegisterType<IMutualFundsBusinessAccess, MutualFundsRepository>();
-            container.RegisterType<IMutualFundDataAccess, MutualFundsDataAccess>();
+        container.RegisterType<IMutualFundsBusinessAccess, MutualFundsRepository>();
+        container.RegisterType<IMutualFundDataAccess, MutualFundsDataAccess>();
 
-            container.RegisterType<IDashboardRepository, DashboardRepository>();
-            container.RegisterType<IDashboardDataAccess, DashboardDataAccess>();
+        container.RegisterType<IDashboardRepository, DashboardRepository>();
+        container.RegisterType<IDashboardDataAccess, DashboardDataAccess>();
 
-            container.RegisterType<ICommonRepository, CommonRepository>();
-            container.RegisterType<ICommonDataAccess, CommonDataAccess>();
-        }
+        container.RegisterType<ICommonRepository, CommonRepository>();
+        container.RegisterType<ICommonDataAccess, CommonDataAccess>();
+    }
   }
 }

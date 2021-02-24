@@ -1,5 +1,4 @@
-﻿using NewRelic.Api.Agent;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -14,5 +13,22 @@ namespace WebApi.Controllers
     //[Trace]
     public class BaseController : ApiController
     {
+        //NewRelic.Api.Agent.NewRelic.GetAgent().CurrentTransaction;
+        //transaction.AddCustomAttribute("Discount Code", "Summer Super Sale");
+
+        //ITransaction transaction = agent;
+
+        //IAgent agent = NewRelic.Api.Agent.NewRelic.GetAgent();
+        //ITransaction transaction = agent.CurrentTransaction;
+
+        //var logger = LogManager.GetLogger("NewRelicLog");
+        ////logger.Info("Hello, New Relic!");
+        //Logger.Debug("Hello {FirstName}, you are number {nbr} on my list", "Bob", 32);
+
+
+        public void newRelicLog()
+        {
+            //transaction.AddCustomAttribute("Discount Code", "Summer Super Sale");
+        }
     }
 }

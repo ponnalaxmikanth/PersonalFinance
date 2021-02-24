@@ -123,12 +123,12 @@ namespace DownloadFundsData
             {
                 //webDriver.Url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2017&toDate=31-01-2017";
                 webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=29-12-2019&toDate=13-01-2020";
-                string url = "https://nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=" + indexType
-                                        + "&fromDate=" + fromDate.ToString("dd-MM-yyyy") + "&toDate=" + toDate.ToString("dd-MM-yyyy");
+                string url = ConfigManager.GetConfigValue("nseDataBaseUrl", "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp") 
+                                        + "?indexType=" + indexType + "&fromDate=" + fromDate.ToString("dd-MM-yyyy") + "&toDate=" + toDate.ToString("dd-MM-yyyy");
 
-                webDriver.Url = url;
+                webDriver.Url = Uri.EscapeUriString(url);
 
-                LogMessage((index + 1) + "/" + count + ": Benchmark: " + indexType + " - " + url);
+                LogMessage((index + 1) + "/" + count + ": Benchmark: " + indexType + " - " + Uri.EscapeUriString(url));
 
                 // webDriver.Url = "https://www1.nseindia.com/products/dynaContent/equities/indices/historicalindices.jsp?indexType=NIFTY%2050&fromDate=01-01-2020&toDate=20-01-2020";
 

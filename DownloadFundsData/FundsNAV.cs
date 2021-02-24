@@ -120,11 +120,22 @@ namespace DownloadFundsData
                                                                    .Replace("(Direct)".ToUpper(), "Direct")
                                                                    .Replace("REGULAR PLAN", "Regular")
                                                                    .Replace("(REGULAR)", "Regular")
+                                                                   .Replace("-", "")
+                                                                   .Replace("  ", " ")
+                                                                   .Replace(") (", ")(")
                                                                    .Replace("Growth Option".ToUpper(), "(G)")
                                                                    .Replace("GROWTH", "(G)")
                                                                    .Replace("Dividend Option".ToUpper(), "(D)")
                                                                    .Replace("DIVIDEND", "(D)")
-                                                                   .Replace("FUND", ""),
+                                                                   .Replace("AND", "&")
+                                                                   .Replace("PLAN", "")
+                                                                   .Replace("(G) Direct", " Direct(G)")
+                                                                   .Replace("PAYOUT", "Payout")
+                                                                   .Replace("(G) (G)", "(G)")
+                                                                   .Replace("(G)(G)", "(G)")
+                                                                   .Replace(" (D)", "(D)")
+                                                                   .Replace(" (G)", "(G)")
+                                                                   .Replace("FUND", "").Trim(),
                             FundOption = result[3].Trim().ToUpper().Contains("GROWTH") ? 1 : 2,
                             Fund_Type = result[3].Trim().ToUpper().Contains("DIRECT") ? 2 : 1,
                             FundType = fundType,
@@ -154,7 +165,11 @@ namespace DownloadFundsData
             {
                 string strXml = GetXMLString(latestNavData);
                 _mfDataAccess.UpdateLatestNAV(latestNavData);
-                _mfDataAccess.UpdateFundsNAV(strXml, type);
+                if (!_mfDataAccess.UpdateFundsNAV(strXml, type))
+                {
+                    LogMessage("Exception occurred while updating NAV data: " + type);
+                    System.Threading.Thread.Sleep(10 * 1000);
+                }
                 _CommonDataAccess.InsertDumpDate(date, fundType, latestNavData.Count());
             }
         }

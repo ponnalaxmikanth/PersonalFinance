@@ -659,10 +659,10 @@ function GenerateInvestmentDetails(response) {
                 { "data": "Date", title: "Date", mRender: function (data, type, full) { return moment(new Date(data)).format("YYYY-MM-DD"); } },
                 { "data": "FundName", title: "Fund Name", class:"text-nowrap" },
                 { "data": "Type", title: "Type" },
-                { "data": "Investment", title: "Investment", mRender: function (data, type, full) { return data.toLocaleString(); } },
-                { "data": "CurrentValue", title: "Current Value", mRender: function (data, type, full) { return data.toLocaleString(); } },
-                { "data": "Profit", title: "Profit (%)", mRender: function (data, type, full) { return data.toLocaleString() + ' %'; } },
-                { "data": "AgePer", title: "Age (%)", mRender: function (data, type, full) { return data.toLocaleString() + ' %'; } },
+                { "data": "Investment", title: "Invest", mRender: function (data, type, full) { return data.toLocaleString(); } },
+                { "data": "CurrentValue", title: "Current", mRender: function (data, type, full) { return data.toLocaleString(); } },
+                { "data": "Profit", title: "Profit(%)", mRender: function (data, type, full) { return data.toLocaleString() + ' %'; } },
+                { "data": "AgePer", title: "Age(%)", mRender: function (data, type, full) { return data.toLocaleString() + ' %'; } },
                 //{
                 //    "data": null, title: "Profit (%)", mRender: function (data, type, full) {
                 //        if (full.Type == "S") return "0 %";

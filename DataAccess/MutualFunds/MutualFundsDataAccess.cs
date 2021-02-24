@@ -446,22 +446,22 @@ namespace DataAccess.MutualFunds
             return ds;
         }
 
-        public DataSet UpdateFundsNAV(string strXml, string type)
+        public Boolean UpdateFundsNAV(string strXml, string type)
         {
-            DataSet ds = null;
             try
             {
                 List<SqlParameter> parameters = new List<SqlParameter>();
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "xml", Value = strXml });
                 parameters.Add(new SqlParameter() { DbType = DbType.String, ParameterName = "schemaType", Value = type });
 
-                 ds = SQLHelper.ExecuteProcedure("Investments", "DownloadFundsNAV", CommandType.StoredProcedure, parameters);
+                 SQLHelper.ExecuteProcedure("Investments", "DownloadFundsNAV", CommandType.StoredProcedure, parameters);
             }
             catch (Exception ex)
             {
                 LoggingDataAccess.LogException(_application, _component, ex.Message, ex.StackTrace);
+                return false;
             }
-            return ds;
+            return true;
         }
 
         public void BackUpNAVData()

@@ -131,6 +131,7 @@ namespace DownloadFundsData
                 DisplayMessage("Press any key to exit....");
                 Console.ReadKey();
             }
+            System.Threading.Thread.Sleep(30000);
             DisplayMessage("exiting application...");
             return;
         }
